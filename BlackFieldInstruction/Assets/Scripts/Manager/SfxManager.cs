@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 
 
-public class SfxManager : MonoSingleton<SfxManager>,IMonoManager
+public class SfxManager : Singleton<SfxManager>,IMonoManager
 {
     public SfxData sfxData;
     public AudioMixerGroup sfxMixerGroup;
@@ -14,8 +14,14 @@ public class SfxManager : MonoSingleton<SfxManager>,IMonoManager
     /// <summary>
     /// 初始化Manager，设置SfxItem，为每个sfx生成SfxItem
     /// </summary>
-    private void Init()
+    public void OnInit()
     {
+        sfxData = Resources.Load<SfxData>("SfxData");
+        sfxMixerGroup = Resources.Load<AudioMixer>("AudioMixer").FindMatchingGroups("sfx")[0];
+        
+        var root = new GameObject("SfxManager");
+        root.transform.SetParent(GameManager.Instance.transform, false);
+        
         _dataDictionary = new Dictionary<string, SfxData.SFXDataEntry>();
         _sfxItems = new Dictionary<SfxData.SFXDataEntry, AudioSource>();
         for (int i = 0; i < sfxData.data.Count; i++)
@@ -23,7 +29,7 @@ public class SfxManager : MonoSingleton<SfxManager>,IMonoManager
             if (!string.IsNullOrEmpty(sfxData.data[i].name))
             {
                 GameObject sfxObjTemp = new GameObject(sfxData.data[i].name);
-                sfxObjTemp.transform.SetParent(base.transform); 
+                sfxObjTemp.transform.SetParent(root.transform); 
                 AudioSource sfxObjAudioSource = sfxObjTemp.AddComponent<AudioSource>();
                 sfxObjAudioSource.outputAudioMixerGroup = sfxMixerGroup;
                 sfxObjAudioSource.playOnAwake = false;
@@ -40,7 +46,7 @@ public class SfxManager : MonoSingleton<SfxManager>,IMonoManager
     /// <param name="sfxName">sfx名称</param>
     /// <param name="volumeBase">初始音量</param>
     /// <param name="isLoop">是否循环</param>
-    public void PlaySfx(string sfxName, float volumeBase, bool isLoop = false)
+    public void PlaySfx(string sfxName, float volumeBase=1f, bool isLoop = false)
     {
         if (_dataDictionary.ContainsKey(sfxName))
         {
@@ -92,11 +98,6 @@ public class SfxManager : MonoSingleton<SfxManager>,IMonoManager
         {
             sfxItem.Value.volume = volumeBase;
         }
-    }
-    
-    public void OnInit()
-    {
-        Init();
     }
 
     public void Update()

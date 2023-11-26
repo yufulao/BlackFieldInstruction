@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class GameManager : MonoSingleton<GameManager>
 {
-    private List<IMonoManager> _managerList = new List<IMonoManager>();
+    private readonly List<IMonoManager> _managerList = new List<IMonoManager>();
     
     protected override void Awake()
     {
         base.Awake();
         DontDestroyOnLoad(this.gameObject);
         
+        _managerList.Add(EventManager.Instance);
+        _managerList.Add(InputManager.Instance);
         _managerList.Add(FsmManager.Instance);
         _managerList.Add(BgmManager.Instance);
         _managerList.Add(SfxManager.Instance);
@@ -20,6 +22,11 @@ public class GameManager : MonoSingleton<GameManager>
         {
             manager.OnInit();
         }
+
+        //测试
+        //StartCoroutine(BgmManager.Instance.PlayBgmFadeDelay("测试bgm",0f, 0f, 0f));
+        //SfxManager.Instance.PlaySfx("测试sfx",1f);
+        //EventManager.Instance.AddListener(EventName.Click,()=>{Debug.Log("Click");});
     }
 
     private void Update()

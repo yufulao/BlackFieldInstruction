@@ -4,11 +4,23 @@ using DG.Tweening;
 using UnityEngine.Events;
 using UnityEngine.Audio;
 
-public class BgmManager : MonoSingleton<BgmManager>,IMonoManager
+public class BgmManager : Singleton<BgmManager>,IMonoManager
 {
     public BgmData bgmData;
     public AudioMixerGroup bgmMixerGroup;
     private AudioSource _audioSource;
+    
+    public void OnInit()
+    {
+        bgmData = Resources.Load<BgmData>("BgmData");
+        bgmMixerGroup = Resources.Load<AudioMixer>("AudioMixer").FindMatchingGroups("bgm")[0];
+        
+        var root = new GameObject("BgmManager");
+        root.transform.SetParent(GameManager.Instance.transform, false);
+        _audioSource = root.AddComponent<AudioSource>();
+        _audioSource.outputAudioMixerGroup = bgmMixerGroup;
+        _audioSource.playOnAwake = false;
+    }
     
     /// <summary>
     /// 播放bgm
@@ -52,7 +64,9 @@ public class BgmManager : MonoSingleton<BgmManager>,IMonoManager
     public IEnumerator PlayBgmFadeDelay(string bgmName, float fadeOutTime, float delayTime, float fadeInTime, float baseVolume=1f, UnityAction callback = null)
     {
         _audioSource.loop = true;
-        yield return StartCoroutine(StopBgmFadeDelay(0f, fadeOutTime));
+        _audioSource.DOFade(0, fadeOutTime);//音量降为0
+        yield return new WaitForSeconds(fadeOutTime);
+        StopBgm();
         yield return new WaitForSeconds(delayTime);
         PlayBGM(bgmName, 0f);
         _audioSource.DOFade(baseVolume, fadeInTime);
@@ -68,7 +82,6 @@ public class BgmManager : MonoSingleton<BgmManager>,IMonoManager
     /// <returns></returns>
     public IEnumerator StopBgmFadeDelay(float delayTime, float fadeOutTime, UnityAction callback = null)
     {
-        StopAllCoroutines();
         yield return new WaitForSeconds(delayTime);
         _audioSource.DOFade(0, fadeOutTime);//音量降为0
         yield return new WaitForSeconds(fadeOutTime);
@@ -83,12 +96,6 @@ public class BgmManager : MonoSingleton<BgmManager>,IMonoManager
     public void SetVolumeRuntime(float volumePre)
     {
         _audioSource.volume = volumePre;
-    }
-    
-    public void OnInit()
-    {
-        _audioSource = gameObject.AddComponent<AudioSource>();
-        _audioSource.outputAudioMixerGroup = bgmMixerGroup;
     }
 
     public void Update()

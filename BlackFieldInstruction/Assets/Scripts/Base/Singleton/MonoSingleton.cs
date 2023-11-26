@@ -9,10 +9,10 @@ public class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
     protected virtual void Awake()
     {
         if (_instance != null)
-                Destroy(gameObject);
+            Destroy(gameObject);
         else
         {
-                _instance = this as T;
+            _instance = this as T;
         }       
            
     }

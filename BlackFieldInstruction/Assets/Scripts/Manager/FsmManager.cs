@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FsmManager : MonoSingleton<FsmManager>,IMonoManager
+public class FsmManager : Singleton<FsmManager>,IMonoManager
 {
-    private Dictionary<string, BaseFsm> _fsmDict = new Dictionary<string, BaseFsm>();
+    private readonly Dictionary<string, BaseFsm> _fsmDict = new Dictionary<string, BaseFsm>();
 
     /// <summary>
     /// 获取状态机
