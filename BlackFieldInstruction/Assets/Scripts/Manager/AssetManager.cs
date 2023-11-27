@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -50,22 +51,23 @@ public class AssetManager : Singleton<AssetManager>,IMonoManager
     /// <typeparam name="T">资源类型</typeparam>
     /// <param name="path">资源路径，如果为空则不会加载</param>
     /// <param name="callBack">回调函数</param>
-    public void LoadAssetAsync<T>(string path, Action<T> callBack) where T : Object
+    public IEnumerator LoadAssetAsync<T>(string path, Action<T> callBack) where T : Object
     {
         if (string.IsNullOrEmpty(path))
         {
             Debug.Log("路径不能为空");
-            return;
+            yield break;
         }
         
         AsyncOperationHandle<T> loadHandle;
         if (_handleDict.ContainsKey(path))//已有handle，重复添加handle
         {
             loadHandle=_handleDict[path].Convert<T>();
+            yield return loadHandle;
             if (loadHandle.IsDone)//如果已经操作完成，输出回调并且跳出函数
             {
                 callBack?.Invoke(loadHandle.Result);
-                return;
+                yield break;
             }
             //如果操作没完成，会有Completed来执行
         }
@@ -73,6 +75,7 @@ public class AssetManager : Singleton<AssetManager>,IMonoManager
         {
             loadHandle=Addressables.LoadAssetAsync<T>(path);
             _handleDict.Add(path, loadHandle);
+            yield return loadHandle;
             
             loadHandle.Completed += (handle) =>
             {
@@ -152,15 +155,16 @@ public class AssetManager : Singleton<AssetManager>,IMonoManager
     /// <param name="path">场景path</param>
     /// <param name="callBack">回调中获取场景sceneInstance.Scene</param>
     /// <param name="loadSceneMode">single是替换当前场景，additive是在当前场景上追加新的场景</param>
-    public void LoadSceneSync(string path, Action<SceneInstance> callBack, LoadSceneMode loadSceneMode=LoadSceneMode.Single)
+    public IEnumerator LoadSceneSync(string path, Action<SceneInstance> callBack, LoadSceneMode loadSceneMode=LoadSceneMode.Single)
     {
         if (string.IsNullOrEmpty(path))
         {
             Debug.Log("路径不能为空");
-            return;
+            yield break;
         }
         
         AsyncOperationHandle<SceneInstance> sceneLoadHandle = Addressables.LoadSceneAsync(path, loadSceneMode);
+        yield return sceneLoadHandle;
         sceneLoadHandle.Completed += (handle) =>
         {
             if (handle.Status == AsyncOperationStatus.Succeeded)

@@ -40,10 +40,10 @@ public class SceneManager : Singleton<SceneManager>,IMonoManager
     /// </summary>
     /// <param name="scenePath"></param>
     /// <returns></returns>
-    public void ChangeSceneAsync(string scenePath)
+    public IEnumerator ChangeSceneAsync(string scenePath)
     {
         //single模式切换场景
-        AssetManager.Instance.LoadSceneSync(scenePath, (sceneInstance) =>
+        yield return AssetManager.Instance.LoadSceneSync(scenePath, (sceneInstance) =>
         {
             _loadedSceneDic.Add(scenePath, sceneInstance);
         });

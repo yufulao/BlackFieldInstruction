@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -46,24 +47,24 @@ public class SfxManager : Singleton<SfxManager>,IMonoManager
     /// <param name="sfxName">sfx名称</param>
     /// <param name="volumeBase">初始音量</param>
     /// <param name="isLoop">是否循环</param>
-    public void PlaySfx(string sfxName, float volumeBase=1f, bool isLoop = false)
+    public IEnumerator PlaySfx(string sfxName, float volumeBase=1f, bool isLoop = false)
     {
         if (_dataDictionary.ContainsKey(sfxName))
         {
             SfxData.SFXDataEntry entry = _dataDictionary[sfxName];
 
-            AssetManager.Instance.LoadAssetAsync<AudioClip>(
+            yield return AssetManager.Instance.LoadAssetAsync<AudioClip>(
                 entry.maudioClipPaths[UnityEngine.Random.Range(0, entry.maudioClipPaths.Count)],
                 (clip) =>
                 {
                     PlaySfxAsync(entry, volumeBase, isLoop, clip);
                 });
-            return;
+            yield break;
         }
         else
         {
             Debug.LogError("没有这个sfx：" + sfxName);
-            return;
+            yield break;
         }
     }
     

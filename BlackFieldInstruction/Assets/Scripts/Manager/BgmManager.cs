@@ -26,16 +26,17 @@ public class BgmManager : Singleton<BgmManager>,IMonoManager
     /// </summary>
     /// <param name="bgmName">bgm名称</param>
     /// <param name="baseVolume">bgm初始音量</param>
-    public void PlayBGM(string bgmName,float baseVolume=1f)
+    public IEnumerator PlayBGM(string bgmName,float baseVolume=1f)
     {
         foreach (BgmData.BGMDataEntry datum in bgmData.data)
         {
             if (datum.name == bgmName)
             {
                 _audioSource.Stop();
-                AssetManager.Instance.LoadAssetAsync<AudioClip>(datum.audioClipPath,
+                yield return AssetManager.Instance.LoadAssetAsync<AudioClip>(
+                    datum.audioClipPath,
                     (clip) => { PlayBgmAsync(clip, baseVolume); });
-                return;
+                yield break;
             }
         }
         Debug.LogError("没有该BGM名字 " + bgmName);
@@ -78,7 +79,7 @@ public class BgmManager : Singleton<BgmManager>,IMonoManager
         yield return new WaitForSeconds(fadeOutTime);
         StopBgm();
         yield return new WaitForSeconds(delayTime);
-        PlayBGM(bgmName, 0f);
+        yield return PlayBGM(bgmName, 0f);
         _audioSource.DOFade(baseVolume, fadeInTime);
         callback?.Invoke();
     }

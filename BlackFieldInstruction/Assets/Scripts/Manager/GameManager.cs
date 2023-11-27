@@ -26,10 +26,10 @@ public class GameManager : MonoSingleton<GameManager>
         }
 
         //测试
-        //StartCoroutine(BgmManager.Instance.PlayBgmFadeDelay("测试bgm",0f, 0f, 0f));
-        //SfxManager.Instance.PlaySfx("测试sfx",1f);
+        StartCoroutine(BgmManager.Instance.PlayBgmFadeDelay("测试bgm",0f, 0f, 0f));
+        StartCoroutine(SfxManager.Instance.PlaySfx("测试sfx",1f));
         //EventManager.Instance.AddListener(EventName.Click,()=>{Debug.Log("Click");});
-        SceneManager.Instance.ChangeSceneAsync("TestScene");
+        StartCoroutine(SceneManager.Instance.ChangeSceneAsync("TestScene"));
     }
 
     private void Update()
