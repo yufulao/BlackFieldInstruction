@@ -13,10 +13,12 @@ public class GameManager : MonoSingleton<GameManager>
         DontDestroyOnLoad(this.gameObject);
         
         _managerList.Add(EventManager.Instance);
+        _managerList.Add(AssetManager.Instance);
         _managerList.Add(InputManager.Instance);
         _managerList.Add(FsmManager.Instance);
         _managerList.Add(BgmManager.Instance);
         _managerList.Add(SfxManager.Instance);
+        _managerList.Add(SceneManager.Instance);
 
         foreach (var manager in _managerList)
         {
@@ -27,6 +29,7 @@ public class GameManager : MonoSingleton<GameManager>
         //StartCoroutine(BgmManager.Instance.PlayBgmFadeDelay("测试bgm",0f, 0f, 0f));
         //SfxManager.Instance.PlaySfx("测试sfx",1f);
         //EventManager.Instance.AddListener(EventName.Click,()=>{Debug.Log("Click");});
+        SceneManager.Instance.ChangeSceneAsync("TestScene");
     }
 
     private void Update()

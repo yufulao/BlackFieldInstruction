@@ -10,12 +10,12 @@ public class SfxData : ScriptableObject
 	{
 		public string name;
 
-		public List<AudioClip> maudioClips;
+		public List<string> maudioClipPaths;
 
 		[Range(0f, 1f)]
-		public float m_volume;
+		public float volume;
 
-		public bool m_oneShot;
+		public bool oneShot;
 	}
 
 	public List<SFXDataEntry> data;

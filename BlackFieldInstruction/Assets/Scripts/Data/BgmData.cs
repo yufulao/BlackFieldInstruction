@@ -10,7 +10,7 @@ public class BgmData : ScriptableObject
 	{
 		public string name;
 
-		public AudioClip audioClip;
+		public string audioClipPath;
 
 	}
 

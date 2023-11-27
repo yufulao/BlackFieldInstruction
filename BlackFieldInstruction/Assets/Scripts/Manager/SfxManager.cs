@@ -16,8 +16,8 @@ public class SfxManager : Singleton<SfxManager>,IMonoManager
     /// </summary>
     public void OnInit()
     {
-        sfxData = Resources.Load<SfxData>("SfxData");
-        sfxMixerGroup = Resources.Load<AudioMixer>("AudioMixer").FindMatchingGroups("sfx")[0];
+        sfxData = AssetManager.Instance.LoadAsset<SfxData>("SfxData");
+        sfxMixerGroup = AssetManager.Instance.LoadAsset<AudioMixer>("AudioMixer").FindMatchingGroups("sfx")[0];
         
         var root = new GameObject("SfxManager");
         root.transform.SetParent(GameManager.Instance.transform, false);
@@ -51,22 +51,40 @@ public class SfxManager : Singleton<SfxManager>,IMonoManager
         if (_dataDictionary.ContainsKey(sfxName))
         {
             SfxData.SFXDataEntry entry = _dataDictionary[sfxName];
-            if (entry.m_oneShot)
-            {
-                _sfxItems[entry].PlayOneShot(entry.maudioClips[UnityEngine.Random.Range(0, entry.maudioClips.Count)], volumeBase);
-                return;
-            }
-            _sfxItems[entry].Stop();
-            _sfxItems[entry].clip = entry.maudioClips[UnityEngine.Random.Range(0, entry.maudioClips.Count)];
-            _sfxItems[entry].loop = isLoop;
 
-            _sfxItems[entry].Play();
-            _sfxItems[entry].volume = volumeBase;
+            AssetManager.Instance.LoadAssetAsync<AudioClip>(
+                entry.maudioClipPaths[UnityEngine.Random.Range(0, entry.maudioClipPaths.Count)],
+                (clip) =>
+                {
+                    PlaySfxAsync(entry, volumeBase, isLoop, clip);
+                });
+            return;
         }
         else
         {
             Debug.LogError("没有这个sfx：" + sfxName);
             return;
+        }
+    }
+    
+    /// <summary>
+    /// 异步获取到audioClip后播放
+    /// </summary>
+    /// <param name="entry"></param>
+    /// <param name="clip"></param>
+    private void PlaySfxAsync(SfxData.SFXDataEntry entry,float volumeBase,bool isLoop,AudioClip clip)
+    {
+        if (entry.oneShot)
+        {
+            _sfxItems[entry].PlayOneShot(clip, volumeBase);
+        }
+        else
+        {
+            _sfxItems[entry].Stop();
+            _sfxItems[entry].clip = clip;
+            _sfxItems[entry].loop = isLoop;
+            _sfxItems[entry].volume = volumeBase;
+            _sfxItems[entry].Play();
         }
     }
 

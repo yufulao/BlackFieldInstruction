@@ -12,9 +12,8 @@ public class BgmManager : Singleton<BgmManager>,IMonoManager
     
     public void OnInit()
     {
-        bgmData = Resources.Load<BgmData>("BgmData");
-        bgmMixerGroup = Resources.Load<AudioMixer>("AudioMixer").FindMatchingGroups("bgm")[0];
-        
+        bgmData = AssetManager.Instance.LoadAsset<BgmData>("BgmData");
+        bgmMixerGroup = AssetManager.Instance.LoadAsset<AudioMixer>("AudioMixer").FindMatchingGroups("bgm")[0];
         var root = new GameObject("BgmManager");
         root.transform.SetParent(GameManager.Instance.transform, false);
         _audioSource = root.AddComponent<AudioSource>();
@@ -34,13 +33,24 @@ public class BgmManager : Singleton<BgmManager>,IMonoManager
             if (datum.name == bgmName)
             {
                 _audioSource.Stop();
-                _audioSource.clip = datum.audioClip;
-                _audioSource.Play();
-                _audioSource.volume = baseVolume;
+                AssetManager.Instance.LoadAssetAsync<AudioClip>(datum.audioClipPath,
+                    (clip) => { PlayBgmAsync(clip, baseVolume); });
                 return;
             }
         }
         Debug.LogError("没有该BGM名字 " + bgmName);
+    }
+
+    /// <summary>
+    /// 异步获取audioClip后播放
+    /// </summary>
+    /// <param name="clip"></param>
+    /// <param name="baseVolume"></param>
+    private void PlayBgmAsync(AudioClip clip,float baseVolume)
+    {
+        _audioSource.clip = clip;
+        _audioSource.Play();
+        _audioSource.volume = baseVolume;
     }
     
     /// <summary>

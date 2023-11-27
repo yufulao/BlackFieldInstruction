@@ -9,6 +9,14 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="AddressableAssetsData" t="Include">
+          <e p="AssetGroups" t="Include">
+            <e p="Schemas" t="Include" />
+          </e>
+          <e p="AssetGroupTemplates" t="Include" />
+          <e p="DataBuilders" t="Include" />
+          <e p="Windows" t="Include" />
+        </e>
         <e p="Animation" t="Include" />
         <e p="Data" t="Include" />
         <e p="Editor" t="Include" />
@@ -82,6 +90,7 @@
             <e p="SfxData.cs" t="Include" />
           </e>
           <e p="Manager" t="Include">
+            <e p="AssetManager.cs" t="Include" />
             <e p="BgmManager.cs" t="Include" />
             <e p="EventManager" t="Include">
               <e p="EventManager.cs" t="Include" />
@@ -93,6 +102,7 @@
               <e p="InputActions.cs" t="Include" />
               <e p="InputManager.cs" t="Include" />
             </e>
+            <e p="SceneManager.cs" t="Include" />
             <e p="SfxManager.cs" t="Include" />
           </e>
         </e>
