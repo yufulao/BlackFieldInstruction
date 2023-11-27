@@ -1,0 +1,7 @@
+key#audioClipPaths#volume#oneShot#None
+sfx名#资源路径#初始音量#是否oneShot#None
+string#List<string>#float#bool#None
+TestSfx#Assets/AddressableAssets/Sfx/TestSfx#1#False#None
+None#None#None#None#None
+None#None#None#None#None
+None#None#None#None#None

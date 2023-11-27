@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Rabi;
 using UnityEngine;
 
 public class GameManager : MonoSingleton<GameManager>
@@ -26,10 +27,11 @@ public class GameManager : MonoSingleton<GameManager>
         }
 
         //测试
-        StartCoroutine(BgmManager.Instance.PlayBgmFadeDelay("测试bgm",0f, 0f, 0f));
-        StartCoroutine(SfxManager.Instance.PlaySfx("测试sfx",1f));
+        StartCoroutine(BgmManager.Instance.PlayBgmFadeDelay("TestBgm",0f, 0f, 0f));
+        StartCoroutine(SfxManager.Instance.PlaySfx("TestSfx",1f));
         //EventManager.Instance.AddListener(EventName.Click,()=>{Debug.Log("Click");});
         StartCoroutine(SceneManager.Instance.ChangeSceneAsync("TestScene"));
+        //Debug.Log(ConfigManager.Instance.cfgBgm["TestBgm"].key);
     }
 
     private void Update()

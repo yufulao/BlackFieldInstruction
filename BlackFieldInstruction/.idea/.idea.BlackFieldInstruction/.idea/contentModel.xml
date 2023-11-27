@@ -9,6 +9,12 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="AddressableAssets" t="Include">
+          <e p="Config" t="Include">
+            <e p="CfgBgm.txt" t="Include" />
+            <e p="CfgSfx.txt" t="Include" />
+          </e>
+        </e>
         <e p="AddressableAssetsData" t="Include">
           <e p="AssetGroups" t="Include">
             <e p="Schemas" t="Include" />
@@ -81,17 +87,22 @@
               <e p="IMonoManager.cs" t="Include" />
             </e>
             <e p="Singleton" t="Include">
+              <e p="BaseSingleTon.cs" t="Include" />
               <e p="MonoSingleton.cs" t="Include" />
-              <e p="Singleton.cs" t="Include" />
             </e>
           </e>
-          <e p="Data" t="Include">
-            <e p="BgmData.cs" t="Include" />
-            <e p="SfxData.cs" t="Include" />
+          <e p="Config" t="Include">
+            <e p="CfgBgm.cs" t="Include" />
+            <e p="CfgSfx.cs" t="Include" />
           </e>
+          <e p="ConfigDef" t="Include" />
           <e p="Manager" t="Include">
             <e p="AssetManager.cs" t="Include" />
             <e p="BgmManager.cs" t="Include" />
+            <e p="ConfigManager" t="Include">
+              <e p="ConfigManager.cs" t="Include" />
+              <e p="CsvReader.cs" t="Include" />
+            </e>
             <e p="EventManager" t="Include">
               <e p="EventManager.cs" t="Include" />
               <e p="EventName.cs" t="Include" />

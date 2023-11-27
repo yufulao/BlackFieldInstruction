@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +8,7 @@ using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 using Object = UnityEngine.Object;
 
-public class AssetManager : Singleton<AssetManager>,IMonoManager
+public class AssetManager : BaseSingleTon<AssetManager>,IMonoManager
 {
     //value是handle，获取资源的异步操作句柄，状态可以是isDone也可以是正在加载
     private readonly Dictionary<string, AsyncOperationHandle> _handleDict = new Dictionary<string, AsyncOperationHandle>();
@@ -63,34 +63,28 @@ public class AssetManager : Singleton<AssetManager>,IMonoManager
         if (_handleDict.ContainsKey(path))//已有handle，重复添加handle
         {
             loadHandle=_handleDict[path].Convert<T>();
-            yield return loadHandle;
             if (loadHandle.IsDone)//如果已经操作完成，输出回调并且跳出函数
             {
                 callBack?.Invoke(loadHandle.Result);
                 yield break;
             }
-            //如果操作没完成，会有Completed来执行
         }
         else//第一次添加这个handle
         {
             loadHandle=Addressables.LoadAssetAsync<T>(path);
             _handleDict.Add(path, loadHandle);
-            yield return loadHandle;
-            
-            loadHandle.Completed += (handle) =>
-            {
-                if (handle.Status == AsyncOperationStatus.Succeeded)
-                {
-                    callBack?.Invoke(handle.Result);
-                    return;
-                }
-
-                Debug.Log("加载失败"+path);
-                //释放handle
-                Release(path);
-            };
         }
         
+        //如果操作没完成
+        yield return loadHandle;
+        if (loadHandle.Status == AsyncOperationStatus.Succeeded)
+        {
+            callBack?.Invoke(loadHandle.Result);
+            yield break;
+        }
+        
+        Debug.Log("加载失败"+path);
+        Release(path);
     }
 
     /// <summary>

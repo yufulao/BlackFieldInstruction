@@ -1,42 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
+using Rabi;
 using UnityEngine;
 using UnityEngine.Audio;
 
 
-public class SfxManager : Singleton<SfxManager>,IMonoManager
+public class SfxManager : BaseSingleTon<SfxManager>,IMonoManager
 {
-    public SfxData sfxData;
-    public AudioMixerGroup sfxMixerGroup;
+    private CfgSfx _cfgSfx;
+    private AudioMixerGroup _sfxMixerGroup;
 
-    private Dictionary<string, SfxData.SFXDataEntry> _dataDictionary;
-    private Dictionary<SfxData.SFXDataEntry, AudioSource> _sfxItems;
+    private Dictionary<string, RowCfgSfx> _dataDictionary;
+    private Dictionary<RowCfgSfx, AudioSource> _sfxItems;
     
     /// <summary>
     /// 初始化Manager，设置SfxItem，为每个sfx生成SfxItem
     /// </summary>
     public void OnInit()
     {
-        sfxData = AssetManager.Instance.LoadAsset<SfxData>("SfxData");
-        sfxMixerGroup = AssetManager.Instance.LoadAsset<AudioMixer>("AudioMixer").FindMatchingGroups("sfx")[0];
+        _cfgSfx=ConfigManager.Instance.cfgSfx;
+        _sfxMixerGroup = AssetManager.Instance.LoadAsset<AudioMixer>("AudioMixer").FindMatchingGroups("sfx")[0];
         
         var root = new GameObject("SfxManager");
         root.transform.SetParent(GameManager.Instance.transform, false);
         
-        _dataDictionary = new Dictionary<string, SfxData.SFXDataEntry>();
-        _sfxItems = new Dictionary<SfxData.SFXDataEntry, AudioSource>();
-        for (int i = 0; i < sfxData.data.Count; i++)
+        _dataDictionary = new Dictionary<string, RowCfgSfx>();
+        _sfxItems = new Dictionary<RowCfgSfx, AudioSource>();
+        for (int i = 0; i < _cfgSfx.AllConfigs.Count; i++)
         {
-            if (!string.IsNullOrEmpty(sfxData.data[i].name))
+            if (!string.IsNullOrEmpty(_cfgSfx.AllConfigs[i].key))
             {
-                GameObject sfxObjTemp = new GameObject(sfxData.data[i].name);
+                GameObject sfxObjTemp = new GameObject(_cfgSfx.AllConfigs[i].key);
                 sfxObjTemp.transform.SetParent(root.transform); 
                 AudioSource sfxObjAudioSource = sfxObjTemp.AddComponent<AudioSource>();
-                sfxObjAudioSource.outputAudioMixerGroup = sfxMixerGroup;
+                sfxObjAudioSource.outputAudioMixerGroup = _sfxMixerGroup;
                 sfxObjAudioSource.playOnAwake = false;
                 
-                _sfxItems.Add(sfxData.data[i], sfxObjAudioSource);
-                _dataDictionary.Add(sfxData.data[i].name, sfxData.data[i]);
+                _sfxItems.Add(_cfgSfx.AllConfigs[i], sfxObjAudioSource);
+                _dataDictionary.Add(_cfgSfx.AllConfigs[i].key, _cfgSfx.AllConfigs[i]);
             }
         }
     }
@@ -51,13 +52,13 @@ public class SfxManager : Singleton<SfxManager>,IMonoManager
     {
         if (_dataDictionary.ContainsKey(sfxName))
         {
-            SfxData.SFXDataEntry entry = _dataDictionary[sfxName];
+            RowCfgSfx rowCfgSfx = _dataDictionary[sfxName];
 
             yield return AssetManager.Instance.LoadAssetAsync<AudioClip>(
-                entry.maudioClipPaths[UnityEngine.Random.Range(0, entry.maudioClipPaths.Count)],
+                rowCfgSfx.audioClipPaths[UnityEngine.Random.Range(0, rowCfgSfx.audioClipPaths.Count)],
                 (clip) =>
                 {
-                    PlaySfxAsync(entry, volumeBase, isLoop, clip);
+                    PlaySfxAsync(rowCfgSfx, volumeBase, isLoop, clip);
                 });
             yield break;
         }
@@ -71,21 +72,23 @@ public class SfxManager : Singleton<SfxManager>,IMonoManager
     /// <summary>
     /// 异步获取到audioClip后播放
     /// </summary>
-    /// <param name="entry"></param>
+    /// <param name="rowCfgSfx"></param>
+    /// /// <param name="volumeBase"></param>
+    /// /// <param name="isLoop"></param>
     /// <param name="clip"></param>
-    private void PlaySfxAsync(SfxData.SFXDataEntry entry,float volumeBase,bool isLoop,AudioClip clip)
+    private void PlaySfxAsync(RowCfgSfx rowCfgSfx,float volumeBase,bool isLoop,AudioClip clip)
     {
-        if (entry.oneShot)
+        if (rowCfgSfx.oneShot)
         {
-            _sfxItems[entry].PlayOneShot(clip, volumeBase);
+            _sfxItems[rowCfgSfx].PlayOneShot(clip, volumeBase);
         }
         else
         {
-            _sfxItems[entry].Stop();
-            _sfxItems[entry].clip = clip;
-            _sfxItems[entry].loop = isLoop;
-            _sfxItems[entry].volume = volumeBase;
-            _sfxItems[entry].Play();
+            _sfxItems[rowCfgSfx].Stop();
+            _sfxItems[rowCfgSfx].clip = clip;
+            _sfxItems[rowCfgSfx].loop = isLoop;
+            _sfxItems[rowCfgSfx].volume = volumeBase;
+            _sfxItems[rowCfgSfx].Play();
         }
     }
 
@@ -97,8 +100,8 @@ public class SfxManager : Singleton<SfxManager>,IMonoManager
     {
         if (_dataDictionary.ContainsKey(sfxName))
         {
-            SfxData.SFXDataEntry entry = _dataDictionary[sfxName];
-            _sfxItems[entry].Stop();
+            RowCfgSfx rowCfgSfx = _dataDictionary[sfxName];
+            _sfxItems[rowCfgSfx].Stop();
         }
         else
         {

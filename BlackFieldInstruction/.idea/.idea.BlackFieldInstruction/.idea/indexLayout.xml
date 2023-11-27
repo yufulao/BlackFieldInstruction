@@ -29,7 +29,7 @@
       <Path>.plastic</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
-      <Path>Temp</Path>
+      <Path>RabiConfig</Path>
       <Path>UserSettings</Path>
       <Path>obj</Path>
     </explicitExcludes>

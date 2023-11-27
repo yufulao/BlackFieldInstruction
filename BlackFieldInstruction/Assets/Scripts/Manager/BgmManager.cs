@@ -1,23 +1,24 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using DG.Tweening;
+using Rabi;
 using UnityEngine.Events;
 using UnityEngine.Audio;
 
-public class BgmManager : Singleton<BgmManager>,IMonoManager
+public class BgmManager : BaseSingleTon<BgmManager>,IMonoManager
 {
-    public BgmData bgmData;
-    public AudioMixerGroup bgmMixerGroup;
+    private AudioMixerGroup _bgmMixerGroup;
+    private CfgBgm _cfgBgm;
     private AudioSource _audioSource;
     
     public void OnInit()
     {
-        bgmData = AssetManager.Instance.LoadAsset<BgmData>("BgmData");
-        bgmMixerGroup = AssetManager.Instance.LoadAsset<AudioMixer>("AudioMixer").FindMatchingGroups("bgm")[0];
+        _cfgBgm=ConfigManager.Instance.cfgBgm;
+        _bgmMixerGroup = AssetManager.Instance.LoadAsset<AudioMixer>("AudioMixer").FindMatchingGroups("bgm")[0];
         var root = new GameObject("BgmManager");
         root.transform.SetParent(GameManager.Instance.transform, false);
         _audioSource = root.AddComponent<AudioSource>();
-        _audioSource.outputAudioMixerGroup = bgmMixerGroup;
+        _audioSource.outputAudioMixerGroup = _bgmMixerGroup;
         _audioSource.playOnAwake = false;
     }
     
@@ -28,18 +29,11 @@ public class BgmManager : Singleton<BgmManager>,IMonoManager
     /// <param name="baseVolume">bgm初始音量</param>
     public IEnumerator PlayBGM(string bgmName,float baseVolume=1f)
     {
-        foreach (BgmData.BGMDataEntry datum in bgmData.data)
-        {
-            if (datum.name == bgmName)
-            {
-                _audioSource.Stop();
-                yield return AssetManager.Instance.LoadAssetAsync<AudioClip>(
-                    datum.audioClipPath,
-                    (clip) => { PlayBgmAsync(clip, baseVolume); });
-                yield break;
-            }
-        }
-        Debug.LogError("没有该BGM名字 " + bgmName);
+        _audioSource.Stop();
+        yield return AssetManager.Instance.LoadAssetAsync<AudioClip>(
+            _cfgBgm[bgmName].audioClipPath,
+            (clip) => { PlayBgmAsync(clip, baseVolume); });
+        yield break;
     }
 
     /// <summary>

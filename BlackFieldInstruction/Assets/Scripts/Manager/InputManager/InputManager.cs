@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class InputManager : Singleton<InputManager>,IMonoManager
+public class InputManager : BaseSingleTon<InputManager>,IMonoManager
 {
     private readonly InputActions _inputActions=new InputActions();
     

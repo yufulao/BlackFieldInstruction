@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 
-public class SceneManager : Singleton<SceneManager>,IMonoManager
+public class SceneManager : BaseSingleTon<SceneManager>,IMonoManager
 {
     private readonly Dictionary<string, SceneInstance>
         _loadedSceneDic = new Dictionary<string, SceneInstance>(); //已加载的场景 k:资源路径 v:实例
@@ -46,10 +46,11 @@ public class SceneManager : Singleton<SceneManager>,IMonoManager
         yield return AssetManager.Instance.LoadSceneSync(scenePath, (sceneInstance) =>
         {
             _loadedSceneDic.Add(scenePath, sceneInstance);
+            // 激活加载的场景
+            UnityEngine.SceneManagement.SceneManager.SetActiveScene(sceneInstance.Scene);
         });
     }
-    
-    
+
     /// <summary>
     /// 卸载场景
     /// </summary>

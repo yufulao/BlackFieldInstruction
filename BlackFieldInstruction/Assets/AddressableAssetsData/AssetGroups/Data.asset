@@ -21,12 +21,12 @@ MonoBehaviour:
     m_Address: AudioMixer
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: e728db3a308f2774c95bb6e2ea3245b7
-    m_Address: BgmData
+  - m_GUID: 1b0b49f64ebc5084b8f61b4fb2d81706
+    m_Address: Assets/AddressableAssets/Config/CfgBgm.txt
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 03603e6ad585d864184679e762526cb3
-    m_Address: SfxData
+  - m_GUID: 9547d644ec728c2488469c5abc161920
+    m_Address: Assets/AddressableAssets/Config/CfgSfx.txt
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

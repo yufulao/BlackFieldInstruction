@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FsmManager : Singleton<FsmManager>,IMonoManager
+public class FsmManager : BaseSingleTon<FsmManager>,IMonoManager
 {
     private readonly Dictionary<string, BaseFsm> _fsmDict = new Dictionary<string, BaseFsm>();
 

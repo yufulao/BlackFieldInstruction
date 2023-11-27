@@ -6,7 +6,7 @@ using UnityEngine.Events;
 /// <summary>
 /// 事件管理器
 /// </summary>
-public class EventManager:Singleton<EventManager>,IMonoManager
+public class EventManager:BaseSingleTon<EventManager>,IMonoManager
 {
     private readonly Dictionary<EventName, Action> _eventDic = new Dictionary<EventName, Action>();
     
