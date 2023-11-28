@@ -17,12 +17,12 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: edc80cb09a487424fb97d6c4e3f7e691
   m_SerializeEntries:
-  - m_GUID: 42bd29bdf2feec04ea50b5787a7e5059
-    m_Address: Stage_test
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: d05ec6ef2ae2f0a4b8cc091315c4e0e2
     m_Address: TestScene
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 42bd29bdf2feec04ea50b5787a7e5059
+    m_Address: StageTest
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

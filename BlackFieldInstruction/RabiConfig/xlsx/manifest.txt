@@ -1,2 +1,3 @@
 Sfx.xlsx
 Bgm.xlsx
+Stage.xlsx

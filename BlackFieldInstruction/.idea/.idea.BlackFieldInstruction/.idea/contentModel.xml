@@ -10,10 +10,16 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="AddressableAssets" t="Include">
+          <e p="Animation" t="Include" />
+          <e p="AudioMixer" t="Include" />
+          <e p="Bgm" t="Include" />
           <e p="Config" t="Include">
             <e p="CfgBgm.txt" t="Include" />
             <e p="CfgSfx.txt" t="Include" />
+            <e p="CfgStage.txt" t="Include" />
           </e>
+          <e p="Scene" t="Include" />
+          <e p="Sfx" t="Include" />
         </e>
         <e p="AddressableAssetsData" t="Include">
           <e p="AssetGroups" t="Include">
@@ -23,8 +29,6 @@
           <e p="DataBuilders" t="Include" />
           <e p="Windows" t="Include" />
         </e>
-        <e p="Animation" t="Include" />
-        <e p="Data" t="Include" />
         <e p="Editor" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
@@ -74,9 +78,20 @@
             <e p="readme_DOTweenPro.txt" t="Include" />
           </e>
         </e>
-        <e p="Res" t="Include" />
+        <e p="Res" t="Include">
+          <e p="Platformer Kit" t="Include">
+            <e p="License.txt" t="Include" />
+            <e p="Models" t="Include">
+              <e p="DAE format" t="Include" />
+              <e p="FBX format" t="Include" />
+              <e p="GLTF format" t="Include" />
+              <e p="OBJ format" t="Include" />
+              <e p="STL format" t="Include" />
+            </e>
+            <e p="Previews" t="Include" />
+          </e>
+        </e>
         <e p="Resources" t="Include" />
-        <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Base" t="Include">
             <e p="Fsm" t="Include">
@@ -91,9 +106,27 @@
               <e p="MonoSingleton.cs" t="Include" />
             </e>
           </e>
+          <e p="Battle" t="Include">
+            <e p="Controllers" t="Include">
+              <e p="BattleManager.cs" t="Include" />
+              <e p="GridManager.cs" t="Include" />
+            </e>
+            <e p="Models" t="Include">
+              <e p="Grid" t="Include">
+                <e p="GridCell.cs" t="Include" />
+                <e p="GridInfo.cs" t="Include" />
+                <e p="GridMap.cs" t="Include" />
+                <e p="GridObject.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Views" t="Include">
+              <e p="GridMapView.cs" t="Include" />
+            </e>
+          </e>
           <e p="Config" t="Include">
             <e p="CfgBgm.cs" t="Include" />
             <e p="CfgSfx.cs" t="Include" />
+            <e p="CfgStage.cs" t="Include" />
           </e>
           <e p="ConfigDef" t="Include" />
           <e p="Manager" t="Include">
@@ -116,6 +149,7 @@
             <e p="SceneManager.cs" t="Include" />
             <e p="SfxManager.cs" t="Include" />
           </e>
+          <e p="Utils.cs" t="Include" />
         </e>
       </e>
       <e p="BlackFieldInstruction.sln" t="IncludeFlat" />

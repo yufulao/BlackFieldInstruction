@@ -48,6 +48,7 @@ public class SceneManager : BaseSingleTon<SceneManager>,IMonoManager
             _loadedSceneDic.Add(scenePath, sceneInstance);
             // 激活加载的场景
             UnityEngine.SceneManagement.SceneManager.SetActiveScene(sceneInstance.Scene);
+            BattleManager.Instance.EnterStageScene("StageTest");
         });
     }
 

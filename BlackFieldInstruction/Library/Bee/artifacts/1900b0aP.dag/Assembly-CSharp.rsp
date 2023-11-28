@@ -306,6 +306,7 @@
 -r:"D:/Project/BlackFieldInstruction/BlackFieldInstruction/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/AOT/Newtonsoft.Json.dll"
 -r:"D:/Project/BlackFieldInstruction/BlackFieldInstruction/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Assembly-CSharp-firstpass.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/Unity.2D.Tilemap.Extras.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.Addressables.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.InputSystem.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.ResourceManager.ref.dll"
@@ -324,8 +325,16 @@
 "Assets/Scripts/Base/Manager/IMonoManager.cs"
 "Assets/Scripts/Base/Singleton/BaseSingleTon.cs"
 "Assets/Scripts/Base/Singleton/MonoSingleton.cs"
+"Assets/Scripts/Battle/Controllers/BattleManager.cs"
+"Assets/Scripts/Battle/Controllers/GridManager.cs"
+"Assets/Scripts/Battle/Models/Grid/GridCell.cs"
+"Assets/Scripts/Battle/Models/Grid/GridInfo.cs"
+"Assets/Scripts/Battle/Models/Grid/GridMap.cs"
+"Assets/Scripts/Battle/Models/Grid/GridObject.cs"
+"Assets/Scripts/Battle/Views/GridMapView.cs"
 "Assets/Scripts/Config/CfgBgm.cs"
 "Assets/Scripts/Config/CfgSfx.cs"
+"Assets/Scripts/Config/CfgStage.cs"
 "Assets/Scripts/Manager/AssetManager.cs"
 "Assets/Scripts/Manager/BgmManager.cs"
 "Assets/Scripts/Manager/ConfigManager/ConfigManager.cs"
@@ -338,6 +347,7 @@
 "Assets/Scripts/Manager/InputManager/InputManager.cs"
 "Assets/Scripts/Manager/SceneManager.cs"
 "Assets/Scripts/Manager/SfxManager.cs"
+"Assets/Scripts/Utils.cs"
 -langversion:9.0
 
 /deterministic

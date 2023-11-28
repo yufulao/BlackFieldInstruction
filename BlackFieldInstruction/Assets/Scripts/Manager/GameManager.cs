@@ -27,11 +27,18 @@ public class GameManager : MonoSingleton<GameManager>
         }
 
         //测试
-        StartCoroutine(BgmManager.Instance.PlayBgmFadeDelay("TestBgm",0f, 0f, 0f));
-        StartCoroutine(SfxManager.Instance.PlaySfx("TestSfx",1f));
+        //StartCoroutine(BgmManager.Instance.PlayBgmFadeDelay("TestBgm",0f, 0f, 0f));
+        //StartCoroutine(SfxManager.Instance.PlaySfx("TestSfx",1f));
         //EventManager.Instance.AddListener(EventName.Click,()=>{Debug.Log("Click");});
-        StartCoroutine(SceneManager.Instance.ChangeSceneAsync("TestScene"));
+        //StartCoroutine(SceneManager.Instance.ChangeSceneAsync("TestScene"));
         //Debug.Log(ConfigManager.Instance.cfgBgm["TestBgm"].key);
+        StartCoroutine(TestSceneEnumerator("StageTest"));
+    }
+
+    IEnumerator TestSceneEnumerator(string battleSceneName)
+    {
+        yield return StartCoroutine(SceneManager.Instance.ChangeSceneAsync(battleSceneName));
+        BattleManager.Instance.EnterStageScene(battleSceneName);
     }
 
     private void Update()

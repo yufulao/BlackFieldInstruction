@@ -13,6 +13,7 @@ namespace Rabi
     {
         public readonly CfgBgm cfgBgm = new CfgBgm();
         public readonly CfgSfx cfgSfx = new CfgSfx();
+        public readonly CfgStage cfgStage = new CfgStage();
 
         public ConfigManager()
         {
@@ -28,5 +29,6 @@ namespace Rabi
         {
             cfgBgm.Load();
             cfgSfx.Load();
+            cfgStage.Load();
         }
     }}

@@ -1,0 +1,7 @@
+key#width#height#cellSize#None
+key#横向格子数#纵向格子数#每个网格的宽高#None
+string#int#int#float#None
+StageTest#10#18#1#None
+None#None#None#None#None
+None#None#None#None#None
+None#None#None#None#None
