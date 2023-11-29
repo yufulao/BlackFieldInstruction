@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,11 +37,12 @@ public class SceneManager : BaseSingleTon<SceneManager>,IMonoManager
     }
     
     /// <summary>
-    /// 切换场景
+    /// 异步切换场景
     /// </summary>
-    /// <param name="scenePath"></param>
+    /// <param name="scenePath">场景的资源路径</param>
+    /// <param name="callback">切换场景后的回调</param>
     /// <returns></returns>
-    public IEnumerator ChangeSceneAsync(string scenePath)
+    public IEnumerator ChangeSceneAsync(string scenePath ,Action<SceneInstance> callback=null)
     {
         //single模式切换场景
         yield return AssetManager.Instance.LoadSceneSync(scenePath, (sceneInstance) =>
@@ -48,7 +50,7 @@ public class SceneManager : BaseSingleTon<SceneManager>,IMonoManager
             _loadedSceneDic.Add(scenePath, sceneInstance);
             // 激活加载的场景
             UnityEngine.SceneManagement.SceneManager.SetActiveScene(sceneInstance.Scene);
-            BattleManager.Instance.EnterStageScene("StageTest");
+            callback?.Invoke(sceneInstance);
         });
     }
 

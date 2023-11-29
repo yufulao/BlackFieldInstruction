@@ -1,3 +1,4 @@
 Sfx.xlsx
 Bgm.xlsx
 Stage.xlsx
+Command.xlsx

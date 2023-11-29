@@ -15,6 +15,7 @@
           <e p="Bgm" t="Include" />
           <e p="Config" t="Include">
             <e p="CfgBgm.txt" t="Include" />
+            <e p="CfgCommand.txt" t="Include" />
             <e p="CfgSfx.txt" t="Include" />
             <e p="CfgStage.txt" t="Include" />
           </e>
@@ -108,15 +109,36 @@
           </e>
           <e p="Battle" t="Include">
             <e p="Controllers" t="Include">
+              <e p="BattleManager" t="Include">
+                <e p="BattleFsm.cs" t="Include" />
+                <e p="Fsm" t="Include">
+                  <e p="BattleCommandExcuteState.cs" t="Include" />
+                  <e p="BattleCommandInputState.cs" t="Include" />
+                  <e p="BattleEndState.cs" t="Include" />
+                  <e p="BattleInitState.cs" t="Include" />
+                  <e p="BattlePauseState.cs" t="Include" />
+                </e>
+              </e>
               <e p="BattleManager.cs" t="Include" />
+              <e p="CommandManager.cs" t="Include" />
               <e p="GridManager.cs" t="Include" />
             </e>
             <e p="Models" t="Include">
+              <e p="Command" t="Include">
+                <e p="CommandEnum.cs" t="Include" />
+                <e p="CommandList.cs" t="Include" />
+                <e p="CommandMainModel.cs" t="Include" />
+                <e p="UsedCommandObj.cs" t="Include" />
+                <e p="WaitingCommandObj.cs" t="Include" />
+              </e>
               <e p="Grid" t="Include">
+                <e p="ForwardType.cs" t="Include" />
                 <e p="GridCell.cs" t="Include" />
                 <e p="GridInfo.cs" t="Include" />
                 <e p="GridMap.cs" t="Include" />
                 <e p="GridObject.cs" t="Include" />
+                <e p="GridObjType.cs" t="Include" />
+                <e p="Player.cs" t="Include" />
               </e>
             </e>
             <e p="Views" t="Include">
@@ -125,6 +147,7 @@
           </e>
           <e p="Config" t="Include">
             <e p="CfgBgm.cs" t="Include" />
+            <e p="CfgCommand.cs" t="Include" />
             <e p="CfgSfx.cs" t="Include" />
             <e p="CfgStage.cs" t="Include" />
           </e>

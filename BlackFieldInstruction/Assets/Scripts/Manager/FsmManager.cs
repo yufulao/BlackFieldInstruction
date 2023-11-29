@@ -13,7 +13,7 @@ public class FsmManager : BaseSingleTon<FsmManager>,IMonoManager
     /// <param name="fsmNameT">状态机名</param>
     /// <typeparam name="T">状态机类型</typeparam>
     /// <returns></returns>
-    public BaseFsm GetFsmByName<T>(string fsmNameT) where T:BaseFsm,new()
+    public T GetFsmByName<T>(string fsmNameT) where T:BaseFsm,new()
     {
         if (_fsmDict.ContainsKey(fsmNameT))
         {

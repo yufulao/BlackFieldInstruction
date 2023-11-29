@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Rabi;
@@ -10,9 +11,9 @@ public class GridManager : MonoSingleton<GridManager>
     private GridMapView _gridMapView;
 
     /// <summary>
-    /// 重新获取场景中的model和view
+    /// 重新获取场景中的girdModel和gridView
     /// </summary>
-    public void ReloadGridManager(RowCfgStage rowCfgStage)
+    public void LoadGridManager(RowCfgStage rowCfgStage)
     {
         _gridMap =GameObject.FindObjectOfType<GridMap>();
         _gridMapView = GameObject.FindObjectOfType<GridMapView>();
@@ -22,7 +23,7 @@ public class GridManager : MonoSingleton<GridManager>
             _gridMapView.ShowDebug(rowCfgStage.width,rowCfgStage.height,rowCfgStage.cellSize);
         }
     }
-    
+
     /// <summary>
     /// 世界坐标转网格坐标
     /// </summary>
@@ -43,5 +44,16 @@ public class GridManager : MonoSingleton<GridManager>
     public Vector3 GetWorldPositionByPoint(int x,int z,float y=0)
     {
         return _gridMap.GetWorldPositionByPoint(x,z,y);
+    }
+
+    /// <summary>
+    /// 检测[x,z]是否可以走
+    /// </summary>
+    /// <param name="x"></param>
+    /// <param name="z"></param>
+    /// <returns></returns>
+    public bool CheckWalkable(int x,int z)
+    {
+        return _gridMap.CheckCanWalk(x, z);
     }
 }

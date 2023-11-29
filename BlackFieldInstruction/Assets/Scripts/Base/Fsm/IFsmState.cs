@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IFsmState
+public interface IFsmState 
 {
     /// <summary>
     /// 状态开始

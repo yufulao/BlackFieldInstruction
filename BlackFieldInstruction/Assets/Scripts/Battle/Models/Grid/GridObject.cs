@@ -5,6 +5,6 @@ using UnityEngine;
 
 public class GridObject:MonoBehaviour
 {
-    public GridInfo gridInfo;
-    
+    public GridObjInfo gridObjInfo;
+
 }

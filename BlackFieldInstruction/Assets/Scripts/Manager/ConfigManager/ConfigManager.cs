@@ -12,6 +12,7 @@ namespace Rabi
     public sealed class ConfigManager : BaseSingleTon<ConfigManager>
     {
         public readonly CfgBgm cfgBgm = new CfgBgm();
+        public readonly CfgCommand cfgCommand = new CfgCommand();
         public readonly CfgSfx cfgSfx = new CfgSfx();
         public readonly CfgStage cfgStage = new CfgStage();
 
@@ -28,6 +29,7 @@ namespace Rabi
         private void Init()
         {
             cfgBgm.Load();
+            cfgCommand.Load();
             cfgSfx.Load();
             cfgStage.Load();
         }

@@ -10,6 +10,7 @@ public class GridMap : MonoBehaviour
     private int _height;//z轴有几个格子
     private float _cellSize;//每个格子的宽度和长度
     private GridCell[,] _map;
+    private Player _player;
 
     /// <summary>
     /// 初始化并创建网格地图
@@ -73,7 +74,7 @@ public class GridMap : MonoBehaviour
         {
             for (int z = 0; z < _map.GetLength(1); z++)
             {
-                _map[x, z] = new GridCell();
+                _map[x, z] = new GridCell(x,z);
             }
         }
     }
@@ -87,6 +88,7 @@ public class GridMap : MonoBehaviour
         for (int i = 0; i < gridObjList.Length; i++)
         {
             Vector2Int objPoint= GetPointByWorldPosition(gridObjList[i].transform.position);
+            gridObjList[i].gridObjInfo.originalPoint = objPoint;
             _map[objPoint.x,objPoint.y].gridObjList.Add(gridObjList[i]);
         }
     }
