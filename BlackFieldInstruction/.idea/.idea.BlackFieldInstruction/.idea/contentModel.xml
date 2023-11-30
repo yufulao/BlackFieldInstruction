@@ -21,6 +21,7 @@
             <e p="CfgStage.txt" t="Include" />
             <e p="CfgUi.txt" t="Include" />
           </e>
+          <e p="Prefab" t="Include" />
           <e p="Scene" t="Include" />
           <e p="Sfx" t="Include" />
           <e p="Ui" t="Include" />
@@ -109,11 +110,6 @@
               <e p="BaseSingleTon.cs" t="Include" />
               <e p="MonoSingleton.cs" t="Include" />
             </e>
-            <e p="Ui" t="Include">
-              <e p="UiCtrlBase.cs" t="Include" />
-              <e p="UiModelBase.cs" t="Include" />
-              <e p="UiViewBase.cs" t="Include" />
-            </e>
           </e>
           <e p="Battle" t="Include">
             <e p="Controllers" t="Include">
@@ -135,9 +131,6 @@
               <e p="Command" t="Include">
                 <e p="CommandEnum.cs" t="Include" />
                 <e p="CommandList.cs" t="Include" />
-                <e p="CommandMainModel.cs" t="Include" />
-                <e p="UsedCommandObj.cs" t="Include" />
-                <e p="WaitingCommandObj.cs" t="Include" />
               </e>
               <e p="Grid" t="Include">
                 <e p="ForwardType.cs" t="Include" />
@@ -188,6 +181,11 @@
               <e p="CommandViewCtrl.cs" t="Include" />
               <e p="CommandViewModel.cs" t="Include" />
               <e p="CommandViewView.cs" t="Include" />
+              <e p="UsedCommandObj.cs" t="Include" />
+              <e p="WaitingCommandObj.cs" t="Include" />
+            </e>
+            <e p="UIBase" t="Include">
+              <e p="UiCtrlBase.cs" t="Include" />
             </e>
           </e>
           <e p="Utils.cs" t="Include" />

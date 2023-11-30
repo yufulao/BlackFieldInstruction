@@ -4,35 +4,32 @@ using System.Collections.Generic;
 using Rabi;
 using UnityEngine;
 
-public class UiManager : BaseSingleTon<UiManager>,IMonoManager
+public class UIManager : BaseSingleTon<UIManager>,IMonoManager
 {
     private CfgUi _cfgUi;
-    private Transform uiRoot;
-    private Transform sceneLayer;
-    private Transform normalLayer;
-    private Transform topLayer;
+    private Transform _uiRoot;
     private Dictionary<string, Transform> _layers;
-    private Dictionary<string, UiCtrlBase> _allViews;
-    private Dictionary<string, Stack<UiCtrlBase>> _layerStacks;
+    private Dictionary<string, UICtrlBase> _allViews;
+    private Dictionary<string, Stack<UICtrlBase>> _layerStacks;
 
 
     public void OnInit()
     {
         _cfgUi = ConfigManager.Instance.cfgUi;
         
-        uiRoot = GameObject.Find("UiRoot").transform;
+        _uiRoot = GameObject.Find("UiRoot").transform;
 
         _layers = new Dictionary<string, Transform>();
         _layers.Add("SceneLayer",GameObject.Find("SceneLayer").transform);
         _layers.Add("NormalLayer",GameObject.Find("NormalLayer").transform);
         _layers.Add("TopLayer",GameObject.Find("TopLayer").transform);
 
-        _layerStacks = new Dictionary<string, Stack<UiCtrlBase>>();
-        _layerStacks.Add("SceneLayer",new Stack<UiCtrlBase>());
-        _layerStacks.Add("NormalLayer",new Stack<UiCtrlBase>());
-        _layerStacks.Add("TopLayer",new Stack<UiCtrlBase>());
+        _layerStacks = new Dictionary<string, Stack<UICtrlBase>>();
+        _layerStacks.Add("SceneLayer",new Stack<UICtrlBase>());
+        _layerStacks.Add("NormalLayer",new Stack<UICtrlBase>());
+        _layerStacks.Add("TopLayer",new Stack<UICtrlBase>());
         
-        _allViews = new Dictionary<string, UiCtrlBase>();
+        _allViews = new Dictionary<string, UICtrlBase>();
     }
 
     public void Update()
@@ -60,84 +57,74 @@ public class UiManager : BaseSingleTon<UiManager>,IMonoManager
     /// </summary>
     /// <param name="windowName"></param>
     /// <param name="callback"></param>
-    public IEnumerator OpenWindow(string windowName,Action<UiCtrlBase> callback=null)
+    public UICtrlBase OpenWindow(string windowName)
     {
-        yield return GetCtrl(windowName, (ctrl) =>
-        {
-            _layerStacks[ConfigManager.Instance.cfgUi[windowName].layer].Push(ctrl);
-            ctrl.OpenRoot();
-            callback?.Invoke(ctrl);
-        });
+        UICtrlBase ctrl = GetCtrl(windowName);
+
+        _layerStacks[ConfigManager.Instance.cfgUi[windowName].layer].Push(ctrl);
+        ctrl.OpenRoot();
+        return ctrl;
     }
     
     /// <summary>
     /// 关闭页面
     /// </summary>
     /// <param name="windowName"></param>
-    public IEnumerator CloseWindows(string windowName)
+    public void CloseWindows(string windowName)
     {
-        yield return GetCtrl(windowName, (ctrl) =>
+        UICtrlBase ctrl = GetCtrl(windowName); 
+        string layer = ConfigManager.Instance.cfgUi[windowName].layer;
+        while (_layerStacks[layer].Count!=0)
         {
-            string layer = ConfigManager.Instance.cfgUi[windowName].layer;
-            while (_layerStacks[layer].Count!=0)
+            UICtrlBase ctrlBefore= _layerStacks[layer].Pop();
+            if (ctrlBefore==ctrl)
             {
-                UiCtrlBase ctrlBefore= _layerStacks[layer].Pop();
-                if (ctrlBefore==ctrl)
-                {
-                    break;
-                }
-                ctrlBefore.CloseRoot();
+                break;
             }
-            ctrl.CloseRoot();
-        });
+            ctrlBefore.CloseRoot();
+        }
+        ctrl.CloseRoot();
     }
 
-    private IEnumerator GetCtrl(string windowName,Action<UiCtrlBase> callback)
+    public UICtrlBase GetCtrl(string windowName,params object[] param)
     {
         if (_allViews.ContainsKey(windowName))
         {
-            callback?.Invoke(_allViews[windowName]);
-            yield break;
+            return _allViews[windowName];
         }
 
-        yield return CreatNewView(windowName, (ctrl) =>
-        {
-            callback?.Invoke(ctrl);
-        });
+        return CreatNewView(windowName,param);
     }
 
-    private IEnumerator CreatNewView(string windowName ,Action<UiCtrlBase> callback)
+    private UICtrlBase CreatNewView(string windowName,params object[] param)
     {
         RowCfgUi rowCfgUi = _cfgUi[windowName];
-        yield return AssetManager.Instance.LoadAssetAsync<GameObject>(rowCfgUi.uiPath, (obj) =>
-        {
-            GameObject rootObj = GameObject.Instantiate(obj, _layers[rowCfgUi.layer]);
-            //rootObj上的ctrl开始start并实例化view和model
-            rootObj.SetActive(false);
-            rootObj.GetComponent<Canvas>().sortingOrder = rowCfgUi.sortOrder;
-            
-            UiCtrlBase ctrlNew=null;
-            Component[] components = rootObj.GetComponents<Component>();
-            for (int i = 0; i < components.Length; i++)
-            {
-                if (components[i] is UiCtrlBase)
-                {
-                    ctrlNew=components[i] as UiCtrlBase;
-                    break;
-                }
-            }
-            
-            if (ctrlNew==null)
-            {
-                Debug.LogError("找不到viewObj挂载的ctrl"+rootObj.name);
-                return;
-            }
-            
-            _allViews.Add(windowName,ctrlNew);
-            ctrlNew.OnInit(rootObj.transform);
-            callback?.Invoke(ctrlNew);
-        });
+        GameObject rootObj = GameObject.Instantiate(AssetManager.Instance.LoadAsset<GameObject>(rowCfgUi.uiPath), _layers[rowCfgUi.layer]);
         
+        //rootObj上的ctrl开始start并实例化view和model
+        rootObj.SetActive(false);
+        rootObj.GetComponent<Canvas>().sortingOrder = rowCfgUi.sortOrder;
+            
+        UICtrlBase ctrlNew=null;
+        Component[] components = rootObj.GetComponents<Component>();
+        for (int i = 0; i < components.Length; i++)
+        {
+            if (components[i] is UICtrlBase)
+            {
+                ctrlNew=components[i] as UICtrlBase;
+                break;
+            }
+        }
+            
+        if (ctrlNew==null)
+        {
+            Debug.LogError("找不到viewObj挂载的ctrl"+rootObj.name);
+            return null;
+        }
+            
+        _allViews.Add(windowName,ctrlNew);
+        ctrlNew.OnInit(rootObj.transform,param);
+        return ctrlNew;
     }
 
 }

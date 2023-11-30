@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class CommandViewView : UiViewBase
+public class CommandViewView
 {
-    public override void OnInit()
-    {
-        base.OnInit();
+    public Transform root;
+    public Transform usedObjContainer;
+    public Transform waitingObjContainer;
 
+    public void OnInit(Transform viewRoot)
+    {
+        root = viewRoot;
+        usedObjContainer=root.Find("DownFrame").Find("UsedCommandObjList").Find("Viewport").Find("UsedObjContainer");
+        waitingObjContainer=root.Find("DownFrame").Find("WaitingCommandObjList").Find("Viewport").Find("WaitingObjContainer");
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Rabi;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoSingleton<GameManager>
@@ -20,25 +21,37 @@ public class GameManager : MonoSingleton<GameManager>
         _managerList.Add(BgmManager.Instance);
         _managerList.Add(SfxManager.Instance);
         _managerList.Add(SceneManager.Instance);
-        _managerList.Add(UiManager.Instance);
+        _managerList.Add(UIManager.Instance);
 
         foreach (var manager in _managerList)
         {
             manager.OnInit();
         }
+    }
 
+    private void Start()
+    {
         //测试
         //StartCoroutine(BgmManager.Instance.PlayBgmFadeDelay("TestBgm",0f, 0f, 0f));
         //StartCoroutine(SfxManager.Instance.PlaySfx("TestSfx",1f));
         //EventManager.Instance.AddListener(EventName.Click,()=>{Debug.Log("Click");});
         //Debug.Log(ConfigManager.Instance.cfgBgm["TestBgm"].key);
-        StartCoroutine(SceneManager.Instance.ChangeSceneAsync("StageTest",(sceneInstance)=>
-        {
-            BattleManager.Instance.OnInit();
-            BattleManager.Instance.EnterStageScene("StageTest");
-        }));
+        // StartCoroutine(SceneManager.Instance.ChangeSceneAsync("StageTest",(sceneInstance)=>
+        // {
+        //     BattleManager.Instance.OnInit();
+        //     BattleManager.Instance.EnterStageScene("StageTest");
+        // }));
+        //GameObject obj = CommandManager.Instance.CreatWaitingObj();
+        StartCoroutine(Funcc());
     }
-    
+
+    IEnumerator Funcc()
+    {
+        yield return StartCoroutine(SceneManager.Instance.ChangeSceneAsync("StageTest"));
+        BattleManager.Instance.OnInit();
+        BattleManager.Instance.EnterStageScene("StageTest");
+
+    }
 
     private void Update()
     {

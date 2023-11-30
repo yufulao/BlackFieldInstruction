@@ -36,7 +36,7 @@ public class BattleManager:MonoSingleton<BattleManager>
 
     public void BattleInitStateEnter()
     {
-        CommandManager.Instance.ReloadCommandModel(_currentStage);//可以只更新model，view复用
+        CommandManager.Instance.InitCommandManager(_currentStage);
         //理论上，协程结束后场景已经切换，所以旧的被销毁，新的被识别为instance……吧？嗯？
         GridManager.Instance.LoadGridManager(_currentStage); //重新获取场景中的model和view
         

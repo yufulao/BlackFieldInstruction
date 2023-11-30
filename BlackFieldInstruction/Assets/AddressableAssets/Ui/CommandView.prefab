@@ -1120,6 +1120,7 @@ GameObject:
   - component: {fileID: 1332084727797179232}
   - component: {fileID: 1672784294361136288}
   - component: {fileID: 4092566708112633469}
+  - component: {fileID: 8857004149562754184}
   m_Layer: 5
   m_Name: CommandView
   m_TagString: Untagged
@@ -1222,4 +1223,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806837250b70a4644b697e89182e7170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  root: {fileID: 0}
+--- !u!114 &8857004149562754184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6398435988403925589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b30e753de7f0d054fb7b2908ab3fe327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
