@@ -13,8 +13,10 @@ namespace Rabi
     {
         public readonly CfgBgm cfgBgm = new CfgBgm();
         public readonly CfgCommand cfgCommand = new CfgCommand();
+        public readonly CfgPrefab cfgPrefab = new CfgPrefab();
         public readonly CfgSfx cfgSfx = new CfgSfx();
         public readonly CfgStage cfgStage = new CfgStage();
+        public readonly CfgUi cfgUi = new CfgUi();
 
         public ConfigManager()
         {
@@ -30,7 +32,9 @@ namespace Rabi
         {
             cfgBgm.Load();
             cfgCommand.Load();
+            cfgPrefab.Load();
             cfgSfx.Load();
             cfgStage.Load();
+            cfgUi.Load();
         }
     }}

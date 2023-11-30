@@ -36,14 +36,16 @@ public class BattleManager:MonoSingleton<BattleManager>
 
     public void BattleInitStateEnter()
     {
-        //UiManager打开commandUi，有实例就打开，没有就生成然后再打开，生成的话传给commandManager=================================================================================================
-        CommandManager.Instance.LoadCommandUi(GameObject.Find("CommandUiRoot").transform);
-        //测试先默认每次都生成并传给CommandManager===========================================================================================================================================
         CommandManager.Instance.ReloadCommandModel(_currentStage);//可以只更新model，view复用
         //理论上，协程结束后场景已经切换，所以旧的被销毁，新的被识别为instance……吧？嗯？
         GridManager.Instance.LoadGridManager(_currentStage); //重新获取场景中的model和view
         
         _battleFsm.ChangeFsmState(typeof(BattleCommandInputState));
+    }
+
+    public void BattleInputStateEnter()
+    {
+        CommandManager.Instance.OpenCommandView();
     }
 
     /// <summary>

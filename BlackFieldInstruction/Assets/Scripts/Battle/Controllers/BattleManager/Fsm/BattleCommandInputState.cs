@@ -6,7 +6,7 @@ public class BattleCommandInputState : IFsmState
 {
     public void OnEnter()
     {
-        
+        BattleManager.Instance.BattleInputStateEnter();
     }
 
     public void OnUpdate()

@@ -16,11 +16,14 @@
           <e p="Config" t="Include">
             <e p="CfgBgm.txt" t="Include" />
             <e p="CfgCommand.txt" t="Include" />
+            <e p="CfgPrefab.txt" t="Include" />
             <e p="CfgSfx.txt" t="Include" />
             <e p="CfgStage.txt" t="Include" />
+            <e p="CfgUi.txt" t="Include" />
           </e>
           <e p="Scene" t="Include" />
           <e p="Sfx" t="Include" />
+          <e p="Ui" t="Include" />
         </e>
         <e p="AddressableAssetsData" t="Include">
           <e p="AssetGroups" t="Include">
@@ -106,6 +109,11 @@
               <e p="BaseSingleTon.cs" t="Include" />
               <e p="MonoSingleton.cs" t="Include" />
             </e>
+            <e p="Ui" t="Include">
+              <e p="UiCtrlBase.cs" t="Include" />
+              <e p="UiModelBase.cs" t="Include" />
+              <e p="UiViewBase.cs" t="Include" />
+            </e>
           </e>
           <e p="Battle" t="Include">
             <e p="Controllers" t="Include">
@@ -148,8 +156,10 @@
           <e p="Config" t="Include">
             <e p="CfgBgm.cs" t="Include" />
             <e p="CfgCommand.cs" t="Include" />
+            <e p="CfgPrefab.cs" t="Include" />
             <e p="CfgSfx.cs" t="Include" />
             <e p="CfgStage.cs" t="Include" />
+            <e p="CfgUi.cs" t="Include" />
           </e>
           <e p="ConfigDef" t="Include" />
           <e p="Manager" t="Include">
@@ -171,6 +181,14 @@
             </e>
             <e p="SceneManager.cs" t="Include" />
             <e p="SfxManager.cs" t="Include" />
+            <e p="UiManager.cs" t="Include" />
+          </e>
+          <e p="Ui" t="Include">
+            <e p="Command" t="Include">
+              <e p="CommandViewCtrl.cs" t="Include" />
+              <e p="CommandViewModel.cs" t="Include" />
+              <e p="CommandViewView.cs" t="Include" />
+            </e>
           </e>
           <e p="Utils.cs" t="Include" />
         </e>

@@ -1,62 +1,74 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Rabi;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CommandManager : MonoSingleton<CommandManager>
 {
     public Transform usedObjContainer;
     public Transform waitingObjContainer;
-    public GameObject usedObjPrefab;
-    public GameObject waitingObjPrefab;
+
+    private CommandViewCtrl _viewCtrl;
     
     private CommandMainModel _commandModel;//动态的，会切换
 
-    public void LoadCommandUi(Transform commandUiRoot)
+    public void OpenCommandView()
     {
-        usedObjContainer=commandUiRoot.Find("DownFrame").Find("UsedCommandObjList").Find("Viewport").Find("UsedObjContainer");
-        waitingObjContainer=commandUiRoot.Find("DownFrame").Find("WaitingCommandObjList").Find("Viewport").Find("WaitingObjContainer");
+        StartCoroutine(UiManager.Instance.OpenWindow("CommandView", (ctrl) =>
+        {
+            _viewCtrl=ctrl as CommandViewCtrl;
+            usedObjContainer=_viewCtrl.root.Find("DownFrame").Find("UsedCommandObjList").Find("Viewport").Find("UsedObjContainer");
+            waitingObjContainer=_viewCtrl.root.Find("DownFrame").Find("WaitingCommandObjList").Find("Viewport").Find("WaitingObjContainer");
+        }));
     }
-    
+
     /// <summary>
     /// 重新获取场景中的commandModel和commandView
     /// </summary>
     /// <param name="rowCfgStage"></param>
     public void ReloadCommandModel(RowCfgStage rowCfgStage)
     {
+        StartCoroutine(InitOriginalObjCommandList(rowCfgStage));
+    }
+
+    private IEnumerator InitOriginalObjCommandList(RowCfgStage rowCfgStage)
+    {
         Dictionary<int, int> commandDic = rowCfgStage.commandDic;
         List<WaitingCommandObj> originalObjCommandList = new List<WaitingCommandObj>();
         foreach (var pair in commandDic)
         {
-            WaitingCommandObj waitingObjTemp = Instantiate(waitingObjPrefab,waitingObjContainer).GetComponent<WaitingCommandObj>();
-            CommandEnum commandEnum = (CommandEnum) pair.Key;
-            //Debug.Log("i:"+i+","+"commandDic[i]:"+commandDic[i]);
-            RowCfgCommand rowCfgCommand = ConfigManager.Instance.cfgCommand[commandEnum.ToString()];
-            //Debug.Log("commandEnum:"+commandEnum+","+"count:"+commandDic[i]+","+"needTime:"+rowCfgCommand.needTime);
-            waitingObjTemp.Init(commandEnum, pair.Value,rowCfgCommand.needTime);
+            yield return StartCoroutine(CreatWaitingObj((obj) =>
+            {
+                obj.transform.SetParent(waitingObjContainer);
+                WaitingCommandObj waitingObjTemp=obj.GetComponent<WaitingCommandObj>();
+                CommandEnum commandEnum = (CommandEnum) pair.Key;
+                //Debug.Log("i:"+i+","+"commandDic[i]:"+commandDic[i]);
+                RowCfgCommand rowCfgCommand = ConfigManager.Instance.cfgCommand[commandEnum.ToString()];
+                //Debug.Log("commandEnum:"+commandEnum+","+"count:"+commandDic[i]+","+"needTime:"+rowCfgCommand.needTime);
+                waitingObjTemp.Init(commandEnum, pair.Value,rowCfgCommand.needTime);
             
-            UpdateWaitingObjView(waitingObjTemp);
-            originalObjCommandList.Add(waitingObjTemp);
+                UpdateWaitingObjView(waitingObjTemp);
+                originalObjCommandList.Add(waitingObjTemp);
+            }));
         }
-
         _commandModel=GameObject.FindObjectOfType<CommandMainModel>();
         _commandModel.InitModel(originalObjCommandList);
     }
-    
-    
-    
+
     /// <summary>
     /// 点击waitingObj
     /// </summary>
     /// <param name="waitingObj"></param>
-    public void ClickWaitingObj(WaitingCommandObj waitingObj)
+    public void ClickWaitingObj(GameObject waitingObj)
     {
-        _commandModel.ClickWaitingObj(waitingObj);
+        _commandModel.ClickWaitingObj(waitingObj.GetComponent<WaitingCommandObj>());
     }
 
-    public void ClickUsedObj(UsedCommandObj usedObj)
+    public void ClickUsedObj(GameObject usedObj)
     {
-        _commandModel.ClickUsedObj(usedObj);
+        _commandModel.ClickUsedObj(usedObj.GetComponent<UsedCommandObj>());
     }
 
     public void UpdateWaitingObjView(WaitingCommandObj waitingObj)
@@ -77,11 +89,15 @@ public class CommandManager : MonoSingleton<CommandManager>
         waitingObj.gameObject.SetActive(open);
     }
 
-    public UsedCommandObj AddNewUsedObj(CommandEnum commandEnum,int needTime)
+    public IEnumerator AddNewUsedObj(CommandEnum commandEnum,int needTime,Action<UsedCommandObj> callback)
     {
-        UsedCommandObj usedObj = Instantiate(usedObjPrefab,usedObjContainer).GetComponent<UsedCommandObj>();//对象池处理，好像对象池也得开个新类，不然对象好像重复引用了============================================================
-        usedObj.Init(commandEnum,1,needTime);
-        return usedObj;
+        yield return CreatUsedObj((obj) =>
+        {
+            obj.transform.SetParent(usedObjContainer);
+            UsedCommandObj usedObj = obj.GetComponent<UsedCommandObj>();
+            usedObj.Init(commandEnum,1,needTime);
+            callback?.Invoke(usedObj);
+        });
     }
     
     public void NoWaitingObj()
@@ -92,5 +108,33 @@ public class CommandManager : MonoSingleton<CommandManager>
     public void NoUsedObj()
     {
         
+    }
+    
+    public IEnumerator CreatWaitingObj(Action<GameObject> callback)
+    {
+        yield return AssetManager.Instance.LoadAssetAsync<GameObject>(
+            ConfigManager.Instance.cfgPrefab["WaitingCommandObj"].prefabPath, (obj) =>
+            {
+                GameObject waitingObj =Instantiate(obj);
+                waitingObj.transform.Find("ClickBtn").GetComponent<Button>().onClick.AddListener(()=>
+                {
+                    CommandManager.Instance.ClickWaitingObj(waitingObj);
+                });
+                callback?.Invoke(waitingObj);
+            });
+    }
+    
+    public IEnumerator CreatUsedObj(Action<GameObject> callback)
+    {
+        yield return AssetManager.Instance.LoadAssetAsync<GameObject>(
+            ConfigManager.Instance.cfgPrefab["UsedCommandObj"].prefabPath, (obj) =>
+            {
+                GameObject usedObj =Instantiate(obj);
+                usedObj.transform.Find("ClickBtn").GetComponent<Button>().onClick.AddListener(()=>
+                {
+                    CommandManager.Instance.ClickUsedObj(usedObj);
+                });
+                callback?.Invoke(usedObj);
+            });
     }
 }

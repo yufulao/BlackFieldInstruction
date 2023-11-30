@@ -51,9 +51,12 @@ public class CommandMainModel : MonoBehaviour
     {
         if (_usedObjList.Count==0||_usedObjList[_usedObjList.Count - 1].commandEnum!=waitingObj.commandEnum)
         {
-            UsedCommandObj newUsedObj= CommandManager.Instance.AddNewUsedObj(waitingObj.commandEnum, waitingObj.needTime);
-            _usedObjList.Add(newUsedObj);
-            UpdateLastUsedObj();
+            StartCoroutine(CommandManager.Instance.AddNewUsedObj(waitingObj.commandEnum, waitingObj.needTime,
+                (newUsedObj) =>
+                {
+                    _usedObjList.Add(newUsedObj);
+                    UpdateLastUsedObj();
+                }));
             return;
         }
         

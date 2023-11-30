@@ -20,6 +20,7 @@ public class GameManager : MonoSingleton<GameManager>
         _managerList.Add(BgmManager.Instance);
         _managerList.Add(SfxManager.Instance);
         _managerList.Add(SceneManager.Instance);
+        _managerList.Add(UiManager.Instance);
 
         foreach (var manager in _managerList)
         {
