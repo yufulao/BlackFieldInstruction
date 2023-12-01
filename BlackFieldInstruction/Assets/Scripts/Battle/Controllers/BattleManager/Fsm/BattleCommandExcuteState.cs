@@ -7,7 +7,7 @@ public class BattleCommandExcuteState : IFsmState
 {
     public void OnEnter()
     {
-        
+        BattleManager.Instance.BattleCommandExcuteStateEnter();
     }
 
     public void OnUpdate()

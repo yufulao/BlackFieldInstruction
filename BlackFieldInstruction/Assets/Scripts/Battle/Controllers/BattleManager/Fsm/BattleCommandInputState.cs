@@ -11,7 +11,7 @@ public class BattleCommandInputState : IFsmState
 
     public void OnUpdate()
     {
-        BattleManager.Instance.BattleInputStateUpdate();
+
     }
 
     public void OnExit()

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UIElements;
 
 public class GridMap : MonoBehaviour
@@ -10,7 +11,7 @@ public class GridMap : MonoBehaviour
     private int _height;//z轴有几个格子
     private float _cellSize;//每个格子的宽度和长度
     private GridCell[,] _map;
-    private Player _player;
+    private List<GridObject> _allGridObjects;
 
     /// <summary>
     /// 初始化并创建网格地图
@@ -23,8 +24,31 @@ public class GridMap : MonoBehaviour
         _width = width;
         _height = height;
         _cellSize = cellSize;
+        _allGridObjects = new List<GridObject>();
         CreatMap();
         LoadGridObjs();
+    }
+
+    /// <summary>
+    /// 重置网格位置
+    /// </summary>
+    public void ResetGridMap()
+    {
+        for (int i = 0; i < _allGridObjects.Count; i++)
+        {
+            _allGridObjects[i].OnReset();
+        }
+
+        CreatMap();
+        var gridObjList= transform.GetComponentsInChildren<GridObject>();
+        for (int i = 0; i < gridObjList.Length; i++)
+        {
+            _allGridObjects.Add(gridObjList[i]);
+            Vector2Int objPoint= GetPointByWorldPosition(gridObjList[i].transform.position);
+            gridObjList[i].gridObjInfo.originalPoint = objPoint;
+            gridObjList[i].gridObjInfo.currentPoint = objPoint;
+            _map[objPoint.x,objPoint.y].gridObjList.Add(gridObjList[i]);
+        }
     }
     
     /// <summary>
@@ -39,6 +63,19 @@ public class GridMap : MonoBehaviour
             return false;
         
         return _map[x,z].CheckWalkable();
+    }
+    
+    /// <summary>
+    /// 更新单个GridCell
+    /// </summary>
+    /// <param name="gridObject">需要更新的gridObject</param>
+    /// <param name="lastPoint">更新之前的point坐标</param>
+    /// <param name="newPoint">更新之后的point坐标</param>
+    public void UpdateGridObjPoint(GridObject gridObject,Vector2Int lastPoint,Vector2Int newPoint)
+    {
+        gridObject.gridObjInfo.currentPoint = newPoint;
+        _map[lastPoint.x, lastPoint.y].gridObjList.Remove(gridObject);
+        _map[newPoint.x,newPoint.y].gridObjList.Add(gridObject);
     }
     
     /// <summary>
@@ -84,13 +121,31 @@ public class GridMap : MonoBehaviour
     /// </summary>
     private void LoadGridObjs()
     {
+        Player player = null;
+        List<TargetObject> targetObjects = new List<TargetObject>();
+        
         var gridObjList= transform.GetComponentsInChildren<GridObject>();
         for (int i = 0; i < gridObjList.Length; i++)
         {
+            _allGridObjects.Add(gridObjList[i]);
             Vector2Int objPoint= GetPointByWorldPosition(gridObjList[i].transform.position);
             gridObjList[i].gridObjInfo.originalPoint = objPoint;
+            gridObjList[i].gridObjInfo.currentPoint = objPoint;
             _map[objPoint.x,objPoint.y].gridObjList.Add(gridObjList[i]);
+            gridObjList[i].OnInit();
+            
+            if (gridObjList[i] is Player)
+            {
+                player = gridObjList[i] as Player;
+            }
+
+            if (gridObjList[i] is TargetObject)
+            {
+                targetObjects.Add(gridObjList[i] as  TargetObject);
+            }
         }
+
+        GridManager.Instance.SetGridObjectsParams(player,targetObjects);
     }
 
     /// <summary>

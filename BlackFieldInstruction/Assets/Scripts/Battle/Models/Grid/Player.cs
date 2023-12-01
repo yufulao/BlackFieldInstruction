@@ -9,46 +9,71 @@ public class Player : GridObject
     private Rigidbody _rb;
     private Animator _animator;
     private ForwardType _currentForwardType;
-    private GridCell _currentCell;
+    private ForwardType _originalForwardType;
+    private Tweener _tweener;
+
+    public override void OnInit()
+    {
+        base.OnInit();
+        _originalForwardType = ForwardType.Up;
+        _currentForwardType = _originalForwardType;
+        _rb = GetComponent<Rigidbody>();
+        _animator = GetComponent<Animator>();
+    }
+
+    public override void OnReset()
+    {
+        base.OnReset();
+        StartCoroutine(WaitForRotate(_originalForwardType));
+    }
 
     /// <summary>
     /// player移动指令
     /// </summary>
     /// <param name="commandEnum">指令类型</param>
-    /// <param name="callback">返回是否执行成功</param>
     /// <param name="during">移动时间</param>
     /// <returns></returns>
-    public IEnumerator MoveCommand(CommandEnum commandEnum,Action<bool> callback=null,float during=1f)
+    public IEnumerator MoveCommand(CommandType commandEnum,float during=1f)
     {
-        Vector2Int point = _currentCell.GetPoint();
-        Vector2Int targetPoint = point;
+        Vector2Int lastPoint=gridObjInfo.currentPoint;
+        ForwardType targetForward = _currentForwardType;
+        Vector2Int newPoint=lastPoint;
         switch (commandEnum)
         {
-            case CommandEnum.Up:
-                targetPoint = new Vector2Int(point.x, point.y + 1);
+            case CommandType.Up:
+                targetForward = ForwardType.Up;
+                newPoint = new Vector2Int(lastPoint.x, lastPoint.y + 1);
                 break;
-            case CommandEnum.Down:
-                targetPoint = new Vector2Int(point.x, point.y-1);
+            case CommandType.Down:
+                targetForward = ForwardType.Down;
+                newPoint = new Vector2Int(lastPoint.x, lastPoint.y-1);
                 break;
-            case CommandEnum.Left:
-                targetPoint = new Vector2Int(point.x-1, point.y);
+            case CommandType.Left:
+                targetForward = ForwardType.Left;
+                newPoint = new Vector2Int(lastPoint.x-1, lastPoint.y);
                 break;
-            case CommandEnum.Right:
-                targetPoint = new Vector2Int(point.x+1, point.y);
+            case CommandType.Right:
+                targetForward = ForwardType.Right;
+                newPoint = new Vector2Int(lastPoint.x+1, lastPoint.y);
                 break;
-            case CommandEnum.Wait:
+            case CommandType.Wait:
                 break;
-        }
-
-        if (GridManager.Instance.CheckWalkable(targetPoint.x, targetPoint.y))
-        {
-            _rb.DOMove(GridManager.Instance.GetWorldPositionByPoint(targetPoint.x, targetPoint.y), during);
-            yield return during;
-            callback?.Invoke(true);
-            yield break;
         }
         
-        callback?.Invoke(false);
+        yield return StartCoroutine(WaitForRotate(targetForward));
+        //Debug.Log(GridManager.Instance.CheckWalkable(targetPoint.x, targetPoint.y));
+        // Debug.Log(newPoint.x+"  "+newPoint.y);
+        if (GridManager.Instance.CheckWalkable(newPoint.x, newPoint.y))
+        {
+            _tweener=_rb.DOMove(GridManager.Instance.GetWorldPositionByPoint(newPoint.x, newPoint.y), during);
+            //Debug.Log(GridManager.Instance.GetWorldPositionByPoint(targetPoint.x, targetPoint.y));
+            yield return _tweener.WaitForCompletion();
+            GridManager.Instance.UpdateGridObjPoint(this,lastPoint,newPoint);//更新GridObj
+        }
+        if (!GridManager.Instance.CheckPlayerGetTarget())
+        {
+            CommandManager.Instance.ExcuteCommand();
+        }
     }
     
     /// <summary>
@@ -66,20 +91,20 @@ public class Player : GridObject
         switch (targetForward)
         {
             case ForwardType.Up:
-                transform.DOLookAt(Vector3.forward,during);
+                _tweener=transform.DORotate(new Vector3(0,0,0),during);
                 break;
             case ForwardType.Down:
-                transform.DOLookAt(Vector3.back,during);
+                _tweener=transform.DORotate(new Vector3(0,180,0),during);
                 break;
             case ForwardType.Left:
-                transform.DOLookAt(Vector3.left,during);
+                _tweener=transform.DORotate(new Vector3(0,-90,0),during);
                 break;
             case ForwardType.Right:
-                transform.DOLookAt(Vector3.right,during);
+                _tweener=transform.DORotate(new Vector3(0,90,0),during);
                 break;
         }
 
-        yield return during;
+        yield return _tweener.WaitForCompletion();
         _currentForwardType = targetForward;
     } 
     

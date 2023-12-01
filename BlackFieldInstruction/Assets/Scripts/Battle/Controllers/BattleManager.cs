@@ -8,8 +8,8 @@ using UnityEngine;
 public class BattleManager:MonoSingleton<BattleManager>
 {
     private RowCfgStage _currentStage;
-    
     private BattleFsm _battleFsm;
+    private bool _win;
 
     private void Update()
     {
@@ -21,6 +21,7 @@ public class BattleManager:MonoSingleton<BattleManager>
     /// </summary>
     public void OnInit()
     {
+        InitBattleParams();
         InitBattleFsm();
     }
 
@@ -34,6 +35,9 @@ public class BattleManager:MonoSingleton<BattleManager>
         _battleFsm.ChangeFsmState(typeof(BattleInitState));
     }
 
+    /// <summary>
+    /// BattleInit阶段的enter
+    /// </summary>
     public void BattleInitStateEnter()
     {
         CommandManager.Instance.InitCommandManager(_currentStage);
@@ -43,53 +47,61 @@ public class BattleManager:MonoSingleton<BattleManager>
         _battleFsm.ChangeFsmState(typeof(BattleCommandInputState));
     }
 
+    /// <summary>
+    /// battleInput阶段的enter
+    /// </summary>
     public void BattleInputStateEnter()
     {
         CommandManager.Instance.OpenCommandView();
     }
 
     /// <summary>
-    /// 指令输入阶段Update监听
+    /// 开始执行指令，预留给commandViewCtrl注册startBtn的click监听
     /// </summary>
-    public void BattleInputStateUpdate()
+    public void ChangeToCommandExcuteState()
     {
-        
-    }
-
-    /// <summary>
-    /// 结束输入指令btn事件
-    /// </summary>
-    public void FinishCommandInput()
-    {
+        CommandManager.Instance.CloseCommandView();
         _battleFsm.ChangeFsmState(typeof(BattleCommandExcuteState));
     }
 
     /// <summary>
-    /// 结束执行指令阶段
+    /// battleCommandExcute阶段的enter
     /// </summary>
-    public void FinishCommandExcute()
+    public void BattleCommandExcuteStateEnter()
     {
-        _battleFsm.ChangeFsmState(typeof(BattleEndState));
+        CommandManager.Instance.OnExcuteCommandStart();
     }
 
     /// <summary>
-    /// 检测战斗结果
+    /// 战斗中结束，传入战斗结果
     /// </summary>
     /// <returns></returns>
-    public bool CheckBattleEnd()
+    public void BattleEnd(bool win)
     {
-        return false;
+        _win = win;
+        _battleFsm.ChangeFsmState(typeof(BattleEndState));
+    }
+    
+    /// <summary>
+    /// battleEndState阶段的enter
+    /// </summary>
+    public void BattleEndStateEnter()
+    {
+        Debug.Log("游戏结束"+_win);
+        if (!_win)
+        {
+            ResetBattle();
+        }
     }
 
     /// <summary>
-    /// 重置战斗btn事件，(重新进入场景)
+    /// 重置战斗btn事件
     /// </summary>
-    public void ResetBattle()
+    private void ResetBattle()
     {
-        StartCoroutine(SceneManager.Instance.ChangeSceneAsync(_currentStage.scenePath, (sceneInstance) =>
-        {
-            _battleFsm.ChangeFsmState(typeof(BattleCommandInputState));
-        }));
+        ResetBattleParams();
+        GridManager.Instance.ResetGridMap();
+        _battleFsm.ChangeFsmState(typeof(BattleCommandInputState));
     }
     
     /// <summary>
@@ -99,6 +111,22 @@ public class BattleManager:MonoSingleton<BattleManager>
     private void LoadStageCfg(string stageName)
     {
         _currentStage=ConfigManager.Instance.cfgStage[stageName];
+    }
+
+    /// <summary>
+    /// 设置战斗的参数
+    /// </summary>
+    private void InitBattleParams()
+    {
+        _win = false;
+    }
+
+    /// <summary>
+    /// 重置战斗参数
+    /// </summary>
+    private void ResetBattleParams()
+    {
+        _win = false;
     }
     
     /// <summary>

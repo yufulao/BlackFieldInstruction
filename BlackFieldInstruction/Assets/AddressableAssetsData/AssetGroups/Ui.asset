@@ -18,7 +18,7 @@ MonoBehaviour:
   m_GUID: 804023a83f343b74598f304db36799d6
   m_SerializeEntries:
   - m_GUID: 3d333d9d171c8ea40a71184a1f30a191
-    m_Address: Assets/AddressableAssets/Ui/CommandView.prefab
+    m_Address: Assets/AddressableAssets/UI/CommandView.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

@@ -27,16 +27,24 @@ public class CommandViewModel:MonoBehaviour
     }
 
     /// <summary>
-    /// 点击waitingObj
+    /// 点击waitingObj时处理的数据
     /// </summary>
     /// <param name="waitingObj"></param>
     public void ClickWaitingObj(WaitingCommandObj waitingObj)
     {
+        if (waitingObj.count<=0)
+        {
+            return;
+        }
         _currentNeedTime+=waitingObj.needTime;
         RemoveWaitingObj(waitingObj);
         AddUsedObj(waitingObj);
     }
 
+    /// <summary>
+    /// 点击usedObj时处理的数据
+    /// </summary>
+    /// <param name="usedObj"></param>
     public void ClickUsedObj(UsedCommandObj usedObj)
     {
         WaitingCommandObj waitingObj= AddWaitingObj(usedObj.commandEnum);
@@ -44,6 +52,19 @@ public class CommandViewModel:MonoBehaviour
         RemoveUsedObj(usedObj);
     }
 
+    /// <summary>
+    /// 获取usedCommandList
+    /// </summary>
+    /// <returns></returns>
+    public List<UsedCommandObj> GetUsedObjList()
+    {
+        return _usedObjList;
+    }
+
+    /// <summary>
+    /// usedObj加一
+    /// </summary>
+    /// <param name="waitingObj"></param>
     private void AddUsedObj(WaitingCommandObj waitingObj)
     {
         if (_usedObjList.Count==0||_usedObjList[_usedObjList.Count - 1].commandEnum!=waitingObj.commandEnum)
@@ -66,7 +87,7 @@ public class CommandViewModel:MonoBehaviour
     /// waitingObj加1
     /// </summary>
     /// <param name="commandEnum"></param>
-    private WaitingCommandObj AddWaitingObj(CommandEnum commandEnum)
+    private WaitingCommandObj AddWaitingObj(CommandType commandEnum)
     {
         WaitingCommandObj waitingObj=null;
         for (int i = 0; i < _waitingObjList.Count; i++)
@@ -102,6 +123,10 @@ public class CommandViewModel:MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// usedObj减一
+    /// </summary>
+    /// <param name="usedObj"></param>
     private void RemoveUsedObj(UsedCommandObj usedObj)
     {
         usedObj.count--;
@@ -131,6 +156,5 @@ public class CommandViewModel:MonoBehaviour
         UsedCommandObj lastUsedObj = _usedObjList[_usedObjList.Count - 1];
         lastUsedObj.currentTime = _currentNeedTime;
         CommandViewCtrl.Instance.UpdateLastUsedObjView(lastUsedObj);
-        return;
     }
 }

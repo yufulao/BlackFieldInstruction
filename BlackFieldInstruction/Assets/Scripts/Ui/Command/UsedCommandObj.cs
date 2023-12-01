@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UsedCommandObj : MonoBehaviour
 {
     [HideInInspector]
-    public CommandEnum commandEnum;
+    public CommandType commandEnum;
     [HideInInspector]
     public int count;
     [HideInInspector]
@@ -15,7 +15,13 @@ public class UsedCommandObj : MonoBehaviour
     public Text currentTimeText;
     public Text countText;
 
-    public void Init(CommandEnum commandEnumT,int countT,int currentTimeT)
+    /// <summary>
+    /// 生成usedObj时初始化相关属性
+    /// </summary>
+    /// <param name="commandEnumT"></param>
+    /// <param name="countT"></param>
+    /// <param name="currentTimeT"></param>
+    public void Init(CommandType commandEnumT,int countT,int currentTimeT)
     {
         commandEnum = commandEnumT;
         count = countT;

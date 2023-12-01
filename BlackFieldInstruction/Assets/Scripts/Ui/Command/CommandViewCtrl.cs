@@ -23,7 +23,7 @@ public class CommandViewCtrl : MonoSingleton<CommandViewCtrl>,UICtrlBase
 
     public void BindEvent()
     {
-        
+        _view.startBtn.onClick.AddListener(()=>{BattleManager.Instance.ChangeToCommandExcuteState();});
     }
 
     public void OpenRoot()
@@ -34,6 +34,11 @@ public class CommandViewCtrl : MonoSingleton<CommandViewCtrl>,UICtrlBase
     public void CloseRoot()
     {
         _view.root.gameObject.SetActive(false);
+    }
+
+    public List<UsedCommandObj> GetAllUsedObj()
+    {
+        return _model.GetUsedObjList();
     }
 
     /// <summary>
@@ -56,7 +61,7 @@ public class CommandViewCtrl : MonoSingleton<CommandViewCtrl>,UICtrlBase
             GameObject obj = CreatWaitingObj();
             obj.transform.SetParent(_view.waitingObjContainer);
             WaitingCommandObj waitingObjTemp=obj.GetComponent<WaitingCommandObj>();
-            CommandEnum commandEnum = (CommandEnum) pair.Key;
+            CommandType commandEnum = (CommandType) pair.Key;
             RowCfgCommand rowCfgCommand = ConfigManager.Instance.cfgCommand[commandEnum.ToString()];
             waitingObjTemp.transform.Find("ClickBtn").Find("Text (Legacy)").GetComponent<Text>().text = commandEnum.ToString();
             waitingObjTemp.Init(commandEnum, pair.Value,rowCfgCommand.needTime);
@@ -74,7 +79,7 @@ public class CommandViewCtrl : MonoSingleton<CommandViewCtrl>,UICtrlBase
     /// <param name="commandEnum"></param>
     /// <param name="needTime"></param>
     /// <returns></returns>
-    public UsedCommandObj AddNewUsedObj(CommandEnum commandEnum,int needTime)
+    public UsedCommandObj AddNewUsedObj(CommandType commandEnum,int needTime)
     {
         GameObject obj = CreatUsedObj();
         obj.transform.SetParent(_view.usedObjContainer);
@@ -89,7 +94,7 @@ public class CommandViewCtrl : MonoSingleton<CommandViewCtrl>,UICtrlBase
     /// <param name="waitingObj"></param>
     public void UpdateWaitingObjView(WaitingCommandObj waitingObj)
     {
-        SetClickBtnMaskActive(waitingObj,waitingObj.count>0);//当waitingObj的count为0时，关闭waitingObj，否则启用
+        SetWaitingObjClickBtnMaskActive(waitingObj,waitingObj.count>0);//当waitingObj的count为0时，关闭waitingObj，否则启用
         waitingObj.countText.text = "x" + waitingObj.count.ToString();
         waitingObj.needTimeText.text = waitingObj.needTime.ToString() + "s";
     }
@@ -120,11 +125,20 @@ public class CommandViewCtrl : MonoSingleton<CommandViewCtrl>,UICtrlBase
         
     }
 
-    private void SetClickBtnMaskActive(WaitingCommandObj waitingObj,bool canClick)
+    /// <summary>
+    /// 当waitingObj的count为0时，开启btn的遮罩阻挡点击
+    /// </summary>
+    /// <param name="waitingObj"></param>
+    /// <param name="canClick"></param>
+    private void SetWaitingObjClickBtnMaskActive(WaitingCommandObj waitingObj,bool canClick)
     {
         waitingObj.transform.Find("ClickBtnMask").gameObject.SetActive(!canClick);
     }
 
+    /// <summary>
+    /// 生成一个新的waitingObj
+    /// </summary>
+    /// <returns></returns>
     private GameObject CreatWaitingObj()
     {
         GameObject waitingObj =GameManager.Instantiate(AssetManager.Instance.LoadAsset<GameObject>(ConfigManager.Instance.cfgPrefab["WaitingCommandObj"].prefabPath));
@@ -135,6 +149,10 @@ public class CommandViewCtrl : MonoSingleton<CommandViewCtrl>,UICtrlBase
         return waitingObj;
     }
     
+    /// <summary>
+    /// 生成一个新的usedObj
+    /// </summary>
+    /// <returns></returns>
     private GameObject CreatUsedObj()
     {
         GameObject usedObj=GameManager.Instantiate(AssetManager.Instance.LoadAsset<GameObject>(ConfigManager.Instance.cfgPrefab["UsedCommandObj"].prefabPath));

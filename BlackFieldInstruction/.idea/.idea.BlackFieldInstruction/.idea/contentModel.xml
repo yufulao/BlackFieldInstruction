@@ -84,6 +84,17 @@
           </e>
         </e>
         <e p="Res" t="Include">
+          <e p="Graveyard Kit" t="Include">
+            <e p="License.txt" t="Include" />
+            <e p="Models" t="Include">
+              <e p="DAE format" t="Include" />
+              <e p="FBX format" t="Include" />
+              <e p="GLTF format" t="Include" />
+              <e p="OBJ format" t="Include" />
+              <e p="STL format" t="Include" />
+            </e>
+            <e p="Previews" t="Include" />
+          </e>
           <e p="Platformer Kit" t="Include">
             <e p="License.txt" t="Include" />
             <e p="Models" t="Include">
@@ -128,18 +139,13 @@
               <e p="GridManager.cs" t="Include" />
             </e>
             <e p="Models" t="Include">
-              <e p="Command" t="Include">
-                <e p="CommandEnum.cs" t="Include" />
-                <e p="CommandList.cs" t="Include" />
-              </e>
               <e p="Grid" t="Include">
-                <e p="ForwardType.cs" t="Include" />
                 <e p="GridCell.cs" t="Include" />
                 <e p="GridInfo.cs" t="Include" />
                 <e p="GridMap.cs" t="Include" />
                 <e p="GridObject.cs" t="Include" />
-                <e p="GridObjType.cs" t="Include" />
                 <e p="Player.cs" t="Include" />
+                <e p="TargetObject.cs" t="Include" />
               </e>
             </e>
             <e p="Views" t="Include">
@@ -155,6 +161,10 @@
             <e p="CfgUi.cs" t="Include" />
           </e>
           <e p="ConfigDef" t="Include" />
+          <e p="Define" t="Include">
+            <e p="CommandType.cs" t="Include" />
+            <e p="ForwardType.cs" t="Include" />
+          </e>
           <e p="Manager" t="Include">
             <e p="AssetManager.cs" t="Include" />
             <e p="BgmManager.cs" t="Include" />
@@ -188,7 +198,9 @@
               <e p="UiCtrlBase.cs" t="Include" />
             </e>
           </e>
-          <e p="Utils.cs" t="Include" />
+          <e p="Utils" t="Include">
+            <e p="Utils.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="BlackFieldInstruction.sln" t="IncludeFlat" />

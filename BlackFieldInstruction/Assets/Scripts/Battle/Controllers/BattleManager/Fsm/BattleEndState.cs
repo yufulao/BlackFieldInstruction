@@ -6,7 +6,7 @@ public class BattleEndState : IFsmState
 {
     public void OnEnter()
     {
-        
+        BattleManager.Instance.BattleEndStateEnter();
     }
 
     public void OnUpdate()
