@@ -26,5 +26,6 @@ public class UsedCommandObj : MonoBehaviour
         commandEnum = commandEnumT;
         count = countT;
         currentTime = currentTimeT;
+        transform.Find("ClickBtn").Find("Text (Legacy)").GetComponent<Text>().text = commandEnum.ToString();
     }
 }

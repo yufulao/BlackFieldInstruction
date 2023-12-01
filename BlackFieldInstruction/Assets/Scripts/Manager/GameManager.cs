@@ -13,6 +13,7 @@ public class GameManager : MonoSingleton<GameManager>
     {
         base.Awake();
         DontDestroyOnLoad(this.gameObject);
+        Application.targetFrameRate = 120;
         
         _managerList.Add(EventManager.Instance);
         _managerList.Add(AssetManager.Instance);

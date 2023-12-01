@@ -5,4 +5,4 @@ Up#1#None#None#None#None
 Down#1#None#None#None#None
 Right#1#None#None#None#None
 Left#1#None#None#None#None
-Wait#2#None#None#None#None
+Wait#1#None#None#None#None

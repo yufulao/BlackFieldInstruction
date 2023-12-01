@@ -1,0 +1,1651 @@
+Using pre-set license
+Built from 'HEAD' branch; Version is '2021.3.14f1c1 (3aa525a93a5f) revision 3843365'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22621) 64bit CoreCountrySpecific' Language: 'zh' Physical Memory: 16048 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\app\Unity Hub\2021.3.14f1c1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker8
+-projectPath
+D:/Project/BlackFieldInstruction/BlackFieldInstruction
+-logFile
+Logs/AssetImportWorker8.log
+-srvPort
+60075
+Successfully changed project path to: D:/Project/BlackFieldInstruction/BlackFieldInstruction
+D:/Project/BlackFieldInstruction/BlackFieldInstruction
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+AS: AutoStreaming module initializing.
+Refreshing native plugins compatible for Editor in 131.44 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.14f1c1 (3aa525a93a5f)
+[Subsystems] Discovering subsystems at path D:/app/Unity Hub/2021.3.14f1c1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Project/BlackFieldInstruction/BlackFieldInstruction/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2520)
+    Vendor:   NVIDIA
+    VRAM:     6010 MB
+    Driver:   31.0.15.4601
+Initialize mono
+Mono path[0] = 'D:/app/Unity Hub/2021.3.14f1c1/Editor/Data/Managed'
+Mono path[1] = 'D:/app/Unity Hub/2021.3.14f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/app/Unity Hub/2021.3.14f1c1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56012
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/app/Unity Hub/2021.3.14f1c1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: D:/app/Unity Hub/2021.3.14f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003253 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 141.97 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.688 seconds
+Domain Reload Profiling:
+	ReloadAssembly (688ms)
+		BeginReloadAssembly (58ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (537ms)
+			LoadAssemblies (57ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (110ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (346ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (58ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (142ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (99ms)
+				ProcessInitializeOnLoadMethodAttributes (46ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.010349 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 171.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.703 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1704ms)
+		BeginReloadAssembly (210ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (120ms)
+		EndReloadAssembly (1365ms)
+			LoadAssemblies (106ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (344ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (66ms)
+			SetupLoadedEditorAssemblies (806ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (10ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (172ms)
+				BeforeProcessingInitializeOnLoad (109ms)
+				ProcessInitializeOnLoadAttributes (420ms)
+				ProcessInitializeOnLoadMethodAttributes (89ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Switching render pipeline dd1859b8c186aa14cab60c0866ed63b8 -> ecbd363870e07455ea237f5753668d30
+Refreshing native plugins compatible for Editor in 2.15 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6258 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (416.6 KB). Loaded Objects now: 6754.
+Memory consumption went from 261.4 MB to 261.0 MB.
+Total: 7.203400 ms (FindLiveObjects: 0.596400 ms CreateObjectMapping: 0.530000 ms MarkObjects: 5.843700 ms  DeleteObjects: 0.232000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:srp/default-pipeline: cedb6383070e4755ae32f7753566d803 -> dd81958b1c68aa41ac6bc08066de368b
+========================================================================
+Received Import Request.
+  Time since last request: 272057.768005 seconds.
+  path: Assets/Res/FlatKit/Demos/[Water] Pool/Pool Scene - Materials/PoolScene_Mat 1-OverrideMaterialForBuoyancy.mat
+  artifactKey: Guid(d535c1b18ffe645a6bd12f9a4a59bf88) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Water] Pool/Pool Scene - Materials/PoolScene_Mat 1-OverrideMaterialForBuoyancy.mat using Guid(d535c1b18ffe645a6bd12f9a4a59bf88) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4d50cd400405998b37e9cfe6a803972f') in 0.270554 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Res/FlatKit/Demos/[Water] Various Presets/Water Vessels Scene - Materials/WaterObjectsScene_Plane.mat
+  artifactKey: Guid(12fc058f636b349b5806050ce772178d) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Water] Various Presets/Water Vessels Scene - Materials/WaterObjectsScene_Plane.mat using Guid(12fc058f636b349b5806050ce772178d) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '732f1299dea03d8f6acbb8e38347fdbe') in 0.030887 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Res/FlatKit/Demos/[Water] Various Presets/Water Vessels Scene - Materials/WaterObjectsScene_Vessel Mat 3.mat
+  artifactKey: Guid(bd48db96657f24eca935a523849ff343) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Water] Various Presets/Water Vessels Scene - Materials/WaterObjectsScene_Vessel Mat 3.mat using Guid(bd48db96657f24eca935a523849ff343) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e7441743793991704e4a8fbe7608ac34') in 0.030072 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Res/FlatKit/Demos/[Water] Various Presets/Water Vessels Scene - Materials/WaterObjectScene_Water_06.mat
+  artifactKey: Guid(ea6e499924d1c4de8b13906cf21a9173) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Water] Various Presets/Water Vessels Scene - Materials/WaterObjectScene_Water_06.mat using Guid(ea6e499924d1c4de8b13906cf21a9173) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3eaf4f4847bc10d878c92ee42357698e') in 0.070397 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] Built-In.unitypackage
+  artifactKey: Guid(f4227764308e84f89a765fbf315e2945) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] Built-In.unitypackage using Guid(f4227764308e84f89a765fbf315e2945) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c5419dccbab37e680282158f9e55b86f') in 0.039530 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Desert/Materials/Pillar Variant 3.mat
+  artifactKey: Guid(075fd7b50783749e49a0f49219535275) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Desert/Materials/Pillar Variant 3.mat using Guid(075fd7b50783749e49a0f49219535275) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1c578787d8f4fd990026c4cdd17df9eb') in 0.015823 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Car/Car-Models/PaddleCircle-01.fbx
+  artifactKey: Guid(c95ef0a1359ad4756bdac7d1b32cd61a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Car/Car-Models/PaddleCircle-01.fbx using Guid(c95ef0a1359ad4756bdac7d1b32cd61a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '484c0e7ee6e485c67cf03128b4425926') in 0.049669 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Wanderer/Wanderer-FogSettings.asset
+  artifactKey: Guid(d18dac82fe9b0473289115b2531228d9) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Wanderer/Wanderer-FogSettings.asset using Guid(d18dac82fe9b0473289115b2531228d9) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0f49f11e724e48b90df4714bb55919fb') in 0.028560 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Res/FlatKit/Demos/[Water] Ocean Islands/Ocean Islands Scene - Models/Water_Plane_01.fbx
+  artifactKey: Guid(776e5ebee7bd44b80b834fa98ac15f3a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Water] Ocean Islands/Ocean Islands Scene - Models/Water_Plane_01.fbx using Guid(776e5ebee7bd44b80b834fa98ac15f3a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4734472d6a4b6c2bae5c5665ec07920b') in 0.019395 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Wanderer/Wanderer-Models/Pillar01.fbx
+  artifactKey: Guid(e4427a1b9f2d64588a5ae9f29355d7b2) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Wanderer/Wanderer-Models/Pillar01.fbx using Guid(e4427a1b9f2d64588a5ae9f29355d7b2) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0ac3b2aa31dbf3178f85fc3103aa3aae') in 0.020564 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Racing Car/Models/RC-Road.fbx
+  artifactKey: Guid(e53a7d567c9a04e9d9951a94bf01df8b) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Racing Car/Models/RC-Road.fbx using Guid(e53a7d567c9a04e9d9951a94bf01df8b) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '202e48b678ed465f133236ebc2429fbe') in 0.022573 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Res/FlatKit/PresetsShared/Presets/Toon01__StylSurf_Single.preset
+  artifactKey: Guid(c8225e975668746b3bce886098d69a54) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/PresetsShared/Presets/Toon01__StylSurf_Single.preset using Guid(c8225e975668746b3bce886098d69a54) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6f83f322ae9ddfedd1d12056d10745bf') in 0.017740 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] IslandWithTrees/IslandWithTrees-Materials/IslandWithTrees-Stone.mat
+  artifactKey: Guid(52763759e95824a319cde1e82245c4c4) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] IslandWithTrees/IslandWithTrees-Materials/IslandWithTrees-Stone.mat using Guid(52763759e95824a319cde1e82245c4c4) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '641cbc74764f11eb7adbdb78946b46b4') in 0.027207 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Wanderer/Wanderer-Materials/Wanderer-Cloud.mat
+  artifactKey: Guid(15101f2fbe34f490fb1b7731fbbb81ee) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Wanderer/Wanderer-Materials/Wanderer-Cloud.mat using Guid(15101f2fbe34f490fb1b7731fbbb81ee) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8caeb613cb2d8af11334088247dd01e1') in 0.017629 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Desert/Models/RockPillar9.fbx
+  artifactKey: Guid(9d102d446adbe409da559bce0bc1d462) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Desert/Models/RockPillar9.fbx using Guid(9d102d446adbe409da559bce0bc1d462) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'be0de2385b52798834e8c0f06ea84b67') in 0.017379 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/Res/FlatKit/PresetsShared/Presets/ToonBlurry__StylSurf_Single_HGrad.preset
+  artifactKey: Guid(98843397c2248465c9303d1dac1ee06e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/PresetsShared/Presets/ToonBlurry__StylSurf_Single_HGrad.preset using Guid(98843397c2248465c9303d1dac1ee06e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '54c619d4987fe65231ffa53180059271') in 0.035438 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Valley/Valley-Textures/Valley-Soil03.png
+  artifactKey: Guid(bf3cf40270ab546c2915c2a8715801cc) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Valley/Valley-Textures/Valley-Soil03.png using Guid(bf3cf40270ab546c2915c2a8715801cc) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '669788a79866335f30ca05e544091c2a') in 0.040471 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] IslandWithTrees/IslandWithTrees-Models/Leaftree-v1-02.fbx
+  artifactKey: Guid(e99b4c16419dd47c892e2e2a8df5ef72) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] IslandWithTrees/IslandWithTrees-Models/Leaftree-v1-02.fbx using Guid(e99b4c16419dd47c892e2e2a8df5ef72) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '56568e50243b4ae482c00ee6253baf70') in 0.035756 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Core/Dustyroom.RenderFeatures.Runtime.asmref
+  artifactKey: Guid(a7954c598f36eff428bb843e12eaf350) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Core/Dustyroom.RenderFeatures.Runtime.asmref using Guid(a7954c598f36eff428bb843e12eaf350) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ac9717d0bf5aa6027896d5893d3e6760') in 0.023531 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Res/FlatKit/Demos/[Water] Various Presets/Water Vessels Scene - Materials/WaterObjectsScene_Vessel Mat 7.mat
+  artifactKey: Guid(5d7245d2f923f4c759c7fe3711442d64) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Water] Various Presets/Water Vessels Scene - Materials/WaterObjectsScene_Vessel Mat 7.mat using Guid(5d7245d2f923f4c759c7fe3711442d64) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8bf6518e8ded5e68f79abbd863c2fe73') in 0.018901 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/RenderFeatures/Pixelation/PixelationWrap.shadergraph
+  artifactKey: Guid(6b2177cf82af36949b9a8d210c2b4962) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/RenderFeatures/Pixelation/PixelationWrap.shadergraph using Guid(6b2177cf82af36949b9a8d210c2b4962) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'df8036806291e8c868582afe0f0663ae') in 0.022105 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_11.png
+  artifactKey: Guid(f4c0dd8067deb48b097d853f1cd72b6a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_11.png using Guid(f4c0dd8067deb48b097d853f1cd72b6a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a94908183dedc15ba06c0462114d5cc6') in 0.058958 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_09.png
+  artifactKey: Guid(e9a49b952ee904c22913fa9818a060e6) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_09.png using Guid(e9a49b952ee904c22913fa9818a060e6) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0058e112439cdcbec6d91bd11630834a') in 0.051698 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Editor/ExternalAttributes.Editor.asmdef
+  artifactKey: Guid(625525e52d3f2a642ada60b456fe20d2) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Editor/ExternalAttributes.Editor.asmdef using Guid(625525e52d3f2a642ada60b456fe20d2) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c2f7228d44adaf6240bca64a154a648e') in 0.017829 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_17.png
+  artifactKey: Guid(e4b3b6e8bc5f34f0bb7247a1c2e18e99) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_17.png using Guid(e4b3b6e8bc5f34f0bb7247a1c2e18e99) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '61876cecba613714c9ca2abe814f08ff') in 0.077244 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_16.png
+  artifactKey: Guid(062db1959aabc4afb95dd37cf1c09dd6) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_16.png using Guid(062db1959aabc4afb95dd37cf1c09dd6) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4057070824e983f729f592a9403d4596') in 0.059062 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_15.png
+  artifactKey: Guid(15f4dcc04cfab405486b7f5b1efb7e22) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_15.png using Guid(15f4dcc04cfab405486b7f5b1efb7e22) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '62ecd25ddf024758ab0ae10d5b8e8c46') in 0.072034 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_08.png
+  artifactKey: Guid(0623839c566024935a21928df8bfba56) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_08.png using Guid(0623839c566024935a21928df8bfba56) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'aa4ea635dfa0ea794f5b4e915ca065cc') in 0.076379 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set3/Car-Set3-CarChrome2.mat
+  artifactKey: Guid(d24e706e824bc408ebac74bc43c21ed3) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set3/Car-Set3-CarChrome2.mat using Guid(d24e706e824bc408ebac74bc43c21ed3) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '122e7c394b68a30d28d0e1c1e86e7e3e') in 0.016623 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set2/Car-Set2-Car4Body-2.mat
+  artifactKey: Guid(27ce3a584d6484f8fbe43fafe9ba00f5) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set2/Car-Set2-Car4Body-2.mat using Guid(27ce3a584d6484f8fbe43fafe9ba00f5) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f56fe2b2b74879dbacae72f7835de1d2') in 0.017627 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set1/Car-Set1-Windows.mat
+  artifactKey: Guid(ce73e3b0b1ff34be89316c372e7dd2d1) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set1/Car-Set1-Windows.mat using Guid(ce73e3b0b1ff34be89316c372e7dd2d1) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5122c43f0a80ad1fde478ebc4f37acd1') in 0.013845 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set1/Car-Set1-Car2Chrome2.mat
+  artifactKey: Guid(216bc1afbd31e4ffc9900ed3ea656a65) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set1/Car-Set1-Car2Chrome2.mat using Guid(216bc1afbd31e4ffc9900ed3ea656a65) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3df38874f8aac2ca2c7215a5345fac99') in 0.016515 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set1/Car-Set1-Car2Body.mat
+  artifactKey: Guid(29f5d3455b4d3479ab9f6799b2a9092e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set1/Car-Set1-Car2Body.mat using Guid(29f5d3455b4d3479ab9f6799b2a9092e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b9daed01c8b2971941e32c5b4173ad2a') in 0.016091 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/RenderFeatures/Resources/FlatKitOutline.shader
+  artifactKey: Guid(2e4419296dd04b32bcc48a56ac645aa9) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/RenderFeatures/Resources/FlatKitOutline.shader using Guid(2e4419296dd04b32bcc48a56ac645aa9) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4b625245ecb77cee52c0a8142ea0575f') in 0.017095 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Res/FlatKit/Demos/[Water] Various Presets/Water Vessels Scene - Models/WaterCylinder.fbx
+  artifactKey: Guid(945c640891ca74c8e93b5812990e8a5f) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Water] Various Presets/Water Vessels Scene - Models/WaterCylinder.fbx using Guid(945c640891ca74c8e93b5812990e8a5f) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c6253088512446c12c4758572e1a0f8f') in 0.027826 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set1/Car-Set1-Car1Plates.mat
+  artifactKey: Guid(783e6eb0854334fc98fdba1a3f26ae1e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set1/Car-Set1-Car1Plates.mat using Guid(783e6eb0854334fc98fdba1a3f26ae1e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c4c0e9e7ad3c538a507c2a6797cf25e1') in 0.018112 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/RenderFeatures/Outline/OutlineSettings.cs
+  artifactKey: Guid(130791d3e20646d2b6d81688877b0909) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/RenderFeatures/Outline/OutlineSettings.cs using Guid(130791d3e20646d2b6d81688877b0909) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '36379d63ddd9cf186314150815f28e6b') in 0.024396 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/RenderFeatures/Fog/FogCore.hlsl
+  artifactKey: Guid(44d13df04220413aa6b3f8ee1597a610) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/RenderFeatures/Fog/FogCore.hlsl using Guid(44d13df04220413aa6b3f8ee1597a610) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7ca8f8d2cadad8d06331e50441fbb0f5') in 0.017912 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] NormalMapsTree/NormalMapsTree-Textures/NormalMap_Tree_Trunk.png
+  artifactKey: Guid(d3bdc730c91fd476ebc39738a363ef25) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] NormalMapsTree/NormalMapsTree-Textures/NormalMap_Tree_Trunk.png using Guid(d3bdc730c91fd476ebc39738a363ef25) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5ef01c9a617958d7834290ace379357e') in 0.059084 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Wanderer/Wanderer-Models/Rocks_Small02.fbx
+  artifactKey: Guid(f40972a69d3e6470caab0528da1debf7) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Wanderer/Wanderer-Models/Rocks_Small02.fbx using Guid(f40972a69d3e6470caab0528da1debf7) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5fc2cdc6bcdae5282913c33cfb217d6f') in 0.018676 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Res/FlatKit/PresetsShared/Materials/SimpleCel01_StylSurf_Single.mat
+  artifactKey: Guid(631d28fabcf7c46c2a30a647eef5b155) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/PresetsShared/Materials/SimpleCel01_StylSurf_Single.mat using Guid(631d28fabcf7c46c2a30a647eef5b155) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2ab5054e96d4c3037b8f196d7c92eb55') in 0.030396 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Res/FlatKit/Shaders/GradientSkybox/Editor/GradientSkyboxEditor.cs
+  artifactKey: Guid(fb06f6d66c6c3423c82d8b5ed585ec3e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Shaders/GradientSkybox/Editor/GradientSkyboxEditor.cs using Guid(fb06f6d66c6c3423c82d8b5ed585ec3e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'eedc04dd8fbaff733dca2b6c88ce7a51') in 0.018218 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Wanderer/Wanderer-Materials/Wanderer-TreeTrunk2.mat
+  artifactKey: Guid(cf91782e9360848a0897286cd7407435) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Wanderer/Wanderer-Materials/Wanderer-TreeTrunk2.mat using Guid(cf91782e9360848a0897286cd7407435) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0f18334bcf9f1e9f9ace8c230a029583') in 0.016950 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set5/Car-Set5-Windows.mat
+  artifactKey: Guid(e3a756b36108d41c2837a50418d882c6) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set5/Car-Set5-Windows.mat using Guid(e3a756b36108d41c2837a50418d882c6) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e12dcd9e55a461380125a5e523b294f6') in 0.015293 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set4/Car-Set4-Windows.mat
+  artifactKey: Guid(3750c2daa71d9474cbdd9ff6a48df142) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set4/Car-Set4-Windows.mat using Guid(3750c2daa71d9474cbdd9ff6a48df142) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f99e855bc6ee0dfe0902ad727e3e9571') in 0.016998 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Shared/Car-Skybox.mat
+  artifactKey: Guid(ba73a2ed8551e4e52abc93b14e2d7634) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Shared/Car-Skybox.mat using Guid(ba73a2ed8551e4e52abc93b14e2d7634) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '09620aa42cc7c6532c3a604bded35278') in 0.013574 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 1 - Mode_None-Completely Flat/1-Skybox.mat
+  artifactKey: Guid(953e71ae084a94b128e87ff9e90548da) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 1 - Mode_None-Completely Flat/1-Skybox.mat using Guid(953e71ae084a94b128e87ff9e90548da) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f282e67d7cafb036a0b28bc90e3faa35') in 0.012213 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Desert/Shaders/SubGraphs/Additional Lights.shadersubgraph
+  artifactKey: Guid(425487a91f6c6437c97e2ee8a084c319) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Desert/Shaders/SubGraphs/Additional Lights.shadersubgraph using Guid(425487a91f6c6437c97e2ee8a084c319) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '294a0eec1f51d8e67fe319bcb6a2f874') in 0.019644 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Desert/Shaders/SubGraphs/Gradient Shading.shadersubgraph
+  artifactKey: Guid(d25b9eeaa1445436984ce31ab8019acd) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Desert/Shaders/SubGraphs/Gradient Shading.shadersubgraph using Guid(d25b9eeaa1445436984ce31ab8019acd) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fe16d437c113765223cae4af39c7ec6f') in 0.020627 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set4/Car-Set4-Body3.mat
+  artifactKey: Guid(2104102be739e497aadeae44a9e23139) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set4/Car-Set4-Body3.mat using Guid(2104102be739e497aadeae44a9e23139) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '33ffde3cf0f314d285db023bcbb9d66d') in 0.016068 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Desert/Shaders/Noise/LICENSE
+  artifactKey: Guid(41d8ee8abf4f9054d92973873b8fdcf8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Desert/Shaders/Noise/LICENSE using Guid(41d8ee8abf4f9054d92973873b8fdcf8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '97269a34618f5b3fdc666da8bd86a087') in 0.010869 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Desert/Robot Kyle Desert/Materials/Robot Kyle Color.mat
+  artifactKey: Guid(0aa851515cd3747d6b3b3e461199a2ed) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Desert/Robot Kyle Desert/Materials/Robot Kyle Color.mat using Guid(0aa851515cd3747d6b3b3e461199a2ed) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9a764f2d4024e4dbfd13b4a93d50cc15') in 0.039119 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Desert/Shaders/Library/StylizedLighting.hlsl
+  artifactKey: Guid(7bd28d79f5cf6469ca107acaade2ed3f) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Desert/Shaders/Library/StylizedLighting.hlsl using Guid(7bd28d79f5cf6469ca107acaade2ed3f) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6e21575ab6d0c408863b1575dbf03ecd') in 0.015586 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set5/Car-Set5-CarLights.mat
+  artifactKey: Guid(44d316af5efe24ff2b55fadf003af34b) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set5/Car-Set5-CarLights.mat using Guid(44d316af5efe24ff2b55fadf003af34b) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9d22ea876503eb86b522a3c8f56f1ff8') in 0.015671 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Res/FlatKit/Demos/[Water] Ocean Islands/Ocean Islands Scene - Materials/WaterScene_Island_Purplish.mat
+  artifactKey: Guid(362639e5e3b0949c8b2c1eb7f0b44976) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Water] Ocean Islands/Ocean Islands Scene - Materials/WaterScene_Island_Purplish.mat using Guid(362639e5e3b0949c8b2c1eb7f0b44976) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b49dbbdd252a414f1bc27541d0d3ab1c') in 0.016823 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Wanderer/Wanderer-Materials/Wanderer-Road.mat
+  artifactKey: Guid(c407530976f124c9593b94fdaebe2ce8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Wanderer/Wanderer-Materials/Wanderer-Road.mat using Guid(c407530976f124c9593b94fdaebe2ce8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8e6c3794b92d4406c7036b1e3e7ca315') in 0.012967 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Res/FlatKit/Demos/[Water] Various Presets/Water Vessels Scene - Materials/WaterObjectScene_Water_12.mat
+  artifactKey: Guid(c66d4a45311a74d94ac471df0c19796c) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Water] Various Presets/Water Vessels Scene - Materials/WaterObjectScene_Water_12.mat using Guid(c66d4a45311a74d94ac471df0c19796c) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4a2e002437fe15cd2ba3eca00a3d7b27') in 0.045928 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Room/Room-Materials/Color2.mat
+  artifactKey: Guid(ac33f6af705d44a23ab4486f869f34fe) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Room/Room-Materials/Color2.mat using Guid(ac33f6af705d44a23ab4486f869f34fe) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b52ab8e57fe8c58e4ac5631390727511') in 0.013193 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs - Scene2 - ColorfulMisc.unity
+  artifactKey: Guid(0dfa98ce6ac354785b87a1f05abef26c) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs - Scene2 - ColorfulMisc.unity using Guid(0dfa98ce6ac354785b87a1f05abef26c) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Opening scene 'Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs - Scene2 - ColorfulMisc.unity additively'
+Loaded scene 'Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs - Scene2 - ColorfulMisc.unity'
+	Deserialize:            4.873 ms
+	Integration:            7.224 ms
+	Integration of assets:  1.908 ms
+	Thread Wait Time:       0.010 ms
+	Total Operation Time:   14.015 ms
+Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bd0748190094bbf5d39e4fd261d2a4d4') in 0.109823 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 4 - Mode_Curve-Gradients/4-Skybox.mat
+  artifactKey: Guid(0597b99e8508745448c42dd504f802a6) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 4 - Mode_Curve-Gradients/4-Skybox.mat using Guid(0597b99e8508745448c42dd504f802a6) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'eb0005937bef25e95f5419c344b2340b') in 0.014097 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 2 - Mode_Single/2-Grenade.mat
+  artifactKey: Guid(1e713864208124b5890945e2967fd787) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 2 - Mode_Single/2-Grenade.mat using Guid(1e713864208124b5890945e2967fd787) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cdb8256df68a11e28fb8f5222295c1a6') in 0.013311 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 2 - Mode_Single/2-Pear1.mat
+  artifactKey: Guid(7c2c5a0b294914197a9130e7e3337128) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 2 - Mode_Single/2-Pear1.mat using Guid(7c2c5a0b294914197a9130e7e3337128) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cd3063732eab12452d5b63a4d72b2692') in 0.014502 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 4 - Mode_Curve-Gradients/4-Leaves.mat
+  artifactKey: Guid(1f3e1a656407a4c6a930f9d596cf05cc) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 4 - Mode_Curve-Gradients/4-Leaves.mat using Guid(1f3e1a656407a4c6a930f9d596cf05cc) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cfa0550c58c400b8d577869c3266c1df') in 0.014137 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 3 - Mode_Steps-Toony/3-Grenade.mat
+  artifactKey: Guid(7ffff4954cf1d4e6dbc20b4ebd9a03cd) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 3 - Mode_Steps-Toony/3-Grenade.mat using Guid(7ffff4954cf1d4e6dbc20b4ebd9a03cd) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '177c5911e3cec300f9e1fa0cbdccfa3f') in 0.020073 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 5 - Var-Outlines/5-Grenade.mat
+  artifactKey: Guid(a9c62cefbbbbf44fe901614f6acf2e7b) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 5 - Var-Outlines/5-Grenade.mat using Guid(a9c62cefbbbbf44fe901614f6acf2e7b) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'aa1c854b01e52a1795368a2ff4902c46') in 0.012643 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 4 - Mode_Curve-Gradients/4-Stalks.mat
+  artifactKey: Guid(db756591547934cb684db2b56dd7e694) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 4 - Mode_Curve-Gradients/4-Stalks.mat using Guid(db756591547934cb684db2b56dd7e694) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'da2fdd3630f3faf7c4f050a001a08f19') in 0.016794 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 4 - Mode_Curve-Gradients/4-Pear2.mat
+  artifactKey: Guid(499febfd1f6234475a1b87547405a72a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 4 - Mode_Curve-Gradients/4-Pear2.mat using Guid(499febfd1f6234475a1b87547405a72a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '38e76512ded1553f361a00c0129f0b36') in 0.014100 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Res/FlatKit/Demos/[Water] Pool/Pool Scene - GradientTextures/PoolScene_Water_06_ColorGradient.png
+  artifactKey: Guid(07df246cc2d1c4242ad440ef346fa702) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Water] Pool/Pool Scene - GradientTextures/PoolScene_Water_06_ColorGradient.png using Guid(07df246cc2d1c4242ad440ef346fa702) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9cdc055dd5acefad0c9f8bca63baa1fb') in 0.018043 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] IslandWithTrees/IslandWithTrees-Models/GrassBunch-v1-01.fbx
+  artifactKey: Guid(68c11c322856c4a2198c51dd35d14857) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] IslandWithTrees/IslandWithTrees-Models/GrassBunch-v1-01.fbx using Guid(68c11c322856c4a2198c51dd35d14857) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e80458a438728bbf84f4ac8bd3b0d605') in 0.016180 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set1/Car-Set1-Car3Body.mat
+  artifactKey: Guid(1a5602b1bb62540499324bab7b9de1a0) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set1/Car-Set1-Car3Body.mat using Guid(1a5602b1bb62540499324bab7b9de1a0) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a05d6d388ebdc0d7f61521841c341834') in 0.017026 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set5/Car-Set5-CarPlates.mat
+  artifactKey: Guid(6d04a4a37117a409aae15b2f396d8679) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set5/Car-Set5-CarPlates.mat using Guid(6d04a4a37117a409aae15b2f396d8679) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cb60af9a970493c00a449a50c762cef9') in 0.014487 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Valley/Valley-Materials/LightPlane-01.mat
+  artifactKey: Guid(3bcaad8753c76425a90d2c19e7f2018f) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Valley/Valley-Materials/LightPlane-01.mat using Guid(3bcaad8753c76425a90d2c19e7f2018f) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8b7c3dc1907e353c0046ca2e7fa3f9c5') in 0.012066 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Res/FlatKit/Demos/[Water] Ocean Islands/Ocean Islands Scene - Models/Tree_01.fbx
+  artifactKey: Guid(028e01397e2c24e2d94b2da5d034a7d4) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Water] Ocean Islands/Ocean Islands Scene - Models/Tree_01.fbx using Guid(028e01397e2c24e2d94b2da5d034a7d4) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '118450fdbb9c8cf10ae1a04727df6217') in 0.020107 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Res/FlatKit/Demos/[Water] Various Presets/Water Vessels Scene - Models/WaterVesselsScene_Plane.fbx
+  artifactKey: Guid(c39bdf53cab2e43588a7fcd2b8dd08d2) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Water] Various Presets/Water Vessels Scene - Models/WaterVesselsScene_Plane.fbx using Guid(c39bdf53cab2e43588a7fcd2b8dd08d2) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '585edbc18436ef036f97f40ed958f4d2') in 0.022571 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Desert/Settings/Desert_URP Asset.asset
+  artifactKey: Guid(c5e7ae6d68b65b34f9aea870648ef132) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Desert/Settings/Desert_URP Asset.asset using Guid(c5e7ae6d68b65b34f9aea870648ef132) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9f4d77ebc021aae9309fb8d88bd779b1') in 0.029759 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Res/FlatKit/Demos/[Water] Pool/Pool Scene - Materials/PoolScene_Mat 3.mat
+  artifactKey: Guid(57d2cae67506e4a52940432aba3061f8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Water] Pool/Pool Scene - Materials/PoolScene_Mat 3.mat using Guid(57d2cae67506e4a52940432aba3061f8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9d0266b7a35f557e6a5f6d97cf01d87e') in 0.014467 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Desert/Scripts/BillboardLineRendererCircle.cs
+  artifactKey: Guid(d5a84995609d4fa40a2186a966b314d6) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Desert/Scripts/BillboardLineRendererCircle.cs using Guid(d5a84995609d4fa40a2186a966b314d6) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5bace3fab2ee1e69120ea725dfd64847') in 0.010505 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Racing Car/Settings/[Demo] Racing Car_Renderer.asset
+  artifactKey: Guid(20e76e31c70d0b94bbaf75270b572f9e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Racing Car/Settings/[Demo] Racing Car_Renderer.asset using Guid(20e76e31c70d0b94bbaf75270b572f9e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '59c31f46c86778b0c3c2dd3c78d9d7ce') in 0.060118 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Core/ValidatorAttributes/MaxValueAttribute.cs
+  artifactKey: Guid(7f3e565c6abe9094dbb0494d2bc59413) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Core/ValidatorAttributes/MaxValueAttribute.cs using Guid(7f3e565c6abe9094dbb0494d2bc59413) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f6d64c5f4abc9a94ef419996b744d3b7') in 0.013581 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Core/ValidatorAttributes/ValidateInputAttribute.cs
+  artifactKey: Guid(eefeb76c242515b4f8225c45235eb654) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Core/ValidatorAttributes/ValidateInputAttribute.cs using Guid(eefeb76c242515b4f8225c45235eb654) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '908cbbc5c80cb1a372e8dcd4fb3b23f4') in 0.011997 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs-Materials/2 - OneColorVariousParameters/02.2-BlueprintGrid-Mug-6.mat
+  artifactKey: Guid(1ba3ff017073f4f55b116aeb4f31456a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs-Materials/2 - OneColorVariousParameters/02.2-BlueprintGrid-Mug-6.mat using Guid(1ba3ff017073f4f55b116aeb4f31456a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fe9f3cb95dec535836b8e1c08fe72ebb') in 0.013963 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Valley/Valley-Materials/TerrainPaintLayers/TerrainPaintLayer-5.terrainlayer
+  artifactKey: Guid(87fa74a54199e429995fe818d60b61e1) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Valley/Valley-Materials/TerrainPaintLayers/TerrainPaintLayer-5.terrainlayer using Guid(87fa74a54199e429995fe818d60b61e1) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3e89b180c1e7e188e06a8c5e686cc61a') in 0.016230 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 7 - Var-OutlineImageEffect/7-Skybox.mat
+  artifactKey: Guid(d73d521995c70408b822a65d436df1e0) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 7 - Var-OutlineImageEffect/7-Skybox.mat using Guid(d73d521995c70408b822a65d436df1e0) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1f1d16e611293250764bd11b53fd0dad') in 0.010968 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs-Materials/2 - OneColorVariousParameters/02.2-BlueprintGrid-Mug-9.mat
+  artifactKey: Guid(42b481ef7656046248b2cf4735566a29) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs-Materials/2 - OneColorVariousParameters/02.2-BlueprintGrid-Mug-9.mat using Guid(42b481ef7656046248b2cf4735566a29) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1d1ac111e4960c74121747f0723e7d61') in 0.016706 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Editor/PropertyDrawers/ExpandablePropertyDrawer.cs
+  artifactKey: Guid(3c1918a04454ee14a91bce2534050896) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Editor/PropertyDrawers/ExpandablePropertyDrawer.cs using Guid(3c1918a04454ee14a91bce2534050896) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6122f7d35c81c05625ed1b0071fe569b') in 0.011304 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs-Materials/2 - OneColorVariousParameters/02.2-BlueprintGrid-Mug-10.mat
+  artifactKey: Guid(7c21cd5ce29a140cba4c9ae961a24b62) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs-Materials/2 - OneColorVariousParameters/02.2-BlueprintGrid-Mug-10.mat using Guid(7c21cd5ce29a140cba4c9ae961a24b62) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f8081f1dc8d2779a1bda6ead4c08b195') in 0.013971 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs-Materials/1 - ColorfulMisc/02.1-BlueprintGrid-Mug-07.mat
+  artifactKey: Guid(bf02260f0c2704f2cb34ad5fb15ea544) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs-Materials/1 - ColorfulMisc/02.1-BlueprintGrid-Mug-07.mat using Guid(bf02260f0c2704f2cb34ad5fb15ea544) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9525297a19b43c4497618eaa781c5879') in 0.014121 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Valley/Valley-Models/Models-Forest-Textured/Pine07.fbx
+  artifactKey: Guid(8296d07b6f9ec40bcafa7f117ebad0e4) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Valley/Valley-Models/Models-Forest-Textured/Pine07.fbx using Guid(8296d07b6f9ec40bcafa7f117ebad0e4) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8dc2e02631e5915467e31acc641dc0eb') in 0.020282 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Core/Utility/EColor.cs
+  artifactKey: Guid(7345ef147e487094a8946062b8f42ea8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Core/Utility/EColor.cs using Guid(7345ef147e487094a8946062b8f42ea8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'dcdebfa7ead581a41314b2d0f3c0aa0a') in 0.010460 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs-Materials/2 - OneColorVariousParameters/02.2-BlueprintGrid-Mug-2.mat
+  artifactKey: Guid(2eb9c8d0c1d6e439384930b2be8a6ff5) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs-Materials/2 - OneColorVariousParameters/02.2-BlueprintGrid-Mug-2.mat using Guid(2eb9c8d0c1d6e439384930b2be8a6ff5) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '27d37dd6b50b515b08b2b0608d07990b') in 0.012534 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Core/DrawerAttributes/ShowAssetPreviewAttribute.cs
+  artifactKey: Guid(340df9cb5dee2d64f89acb3fd58af4e9) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Core/DrawerAttributes/ShowAssetPreviewAttribute.cs using Guid(340df9cb5dee2d64f89acb3fd58af4e9) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4af86feb2ee6b6ff7365818c22cd51d6') in 0.009834 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs-Materials/2 - OneColorVariousParameters/02.2-BlueprintGrid-Mug-3.mat
+  artifactKey: Guid(93506af72f5ac4d61b10187ddaafcd47) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs-Materials/2 - OneColorVariousParameters/02.2-BlueprintGrid-Mug-3.mat using Guid(93506af72f5ac4d61b10187ddaafcd47) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '57e0ead11aee349fa392ddd5b1d9826e') in 0.014590 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Valley/Valley-Materials/TerrainPaintLayers/TerrainPaintLayer-6.terrainlayer
+  artifactKey: Guid(27ff0ed5d2fbf41049bde59f001e229e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Valley/Valley-Materials/TerrainPaintLayers/TerrainPaintLayer-6.terrainlayer using Guid(27ff0ed5d2fbf41049bde59f001e229e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd33c6e01143bdf6c35a8b08f5cb6c384') in 0.016075 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Core/DrawerAttributes/DrawerAttribute.cs
+  artifactKey: Guid(66d036b307b3107418ba774dfd3e818c) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Core/DrawerAttributes/DrawerAttribute.cs using Guid(66d036b307b3107418ba774dfd3e818c) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '75701a7045866f2305de51b7a77d283c') in 0.010701 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs-Materials/1 - ColorfulMisc/02.1-BlueprintGrid-Mug-09.mat
+  artifactKey: Guid(ef8addc58707a4ed5a4c9762c5a2e258) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs-Materials/1 - ColorfulMisc/02.1-BlueprintGrid-Mug-09.mat using Guid(ef8addc58707a4ed5a4c9762c5a2e258) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1455c4373a092543a067e3a35da227f5') in 0.017545 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Core/MetaAttributes/MetaAttribute.cs
+  artifactKey: Guid(56cddb9b014f8c2469fda1d2599c5d1f) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Core/MetaAttributes/MetaAttribute.cs using Guid(56cddb9b014f8c2469fda1d2599c5d1f) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '37d5e87d07d8e1a7dc99307dc3a2d6b6') in 0.012320 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs-Materials/Shared/BlueprintGrid-Grid.mat
+  artifactKey: Guid(bb2ae5fffe88a4ed8825df8aa4d870d1) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs-Materials/Shared/BlueprintGrid-Grid.mat using Guid(bb2ae5fffe88a4ed8825df8aa4d870d1) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '28a71eef5eec02ddf789be660ada68ab') in 0.043715 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Res/FlatKit/Utils/MeshSmoother.cs
+  artifactKey: Guid(e7876b5b65fd9844a852a6352eb2c8c1) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Utils/MeshSmoother.cs using Guid(e7876b5b65fd9844a852a6352eb2c8c1) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2219b1f413aa88a5cdc417aed172f183') in 0.015049 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Res/FlatKit/PresetsShared/Materials/TwoColorVasePreset01.mat
+  artifactKey: Guid(8f7c53e504a2d438f86459695b527b18) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/PresetsShared/Materials/TwoColorVasePreset01.mat using Guid(8f7c53e504a2d438f86459695b527b18) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7c2bde7416aace8faa5c7cb5a5c2b0d3') in 0.017086 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Res/FlatKit/Demos/[Water] Ocean Islands/Ocean Islands Scene - Materials/WaterScene_Bottom.mat
+  artifactKey: Guid(09befda3efe9c4c55b629352e6b4a980) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Water] Ocean Islands/Ocean Islands Scene - Materials/WaterScene_Bottom.mat using Guid(09befda3efe9c4c55b629352e6b4a980) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '828631a21d419b0292bbdd094138f59c') in 0.018309 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 4 - Mode_Curve-Gradients/FV-Scene-4-Ramps/4-Plane_CelCurveTexture-ramp.png
+  artifactKey: Guid(f40785d87b4df4da38be95d6cb2d0b92) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 4 - Mode_Curve-Gradients/FV-Scene-4-Ramps/4-Plane_CelCurveTexture-ramp.png using Guid(f40785d87b4df4da38be95d6cb2d0b92) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8d09e6d7574fd184669855156aaa5d5b') in 0.020179 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 3 - Mode_Steps-Toony/FV-Scene-3-Ramps/3-Leaves_CelStepTexture-ramp.png
+  artifactKey: Guid(e04f138cb02b040ddb9e637bb43675b0) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 3 - Mode_Steps-Toony/FV-Scene-3-Ramps/3-Leaves_CelStepTexture-ramp.png using Guid(e04f138cb02b040ddb9e637bb43675b0) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd102458d1f3ec1716287eb03076da6e9') in 0.019113 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Editor/PropertyValidators/PropertyValidatorBase.cs
+  artifactKey: Guid(f40a67826127b8445ba252aa14309b10) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Editor/PropertyValidators/PropertyValidatorBase.cs using Guid(f40a67826127b8445ba252aa14309b10) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ae059069285068d45a44c155f46fd422') in 0.011884 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 4 - Mode_Curve-Gradients/FV-Scene-4-Ramps/4-Apple_CelCurveTexture-ramp.png
+  artifactKey: Guid(817ba2a712291410fba0b852211aa67d) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 4 - Mode_Curve-Gradients/FV-Scene-4-Ramps/4-Apple_CelCurveTexture-ramp.png using Guid(817ba2a712291410fba0b852211aa67d) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'adce3d25d51372e2f22c0e7faf209e88') in 0.018324 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Res/FlatKit/Demos/Common/Textures/Misc/Noise/Noise-01.png
+  artifactKey: Guid(3dd885f2e127c417eb6732a90a069415) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/Common/Textures/Misc/Noise/Noise-01.png using Guid(3dd885f2e127c417eb6732a90a069415) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '62b98fee79e6852ddf0d28291d4866db') in 0.032260 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Res/FlatKit/Demos/Common/Textures/Misc/Noise/Noise-06.png
+  artifactKey: Guid(938f23ae374934eabbc4c954db1cae99) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/Common/Textures/Misc/Noise/Noise-06.png using Guid(938f23ae374934eabbc4c954db1cae99) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7b6ca62d8838f02a68916764ee1dd2c1') in 0.022260 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 3 - Mode_Steps-Toony/FV-Scene-3-Ramps/3-Banana_CelStepTexture-ramp.png
+  artifactKey: Guid(0484f26fbec4c4e228e44ff699ade550) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 3 - Mode_Steps-Toony/FV-Scene-3-Ramps/3-Banana_CelStepTexture-ramp.png using Guid(0484f26fbec4c4e228e44ff699ade550) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '528527fa727ebb320d06f346ce8a4c84') in 0.017053 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs-Materials/2 - OneColorVariousParameters/BlPrMugs-Scene_2_RampTextures/02.2-BlueprintGrid-Mug-14_CelStepTexture-ramp.png
+  artifactKey: Guid(953f01b1bb2df4bd29ea2cbb2576b45a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs-Materials/2 - OneColorVariousParameters/BlPrMugs-Scene_2_RampTextures/02.2-BlueprintGrid-Mug-14_CelStepTexture-ramp.png using Guid(953f01b1bb2df4bd29ea2cbb2576b45a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd9a3b7bc3564f2baa6a00d3662029f8a') in 0.022113 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Editor/PropertyDrawers/ShowAssetPreviewPropertyDrawer.cs
+  artifactKey: Guid(91ee7a4a8e531d841b7d36be94da45d0) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Editor/PropertyDrawers/ShowAssetPreviewPropertyDrawer.cs using Guid(91ee7a4a8e531d841b7d36be94da45d0) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7d7180fec348a0e1480ee6408fc29409') in 0.010513 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 3 - Mode_Steps-Toony/FV-Scene-3-Ramps/3-Pear1_CelStepTexture-ramp.png
+  artifactKey: Guid(cc9f2af42e938436e8f03a750f57987a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 3 - Mode_Steps-Toony/FV-Scene-3-Ramps/3-Pear1_CelStepTexture-ramp.png using Guid(cc9f2af42e938436e8f03a750f57987a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '49932294f851722cb9e951bb48145a52') in 0.017530 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set4/Car-Set4-Skybox.mat
+  artifactKey: Guid(a3b768f5754894b179d3c2034ae62ce7) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set4/Car-Set4-Skybox.mat using Guid(a3b768f5754894b179d3c2034ae62ce7) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '51a05ec39d8a4a8e6dc26b7e5798cfef') in 0.012584 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Valley/Valley-Materials/Pine01-Leaves03.mat
+  artifactKey: Guid(9e060d8250c5d49d29051bb0aef1fb52) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Valley/Valley-Materials/Pine01-Leaves03.mat using Guid(9e060d8250c5d49d29051bb0aef1fb52) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9a07a7b78b356fd540f02af9f6e02ff1') in 0.010868 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set4/Car-Set4-Body2.mat
+  artifactKey: Guid(a0c632a6d41be47809d07163ebaf04a2) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set4/Car-Set4-Body2.mat using Guid(a0c632a6d41be47809d07163ebaf04a2) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '921e11e51982207cb4c88654614ea71e') in 0.016493 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Core/MetaAttributes/LabelAttribute.cs
+  artifactKey: Guid(32017a84d90bd8842bf40ff4e4e6c1ec) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Core/MetaAttributes/LabelAttribute.cs using Guid(32017a84d90bd8842bf40ff4e4e6c1ec) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a27e85676aa58c679fdea12e491d435a') in 0.010746 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Valley/Valley-Materials/Valley-Skybox 1.mat
+  artifactKey: Guid(7fece7608763947d9ba913243fda1296) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Valley/Valley-Materials/Valley-Skybox 1.mat using Guid(7fece7608763947d9ba913243fda1296) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6d12d0901cec44c275ae15d71fd4a6b9') in 0.012407 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Valley/Valley-Textures/Valley-Grass2d-05.png
+  artifactKey: Guid(b66733897c503491a81db5e236f8d112) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Valley/Valley-Textures/Valley-Grass2d-05.png using Guid(b66733897c503491a81db5e236f8d112) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '34a92282b130e1ac1237539ca3ab08c0') in 0.023798 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] NormalMapsTree/NormalMapsTree - Scene.unity
+  artifactKey: Guid(adc00bb328a1d4445af18df3d67701ed) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] NormalMapsTree/NormalMapsTree - Scene.unity using Guid(adc00bb328a1d4445af18df3d67701ed) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Opening scene 'Assets/Res/FlatKit/Demos/[Demo] NormalMapsTree/NormalMapsTree - Scene.unity additively'
+Loaded scene 'Assets/Res/FlatKit/Demos/[Demo] NormalMapsTree/NormalMapsTree - Scene.unity'
+	Deserialize:            2.626 ms
+	Integration:            5.639 ms
+	Integration of assets:  2.208 ms
+	Thread Wait Time:       0.011 ms
+	Total Operation Time:   10.484 ms
+Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '70106b428b2c05a5695a9908ed6ffbd7') in 0.065150 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Racing Car/Models/RC-Sprout2.fbx
+  artifactKey: Guid(dd3925d07a7874c0c9ca68ccefe82a4c) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Racing Car/Models/RC-Sprout2.fbx using Guid(dd3925d07a7874c0c9ca68ccefe82a4c) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1b9a6fb65407a3a50869db715fee76da') in 0.017711 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 3 - Mode_Steps-Toony/FV-Scene-3-Ramps/3-Grape_CelStepTexture-ramp.png
+  artifactKey: Guid(e45f4cf5eba4b4de589c2f41bb52cc58) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 3 - Mode_Steps-Toony/FV-Scene-3-Ramps/3-Grape_CelStepTexture-ramp.png using Guid(e45f4cf5eba4b4de589c2f41bb52cc58) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3aa79993200a074b05511f15d0e65940') in 0.025276 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Wanderer/Wanderer-Models/Wall05.fbx
+  artifactKey: Guid(9972aea74224248eea3aa9005a2214af) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Wanderer/Wanderer-Models/Wall05.fbx using Guid(9972aea74224248eea3aa9005a2214af) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a0cd1a8db5ef530276874e52ff656c0e') in 0.029368 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Desert/Materials/SphereBase.mat
+  artifactKey: Guid(fa5ceae123ac943fe87d854b5fc8abd8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Desert/Materials/SphereBase.mat using Guid(fa5ceae123ac943fe87d854b5fc8abd8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '913e236436cc5d495d59b48c06552bb7') in 0.018574 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Racing Car/Models/RC-RoadCone.fbx
+  artifactKey: Guid(4e6fc376197354931b2f1a6496ddee45) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Racing Car/Models/RC-RoadCone.fbx using Guid(4e6fc376197354931b2f1a6496ddee45) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f703f8e6b384d15ff92f4d39a3bd34a7') in 0.022070 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Desert/Shaders/Noise/ClassicNoise2D.hlsl
+  artifactKey: Guid(dcbc3be8e5ec84a48a61ce519e461532) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Desert/Shaders/Noise/ClassicNoise2D.hlsl using Guid(dcbc3be8e5ec84a48a61ce519e461532) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '577f3eac731559158809778f841a4234') in 0.010358 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Res/FlatKit/Demos/[Water] Ocean Islands/Ocean Islands Scene - Models/Rock_02.fbx
+  artifactKey: Guid(1eb46d926827748f794f96ce54fdb5a4) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Water] Ocean Islands/Ocean Islands Scene - Models/Rock_02.fbx using Guid(1eb46d926827748f794f96ce54fdb5a4) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'de962134ea2da5c363eb148d2c44a02e') in 0.023016 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set3/Car-Set3-Skybox.mat
+  artifactKey: Guid(40d0e8ef240204dfd8636ab544510ec8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set3/Car-Set3-Skybox.mat using Guid(40d0e8ef240204dfd8636ab544510ec8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'aed3b094f72ae71a710717294705236e') in 0.014244 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set4/Car-Set4-Plane 2.mat
+  artifactKey: Guid(9316a15b4ba0b4f24b7c6ba705f05a42) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set4/Car-Set4-Plane 2.mat using Guid(9316a15b4ba0b4f24b7c6ba705f05a42) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '45753b59e79102e445dfdda616b05d6e') in 0.014458 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 4 - Mode_Curve-Gradients/FV-Scene-4-Ramps/4-Pear1_CelCurveTexture-ramp.png
+  artifactKey: Guid(4fc15a589a6404d568a50e23d7a77a0a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 4 - Mode_Curve-Gradients/FV-Scene-4-Ramps/4-Pear1_CelCurveTexture-ramp.png using Guid(4fc15a589a6404d568a50e23d7a77a0a) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bbf2b521dfcdb6dfdc976b2e6f704f18') in 0.017030 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Settings/Very Low_PipelineAsset.asset
+  artifactKey: Guid(f5aa781a595493a4e96c20924d2ab1af) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Settings/Very Low_PipelineAsset.asset using Guid(f5aa781a595493a4e96c20924d2ab1af) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ff397b1ab354df60ae3982fab5704889') in 0.018496 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/RenderFeatures/Fog/FlatKitFog.cs
+  artifactKey: Guid(770acbaed70db4ad696458511aa3f084) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/RenderFeatures/Fog/FlatKitFog.cs using Guid(770acbaed70db4ad696458511aa3f084) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd6232afa6db7ca77fbe6f1eb2413e2f3') in 0.013851 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/4-FruitVaseScene-CelShadingMode-Curve.unity
+  artifactKey: Guid(28730041f3e264cc691089397563cb45) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/4-FruitVaseScene-CelShadingMode-Curve.unity using Guid(28730041f3e264cc691089397563cb45) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Opening scene 'Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/4-FruitVaseScene-CelShadingMode-Curve.unity additively'
+Loaded scene 'Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/4-FruitVaseScene-CelShadingMode-Curve.unity'
+	Deserialize:            2.788 ms
+	Integration:            48.520 ms
+	Integration of assets:  1.291 ms
+	Thread Wait Time:       0.012 ms
+	Total Operation Time:   52.610 ms
+Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7a52103fe6e04f6f34f6b80e60561247') in 0.265684 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Res/FlatKit/Demos/[Water] Ocean Islands/Ocean Islands Scene - Models/Plane_100Edges_Straight.fbx
+  artifactKey: Guid(98aa7127015854f59b6abbcb9c4918e9) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Water] Ocean Islands/Ocean Islands Scene - Models/Plane_100Edges_Straight.fbx using Guid(98aa7127015854f59b6abbcb9c4918e9) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '19a2dde10c2a76952aca87e79ba6c736') in 0.025422 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Editor/Utility/SavedBool.cs
+  artifactKey: Guid(4b611b2bf7ad6614fa6659a9742a0b5e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Editor/Utility/SavedBool.cs using Guid(4b611b2bf7ad6614fa6659a9742a0b5e) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b28b02dcee59636fd3a4a6eaa1283448') in 0.010636 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Res/FlatKit/Demos/Common/Textures/Misc/Waterfall-01.png
+  artifactKey: Guid(863be0e02a08d44aab03ed9156efe1c5) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/Common/Textures/Misc/Waterfall-01.png using Guid(863be0e02a08d44aab03ed9156efe1c5) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e948935e0b7b71949e42f6c382f0d7d8') in 0.027044 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs-Materials/1 - ColorfulMisc/02.1-BlueprintGrid-Mug-02.mat
+  artifactKey: Guid(9ed267afa8ac44ede8f6af968e2c90c3) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Mugs/Mugs-Materials/1 - ColorfulMisc/02.1-BlueprintGrid-Mug-02.mat using Guid(9ed267afa8ac44ede8f6af968e2c90c3) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '63d2d58419d17dd97630dff526400045') in 0.014110 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Valley/Valley-Materials/TerrainPaintLayers/TerrainPaintLayer-1.terrainlayer
+  artifactKey: Guid(d529ab632c45849c2be88e54b507bf17) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Valley/Valley-Materials/TerrainPaintLayers/TerrainPaintLayer-1.terrainlayer using Guid(d529ab632c45849c2be88e54b507bf17) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5563c98f87fd14d15af610cd61e523ed') in 0.013815 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Room/Room-Materials/Room-Skybox.mat
+  artifactKey: Guid(bab445c88614141598916314e9017f99) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Room/Room-Materials/Room-Skybox.mat using Guid(bab445c88614141598916314e9017f99) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '069195ea561a84e0afa557a4b8144298') in 0.011546 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Valley/Valley-Materials/LightPlane-02.mat
+  artifactKey: Guid(fa03a20f90929460badefbe4c3c00066) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Valley/Valley-Materials/LightPlane-02.mat using Guid(fa03a20f90929460badefbe4c3c00066) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4127495f91a4fcc2795f0e2b8c489c9e') in 0.011875 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 3 - Mode_Steps-Toony/3-Grape.mat
+  artifactKey: Guid(0a8f2d4c180e14933bb063e01772ad21) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 3 - Mode_Steps-Toony/3-Grape.mat using Guid(0a8f2d4c180e14933bb063e01772ad21) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6a3ba2a20b1cc57e305dcf414d61bb61') in 0.013276 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Wanderer/Wanderer-Models/Waterfall_Pool01.fbx
+  artifactKey: Guid(3f17966e1186f4107accade3bf0e5330) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Wanderer/Wanderer-Models/Waterfall_Pool01.fbx using Guid(3f17966e1186f4107accade3bf0e5330) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0ef0704e988562144a30ac43a249ebfb') in 0.023522 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Res/FlatKit/PresetsShared/Presets/SmoothExtraCel__StylSurf_ExtraC_Spec.preset
+  artifactKey: Guid(c7497abdaa3ef48a5ba5c33d587e1133) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/PresetsShared/Presets/SmoothExtraCel__StylSurf_ExtraC_Spec.preset using Guid(c7497abdaa3ef48a5ba5c33d587e1133) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cd7ee03bfa11771371c7e7f494db4877') in 0.016271 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Res/FlatKit/Demos/[Water] Ocean Islands/Ocean Islands Scene - Models/Plane_25Edges_Displaced_1.fbx
+  artifactKey: Guid(ec86a959536374cfca131c9127c44e1f) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Water] Ocean Islands/Ocean Islands Scene - Models/Plane_25Edges_Displaced_1.fbx using Guid(ec86a959536374cfca131c9127c44e1f) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '484cd85c83c26a44315f0aa7ed8bc9cc') in 0.019702 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Editor/CustomInspectorDefinitions.cs
+  artifactKey: Guid(aa056e1a4f8d4d518b5bee373fe90fb2) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Editor/CustomInspectorDefinitions.cs using Guid(aa056e1a4f8d4d518b5bee373fe90fb2) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '50e55c24164804b135c516204413f771') in 0.014120 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Res/FlatKit/Demos/Common/Textures/Misc/Noise/Noise-05.png
+  artifactKey: Guid(9b6f1d1fb45bc41ea899ec0aa1d82aa7) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/Common/Textures/Misc/Noise/Noise-05.png using Guid(9b6f1d1fb45bc41ea899ec0aa1d82aa7) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '838e4006a04a6b6bd3e9927eb95afce5') in 0.021859 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/RenderFeatures/Pixelation/PixelationCore.hlsl
+  artifactKey: Guid(d00436b1cf7a4c7c8cb42e8f0bc826c9) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/RenderFeatures/Pixelation/PixelationCore.hlsl using Guid(d00436b1cf7a4c7c8cb42e8f0bc826c9) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'dd511967b07a0fd374f730f4d10b7709') in 0.011773 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Valley/Valley-Models/Models-Forest-Textured/Pine01.fbx
+  artifactKey: Guid(ac9a1a48def3a405ea9b3539c345b482) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Valley/Valley-Models/Models-Forest-Textured/Pine01.fbx using Guid(ac9a1a48def3a405ea9b3539c345b482) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'dbb280d500bb90c1a77bf0d208c38b3b') in 0.024881 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set2/Car-Set2-Car4Body-1.mat
+  artifactKey: Guid(bcbc887a401b3411fb6cca34e86d33a8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Car/Car-Materials/Car-Materials-Set2/Car-Set2-Car4Body-1.mat using Guid(bcbc887a401b3411fb6cca34e86d33a8) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '00a6e3be464885491fe019001c9b88f5') in 0.013320 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Res/FlatKit/PresetsShared/Presets/TwoColorVasePreset03.preset
+  artifactKey: Guid(3bf4feb0be3584503919b2aaea4f17cd) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/PresetsShared/Presets/TwoColorVasePreset03.preset using Guid(3bf4feb0be3584503919b2aaea4f17cd) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '00862f5cbe2b6a1929b024391822bd33') in 0.019287 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Core/ValidatorAttributes/RequiredAttribute.cs
+  artifactKey: Guid(902321a31e442404a9de77a7074fd44b) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/[Render Pipeline] URP/EditorAttributes/Core/ValidatorAttributes/RequiredAttribute.cs using Guid(902321a31e442404a9de77a7074fd44b) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1f33f12e7e609cd11953d81465f7af55') in 0.010694 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 2 - Mode_Single/2-Leaves.mat
+  artifactKey: Guid(f145e4d40e0bc42c59a9a5fd4b27f4ff) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 2 - Mode_Single/2-Leaves.mat using Guid(f145e4d40e0bc42c59a9a5fd4b27f4ff) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'dd74acde90eb9b514b60164085d3953d') in 0.017399 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 1 - Mode_None-Completely Flat/1-Pear2.mat
+  artifactKey: Guid(0f171c6eeafc140ccaa4cbb55e13d6ce) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 1 - Mode_None-Completely Flat/1-Pear2.mat using Guid(0f171c6eeafc140ccaa4cbb55e13d6ce) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8df4c175f66c4f0db486e7fc95881154') in 0.024557 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 4 - Mode_Curve-Gradients/FV-Scene-4-Ramps/4-Grenade_CelCurveTexture-ramp.png
+  artifactKey: Guid(f6c5192c3616b495caa2282ec6670c1f) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Fruit Vase/FruitVase-Materials/FV-Scene 4 - Mode_Curve-Gradients/FV-Scene-4-Ramps/4-Grenade_CelCurveTexture-ramp.png using Guid(f6c5192c3616b495caa2282ec6670c1f) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '255c7a0aacfb00674b8a6361b10b810e') in 0.017268 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Res/FlatKit/Demos/[Demo] Desert/Textures/Pillar Line Map.asset
+  artifactKey: Guid(d9308c8608c102747a3e226411b4d2a3) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe)
+Start importing Assets/Res/FlatKit/Demos/[Demo] Desert/Textures/Pillar Line Map.asset using Guid(d9308c8608c102747a3e226411b4d2a3) Importer(2089858483,c653a7c40615fbf8c82c05b109e42dfe) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cb85192386cea6b21d9e226dff31019f') in 0.250337 seconds 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 5.77 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 39 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 40 unused Assets / (382.3 KB). Loaded Objects now: 6796.
+Memory consumption went from 135.1 MB to 134.8 MB.
+Total: 5.670000 ms (FindLiveObjects: 0.383700 ms CreateObjectMapping: 0.392300 ms MarkObjects: 4.720800 ms  DeleteObjects: 0.171900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 52.806188 seconds.
+  path: Assets/Res/FlatKit/Demos/Common/URP Configs/[FlatKit] Example URP Asset.asset
+  artifactKey: Guid(ecbd363870e07455ea237f5753668d30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Res/FlatKit/Demos/Common/URP Configs/[FlatKit] Example URP Asset.asset using Guid(ecbd363870e07455ea237f5753668d30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73f9621aee79f342f9404c672b22d571') in 0.028220 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Settings/Low_PipelineAsset.asset
+  artifactKey: Guid(df4a5942a87e8f84b8cb46251ac73698) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Settings/Low_PipelineAsset.asset using Guid(df4a5942a87e8f84b8cb46251ac73698) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f432f1020f09f2373dae179295ba077') in 0.010067 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Settings/Medium_PipelineAsset.asset
+  artifactKey: Guid(92caba1ebbdfce24984d9a27fcbcbe11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Settings/Medium_PipelineAsset.asset using Guid(92caba1ebbdfce24984d9a27fcbcbe11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce2a11bc5e6297380eef94669a45478d') in 0.009487 seconds 
+========================================================================
+Received Prepare
+Switching render pipeline c5e7ae6d68b65b34f9aea870648ef132 -> ecbd363870e07455ea237f5753668d30
+Refreshing native plugins compatible for Editor in 6.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 34 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 34 unused Assets / (380.9 KB). Loaded Objects now: 6804.
+Memory consumption went from 135.0 MB to 134.6 MB.
+Total: 5.201400 ms (FindLiveObjects: 0.503200 ms CreateObjectMapping: 0.225800 ms MarkObjects: 4.262400 ms  DeleteObjects: 0.208600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:srp/default-pipeline: cedb6383070e4755ae32f7753566d803 -> 5c7eead6866bb5439fea8a0746e81f23
+========================================================================
+Received Import Request.
+  Time since last request: 29.684554 seconds.
+  path: Assets/Settings/High_PipelineAsset.asset
+  artifactKey: Guid(2337ed70586a40c4ca8054b23f5e674e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Settings/High_PipelineAsset.asset using Guid(2337ed70586a40c4ca8054b23f5e674e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e13fef7303ac2c69db3d0e789dc3fb7') in 0.004070 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009071 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Desert_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.054 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1055ms)
+		BeginReloadAssembly (132ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (51ms)
+		EndReloadAssembly (848ms)
+			LoadAssemblies (76ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (238ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (406ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (64ms)
+				ProcessInitializeOnLoadAttributes (245ms)
+				ProcessInitializeOnLoadMethodAttributes (76ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (32ms)
+Platform modules already initialized, skipping
+Switching render pipeline c5e7ae6d68b65b34f9aea870648ef132 -> ecbd363870e07455ea237f5753668d30
+Refreshing native plugins compatible for Editor in 2.35 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6013 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 79 unused Assets / (345.7 KB). Loaded Objects now: 6761.
+Memory consumption went from 261.8 MB to 261.4 MB.
+Total: 3.456300 ms (FindLiveObjects: 0.343500 ms CreateObjectMapping: 0.200300 ms MarkObjects: 2.773000 ms  DeleteObjects: 0.138200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:srp/default-pipeline: cedb6383070e4755ae32f7753566d803 -> 5c7eead6866bb5439fea8a0746e81f23
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009924 seconds.
+ArgumentException: An item with the same key has already been added. Key: 00000000000000000000000000000000
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x0015a] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].Add (TKey key, TValue value) [0x00000] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (TSource[] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0001c] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00043] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector) [0x00000] in <109e781b32ec464d8737a667de805742>:0 
+  at UnityEditor.Scripting.ScriptCompilation.LoadingAssemblyDefinition.SetAllCustomScriptAssemblyReferenceJsonsContents (System.String[] paths, System.String[] contents) [0x00172] in <13797120844d4bb0b6f43571e6aa9e25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:EmitExceptionsAsErrors(Exception[])
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:SetAllCustomScriptAssemblyReferenceJsons(String[], String[])
+
+ArgumentException: An item with the same key has already been added. Key: 00000000000000000000000000000000
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x0015a] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].Add (TKey key, TValue value) [0x00000] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (TSource[] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0001c] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00043] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector) [0x00000] in <109e781b32ec464d8737a667de805742>:0 
+  at UnityEditor.Scripting.ScriptCompilation.LoadingAssemblyDefinition.SetAllCustomScriptAssemblyReferenceJsonsContents (System.String[] paths, System.String[] contents) [0x00172] in <13797120844d4bb0b6f43571e6aa9e25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:EmitExceptionsAsErrors(Exception[])
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:SetAllCustomScriptAssemblyReferenceJsons(String[], String[])
+
+ArgumentException: An item with the same key has already been added. Key: 00000000000000000000000000000000
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x0015a] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].Add (TKey key, TValue value) [0x00000] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (TSource[] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0001c] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00043] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector) [0x00000] in <109e781b32ec464d8737a667de805742>:0 
+  at UnityEditor.Scripting.ScriptCompilation.LoadingAssemblyDefinition.SetAllCustomScriptAssemblyReferenceJsonsContents (System.String[] paths, System.String[] contents) [0x00172] in <13797120844d4bb0b6f43571e6aa9e25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:EmitExceptionsAsErrors(Exception[])
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:SetAllCustomScriptAssemblyReferenceJsons(String[], String[])
+
+ArgumentException: An item with the same key has already been added. Key: 00000000000000000000000000000000
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x0015a] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].Add (TKey key, TValue value) [0x00000] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (TSource[] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0001c] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00043] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector) [0x00000] in <109e781b32ec464d8737a667de805742>:0 
+  at UnityEditor.Scripting.ScriptCompilation.LoadingAssemblyDefinition.SetAllCustomScriptAssemblyReferenceJsonsContents (System.String[] paths, System.String[] contents) [0x00172] in <13797120844d4bb0b6f43571e6aa9e25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:EmitExceptionsAsErrors(Exception[])
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:SetAllCustomScriptAssemblyReferenceJsons(String[], String[])
+
+ArgumentException: An item with the same key has already been added. Key: 00000000000000000000000000000000
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x0015a] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].Add (TKey key, TValue value) [0x00000] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (TSource[] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0001c] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00043] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector) [0x00000] in <109e781b32ec464d8737a667de805742>:0 
+  at UnityEditor.Scripting.ScriptCompilation.LoadingAssemblyDefinition.SetAllCustomScriptAssemblyReferenceJsonsContents (System.String[] paths, System.String[] contents) [0x00172] in <13797120844d4bb0b6f43571e6aa9e25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:EmitExceptionsAsErrors(Exception[])
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:SetAllCustomScriptAssemblyReferenceJsons(String[], String[])
+
+ArgumentException: An item with the same key has already been added. Key: 00000000000000000000000000000000
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x0015a] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].Add (TKey key, TValue value) [0x00000] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (TSource[] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0001c] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00043] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector) [0x00000] in <109e781b32ec464d8737a667de805742>:0 
+  at UnityEditor.Scripting.ScriptCompilation.LoadingAssemblyDefinition.SetAllCustomScriptAssemblyReferenceJsonsContents (System.String[] paths, System.String[] contents) [0x00172] in <13797120844d4bb0b6f43571e6aa9e25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:EmitExceptionsAsErrors(Exception[])
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:SetAllCustomScriptAssemblyReferenceJsons(String[], String[])
+
+ArgumentException: An item with the same key has already been added. Key: 00000000000000000000000000000000
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x0015a] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].Add (TKey key, TValue value) [0x00000] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (TSource[] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0001c] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00043] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector) [0x00000] in <109e781b32ec464d8737a667de805742>:0 
+  at UnityEditor.Scripting.ScriptCompilation.LoadingAssemblyDefinition.SetAllCustomScriptAssemblyReferenceJsonsContents (System.String[] paths, System.String[] contents) [0x00172] in <13797120844d4bb0b6f43571e6aa9e25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:EmitExceptionsAsErrors(Exception[])
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:SetAllCustomScriptAssemblyReferenceJsons(String[], String[])
+
+ArgumentException: An item with the same key has already been added. Key: 00000000000000000000000000000000
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x0015a] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].Add (TKey key, TValue value) [0x00000] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (TSource[] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0001c] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00043] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector) [0x00000] in <109e781b32ec464d8737a667de805742>:0 
+  at UnityEditor.Scripting.ScriptCompilation.LoadingAssemblyDefinition.SetAllCustomScriptAssemblyReferenceJsonsContents (System.String[] paths, System.String[] contents) [0x00172] in <13797120844d4bb0b6f43571e6aa9e25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:EmitExceptionsAsErrors(Exception[])
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:SetAllCustomScriptAssemblyReferenceJsons(String[], String[])
+
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.92 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+ArgumentException: An item with the same key has already been added. Key: 00000000000000000000000000000000
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x0015a] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].Add (TKey key, TValue value) [0x00000] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (TSource[] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0001c] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00043] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector) [0x00000] in <109e781b32ec464d8737a667de805742>:0 
+  at UnityEditor.Scripting.ScriptCompilation.LoadingAssemblyDefinition.SetAllCustomScriptAssemblyReferenceJsonsContents (System.String[] paths, System.String[] contents) [0x00172] in <13797120844d4bb0b6f43571e6aa9e25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:EmitExceptionsAsErrors(Exception[])
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:SetAllCustomScriptAssemblyReferenceJsons(String[], String[])
+
+ArgumentException: An item with the same key has already been added. Key: 00000000000000000000000000000000
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x0015a] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].Add (TKey key, TValue value) [0x00000] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (TSource[] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0001c] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00043] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector) [0x00000] in <109e781b32ec464d8737a667de805742>:0 
+  at UnityEditor.Scripting.ScriptCompilation.LoadingAssemblyDefinition.SetAllCustomScriptAssemblyReferenceJsonsContents (System.String[] paths, System.String[] contents) [0x00172] in <13797120844d4bb0b6f43571e6aa9e25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:EmitExceptionsAsErrors(Exception[])
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:SetAllCustomScriptAssemblyReferenceJsons(String[], String[])
+
+ArgumentException: An item with the same key has already been added. Key: 00000000000000000000000000000000
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x0015a] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].Add (TKey key, TValue value) [0x00000] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (TSource[] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0001c] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00043] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector) [0x00000] in <109e781b32ec464d8737a667de805742>:0 
+  at UnityEditor.Scripting.ScriptCompilation.LoadingAssemblyDefinition.SetAllCustomScriptAssemblyReferenceJsonsContents (System.String[] paths, System.String[] contents) [0x00172] in <13797120844d4bb0b6f43571e6aa9e25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:EmitExceptionsAsErrors(Exception[])
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:SetAllCustomScriptAssemblyReferenceJsons(String[], String[])
+
+ArgumentException: An item with the same key has already been added. Key: 00000000000000000000000000000000
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x0015a] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].Add (TKey key, TValue value) [0x00000] in <d6232873609549b8a045fa15811a5bd3>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (TSource[] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0001c] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x00043] in <109e781b32ec464d8737a667de805742>:0 
+  at System.Linq.Enumerable.ToDictionary[TSource,TKey] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] keySelector) [0x00000] in <109e781b32ec464d8737a667de805742>:0 
+  at UnityEditor.Scripting.ScriptCompilation.LoadingAssemblyDefinition.SetAllCustomScriptAssemblyReferenceJsonsContents (System.String[] paths, System.String[] contents) [0x00172] in <13797120844d4bb0b6f43571e6aa9e25>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:LogException(Exception)
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:EmitExceptionsAsErrors(Exception[])
+UnityEditor.Scripting.ScriptCompilation.EditorCompilationInterface:SetAllCustomScriptAssemblyReferenceJsons(String[], String[])
+
+Desert_Renderer is missing RendererFeatures
+This could be due to missing scripts or compile error.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object,UnityEngine.Object)
+UnityEngine.Debug:LogError (object,UnityEngine.Object)
+UnityEngine.Rendering.Universal.ScriptableRendererData:ValidateRendererFeatures () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:181)
+UnityEngine.Rendering.Universal.ScriptableRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs:76)
+UnityEngine.Rendering.Universal.UniversalRendererData:OnValidate () (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRendererData.cs:269)
+
+(Filename: Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/ScriptableRendererData.cs Line: 181)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.019 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1020ms)
+		BeginReloadAssembly (110ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (837ms)
+			LoadAssemblies (70ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (239ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (399ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (93ms)
+				ProcessInitializeOnLoadAttributes (218ms)
+				ProcessInitializeOnLoadMethodAttributes (66ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (31ms)
+Platform modules already initialized, skipping
+Switching render pipeline c5e7ae6d68b65b34f9aea870648ef132 -> 00000000000000000000000000000000
+Refreshing native plugins compatible for Editor in 3.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5995 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 44 unused Assets / (318.3 KB). Loaded Objects now: 6752.
+Memory consumption went from 260.3 MB to 260.0 MB.
+Total: 3.531700 ms (FindLiveObjects: 0.453400 ms CreateObjectMapping: 0.201200 ms MarkObjects: 2.801400 ms  DeleteObjects: 0.074300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:srp/default-shader: 00a0da0d000000000000000000000000 -> 0000e00a000e0de00000e000e0000000
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:srp/default-pipeline:  -> 5c7eead6866bb5439fea8a0746e81f23
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

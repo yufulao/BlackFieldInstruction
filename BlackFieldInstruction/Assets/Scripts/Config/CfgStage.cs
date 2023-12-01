@@ -22,6 +22,7 @@ namespace Rabi
         public float cellSize; //每个网格的宽高
         public string scenePath; //场景资源路径
         public Dictionary<int,int> commandDic; //关卡可用指令
+        public Dictionary<int,int> commandTime; //每个指令时长
     }
 
     public class CfgStage
@@ -74,7 +75,7 @@ namespace Rabi
         private RowCfgStage ParseRow(string[] col)
         {
             //列越界
-            if (col.Length < 6)
+            if (col.Length < 7)
             {
                 Debug.LogError($"配置表字段行数越界:{GetType()}");
                 return null;
@@ -88,6 +89,7 @@ namespace Rabi
             data.cellSize = CsvUtility.ToFloat(rowHelper.ReadNextCol()); //每个网格的宽高
             data.scenePath = CsvUtility.ToString(rowHelper.ReadNextCol()); //场景资源路径
             data.commandDic = CsvUtility.ToDictionary<int,int>(rowHelper.ReadNextCol()); //关卡可用指令
+            data.commandTime = CsvUtility.ToDictionary<int,int>(rowHelper.ReadNextCol()); //每个指令时长
             return data;
         }
     }

@@ -10,7 +10,7 @@ public class GridObjInfo
     public bool walkable;
 
     //动态变量
-    public Vector2Int originalPoint;//初始网格坐标
-    public Vector2Int currentPoint;
+    [HideInInspector]public Vector2Int originalPoint;//初始网格坐标
+    [HideInInspector]public Vector2Int currentPoint;
 
 }

@@ -7,7 +7,7 @@ using UnityEngine;
 public class GridManager : MonoSingleton<GridManager>
 {
     public bool debugShow;//是否显示辅助线
-    public Player player;
+    [HideInInspector]public Player player;
     private List<TargetObject> _targetObjects;
     private GridMap _gridMap;//动态的，会切换
     private GridMapView _gridMapView;

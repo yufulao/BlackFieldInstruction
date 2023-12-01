@@ -55,6 +55,7 @@ public class CommandViewCtrl : MonoSingleton<CommandViewCtrl>,UICtrlBase
         
         RowCfgStage rowCfgStage = param[0] as RowCfgStage;
         Dictionary<int, int> commandDic = rowCfgStage.commandDic;
+        Dictionary<int, int> commandTime = rowCfgStage.commandTime;
         List<WaitingCommandObj> originalObjCommandList = new List<WaitingCommandObj>();
         foreach (var pair in commandDic)
         {
@@ -62,9 +63,13 @@ public class CommandViewCtrl : MonoSingleton<CommandViewCtrl>,UICtrlBase
             obj.transform.SetParent(_view.waitingObjContainer);
             WaitingCommandObj waitingObjTemp=obj.GetComponent<WaitingCommandObj>();
             CommandType commandEnum = (CommandType) pair.Key;
-            RowCfgCommand rowCfgCommand = ConfigManager.Instance.cfgCommand[commandEnum.ToString()];
             waitingObjTemp.transform.Find("ClickBtn").Find("Text (Legacy)").GetComponent<Text>().text = commandEnum.ToString();
-            waitingObjTemp.Init(commandEnum, pair.Value,rowCfgCommand.needTime);
+            int needTime = ConfigManager.Instance.cfgCommand[commandEnum.ToString()].needTime;
+            if (commandTime.ContainsKey(pair.Key))//有设置这个指令的needTime，否则用默认needTime
+            {
+                needTime = commandTime[pair.Key];
+            }
+            waitingObjTemp.Init(commandEnum, pair.Value,needTime);
             
             UpdateWaitingObjView(waitingObjTemp);
             originalObjCommandList.Add(waitingObjTemp);
