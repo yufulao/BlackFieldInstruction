@@ -1,4 +1,0 @@
-repository "BlackFieldInstruction@yufulao_lixu@cloud.cn"
-  path "/"
-    smartbranch "/main" 
-     

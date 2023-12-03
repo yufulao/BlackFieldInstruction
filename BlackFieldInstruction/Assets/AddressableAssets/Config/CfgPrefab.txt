@@ -1,7 +1,0 @@
-key#prefabPath#None#None#None#None#None
-key#预设路径#None#None#None#None#None
-string#string#None#None#None#None#None
-WaitingCommandObj#Assets/AddressableAssets/Prefab/WaitingCommandObj.prefab#None#None#None#None#None
-UsedCommandObj#Assets/AddressableAssets/Prefab/UsedCommandObj.prefab#None#None#None#None#None
-ClickBtnProto#Assets/AddressableAssets/Prefab/ClickBtnProto.prefab#None#None#None#None#None
-None#None#None#None#None#None#None

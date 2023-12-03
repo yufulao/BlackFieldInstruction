@@ -1,6 +1,0 @@
-Sfx.xlsx
-Bgm.xlsx
-Stage.xlsx
-Command.xlsx
-Ui.xlsx
-Prefab.xlsx

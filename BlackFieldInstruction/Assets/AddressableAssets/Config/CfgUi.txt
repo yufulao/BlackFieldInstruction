@@ -1,7 +1,0 @@
-key#layer#sortOrder#uiPath#None#None#None
-key#所属层级#canvas的层级#预设路径#None#None#None
-string#string#int#string#None#None#None
-CommandView#SceneLayer#0#Assets/AddressableAssets/UI/CommandView.prefab#None#None#None
-None#None#None#None#None#None#None
-None#None#None#None#None#None#None
-None#None#None#None#None#None#None
