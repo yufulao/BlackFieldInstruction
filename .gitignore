@@ -1,0 +1,4 @@
+# 忽略Asset/Res整个目录
+Assets/Res/
+# 忽略Library整个目录
+Library/

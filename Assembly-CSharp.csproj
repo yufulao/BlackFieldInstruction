@@ -1,0 +1,1127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LangVersion>9.0</LangVersion>
+    <_TargetFrameworkDirectories>non_empty_path_generated_by_unity.rider.package</_TargetFrameworkDirectories>
+    <_FullFrameworkReferenceAssemblyPaths>non_empty_path_generated_by_unity.rider.package</_FullFrameworkReferenceAssemblyPaths>
+    <DisableHandlePackageFileConflicts>true</DisableHandlePackageFileConflicts>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{f57d8bff-318f-4a06-022c-0cedab3ce02f}</ProjectGuid>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>.</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\Bin\Debug\Assembly-CSharp\</OutputPath>
+    <DefineConstants>UNITY_2021_3_14;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;USE_SEARCH_TABLE;USE_SEARCH_MODULE;USE_PROPERTY_DATABASE;USE_SEARCH_EXTENSION_API;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_ANDROID;TEXTCORE_1_0_OR_NEWER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_ETC_COMPRESSION;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_IG;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169,0649</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoConfig>true</NoConfig>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
+    <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
+  </PropertyGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Scripts\BattleLogic\BattleFsm\Fsm\BattleInitState.cs" />
+     <Compile Include="Assets\Scripts\Core\Manager\UIManager.cs" />
+     <Compile Include="Assets\Res\FlatKit\Demos\Common\Scripts\Motion\OrbitMotion.cs" />
+     <Compile Include="Assets\Scripts\BattleLogic\Grid\Component\GridInfo.cs" />
+     <Compile Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Scripts\FloatingMotion.cs" />
+     <Compile Include="Assets\Res\FlatKit\Demos\Common\Scripts\UvScroller.cs" />
+     <Compile Include="Assets\Scripts\Config\CfgCommand.cs" />
+     <Compile Include="Assets\Scripts\Core\Base\Manager\IMonoManager.cs" />
+     <Compile Include="Assets\Scripts\Core\Manager\InputManager\InputActions.cs" />
+     <Compile Include="Assets\Scripts\UI\UILogic\Command\CommandUICtrl.cs" />
+     <Compile Include="Assets\Scripts\Config\CfgPrefab.cs" />
+     <Compile Include="Assets\Res\FlatKit\Demos\Common\Scripts\Motion\LinearMotion.cs" />
+     <Compile Include="Assets\Scripts\Config\CfgUI.cs" />
+     <Compile Include="Assets\Scripts\Core\Manager\SceneManager.cs" />
+     <Compile Include="Assets\Scripts\BattleLogic\Grid\GridManager.cs" />
+     <Compile Include="Assets\Scripts\Core\Manager\InputManager\InputManager.cs" />
+     <Compile Include="Assets\Scripts\UI\UILogic\Command\Component\UsedCommandItem.cs" />
+     <Compile Include="Assets\Scripts\Misc\Def\CommandType.cs" />
+     <Compile Include="Assets\Scripts\Core\Manager\AssetManager.cs" />
+     <Compile Include="Assets\Scripts\Core\Manager\EventManager\EventManager.cs" />
+     <Compile Include="Assets\Scripts\Core\Manager\BgmManager.cs" />
+     <Compile Include="Assets\Scripts\Core\Manager\FsmManager.cs" />
+     <Compile Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Scripts\BillboardLineRendererCircle.cs" />
+     <Compile Include="Assets\Scripts\UI\UILogic\Command\Component\WaitingCommandItem.cs" />
+     <Compile Include="Assets\Scripts\Core\Manager\ConfigManager\CsvReader.cs" />
+     <Compile Include="Assets\Scripts\BattleLogic\BattleFsm\Fsm\BattleCommandInputState.cs" />
+     <Compile Include="Assets\Scripts\BattleLogic\BattleFsm\Fsm\BattlePauseState.cs" />
+     <Compile Include="Assets\Scripts\BattleLogic\BattleManager.cs" />
+     <Compile Include="Assets\Scripts\UI\Base\UIDragComponent.cs" />
+     <Compile Include="Assets\Scripts\BattleLogic\BattleFsm\Fsm\BattleCommandExcuteState.cs" />
+     <Compile Include="Assets\Scripts\UI\Base\UICtrlBase.cs" />
+     <Compile Include="Assets\Scripts\BattleLogic\Grid\Component\GridCell.cs" />
+     <Compile Include="Assets\Scripts\BattleLogic\Grid\Component\GridObject.cs" />
+     <Compile Include="Assets\Scripts\BattleLogic\Command\CommandManager.cs" />
+     <Compile Include="Assets\Scripts\BattleLogic\BattleFsm\Fsm\BattleEndState.cs" />
+     <Compile Include="Assets\Scripts\UI\UILogic\Command\CommandUIModel.cs" />
+     <Compile Include="Assets\Scripts\BattleLogic\Grid\GridView.cs" />
+     <Compile Include="Assets\Scripts\BattleLogic\Grid\GridModel.cs" />
+     <Compile Include="Assets\Scripts\BattleLogic\Grid\Component\Player.cs" />
+     <Compile Include="Assets\Scripts\Misc\Util\Utils.cs" />
+     <Compile Include="Assets\Res\FlatKit\[Render Pipeline] URP\Water\Scripts\Buoyancy.cs" />
+     <Compile Include="Assets\Scripts\BattleLogic\Grid\Component\TargetObject.cs" />
+     <Compile Include="Assets\Scripts\Config\CfgSfx.cs" />
+     <Compile Include="Assets\Scripts\Core\Base\Fsm\IFsmState.cs" />
+     <Compile Include="Assets\Scripts\Core\Base\Fsm\BaseFsm.cs" />
+     <Compile Include="Assets\Scripts\Config\CfgBgm.cs" />
+     <Compile Include="Assets\Scripts\Core\Manager\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Config\CfgStage.cs" />
+     <Compile Include="Assets\Scripts\BattleLogic\BattleFsm\BattleFsm.cs" />
+     <Compile Include="Assets\Scripts\UI\UILogic\Command\Component\CommandItem.cs" />
+     <Compile Include="Assets\Scripts\Core\Base\Singleton\MonoSingleton.cs" />
+     <Compile Include="Assets\Scripts\Misc\Def\ForwardType.cs" />
+     <Compile Include="Assets\Scripts\Core\Manager\SfxManager.cs" />
+     <Compile Include="Assets\Scripts\Core\Manager\EventManager\EventName.cs" />
+     <Compile Include="Assets\Scripts\Core\Base\Singleton\BaseSingleTon.cs" />
+     <Compile Include="Assets\Scripts\Core\Manager\ConfigManager\ConfigManager.cs" />
+     <Compile Include="Assets\Res\FlatKit\Demos\Common\Scripts\AutoLoadPipelineAsset.cs" />
+     <Folder Include="Assets" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Valley\Valley-FogImageEffect-Presets" />
+     <Folder Include="Assets\Res\FlatKit\Demos\Common" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Models" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 7 - Var-OutlineImageEffect" />
+     <Folder Include="Assets\AddressableAssets\Animation" />
+     <None Include="Assets\AddressableAssets\Config\CfgCommand.txt" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Racing Car" />
+     <Folder Include="Assets\Res\FlatKit" />
+     <Folder Include="Assets\Res\Graveyard Kit" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 5 - Var-Outlines" />
+     <Folder Include="Assets\Scripts\Misc" />
+     <Folder Include="Assets\Res\FlatKit\Shaders" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Room\Room-Materials" />
+     <Folder Include="Assets\AddressableAssets\Prefab\Material" />
+     <Folder Include="Assets\AddressableAssetsData\AssetGroupTemplates" />
+     <Folder Include="Assets\Res\FlatKit\Shaders\StylizedSurface\LibraryUrp" />
+     <None Include="Assets\Res\FlatKit\Shaders\StylizedSurface\LibraryUrp\LitForwardPass_DR.hlsl" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Mugs" />
+     <Folder Include="Assets\Res\FlatKit\Demos\Common\URP Configs" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Settings" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Racing Car\Materials" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Ocean Islands\Ocean Islands Scene - Post-Processing" />
+     <Folder Include="Assets\Res\Platformer Kit" />
+     <Folder Include="Assets\AddressableAssetsData" />
+     <Folder Include="Assets\Res\FlatKit\Demos\Common\Textures" />
+     <Folder Include="Assets\Res\Graveyard Kit\Models" />
+     <Folder Include="Assets\AddressableAssets\Bgm" />
+     <None Include="Assets\AddressableAssets\Config\CfgPrefab.txt" />
+     <Folder Include="Assets\AddressableAssetsData\AssetGroups" />
+     <Folder Include="Assets\Res\Platformer Kit\Models\STL format" />
+     <Folder Include="Assets\AddressableAssets\Config" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Mugs\Mugs-Materials\2 - OneColorVariousParameters\BlPrMugs-Scene_2_RampTextures" />
+     <None Include="Assets\Res\FlatKit\Shaders\StylizedSurface\LibraryUrp\TerrainLitPasses_DR.hlsl" />
+     <Folder Include="Assets\AddressableAssets" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Robot Kyle Desert" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Pool\Pool Scene - GradientTextures" />
+     <Folder Include="Assets\Scripts\UI\UILogic\Command\Component" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Mugs\Resources" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Racing Car\Textures" />
+     <Folder Include="Assets\Res\Platformer Kit\Models\FBX format" />
+     <None Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders\CircleDecal.shader" />
+     <None Include="Assets\AddressableAssets\Config\CfgStage.txt" />
+     <Folder Include="Assets\AddressableAssetsData\AssetGroups\Schemas" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials" />
+     <None Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders\Noise\ClassicNoise3D.hlsl" />
+     <Folder Include="Assets\Res\FlatKit\[Render Pipeline] URP\Water\Scripts" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Wanderer\Wanderer-Models" />
+     <Folder Include="Assets\AddressableAssetsData\DataBuilders" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Mugs\Mugs-Materials\Shared" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Valley\Valley-Terrain" />
+     <Folder Include="Assets\Scripts\BattleLogic\Grid" />
+     <None Include="Assets\Res\FlatKit\Shaders\StylizedSurface\LibraryUrp\StylizedInput.hlsl" />
+     <None Include="Assets\Res\FlatKit\Shaders\GradientSkybox\GradientSkybox.shader" />
+     <Folder Include="Assets\Scripts\Misc\Def" />
+     <Folder Include="Assets\Scripts\Core\Manager\InputManager" />
+     <None Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders\BubbleLineMap.shader" />
+     <Folder Include="Assets\Res\FlatKit\[Render Pipeline] URP\Water\Textures" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] NormalMapsTree\NormalMapsTree-Models" />
+     <Folder Include="Assets\Scripts\BattleLogic\Grid\Component" />
+     <Folder Include="Assets\AddressableAssets\Scene" />
+     <None Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders\Noise\Common.hlsl" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders\SubGraphs" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Valley\Valley-Materials" />
+     <Folder Include="Assets\Res\FlatKit\[Render Pipeline] URP\Water\Shaders" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Car\Car-Materials\Car-Materials-Shared" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Valley\Valley-Models\Models-Forest-Textured" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Textures" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Various Presets\Water Vessels Scene - GradientTextures" />
+     <Folder Include="Assets\Res\FlatKit\Demos\Common\Textures\Misc\Noise" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Car\Car-Materials\Car-Materials-Set3" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Car\Car-Materials\Car-Materials-Set1" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Various Presets" />
+     <Folder Include="Assets\Scripts\Core\Base" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders\Noise" />
+     <Folder Include="Assets\Res\Graveyard Kit\Models\STL format" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase" />
+     <Folder Include="Assets\Scripts\UI\UILogic\Command" />
+     <Folder Include="Assets\Res\Graveyard Kit\Models\DAE format" />
+     <Folder Include="Assets\AddressableAssets\AudioMixer" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Room" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Various Presets\Water Vessels Scene - Presets" />
+     <None Include="Assets\AddressableAssets\Config\CfgSfx.txt" />
+     <Folder Include="Assets\Res\FlatKit\[Render Pipeline] URP\EditorAttributes" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Car\Car-Materials" />
+     <Folder Include="Assets\Scripts\UI\Base" />
+     <Folder Include="Assets\Res" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Valley\Valley-Textures" />
+     <None Include="Assets\Res\FlatKit\Shaders\StylizedSurface\LibraryUrp\Lighting_DR.hlsl" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Mugs\Fonts" />
+     <Folder Include="Assets\Scripts\Core\Base\Fsm" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Wanderer" />
+     <None Include="Assets\AddressableAssets\Config\CfgUI.txt" />
+     <Folder Include="Assets\AddressableAssets\UI" />
+     <Folder Include="Assets\Scripts\Core" />
+     <Folder Include="Assets\Scripts\BattleLogic" />
+     <None Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders\DesertCloud.hlsl" />
+     <Folder Include="Assets\Res\FlatKit\Demos" />
+     <Folder Include="Assets\Scripts\Core\Manager\EventManager" />
+     <None Include="Assets\Res\FlatKit\Shaders\StylizedSurface\StylizedSurfaceOutline.shader" />
+     <Folder Include="Assets\Scripts\Config" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Robot Kyle Desert\Model" />
+     <Folder Include="Assets\Res\FlatKit\Shaders\GradientSkybox" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Robot Kyle Desert\Textures" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Car\Car-Materials\Car-Materials-Set2" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert" />
+     <Folder Include="Assets\Res\Graveyard Kit\Models\FBX format" />
+     <Folder Include="Assets\Res\FlatKit\Demos\Common\Textures\Grid" />
+     <Folder Include="Assets\Scripts\Misc\Util" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 6 - Var-TwoColor" />
+     <Folder Include="Assets\Scripts\BattleLogic\Command" />
+     <None Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders\DesertPillar.hlsl" />
+     <Folder Include="Assets\Res\Platformer Kit\Previews" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] IslandWithTrees\IslandWithTrees-Materials" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Car\Car-Materials\Car-Materials-Set5" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Mugs\Mugs-Models" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] NormalMapsTree" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Materials" />
+     <Folder Include="Assets\AddressableAssets\Prefab" />
+     <Folder Include="Assets\Res\Graveyard Kit\Models\OBJ format" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Mugs\Mugs-Materials\2 - OneColorVariousParameters" />
+     <Folder Include="Assets\Res\Platformer Kit\Models\OBJ format" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Room\Room-CameraProfiles" />
+     <Folder Include="Assets\Scripts\Core\Base\Manager" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Scripts" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 3 - Mode_Steps-Toony\FV-Scene-3-Ramps" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Ocean Islands\Ocean Islands Scene - Materials" />
+     <Folder Include="Assets\AddressableAssetsData\Windows" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 4 - Mode_Curve-Gradients\FV-Scene-4-Ramps" />
+     <Folder Include="Assets\Res\FlatKit\[Render Pipeline] URP" />
+     <Folder Include="Assets\Res\FlatKit\PresetsShared\Materials" />
+     <Folder Include="Assets\Res\Graveyard Kit\Models\GLTF format" />
+     <Folder Include="Assets\Res\Graveyard Kit\Previews" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders\Library" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Wanderer\Wanderer-FogImageEffect-Presets" />
+     <None Include="Assets\Res\Platformer Kit\License.txt" />
+     <Folder Include="Assets\Scripts\BattleLogic\BattleFsm" />
+     <None Include="Assets\AddressableAssets\Config\CfgBgm.txt" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Ocean Islands\Ocean Islands Scene - Textures" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Mugs\Mugs-Materials\1 - ColorfulMisc" />
+     <Folder Include="Assets\Res\FlatKit\Shaders\StylizedSurface" />
+     <Folder Include="Assets\Res\FlatKit\Demos\Common\Textures\Misc" />
+     <Folder Include="Assets\Scripts\UI\UILogic" />
+     <None Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders\Library\StylizedLighting.hlsl" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Models" />
+     <Folder Include="Assets\Res\FlatKit\[Render Pipeline] URP\Water" />
+     <Folder Include="Assets\Scripts\Core\Base\Singleton" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] IslandWithTrees" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Robot Kyle Desert\Materials" />
+     <Folder Include="Assets\Resources" />
+     <Folder Include="Assets\Res\Platformer Kit\Models" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Valley\Valley-Materials\TerrainPaintLayers" />
+     <Folder Include="Assets\Res\Platformer Kit\Models\DAE format" />
+     <Folder Include="Assets\Scripts\Core\Manager" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Mugs\Mugs-Materials" />
+     <Folder Include="Assets\Scripts\UI" />
+     <Folder Include="Assets\AddressableAssetsData\Android" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Racing Car\Settings" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 2 - Mode_Single" />
+     <Folder Include="Assets\Res\FlatKit\PresetsShared\Presets" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Room\Room-Models" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Various Presets\Water Vessels Scene - Textures" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] NormalMapsTree\NormalMapsTree-Textures" />
+     <Folder Include="Assets\AddressableAssets\Sfx" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Pool\Pool Scene - Materials" />
+     <None Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders\Noise\ClassicNoise2D.hlsl" />
+     <Folder Include="Assets\Scripts\Core\Manager\ConfigManager" />
+     <Folder Include="Assets\Scripts" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Pool\Pool Scene - Models" />
+     <None Include="Assets\Res\FlatKit\Shaders\StylizedSurface\TerrainLitAdd_DR.shader" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 3 - Mode_Steps-Toony" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Wanderer\Wanderer-CameraProfiles" />
+     <Folder Include="Assets\Scripts\ConfigDef" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] IslandWithTrees\IslandWithTrees-Models" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Valley\Valley-Models" />
+     <Folder Include="Assets\Res\FlatKit\Demos\Common\Scripts\Motion" />
+     <Folder Include="Assets\Res\Platformer Kit\Models\GLTF format" />
+     <Folder Include="Assets\Res\FlatKit\PresetsShared" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 1 - Mode_None-Completely Flat" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 4 - Mode_Curve-Gradients" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Various Presets\Water Vessels Scene - Models" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Car\Car-Materials\Car-Materials-Set4" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Valley" />
+     <Folder Include="Assets\Scripts\BattleLogic\BattleFsm\Fsm" />
+     <None Include="Assets\Res\FlatKit\Shaders\StylizedSurface\StylizedSurface.shader" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Valley\Valley-CameraProfiles" />
+     <None Include="Assets\Res\FlatKit\Shaders\LightPlane.shader" />
+     <None Include="Assets\Res\FlatKit\Shaders\StylizedSurface\Terrain.shader" />
+     <None Include="Assets\Res\Graveyard Kit\License.txt" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Various Presets\Water Vessels Scene - Materials" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Ocean Islands" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Car" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Ocean Islands\Ocean Islands Scene - Models" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] NormalMapsTree\NormalMapsTree-Materials" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Racing Car\Models" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Wanderer\Wanderer-Materials" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Pool" />
+     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Car\Car-Models" />
+     <Folder Include="Assets\Res\FlatKit\Demos\Common\Scripts" />
+     <None Include="Assets\Res\FlatKit\[Render Pipeline] URP\Water\Shaders\Water.shader" />
+     <Reference Include="UnityEngine">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.AIModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.AIModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.ARModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.ARModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.AccessibilityModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.AccessibilityModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.AndroidJNIModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.AndroidJNIModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.AnimationModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.AnimationModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.AssetBundleModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.AssetBundleModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.AudioModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.AudioModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.ClothModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.ClothModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.CoreModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.CrashReportingModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.CrashReportingModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.DSPGraphModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.DSPGraphModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.DirectorModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.DirectorModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.GIModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.GIModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.GameCenterModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.GameCenterModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.GridModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.GridModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.HotReloadModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.HotReloadModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.IMGUIModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.IMGUIModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.ImageConversionModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.ImageConversionModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.InputModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.InputModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.InputLegacyModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.InputLegacyModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.JSONSerializeModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.JSONSerializeModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.LocalizationModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.LocalizationModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.ParticleSystemModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.ParticleSystemModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.PerformanceReportingModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.PerformanceReportingModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.PhysicsModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.PhysicsModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Physics2DModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.Physics2DModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.ProfilerModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.ProfilerModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.ScreenCaptureModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.ScreenCaptureModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.SharedInternalsModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.SharedInternalsModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.SpriteMaskModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.SpriteMaskModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.SpriteShapeModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.SpriteShapeModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.StreamingModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.StreamingModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.SubstanceModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.SubstanceModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.SubsystemsModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.SubsystemsModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.TLSModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.TLSModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.TerrainModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.TerrainModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.TerrainPhysicsModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.TextCoreFontEngineModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.TextCoreTextEngineModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.TextRenderingModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.TextRenderingModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.TilemapModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.TilemapModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UIModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UIModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UIElementsModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UIElementsModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UIElementsNativeModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UIElementsNativeModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UIWidgetsModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UIWidgetsModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UNETModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UNETModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UmbraModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UmbraModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UnityAnalyticsModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UnityConnectModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityConnectModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UnityCurlModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityCurlModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UnityTestProtocolModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UnityWebRequestModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.VFXModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.VFXModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.VRModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.VRModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.VehiclesModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.VehiclesModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.VideoModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.VideoModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.WindModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.WindModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.XRModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.XRModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.CoreModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.CoreModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.DeviceSimulatorModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.DeviceSimulatorModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.DiagnosticsModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.DiagnosticsModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.GraphViewModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.GraphViewModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.PackageManagerUIModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.PackageManagerUIModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.QuickSearchModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.QuickSearchModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.SceneTemplateModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.SceneTemplateModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.TextCoreFontEngineModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.TextCoreFontEngineModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.TextCoreTextEngineModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.TextCoreTextEngineModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UIBuilderModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.UIBuilderModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UIElementsModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UIElementsSamplesModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsSamplesModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UIServiceModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.UIServiceModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UnityConnectModule">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+     </Reference>
+     <Reference Include="DemiLib">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Unsafe">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Cecil.Mdb">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Cecil.Pdb">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Cecil">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Cecil.Rocks">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+     </Reference>
+     <Reference Include="DOTween">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="ReportGeneratorMerged">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+     </Reference>
+     <Reference Include="Newtonsoft.Json">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+     </Reference>
+     <Reference Include="DOTweenPro">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Android.Types">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Android.Gradle">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
+     </Reference>
+     <Reference Include="netstandard">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
+     </Reference>
+     <Reference Include="Microsoft.Win32.Primitives">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\Microsoft.Win32.Primitives.dll</HintPath>
+     </Reference>
+     <Reference Include="System.AppContext">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.AppContext.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Buffers">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Buffers.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Collections.Concurrent">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Collections.Concurrent.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Collections">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Collections.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Collections.NonGeneric">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Collections.NonGeneric.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Collections.Specialized">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Collections.Specialized.dll</HintPath>
+     </Reference>
+     <Reference Include="System.ComponentModel">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ComponentModel.dll</HintPath>
+     </Reference>
+     <Reference Include="System.ComponentModel.EventBasedAsync">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ComponentModel.EventBasedAsync.dll</HintPath>
+     </Reference>
+     <Reference Include="System.ComponentModel.Primitives">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ComponentModel.Primitives.dll</HintPath>
+     </Reference>
+     <Reference Include="System.ComponentModel.TypeConverter">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ComponentModel.TypeConverter.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Console">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Console.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Data.Common">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Data.Common.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Diagnostics.Contracts">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.Contracts.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Diagnostics.Debug">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.Debug.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Diagnostics.FileVersionInfo">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.FileVersionInfo.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Diagnostics.Process">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.Process.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Diagnostics.StackTrace">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.StackTrace.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Diagnostics.TextWriterTraceListener">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Diagnostics.Tools">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.Tools.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Diagnostics.TraceSource">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.TraceSource.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Diagnostics.Tracing">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Diagnostics.Tracing.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Drawing.Primitives">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Drawing.Primitives.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Dynamic.Runtime">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Dynamic.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Globalization.Calendars">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Globalization.Calendars.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Globalization">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Globalization.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Globalization.Extensions">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Globalization.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO.Compression">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.Compression.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO.Compression.ZipFile">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.Compression.ZipFile.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO.FileSystem">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.FileSystem.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO.FileSystem.DriveInfo">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.FileSystem.DriveInfo.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO.FileSystem.Primitives">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.FileSystem.Primitives.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO.FileSystem.Watcher">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.FileSystem.Watcher.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO.IsolatedStorage">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.IsolatedStorage.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO.MemoryMappedFiles">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.MemoryMappedFiles.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO.Pipes">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.Pipes.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO.UnmanagedMemoryStream">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.IO.UnmanagedMemoryStream.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Linq">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Linq.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Linq.Expressions">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Linq.Expressions.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Linq.Parallel">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Linq.Parallel.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Linq.Queryable">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Linq.Queryable.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Memory">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Memory.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.Http">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Http.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.NameResolution">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.NameResolution.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.NetworkInformation">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.NetworkInformation.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.Ping">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Ping.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.Primitives">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Primitives.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.Requests">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Requests.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.Security">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Security.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.Sockets">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.Sockets.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.WebHeaderCollection">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.WebHeaderCollection.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.WebSockets.Client">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.WebSockets.Client.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net.WebSockets">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Net.WebSockets.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Numerics.Vectors">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Numerics.Vectors.dll</HintPath>
+     </Reference>
+     <Reference Include="System.ObjectModel">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ObjectModel.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Reflection.DispatchProxy">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.DispatchProxy.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Reflection">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Reflection.Emit">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.Emit.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Reflection.Emit.ILGeneration">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.Emit.ILGeneration.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Reflection.Emit.Lightweight">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.Emit.Lightweight.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Reflection.Extensions">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Reflection.Primitives">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Reflection.Primitives.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Resources.Reader">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Resources.Reader.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Resources.ResourceManager">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Resources.ResourceManager.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Resources.Writer">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Resources.Writer.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.CompilerServices.VisualC">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.CompilerServices.VisualC.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.Extensions">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.Handles">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Handles.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.InteropServices">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.InteropServices.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.Numerics">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Numerics.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.Serialization.Formatters">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Serialization.Formatters.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.Serialization.Json">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Serialization.Json.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.Serialization.Primitives">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Serialization.Primitives.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.Serialization.Xml">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Runtime.Serialization.Xml.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Security.Claims">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Claims.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Security.Cryptography.Algorithms">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Cryptography.Algorithms.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Security.Cryptography.Csp">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Cryptography.Csp.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Security.Cryptography.Encoding">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Cryptography.Encoding.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Security.Cryptography.Primitives">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Cryptography.Primitives.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Security.Cryptography.X509Certificates">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Cryptography.X509Certificates.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Security.Principal">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.Principal.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Security.SecureString">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Security.SecureString.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Text.Encoding">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Text.Encoding.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Text.Encoding.Extensions">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Text.Encoding.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Text.RegularExpressions">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Text.RegularExpressions.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Threading">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Threading.Overlapped">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Overlapped.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Threading.Tasks">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Tasks.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Threading.Tasks.Extensions">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Tasks.Extensions.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Threading.Tasks.Parallel">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Tasks.Parallel.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Threading.Thread">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Thread.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Threading.ThreadPool">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.ThreadPool.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Threading.Timer">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Threading.Timer.dll</HintPath>
+     </Reference>
+     <Reference Include="System.ValueTuple">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.ValueTuple.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Xml.ReaderWriter">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.ReaderWriter.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Xml.XDocument">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.XDocument.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Xml.XmlDocument">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.XmlDocument.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Xml.XmlSerializer">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.XmlSerializer.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Xml.XPath">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.XPath.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Xml.XPath.XDocument">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard\System.Xml.XPath.XDocument.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\Extensions\2.0.0\System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+     </Reference>
+     <Reference Include="mscorlib">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\mscorlib.dll</HintPath>
+     </Reference>
+     <Reference Include="System.ComponentModel.Composition">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.ComponentModel.Composition.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Core">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Core.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Data">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Data.dll</HintPath>
+     </Reference>
+     <Reference Include="System">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Drawing">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Drawing.dll</HintPath>
+     </Reference>
+     <Reference Include="System.IO.Compression.FileSystem">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.IO.Compression.FileSystem.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Net">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Net.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Numerics">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Numerics.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Runtime.Serialization">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Runtime.Serialization.dll</HintPath>
+     </Reference>
+     <Reference Include="System.ServiceModel.Web">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.ServiceModel.Web.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Transactions">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Transactions.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Web">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Web.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Windows">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Windows.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Xml">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Xml.Linq">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Linq.dll</HintPath>
+     </Reference>
+     <Reference Include="System.Xml.Serialization">
+     <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VSCode.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.CacheServer">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TextMeshPro.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Addressables">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.State.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Searcher.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UI">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.InputSystem">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Rider.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UI">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.EditorCoroutines.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ShaderGraph.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Mathematics.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Addressables.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Tilemap.Extras">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Tilemap.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="PPv2URPConverters">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualStudio.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Core.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TextMeshPro">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Sprite.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.Runtime">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ResourceManager">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.PlasticSCM.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Tilemap.Extras.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Services.Core">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Core">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Mathematics">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Services.Core.Analytics">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Universal.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Shared.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Services.Core.Environments">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ScriptableBuildPipeline">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ScriptableBuildPipeline.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.State">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{04274519-8601-9a08-939e-803387cf36b1}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+    <ProjectReference Include="ExternAttributes.Editor.csproj">
+      <Project>{78d44f5c-90fe-a967-497c-7d4cbfb0a612}</Project>
+      <Name>ExternAttributes.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="FlatKit.Utils.Editor.csproj">
+      <Project>{6684a651-197d-ea38-d5b3-61f63f6ad2e1}</Project>
+      <Name>FlatKit.Utils.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
+      <Project>{7c2f603b-ff79-92b5-e600-557727539ab6}</Project>
+      <Name>Unity.RenderPipelines.Universal.Runtime</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
