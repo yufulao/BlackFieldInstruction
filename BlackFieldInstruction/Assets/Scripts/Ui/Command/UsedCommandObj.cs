@@ -1,19 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class UsedCommandObj : MonoBehaviour
+public class UsedCommandObj : CommandObj
 {
-    [HideInInspector]
-    public CommandType commandEnum;
-    [HideInInspector]
-    public int count;
-    [HideInInspector]
-    public int currentTime;
-    
+    [HideInInspector] public int currentTime;
+
     public Text currentTimeText;
-    public Text countText;
+
 
     /// <summary>
     /// 生成usedObj时初始化相关属性
@@ -21,11 +18,42 @@ public class UsedCommandObj : MonoBehaviour
     /// <param name="commandEnumT"></param>
     /// <param name="countT"></param>
     /// <param name="currentTimeT"></param>
-    public void Init(CommandType commandEnumT,int countT,int currentTimeT)
+    public void Init(CommandType commandEnumT, int countT, int currentTimeT)
     {
-        commandEnum = commandEnumT;
-        count = countT;
+        base.Init(commandEnumT, countT);
         currentTime = currentTimeT;
-        transform.Find("ClickBtn").Find("Text (Legacy)").GetComponent<Text>().text = commandEnum.ToString();
     }
+
+    public bool DragFilter(GameObject obj)
+    {
+        //Debug.Log(obj.name);
+        if (obj.name == "WaitingCommandObjList")
+        {
+            return true; //保留
+        }
+
+        return false; //移除
+    }
+
+    public void OnCommandObjEndDragCallback(List<GameObject> resultObjs)
+    {
+        if (resultObjs == null)
+        {
+            CommandViewCtrl.Instance.UsedBtnOnEndDragFail(this);
+            return;
+        }
+
+        for (int i = 0; i < resultObjs.Count; i++)
+        {
+            if (resultObjs[i].name == "WaitingCommandObjList")
+            {
+                CommandViewCtrl.Instance.ClickUsedObj(this);
+                return;
+            }
+        }
+
+        CommandViewCtrl.Instance.UsedBtnOnEndDragFail(this);
+    }
+    
+
 }

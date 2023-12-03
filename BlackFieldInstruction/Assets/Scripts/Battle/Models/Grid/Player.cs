@@ -57,6 +57,7 @@ public class Player : GridObject
                 newPoint = new Vector2Int(lastPoint.x+1, lastPoint.y);
                 break;
             case CommandType.Wait:
+                newPoint = new Vector2Int(lastPoint.x, lastPoint.y);
                 break;
         }
         
@@ -70,6 +71,11 @@ public class Player : GridObject
             yield return _tweener.WaitForCompletion();
             GridManager.Instance.UpdateGridObjPoint(this,lastPoint,newPoint);//更新GridObj
         }
+        else
+        {
+            yield return new WaitForSeconds(during);
+        }
+        
         if (!GridManager.Instance.CheckPlayerGetTarget())
         {
             CommandManager.Instance.ExcuteCommand();
