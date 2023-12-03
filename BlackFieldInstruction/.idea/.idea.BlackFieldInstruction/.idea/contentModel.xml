@@ -21,7 +21,9 @@
             <e p="CfgStage.txt" t="Include" />
             <e p="CfgUi.txt" t="Include" />
           </e>
-          <e p="Prefab" t="Include" />
+          <e p="Prefab" t="Include">
+            <e p="Material" t="Include" />
+          </e>
           <e p="Scene" t="Include" />
           <e p="Sfx" t="Include" />
           <e p="Ui" t="Include" />
@@ -504,6 +506,7 @@
           </e>
           <e p="Ui" t="Include">
             <e p="Command" t="Include">
+              <e p="CommandObj.cs" t="Include" />
               <e p="CommandViewCtrl.cs" t="Include" />
               <e p="CommandViewModel.cs" t="Include" />
               <e p="CommandViewView.cs" t="Include" />
@@ -512,6 +515,7 @@
             </e>
             <e p="UIBase" t="Include">
               <e p="UiCtrlBase.cs" t="Include" />
+              <e p="UIDragComponent.cs" t="Include" />
             </e>
           </e>
           <e p="Utils" t="Include">
