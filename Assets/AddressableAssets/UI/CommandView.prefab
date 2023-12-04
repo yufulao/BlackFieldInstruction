@@ -1508,6 +1508,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806837250b70a4644b697e89182e7170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startBtn: {fileID: 8243758927614207010}
+  currentTimeText: {fileID: 7088166916604584791}
+  stageTimeText: {fileID: 6525403409337057595}
+  waitingScroll: {fileID: 5441150653796387063}
+  usedScroll: {fileID: 5441150653457362120}
+  usedItemContainer: {fileID: 5441150652022316376}
+  waitingItemContainer: {fileID: 5441150653751628017}
 --- !u!114 &8857004149562754184
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -30,16 +30,6 @@ public class CommandUIModel : MonoBehaviour
     }
 
     /// <summary>
-    /// 更新当前所需总时间
-    /// </summary>
-    /// <param name="addTime"></param>
-    public void UpdateCurrentNeedTime(int addTime)
-    {
-        _currentNeedTime += addTime;
-        CommandUICtrl.Instance.UpdateCurrentTimeText(_currentNeedTime);
-    }
-
-    /// <summary>
     /// 获取usedCommandList
     /// </summary>
     /// <returns></returns>
@@ -52,92 +42,37 @@ public class CommandUIModel : MonoBehaviour
     /// usedItem加一
     /// </summary>
     /// <param name="waitingItem"></param>
-    /// <param name="usedItemContainer"></param>
-    public void AddUsedCommand(WaitingCommandItem waitingItem, Transform usedItemContainer)
+    public void AddUsedCommand(WaitingCommandItem waitingItem)
     {
+        _currentNeedTime += waitingItem.needTime;
+        CommandUICtrl.Instance.UpdateCurrentTimeText(_currentNeedTime);
+
         UsedCommandItem usedItem = null;
         if (_usedItemList.Count == 0 || _usedItemList[^1].commandEnum != waitingItem.commandEnum)
         {
-            usedItem =
-                Instantiate(
-                    AssetManager.Instance.LoadAsset<GameObject>(ConfigManager.Instance.cfgPrefab["UsedCommandItem"]
-                        .prefabPath), usedItemContainer).GetComponent<UsedCommandItem>();
-            usedItem.Init(waitingItem.commandEnum, 1, waitingItem.needTime);
-            CommandUICtrl.Instance.CreatWaitingBtn(usedItem);
+            usedItem = CommandUICtrl.Instance.AddUsedItem(waitingItem);
             _usedItemList.Add(usedItem);
-            UpdateUsedItem(usedItem);
+            UpdateUsedItem(usedItem, waitingItem.needTime);
             return;
         }
 
         //最新的usedObj是同类command
         usedItem = _usedItemList[^1];
         usedItem.count++;
-        if (usedItem.btnList.Count > usedItem.count)
-        {
-            usedItem.btnList[usedItem.count].SetActive(true);
-        }
-        else
-        {
-            CommandUICtrl.Instance.CreatWaitingBtn(usedItem);
-        }
-
-        UpdateUsedItem(usedItem);
-    }
-
-    /// <summary>
-    /// waitingItem加1
-    /// </summary>
-    /// <param name="commandEnum"></param>
-    public WaitingCommandItem AddWaitingCommand(CommandType commandEnum)
-    {
-        WaitingCommandItem waitingItem = null;
-        foreach (var waitingItemTemp in _waitingItemList)
-        {
-            if (waitingItemTemp.commandEnum == commandEnum)
-            {
-                waitingItem = waitingItemTemp;
-                break;
-            }
-        }
-
-        if (waitingItem == null)
-        {
-            Debug.Log("找不到对应的waitingItem");
-            return null;
-        }
-
-        waitingItem.count++;
-        waitingItem.btnList[waitingItem.count - 1].SetActive(true);
-
-        CommandUICtrl.Instance.UpdateWaitingObjView(waitingItem);
-        return waitingItem;
-    }
-
-    /// <summary>
-    /// waitingItem减一
-    /// </summary>
-    /// <param name="waitingItem"></param>
-    public void RemoveWaitingCommand(WaitingCommandItem waitingItem)
-    {
-        waitingItem.count--;
-        waitingItem.btnList[waitingItem.count].gameObject.SetActive(false);
-        if (_waitingItemList.Count <= 0)
-        {
-            CommandUICtrl.Instance.NoWaitingObj();
-        }
-
-        CommandUICtrl.Instance.UpdateWaitingObjView(waitingItem);
+        UpdateUsedItem(usedItem, waitingItem.needTime);
     }
 
     /// <summary>
     /// usedItem减一
     /// </summary>
     /// <param name="usedItem"></param>
-    public void RemoveUsedCommand(UsedCommandItem usedItem)
+    /// <param name="timeAddon"></param>
+    public void RemoveUsedCommand(UsedCommandItem usedItem, int timeAddon)
     {
-        usedItem.count--;
-        usedItem.btnList[usedItem.count].gameObject.SetActive(false);
+        _currentNeedTime += timeAddon;
+        CommandUICtrl.Instance.UpdateCurrentTimeText(_currentNeedTime);
 
+        usedItem.count--;
         if (usedItem.count <= 0)
         {
             int removeUsedItemIndex = _usedItemList.IndexOf(usedItem);
@@ -151,7 +86,49 @@ public class CommandUIModel : MonoBehaviour
             CommandUICtrl.Instance.NoUsedObj();
         }
 
-        UpdateUsedItem(usedItem);
+        UpdateUsedItem(usedItem,timeAddon);
+    }
+
+    /// <summary>
+    /// waitingItem加1
+    /// </summary>
+    /// <param name="usedItem"></param>
+    public void AddWaitingCommand(UsedCommandItem usedItem)
+    {
+        WaitingCommandItem waitingItem = null;
+        foreach (var waitingItemTemp in _waitingItemList)
+        {
+            if (waitingItemTemp.commandEnum == usedItem.commandEnum)
+            {
+                waitingItem = waitingItemTemp;
+                break;
+            }
+        }
+
+        if (waitingItem == null)
+        {
+            Debug.Log("找不到对应的waitingItem");
+            return;
+        }
+
+        waitingItem.count++;
+        waitingItem.UpdateView();
+    }
+
+    /// <summary>
+    /// waitingItem减一
+    /// </summary>
+    /// <param name="waitingItem"></param>
+    public void RemoveWaitingCommand(WaitingCommandItem waitingItem)
+    {
+        waitingItem.count--;
+
+        if (_waitingItemList.Count <= 0)
+        {
+            CommandUICtrl.Instance.NoWaitingObj();
+        }
+
+        waitingItem.UpdateView();
     }
 
     /// <summary>
@@ -169,19 +146,11 @@ public class CommandUIModel : MonoBehaviour
         {
             var lastUsedItem = _usedItemList[removeUsedItemIndex - 1];
             var nextUsedItem = _usedItemList[removeUsedItemIndex];
-            for (int i = 0; i < nextUsedItem.btnList.Count; i++)
-            {
-                nextUsedItem.btnList[i].transform.SetParent(lastUsedItem.clickBtnContainer);
-                nextUsedItem.btnList[i].transform.position = Vector3.zero;
-                nextUsedItem.btnList[i].GetComponent<Button>().onClick.RemoveAllListeners();
-                nextUsedItem.btnList[i].GetComponent<Button>().onClick.AddListener(() => { CommandUICtrl.Instance.ClickUsedObj(lastUsedItem); });
-                lastUsedItem.btnList.Add(nextUsedItem.btnList[i]);
-            }
 
             lastUsedItem.count += nextUsedItem.count;
             _usedItemList.Remove(nextUsedItem);
             Destroy(nextUsedItem.gameObject); //对象池处理==================================
-            UpdateUsedItem(lastUsedItem);
+            UpdateUsedItem(lastUsedItem,0);
         }
     }
 
@@ -189,16 +158,24 @@ public class CommandUIModel : MonoBehaviour
     /// 更新最新的usedObj的当前时间
     /// </summary>
     /// <param name="usedCommandItem"></param>
-    private void UpdateUsedItem(UsedCommandItem usedCommandItem)
+    /// <param name="timeAddon"></param>
+    private void UpdateUsedItem(UsedCommandItem usedCommandItem, int timeAddon)
     {
         if (_usedItemList.Count == 0)
         {
             return;
         }
 
+        for (int i = _usedItemList.IndexOf(usedCommandItem) + 1; i < _usedItemList.Count; i++)
+        {
+            _usedItemList[i].currentTime += timeAddon;
+            _usedItemList[i].UpdateLastUsedObjView();
+        }
+
         UsedCommandItem lastUsedItem = _usedItemList[^1];
         lastUsedItem.currentTime = _currentNeedTime;
-        CommandUICtrl.Instance.UpdateLastUsedObjView(lastUsedItem);
-        CommandUICtrl.Instance.UpdateLastUsedObjView(usedCommandItem);
+        lastUsedItem.UpdateLastUsedObjView();
+
+        usedCommandItem.UpdateLastUsedObjView();
     }
 }

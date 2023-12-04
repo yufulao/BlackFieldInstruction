@@ -1,10 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(CanvasGroup))]
@@ -22,7 +19,7 @@ public class UIDragComponent : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     private Action _onBeginDrag;
     private Action<PointerEventData> _invalidBeginDragDispatch; //无效拖拽开始时转发的事件
     private Action<PointerEventData> _invalidOnDragDispatch; //无效拖拽中转发的事件
-    private Action<PointerEventData> _invalidEndDragDispatch; //无效拖拽中转发的事件
+    private Action<PointerEventData> _invalidEndDragDispatch; //无效拖拽结束时转发的事件
 
     private GameObject _cacheObjOnDrag; //移动过程中复制的一份物体
     private Vector2 _originalPos; //开始拖拽的position

@@ -25,10 +25,6 @@ MonoBehaviour:
     m_Address: Assets/AddressableAssets/Prefab/WaitingCommandObj.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: a6f63b0c65b756c47be990744453e58a
-    m_Address: Assets/AddressableAssets/Prefab/ClickBtnProto.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: a19174961d3b32943af996d43a3fd044, type: 2}
   m_SchemaSet:

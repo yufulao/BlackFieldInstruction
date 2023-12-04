@@ -1,42 +1,61 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class WaitingCommandItem : CommandItem
 {
-    [HideInInspector]
-    public int needTime;
-    
-    public Text needTimeText;
-    
+    [SerializeField] private Text needTimeText;
+    [SerializeField] private GameObject clickBtnMask;
+
+    private Action<PointerEventData> _scrollOnBeginDrag;
+    private Action<PointerEventData> _scrollOnDrag;
+    private Action<PointerEventData> _scrollOnEndDrag;
+
+
+    public void Init(CommandType commandEnumT, int countT, int needTimeT,Transform onDragParent
+        , Action<PointerEventData> scrollOnBeginDrag, Action<PointerEventData> scrollOnDrag, Action<PointerEventData> scrollOnEndDrag)
+    {
+        base.Init(commandEnumT, countT, needTimeT);
+        _scrollOnBeginDrag = scrollOnBeginDrag;
+        _scrollOnDrag = scrollOnDrag;
+        _scrollOnEndDrag = scrollOnEndDrag;
+
+        clickBtn.transform.Find("Text (Legacy)").GetComponent<Text>().text = commandEnum.ToString();
+        clickBtn.transform.GetComponent<Button>().onClick.AddListener(() => { CommandUICtrl.Instance.ClickWaitingItem(this); });
+        clickBtn.transform.GetComponent<UIDragComponent>().InitDragComponent(onDragParent, DragFilter, null, OnCommandItemEndDragCallback
+            , _scrollOnBeginDrag, _scrollOnDrag, _scrollOnEndDrag);
+
+        UpdateView();
+    }
 
     /// <summary>
-    /// 生成waitingObj时初始化相关属性
+    /// 更新单个可选指令的显示
     /// </summary>
-    /// <param name="commandEnumT"></param>
-    /// <param name="countT"></param>
-    /// <param name="needTimeT"></param>
-    public void Init(CommandType commandEnumT,int countT,int needTimeT)
+    public void UpdateView()
     {
-        base.Init(commandEnumT, countT);
-        needTime = needTimeT;
-        transform.Find("ClickBtnBg").Find("Text (Legacy)").GetComponent<Text>().text = commandEnum.ToString();
+        clickBtnMask.SetActive(count <= 0); //当waitingObj的count为0时，关闭waitingObj，否则启用
+        countText.text = "x" + count.ToString();
+        needTimeText.text = needTime.ToString() + "s";
     }
+
+
     
-    public bool DragFilter(GameObject obj)
+    
+    
+    
+    private bool DragFilter(GameObject obj)
     {
         if (obj.name == "UsedCommandItemList")
         {
             return true; //保留
         }
 
-        return false;//移除
+        return false; //移除
     }
-    
-    public void OnCommandItemEndDragCallback(List<GameObject> resultObjs)
+
+    private void OnCommandItemEndDragCallback(List<GameObject> resultObjs)
     {
         if (resultObjs == null)
         {
@@ -45,13 +64,11 @@ public class WaitingCommandItem : CommandItem
 
         for (int i = 0; i < resultObjs.Count; i++)
         {
-            if (resultObjs[i].name=="UsedCommandItemList")
+            if (resultObjs[i].name == "UsedCommandItemList")
             {
-                CommandUICtrl.Instance.ClickWaitingObj(this);
+                CommandUICtrl.Instance.ClickWaitingItem(this);
                 break;
             }
         }
     }
-    
-
 }
