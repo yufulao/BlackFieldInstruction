@@ -646,6 +646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countText: {fileID: 3928471879060127972}
+  timeText: {fileID: 3928471879263125629}
   canvasGroup: {fileID: 7396268375378321397}
   clickBtn: {fileID: 2507172048979996021}
   commandEnum: 0

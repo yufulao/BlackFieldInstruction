@@ -4,13 +4,21 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public interface UICtrlBase
+public class UICtrlBase : MonoBehaviour
 {
-    void OnInit(params object[] param);
+    public virtual void OnInit(params object[] param)
+    {
+    }
 
-    void BindEvent();
+    public virtual void OpenRoot()
+    {
+    }
 
-    void OpenRoot();
-
-    void CloseRoot();
+    public virtual void CloseRoot()
+    {
+    }
+    
+    protected virtual void BindEvent()
+    {
+    }
 }

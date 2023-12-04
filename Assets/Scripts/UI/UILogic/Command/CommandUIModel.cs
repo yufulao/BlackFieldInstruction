@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class CommandUIModel : MonoBehaviour
 {
+    private CommandUICtrl _commandUICtrl;
     private RowCfgStage _rowCfgStage;
     private List<UsedCommandItem> _usedItemList;
     private List<WaitingCommandItem> _waitingItemList;
@@ -17,11 +18,13 @@ public class CommandUIModel : MonoBehaviour
     /// <summary>
     /// 初始化本关卡所有可选指令
     /// </summary>
+    /// <param name="commandUICtrl">controller</param>
     /// <param name="originalCommandItemList">初始指令列表</param>
     /// <param name="rowCfgStage">关卡数据</param>
     /// <returns></returns>
-    public void OnInit(List<WaitingCommandItem> originalCommandItemList, RowCfgStage rowCfgStage)
+    public void OnInit(CommandUICtrl commandUICtrl,List<WaitingCommandItem> originalCommandItemList, RowCfgStage rowCfgStage)
     {
+        _commandUICtrl = commandUICtrl;
         _rowCfgStage = rowCfgStage;
         _usedItemList = new List<UsedCommandItem>();
         _waitingItemList = new List<WaitingCommandItem>();
@@ -45,21 +48,21 @@ public class CommandUIModel : MonoBehaviour
     public void AddUsedCommand(WaitingCommandItem waitingItem)
     {
         _currentNeedTime += waitingItem.needTime;
-        CommandUICtrl.Instance.UpdateCurrentTimeText(_currentNeedTime);
+        _commandUICtrl.RefreshCurrentTimeText(_currentNeedTime);
 
         UsedCommandItem usedItem = null;
         if (_usedItemList.Count == 0 || _usedItemList[^1].commandEnum != waitingItem.commandEnum)
         {
-            usedItem = CommandUICtrl.Instance.AddUsedItem(waitingItem);
+            usedItem = _commandUICtrl.AddUsedItem(waitingItem);
             _usedItemList.Add(usedItem);
-            UpdateUsedItem(usedItem, waitingItem.needTime);
+            SetUsedItem(usedItem, waitingItem.needTime);
             return;
         }
 
         //最新的usedObj是同类command
         usedItem = _usedItemList[^1];
         usedItem.count++;
-        UpdateUsedItem(usedItem, waitingItem.needTime);
+        SetUsedItem(usedItem, waitingItem.needTime);
     }
 
     /// <summary>
@@ -70,7 +73,7 @@ public class CommandUIModel : MonoBehaviour
     public void RemoveUsedCommand(UsedCommandItem usedItem, int timeAddon)
     {
         _currentNeedTime += timeAddon;
-        CommandUICtrl.Instance.UpdateCurrentTimeText(_currentNeedTime);
+        _commandUICtrl.RefreshCurrentTimeText(_currentNeedTime);
 
         usedItem.count--;
         if (usedItem.count <= 0)
@@ -83,10 +86,10 @@ public class CommandUIModel : MonoBehaviour
 
         if (_usedItemList.Count <= 0)
         {
-            CommandUICtrl.Instance.NoUsedObj();
+            _commandUICtrl.NoUsedObj();
         }
 
-        UpdateUsedItem(usedItem,timeAddon);
+        SetUsedItem(usedItem,timeAddon);
     }
 
     /// <summary>
@@ -112,7 +115,7 @@ public class CommandUIModel : MonoBehaviour
         }
 
         waitingItem.count++;
-        waitingItem.UpdateView();
+        waitingItem.RefreshView();
     }
 
     /// <summary>
@@ -125,10 +128,10 @@ public class CommandUIModel : MonoBehaviour
 
         if (_waitingItemList.Count <= 0)
         {
-            CommandUICtrl.Instance.NoWaitingObj();
+            _commandUICtrl.NoWaitingObj();
         }
 
-        waitingItem.UpdateView();
+        waitingItem.RefreshView();
     }
 
     /// <summary>
@@ -150,7 +153,7 @@ public class CommandUIModel : MonoBehaviour
             lastUsedItem.count += nextUsedItem.count;
             _usedItemList.Remove(nextUsedItem);
             Destroy(nextUsedItem.gameObject); //对象池处理==================================
-            UpdateUsedItem(lastUsedItem,0);
+            SetUsedItem(lastUsedItem,0);
         }
     }
 
@@ -159,7 +162,7 @@ public class CommandUIModel : MonoBehaviour
     /// </summary>
     /// <param name="usedCommandItem"></param>
     /// <param name="timeAddon"></param>
-    private void UpdateUsedItem(UsedCommandItem usedCommandItem, int timeAddon)
+    private void SetUsedItem(UsedCommandItem usedCommandItem, int timeAddon)
     {
         if (_usedItemList.Count == 0)
         {
@@ -169,13 +172,13 @@ public class CommandUIModel : MonoBehaviour
         for (int i = _usedItemList.IndexOf(usedCommandItem) + 1; i < _usedItemList.Count; i++)
         {
             _usedItemList[i].currentTime += timeAddon;
-            _usedItemList[i].UpdateLastUsedObjView();
+            _usedItemList[i].RefreshView();
         }
 
         UsedCommandItem lastUsedItem = _usedItemList[^1];
         lastUsedItem.currentTime = _currentNeedTime;
-        lastUsedItem.UpdateLastUsedObjView();
+        lastUsedItem.RefreshView();
 
-        usedCommandItem.UpdateLastUsedObjView();
+        usedCommandItem.RefreshView();
     }
 }

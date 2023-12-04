@@ -1,56 +1,36 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class UsedCommandItem : CommandItem
 {
-    [SerializeField] private Text currentTimeText;
-
     [HideInInspector] public int currentTime;
 
-    private Action<PointerEventData> _scrollOnBeginDrag;
-    private Action<PointerEventData> _scrollOnDrag;
-    private Action<PointerEventData> _scrollOnEndDrag;
 
-
-    /// <summary>
-    /// 生成usedObj时初始化相关属性
-    /// </summary>
-    /// <param name="commandEnumT"></param>
-    /// <param name="countT"></param>
-    /// <param name="currentTimeT"></param>
-    public void Init(CommandType commandEnumT, int countT, int needTimeT, int currentTimeT,Transform onDragParent
+    public void Init(CommandType commandEnumT, int countT, int needTimeT, int currentTimeT, Transform onDragParent, UnityAction btnClickCallbackT
         , Action<PointerEventData> scrollOnBeginDrag, Action<PointerEventData> scrollOnDrag, Action<PointerEventData> scrollOnEndDrag)
     {
-        base.Init(commandEnumT, countT, needTimeT);
+        base.Init(commandEnumT, countT, needTimeT, btnClickCallbackT,scrollOnBeginDrag,scrollOnDrag,scrollOnEndDrag);
         currentTime = currentTimeT;
-        _scrollOnBeginDrag = scrollOnBeginDrag;
-        _scrollOnDrag = scrollOnDrag;
-        _scrollOnEndDrag = scrollOnEndDrag;
 
-        clickBtn.transform.Find("Text (Legacy)").GetComponent<Text>().text = commandEnum.ToString();
-        clickBtn.transform.GetComponent<Button>().onClick.AddListener(() => { CommandUICtrl.Instance.ClickUsedItem(this); });
         clickBtn.transform.GetComponent<UIDragComponent>().InitDragComponent(onDragParent, DragFilter, () => UsedBtnOnBeginDrag(), OnCommandItemEndDragCallback
             , _scrollOnBeginDrag, _scrollOnDrag, _scrollOnEndDrag);
 
-        UpdateLastUsedObjView();
+        RefreshView();
     }
 
     /// <summary>
     /// 更新最后一个输入的指令的显示
     /// </summary>
-    public void UpdateLastUsedObjView()
+    public void RefreshView()
     {
         countText.text = "x" + count.ToString();
-        currentTimeText.text = currentTime.ToString() + "s";
+        timeText.text = currentTime.ToString() + "s";
     }
 
-    
-    
-    
-    
 
     private bool DragFilter(GameObject obj)
     {
@@ -75,7 +55,7 @@ public class UsedCommandItem : CommandItem
         {
             if (resultObjs[i].name == "WaitingCommandItemList")
             {
-                CommandUICtrl.Instance.ClickUsedItem(this);
+                btnClickCallback.Invoke();
                 return;
             }
         }

@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class CommandUICtrl : MonoSingleton<CommandUICtrl>, UICtrlBase
+public class CommandUICtrl : UICtrlBase
 {
     private CommandUIModel _model;
 
@@ -20,24 +20,19 @@ public class CommandUICtrl : MonoSingleton<CommandUICtrl>, UICtrlBase
     [SerializeField] private Transform usedItemContainer;
     [SerializeField] private Transform waitingItemContainer;
 
-    public void OnInit(params object[] param)
+    public override void OnInit(params object[] param)
     {
         _model = GetComponent<CommandUIModel>();
-        ReloadCommandModel(param);
+        ReloadModel(param);
         BindEvent();
     }
 
-    public void BindEvent()
-    {
-        startBtn.onClick.AddListener(() => BattleManager.Instance.ChangeToCommandExcuteState());
-    }
-
-    public void OpenRoot()
+    public override void OpenRoot()
     {
         gameObject.SetActive(true);
     }
 
-    public void CloseRoot()
+    public override void CloseRoot()
     {
         gameObject.SetActive(false);
     }
@@ -88,7 +83,7 @@ public class CommandUICtrl : MonoSingleton<CommandUICtrl>, UICtrlBase
     /// <summary>
     /// 更新上方显示的的当前时间text
     /// </summary>
-    public void UpdateCurrentTimeText(int currentTime, int stageTime = -1)
+    public void RefreshCurrentTimeText(int currentTime, int stageTime = -1)
     {
         if (stageTime != -1)
         {
@@ -98,21 +93,30 @@ public class CommandUICtrl : MonoSingleton<CommandUICtrl>, UICtrlBase
         currentTimeText.text = currentTime.ToString();
     }
 
+    /// <summary>
+    /// 生成一个AddUsedItem
+    /// </summary>
+    /// <param name="waitingItem"></param>
+    /// <returns></returns>
     public UsedCommandItem AddUsedItem(WaitingCommandItem waitingItem)
     {
         UsedCommandItem usedItem = Instantiate(AssetManager.Instance.LoadAsset<GameObject>(ConfigManager.Instance.cfgPrefab["UsedCommandItem"].prefabPath)
             , usedItemContainer).GetComponent<UsedCommandItem>();
-        usedItem.Init(waitingItem.commandEnum, 1, waitingItem.needTime, waitingItem.needTime,transform
+        usedItem.Init(waitingItem.commandEnum, 1, waitingItem.needTime, waitingItem.needTime, transform, () => ClickUsedItem(usedItem)
             , usedScroll.OnBeginDrag, usedScroll.OnDrag, usedScroll.OnEndDrag);
         return usedItem;
     }
 
+    protected override void BindEvent()
+    {
+        startBtn.onClick.AddListener(() => BattleManager.Instance.ChangeToCommandExcuteState());
+    }
 
     /// <summary>
     /// 重新获取场景中的commandModel和commandView
     /// </summary>
     /// <param name="param">param[0]传关卡数据rowCfgStage</param>
-    private void ReloadCommandModel(params object[] param)
+    private void ReloadModel(params object[] param)
     {
         if (param == null)
         {
@@ -135,12 +139,13 @@ public class CommandUICtrl : MonoSingleton<CommandUICtrl>, UICtrlBase
                 needTime = commandTime[pair.Key];
             }
 
-            waitingItem.Init(commandEnum, pair.Value, needTime,transform
+            waitingItem.Init(commandEnum, pair.Value, needTime, transform, () => ClickWaitingItem(waitingItem)
                 , waitingScroll.OnBeginDrag, waitingScroll.OnDrag, waitingScroll.OnEndDrag);
             originalWaitingItemList.Add(waitingItem);
         }
 
-        _model.OnInit(originalWaitingItemList, rowCfgStage);
-        UpdateCurrentTimeText(0, rowCfgStage.stageTime);
+        _model.OnInit(this, originalWaitingItemList, rowCfgStage);
+        RefreshCurrentTimeText(0, rowCfgStage.stageTime);
     }
+
 }

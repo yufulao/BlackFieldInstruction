@@ -2,46 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c32e2bb8-491b-4f2b-9861-08339f7cd850" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.plastic/plastic.changes" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.changes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.plastic/plastic.wktree" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.wktree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgPrefab.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgPrefab.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Prefab/ClickBtnProto.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Prefab/ClickBtnProto.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Prefab/UsedCommandItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Prefab/UsedCommandItem.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Prefab/WaitingCommandItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Prefab/WaitingCommandItem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/UI/CommandView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/UI/CommandView.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Base/UIDragComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Base/UIDragComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Base/UICtrlBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Base/UICtrlBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/CommandUICtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/CommandUICtrl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/CommandUIModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/CommandUIModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/CommandItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/CommandItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/UsedCommandItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/UsedCommandItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/WaitingCommandItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/WaitingCommandItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExternAttributes.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ExternAttributes.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlatKit.Utils.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FlatKit.Utils.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker2.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker3.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker3.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker2-prev.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker2.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker3-prev.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker3.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker4.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker5.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RabiConfig/xlsx/Prefab.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/RabiConfig/xlsx/Prefab.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.RenderPipelines.Universal.Runtime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.RenderPipelines.Universal.Runtime.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor-firstpass.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor-firstpass.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-firstpass.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-firstpass.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/ExternAttributes.Editor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/ExternAttributes.Editor.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/FlatKit.Utils.Editor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/FlatKit.Utils.Editor.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.RenderPipelines.Universal.Runtime.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.RenderPipelines.Universal.Runtime.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,15 +86,15 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/UsedCommandObj.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/CommandObj.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Misc/Def/CommandItemType.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/UIManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Command/CommandManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Base/UICtrlBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Base/UIDragComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/UIManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Base/UICtrlBase.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/CommandUIModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/UsedCommandItem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/CommandUICtrl.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/WaitingCommandItem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/CommandItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/UsedCommandItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/WaitingCommandItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/CommandUICtrl.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2YfmWTHyDG31Uyxe68gME1pkkrg" />
@@ -185,7 +167,8 @@
       <workItem from="1701528746632" duration="4674000" />
       <workItem from="1701599258279" duration="12091000" />
       <workItem from="1701619653014" duration="8276000" />
-      <workItem from="1701662553881" duration="9946000" />
+      <workItem from="1701662553881" duration="15826000" />
+      <workItem from="1701704922153" duration="4162000" />
     </task>
     <servers />
   </component>
