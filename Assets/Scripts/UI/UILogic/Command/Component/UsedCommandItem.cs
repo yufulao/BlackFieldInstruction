@@ -10,27 +10,22 @@ public class UsedCommandItem : CommandItem
     [HideInInspector] public int currentTime;
 
 
-    public void Init(CommandType commandEnumT, int countT, int needTimeT, int currentTimeT, Transform onDragParent, UnityAction btnClickCallbackT
-        , Action<PointerEventData> scrollOnBeginDrag, Action<PointerEventData> scrollOnDrag, Action<PointerEventData> scrollOnEndDrag)
+    // public void Init(CommandType commandEnumT, int cacheCountT, int cacheNeedTimeT, int currentTimeT, Transform onDragParent, UnityAction btnClickCallbackT
+    //     , Action<PointerEventData> scrollOnBeginDrag, Action<PointerEventData> scrollOnDrag, Action<PointerEventData> scrollOnEndDrag)
+    // {
+    //     base.Init(commandEnumT, cacheCountT, cacheNeedTimeT, btnClickCallbackT,scrollOnBeginDrag,scrollOnDrag,scrollOnEndDrag);
+    //     currentTime = currentTimeT;
+    //
+    //     clickBtn.transform.GetComponent<UIDragComponent>().InitDragComponent(onDragParent, DragFilter, () => UsedBtnOnBeginDrag(), OnCommandItemEndDragCallback
+    //         , _scrollOnBeginDrag, _scrollOnDrag, _scrollOnEndDrag);
+    //
+    //     RefreshView();
+    // }
+
+    public void SetAction(Action<CommandItem> btnOnClick, Action<PointerEventData> scrollOnBeginDrag, Action<PointerEventData> scrollOnDrag, Action<PointerEventData> scrollOnEndDrag)
     {
-        base.Init(commandEnumT, countT, needTimeT, btnClickCallbackT,scrollOnBeginDrag,scrollOnDrag,scrollOnEndDrag);
-        currentTime = currentTimeT;
-
-        clickBtn.transform.GetComponent<UIDragComponent>().InitDragComponent(onDragParent, DragFilter, () => UsedBtnOnBeginDrag(), OnCommandItemEndDragCallback
-            , _scrollOnBeginDrag, _scrollOnDrag, _scrollOnEndDrag);
-
-        RefreshView();
+        base.SetAction(btnOnClick, DragFilter, UsedBtnOnBeginDrag, OnCommandItemEndDragCallback, scrollOnBeginDrag, scrollOnDrag, scrollOnEndDrag);
     }
-
-    /// <summary>
-    /// 更新最后一个输入的指令的显示
-    /// </summary>
-    public void RefreshView()
-    {
-        countText.text = "x" + count.ToString();
-        timeText.text = currentTime.ToString() + "s";
-    }
-
 
     private bool DragFilter(GameObject obj)
     {
@@ -55,7 +50,7 @@ public class UsedCommandItem : CommandItem
         {
             if (resultObjs[i].name == "WaitingCommandItemList")
             {
-                btnClickCallback.Invoke();
+                cacheBtnOnClick.Invoke(this);
                 return;
             }
         }
@@ -68,7 +63,7 @@ public class UsedCommandItem : CommandItem
     /// </summary>
     private void UsedBtnOnEndDragFail()
     {
-        if (count <= 1)
+        if (cacheCount <= 1)
         {
             canvasGroup.alpha = 1;
         }
@@ -79,7 +74,7 @@ public class UsedCommandItem : CommandItem
     /// </summary>
     private void UsedBtnOnBeginDrag()
     {
-        if (count <= 1)
+        if (cacheCount <= 1)
         {
             canvasGroup.alpha = 0;
         }

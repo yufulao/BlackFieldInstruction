@@ -47,22 +47,22 @@ public class CommandUIModel : MonoBehaviour
     /// <param name="waitingItem"></param>
     public void AddUsedCommand(WaitingCommandItem waitingItem)
     {
-        _currentNeedTime += waitingItem.needTime;
+        _currentNeedTime += waitingItem.cacheTime;
         _commandUICtrl.RefreshCurrentTimeText(_currentNeedTime);
 
         UsedCommandItem usedItem = null;
-        if (_usedItemList.Count == 0 || _usedItemList[^1].commandEnum != waitingItem.commandEnum)
+        if (_usedItemList.Count == 0 || _usedItemList[^1].cacheCommandEnum != waitingItem.cacheCommandEnum)
         {
-            usedItem = _commandUICtrl.AddUsedItem(waitingItem);
+            usedItem = _commandUICtrl.CreateUsedItem(waitingItem);
             _usedItemList.Add(usedItem);
-            SetUsedItem(usedItem, waitingItem.needTime);
+            SetUsedItem(usedItem, waitingItem.cacheTime);
             return;
         }
 
         //最新的usedObj是同类command
         usedItem = _usedItemList[^1];
-        usedItem.count++;
-        SetUsedItem(usedItem, waitingItem.needTime);
+        usedItem.cacheCount++;
+        SetUsedItem(usedItem, waitingItem.cacheTime);
     }
 
     /// <summary>
@@ -75,8 +75,10 @@ public class CommandUIModel : MonoBehaviour
         _currentNeedTime += timeAddon;
         _commandUICtrl.RefreshCurrentTimeText(_currentNeedTime);
 
-        usedItem.count--;
-        if (usedItem.count <= 0)
+        usedItem.cacheCount--;
+        SetUsedItem(usedItem,timeAddon);
+        
+        if (usedItem.cacheCount <= 0)
         {
             int removeUsedItemIndex = _usedItemList.IndexOf(usedItem);
             _usedItemList.RemoveAt(removeUsedItemIndex);
@@ -88,8 +90,7 @@ public class CommandUIModel : MonoBehaviour
         {
             _commandUICtrl.NoUsedObj();
         }
-
-        SetUsedItem(usedItem,timeAddon);
+        
     }
 
     /// <summary>
@@ -101,7 +102,7 @@ public class CommandUIModel : MonoBehaviour
         WaitingCommandItem waitingItem = null;
         foreach (var waitingItemTemp in _waitingItemList)
         {
-            if (waitingItemTemp.commandEnum == usedItem.commandEnum)
+            if (waitingItemTemp.cacheCommandEnum == usedItem.cacheCommandEnum)
             {
                 waitingItem = waitingItemTemp;
                 break;
@@ -114,8 +115,8 @@ public class CommandUIModel : MonoBehaviour
             return;
         }
 
-        waitingItem.count++;
-        waitingItem.RefreshView();
+        waitingItem.cacheCount++;
+        waitingItem.Refresh();
     }
 
     /// <summary>
@@ -124,14 +125,14 @@ public class CommandUIModel : MonoBehaviour
     /// <param name="waitingItem"></param>
     public void RemoveWaitingCommand(WaitingCommandItem waitingItem)
     {
-        waitingItem.count--;
+        waitingItem.cacheCount--;
 
         if (_waitingItemList.Count <= 0)
         {
             _commandUICtrl.NoWaitingObj();
         }
 
-        waitingItem.RefreshView();
+        waitingItem.Refresh();
     }
 
     /// <summary>
@@ -145,12 +146,12 @@ public class CommandUIModel : MonoBehaviour
             return;
         }
 
-        if (_usedItemList[removeUsedItemIndex - 1].commandEnum == _usedItemList[removeUsedItemIndex].commandEnum)
+        if (_usedItemList[removeUsedItemIndex - 1].cacheCommandEnum == _usedItemList[removeUsedItemIndex].cacheCommandEnum)
         {
             var lastUsedItem = _usedItemList[removeUsedItemIndex - 1];
             var nextUsedItem = _usedItemList[removeUsedItemIndex];
 
-            lastUsedItem.count += nextUsedItem.count;
+            lastUsedItem.cacheCount += nextUsedItem.cacheCount;
             _usedItemList.Remove(nextUsedItem);
             Destroy(nextUsedItem.gameObject); //对象池处理==================================
             SetUsedItem(lastUsedItem,0);
@@ -158,7 +159,7 @@ public class CommandUIModel : MonoBehaviour
     }
 
     /// <summary>
-    /// 更新最新的usedObj的当前时间
+    /// 更新usedObj的当前时间
     /// </summary>
     /// <param name="usedCommandItem"></param>
     /// <param name="timeAddon"></param>
@@ -169,16 +170,16 @@ public class CommandUIModel : MonoBehaviour
             return;
         }
 
-        for (int i = _usedItemList.IndexOf(usedCommandItem) + 1; i < _usedItemList.Count; i++)
+        for (int i = _usedItemList.IndexOf(usedCommandItem); i < _usedItemList.Count; i++)
         {
             _usedItemList[i].currentTime += timeAddon;
-            _usedItemList[i].RefreshView();
+            _usedItemList[i].Refresh();
         }
 
         UsedCommandItem lastUsedItem = _usedItemList[^1];
         lastUsedItem.currentTime = _currentNeedTime;
-        lastUsedItem.RefreshView();
+        lastUsedItem.Refresh();
 
-        usedCommandItem.RefreshView();
+        usedCommandItem.Refresh();
     }
 }

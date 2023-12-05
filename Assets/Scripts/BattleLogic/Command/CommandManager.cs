@@ -107,10 +107,10 @@ public class CommandManager : MonoSingleton<CommandManager>
         List<UsedCommandItem> usedItemList = _viewCtrl.GetAllUsedItem();
         for (int i = 0; i < usedItemList.Count; i++)
         {
-            for (int j = 0; j < usedItemList[i].count; j++)
+            for (int j = 0; j < usedItemList[i].cacheCount; j++)
             {
                 //Debug.Log(usedObjList[i].commandList[j]);
-                AddCommand(usedItemList[i].commandEnum);
+                AddCommand(usedItemList[i].cacheCommandEnum);
             }
         }
         //Debug.Log(_usedCommandList.Count);

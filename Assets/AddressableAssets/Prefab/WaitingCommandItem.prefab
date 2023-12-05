@@ -647,12 +647,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 3928471879060127972}
   timeText: {fileID: 3928471879263125629}
-  canvasGroup: {fileID: 7396268375378321397}
   clickBtn: {fileID: 2507172048979996021}
-  commandEnum: 0
-  count: 0
-  needTime: 0
-  needTimeText: {fileID: 3928471879263125629}
+  canvasGroup: {fileID: 7396268375378321397}
+  btnDragCmp: {fileID: 2751421473036682897}
+  cacheCommandEnum: 0
+  cacheCount: 0
+  cacheTime: 0
   clickBtnMask: {fileID: 4112660617728931907}
 --- !u!225 &7396268375378321397
 CanvasGroup:

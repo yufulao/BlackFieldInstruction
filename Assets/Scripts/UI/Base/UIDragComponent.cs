@@ -27,21 +27,28 @@ public class UIDragComponent : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     private bool _hadSetValidDrag; //是否已经设置了有效拖拽
 
 
-    public void InitDragComponent(Transform onDragParent, Func<GameObject, bool> filter, Action onBeginDrag = null,
-        Action<List<GameObject>> onEndDrag = null, Action<PointerEventData> invalidBeginDragDispatch = null,
-        Action<PointerEventData> invalidOnDragDispatch = null, Action<PointerEventData> invalidEndDragDispatch = null)
+    public void InitDragComponent(Transform onDragParent)
     {
-        _filter = filter;
-        _onBeginDrag = onBeginDrag;
-        _onEndDrag = onEndDrag;
-        _invalidBeginDragDispatch = invalidBeginDragDispatch;
-        _invalidOnDragDispatch = invalidOnDragDispatch;
-        _invalidEndDragDispatch = invalidEndDragDispatch;
         _canvasGroup = gameObject.GetComponent<CanvasGroup>();
         _graphic = GetComponent<Graphic>();
         _cacheObjOnDrag = Instantiate(this.gameObject, onDragParent);
         _cacheObjOnDrag.SetActive(false);
         _dragRectTransform = _cacheObjOnDrag.GetComponent<RectTransform>();
+    }
+
+    public void SetDragAction(Func<GameObject, bool> filter, Action onBeginDrag = null, Action<List<GameObject>> onEndDrag = null)
+    {
+        _filter = filter;
+        _onBeginDrag = onBeginDrag;
+        _onEndDrag = onEndDrag;
+    }
+
+    public void SetValidDragAction(Action<PointerEventData> invalidBeginDragDispatch = null, Action<PointerEventData> invalidOnDragDispatch = null,
+        Action<PointerEventData> invalidEndDragDispatch = null)
+    {
+        _invalidBeginDragDispatch = invalidBeginDragDispatch;
+        _invalidOnDragDispatch = invalidOnDragDispatch;
+        _invalidEndDragDispatch = invalidEndDragDispatch;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -68,6 +75,7 @@ public class UIDragComponent : MonoBehaviour, IBeginDragHandler, IEndDragHandler
                 SetValidDragging(eventData);
                 _hadSetValidDrag = true;
             }
+
             return;
         }
 

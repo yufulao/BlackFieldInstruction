@@ -47,26 +47,6 @@ public class CommandUICtrl : UICtrlBase
     }
 
     /// <summary>
-    /// 点击waitingObj
-    /// </summary>
-    /// <param name="waitingItem"></param>
-    public void ClickWaitingItem(WaitingCommandItem waitingItem)
-    {
-        _model.RemoveWaitingCommand(waitingItem);
-        _model.AddUsedCommand(waitingItem);
-    }
-
-    /// <summary>
-    /// 点击usedObj
-    /// </summary>
-    /// <param name="usedItem"></param>
-    public void ClickUsedItem(UsedCommandItem usedItem)
-    {
-        _model.AddWaitingCommand(usedItem);
-        _model.RemoveUsedCommand(usedItem, -usedItem.needTime);
-    }
-
-    /// <summary>
     /// 没有可选指令时
     /// </summary>
     public void NoWaitingObj()
@@ -94,16 +74,16 @@ public class CommandUICtrl : UICtrlBase
     }
 
     /// <summary>
-    /// 生成一个AddUsedItem
+    /// 生成一个UsedItem
     /// </summary>
     /// <param name="waitingItem"></param>
     /// <returns></returns>
-    public UsedCommandItem AddUsedItem(WaitingCommandItem waitingItem)
+    public UsedCommandItem CreateUsedItem(WaitingCommandItem waitingItem)
     {
         UsedCommandItem usedItem = Instantiate(AssetManager.Instance.LoadAsset<GameObject>(ConfigManager.Instance.cfgPrefab["UsedCommandItem"].prefabPath)
             , usedItemContainer).GetComponent<UsedCommandItem>();
-        usedItem.Init(waitingItem.commandEnum, 1, waitingItem.needTime, waitingItem.needTime, transform, () => ClickUsedItem(usedItem)
-            , usedScroll.OnBeginDrag, usedScroll.OnDrag, usedScroll.OnEndDrag);
+        usedItem.Init(waitingItem.cacheCommandEnum, transform,1,waitingItem.cacheTime);
+        usedItem.SetAction(OnUsedItemOnClick, usedScroll.OnBeginDrag, usedScroll.OnDrag, usedScroll.OnEndDrag);
         return usedItem;
     }
 
@@ -139,8 +119,8 @@ public class CommandUICtrl : UICtrlBase
                 needTime = commandTime[pair.Key];
             }
 
-            waitingItem.Init(commandEnum, pair.Value, needTime, transform, () => ClickWaitingItem(waitingItem)
-                , waitingScroll.OnBeginDrag, waitingScroll.OnDrag, waitingScroll.OnEndDrag);
+            waitingItem.Init(commandEnum, transform, pair.Value, needTime);
+            waitingItem.SetAction(OnWaitingItemOnClick, waitingScroll.OnBeginDrag, waitingScroll.OnDrag, waitingScroll.OnEndDrag);
             originalWaitingItemList.Add(waitingItem);
         }
 
@@ -148,4 +128,24 @@ public class CommandUICtrl : UICtrlBase
         RefreshCurrentTimeText(0, rowCfgStage.stageTime);
     }
 
+
+    /// <summary>
+    /// 点击usedObj
+    /// </summary>
+    /// <param name="usedItem"></param>
+    private void OnUsedItemOnClick(CommandItem usedItem)
+    {
+        _model.AddWaitingCommand(usedItem as UsedCommandItem);
+        _model.RemoveUsedCommand(usedItem as UsedCommandItem, -usedItem.cacheTime);
+    }
+
+    /// <summary>
+    /// 点击waitingObj
+    /// </summary>
+    /// <param name="waitingItem"></param>
+    private void OnWaitingItemOnClick(CommandItem waitingItem)
+    {
+        _model.RemoveWaitingCommand(waitingItem as WaitingCommandItem);
+        _model.AddUsedCommand(waitingItem as WaitingCommandItem);
+    }
 }

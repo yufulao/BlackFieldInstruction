@@ -10,25 +10,26 @@ public class WaitingCommandItem : CommandItem
     [SerializeField] private GameObject clickBtnMask;
 
 
-    public void Init(CommandType commandEnumT, int countT, int needTimeT, Transform onDragParent, UnityAction btnClickCallbackT
-        , Action<PointerEventData> scrollOnBeginDrag, Action<PointerEventData> scrollOnDrag, Action<PointerEventData> scrollOnEndDrag)
+    // public void Init(CommandType commandEnumT, int cacheCountT, int cacheNeedTimeT, Transform onDragParent, UnityAction btnClickCallbackT
+    //     , Action<PointerEventData> scrollOnBeginDrag, Action<PointerEventData> scrollOnDrag, Action<PointerEventData> scrollOnEndDrag)
+    // {
+    //     base.Init(commandEnumT, cacheCountT, cacheNeedTimeT, btnClickCallbackT, scrollOnBeginDrag,scrollOnDrag,scrollOnEndDrag);
+    //
+    //     clickBtn.transform.GetComponent<UIDragComponent>().InitDragComponent(onDragParent, DragFilter, null, OnCommandItemEndDragCallback
+    //         , _scrollOnBeginDrag, _scrollOnDrag, _scrollOnEndDrag);
+    //
+    //     RefreshView();
+    // }
+    
+    public void SetAction(Action<CommandItem> btnOnClick, Action<PointerEventData> scrollOnBeginDrag, Action<PointerEventData> scrollOnDrag, Action<PointerEventData> scrollOnEndDrag)
     {
-        base.Init(commandEnumT, countT, needTimeT, btnClickCallbackT, scrollOnBeginDrag,scrollOnDrag,scrollOnEndDrag);
-
-        clickBtn.transform.GetComponent<UIDragComponent>().InitDragComponent(onDragParent, DragFilter, null, OnCommandItemEndDragCallback
-            , _scrollOnBeginDrag, _scrollOnDrag, _scrollOnEndDrag);
-
-        RefreshView();
+        base.SetAction(btnOnClick, DragFilter, null, OnCommandItemEndDragCallback, scrollOnBeginDrag, scrollOnDrag, scrollOnEndDrag);
     }
-
-    /// <summary>
-    /// 更新单个可选指令的显示
-    /// </summary>
-    public void RefreshView()
+    
+    public override void Refresh()
     {
-        clickBtnMask.SetActive(count <= 0); //当waitingObj的count为0时，关闭waitingObj，否则启用
-        countText.text = "x" + count.ToString();
-        timeText.text = needTime.ToString() + "s";
+        base.Refresh();
+        clickBtnMask.SetActive(cacheCount <= 0); //当waitingObj的cacheCount为0时，关闭waitingObj，否则启用
     }
 
 
@@ -53,7 +54,7 @@ public class WaitingCommandItem : CommandItem
         {
             if (resultObjs[i].name == "UsedCommandItemList")
             {
-                btnClickCallback.Invoke();
+                cacheBtnOnClick.Invoke(this);
                 break;
             }
         }

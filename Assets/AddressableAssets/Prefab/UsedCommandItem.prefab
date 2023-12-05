@@ -800,11 +800,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 4929199136987746642}
   timeText: {fileID: 4929199135858403139}
-  canvasGroup: {fileID: 6567935416480452225}
   clickBtn: {fileID: 5928066499133606486}
-  commandEnum: 0
-  count: 0
-  needTime: 0
+  canvasGroup: {fileID: 6567935416480452225}
+  btnDragCmp: {fileID: 2847634490200647911}
+  cacheCommandEnum: 0
+  cacheCount: 0
+  cacheTime: 0
   currentTime: 0
 --- !u!225 &6567935416480452225
 CanvasGroup:
