@@ -8,8 +8,6 @@ public class CommandUIModel : MonoBehaviour
     private RowCfgStage _rowCfgStage;
     private List<CommandItem> _usedItemList;
     private List<CommandItem> _waitingItemList;
-    private Dictionary<CommandItem, CommandItemInfo> _usedItemInfoList;
-    private Dictionary<CommandItem, CommandItemInfo> _waitingItemInfoList;
 
     private int _currentNeedTime;
 
@@ -17,49 +15,31 @@ public class CommandUIModel : MonoBehaviour
     /// <summary>
     /// 初始化本关卡所有可选指令
     /// </summary>
-    /// <param name="originalItemInfoList">初始指令列表</param>
+    /// <param name="originalItemList">初始指令列表</param>
     /// <param name="rowCfgStage">关卡数据</param>
     /// <returns></returns>
-    public void OnInit(Dictionary<CommandItem, CommandItemInfo> originalItemInfoList, RowCfgStage rowCfgStage)
+    public void OnInit(List<CommandItem> originalItemList, RowCfgStage rowCfgStage)
     {
         _rowCfgStage = rowCfgStage;
         _usedItemList = new List<CommandItem>();
         _waitingItemList = new List<CommandItem>();
-        _usedItemInfoList = new Dictionary<CommandItem, CommandItemInfo>();
-        _waitingItemInfoList = new Dictionary<CommandItem, CommandItemInfo>();
         _currentNeedTime = 0;
-        _waitingItemInfoList = originalItemInfoList;
+        _waitingItemList = originalItemList;
     }
 
     /// <summary>
     /// 获取usedCommandList
     /// </summary>
     /// <returns></returns>
-    public List<CommandItemInfo> GetUsedItemList()
+    public List<CommandItem> GetUsedItemList()
     {
-        List<CommandItemInfo> usedItemInfoList = new List<CommandItemInfo>();
+        List<CommandItem> usedItemList = new List<CommandItem>();
         for (int i = 0; i < _usedItemList.Count; i++)
         {
-            usedItemInfoList.Add(_usedItemInfoList[_usedItemList[i]]);
+            usedItemList.Add(_usedItemList[i]);
         }
 
-        return usedItemInfoList;
-    }
-
-    /// <summary>
-    /// 获取item的itemInfo
-    /// </summary>
-    /// <param name="item"></param>
-    /// <param name="isUsedItemInfo"></param>
-    /// <returns></returns>
-    public CommandItemInfo GetCommandInfo(CommandItem item, bool isUsedItemInfo)
-    {
-        if (isUsedItemInfo)
-        {
-            return _usedItemInfoList[item];
-        }
-
-        return _waitingItemInfoList[item];
+        return usedItemList;
     }
 
     /// <summary>
@@ -71,56 +51,47 @@ public class CommandUIModel : MonoBehaviour
         return _currentNeedTime;
     }
 
-    public CommandItemInfo AddSameUsedCommand(CommandItem waitingItem, Action<CommandItem, CommandItemInfo> usedRefreshCallback)
+    public bool TryAddSameUsedCommand(CommandItem waitingItem)
     {
-        CommandItemInfo waitingItemInfo = _waitingItemInfoList[waitingItem];
-        _currentNeedTime += waitingItemInfo.cacheTime;
-
-        if (_usedItemList.Count != 0 && _usedItemInfoList[_usedItemList[^1]].cacheCommandEnum == waitingItemInfo.cacheCommandEnum)
+        if (_usedItemList.Count != 0 && _usedItemList[^1].itemInfo.cacheCommandEnum == waitingItem.itemInfo.cacheCommandEnum)
         {
             //最新的usedObj是同类command
+            _currentNeedTime += waitingItem.itemInfo.cacheTime;
             CommandItem usedItem = _usedItemList[^1];
-            _usedItemInfoList[usedItem].cacheCount++;
-            SetUsedItem(usedItem, waitingItemInfo.cacheTime, usedRefreshCallback);
-            return null;
+            usedItem.itemInfo.cacheCount++;
+            SetUsedItem(usedItem, waitingItem.itemInfo.cacheTime);
+            return true;
         }
 
-        return waitingItemInfo;
+        return false;
     }
 
     /// <summary>
     /// usedItem加一
     /// </summary>
     /// <param name="waitingItem"></param>
-    public void AddUsedCommand(CommandItem waitingItem, CommandItem usedItem, CommandItemInfo usedItemInfo, Action<CommandItem, CommandItemInfo> usedRefreshCallback)
+    /// <param name="usedItem"></param>
+    public void AddUsedCommand(CommandItem waitingItem, CommandItem usedItem)
     {
-        CommandItemInfo waitingItemInfo = _waitingItemInfoList[waitingItem];
-        _currentNeedTime += waitingItemInfo.cacheTime;
-
+        _currentNeedTime += waitingItem.itemInfo.cacheTime;
         _usedItemList.Add(usedItem);
-        _usedItemInfoList.Add(usedItem, usedItemInfo);
-        SetUsedItem(usedItem, waitingItemInfo.cacheTime, usedRefreshCallback);
+        SetUsedItem(usedItem, waitingItem.itemInfo.cacheTime);
     }
 
     /// <summary>
     /// usedItem减一
     /// </summary>
     /// <param name="usedItem"></param>
-    public void RemoveUsedCommand(CommandItem usedItem, Action noUsedObjCallback, Action<CommandItem, CommandItemInfo> usedRefreshCallback)
+    /// <param name="noUsedObjCallback"></param>
+    public void RemoveUsedCommand(CommandItem usedItem, Action noUsedObjCallback)
     {
-        CommandItemInfo usedItemInfo = _usedItemInfoList[usedItem];
-        int timeAddon = -usedItemInfo.cacheTime;
+        int timeAddon = -usedItem.itemInfo.cacheTime;
         _currentNeedTime += timeAddon;
-        usedItemInfo.cacheCount--;
-        SetUsedItem(usedItem, timeAddon, usedRefreshCallback);
-
-        if (usedItemInfo.cacheCount <= 0)
-        {
-            int removeUsedItemIndex = _usedItemList.IndexOf(usedItem);
-            _usedItemList.RemoveAt(removeUsedItemIndex);
-            Destroy(usedItem.gameObject); //对象池处理==================================
-            CheckSameAfterRemoveUsedItem(removeUsedItemIndex, usedRefreshCallback);
-        }
+        usedItem.itemInfo.cacheCount--;
+        
+        int removeUsedItemIndex = _usedItemList.IndexOf(usedItem);
+        SetUsedItem(usedItem, timeAddon);
+        CombineSameUsedItem(removeUsedItemIndex);
 
         if (_usedItemList.Count <= 0)
         {
@@ -132,16 +103,14 @@ public class CommandUIModel : MonoBehaviour
     /// waitingItem加1
     /// </summary>
     /// <param name="usedItem"></param>
-    public void AddWaitingCommand(CommandItem usedItem, Action<CommandItem, CommandItemInfo> callback)
+    public CommandItem AddWaitingCommand(CommandItem usedItem)
     {
         CommandItem waitingItem = null;
-        CommandItemInfo waitingItemInfo = null;
-        foreach (var waitingInfo in _waitingItemInfoList)
+        for (int i = 0; i < _waitingItemList.Count; i++)
         {
-            if (waitingInfo.Value.cacheCommandEnum == _usedItemInfoList[usedItem].cacheCommandEnum)
+            if (_waitingItemList[i].itemInfo.cacheCommandEnum == usedItem.itemInfo.cacheCommandEnum)
             {
-                waitingItem = waitingInfo.Key;
-                waitingItemInfo = waitingInfo.Value;
+                waitingItem = _waitingItemList[i];
                 break;
             }
         }
@@ -149,35 +118,32 @@ public class CommandUIModel : MonoBehaviour
         if (waitingItem == null)
         {
             Debug.Log("找不到对应的waitingItem");
-            return;
+            return null;
         }
 
-        waitingItemInfo.cacheCount++;
-        callback?.Invoke(waitingItem, waitingItemInfo);
+        waitingItem.itemInfo.cacheCount++;
+        return waitingItem;
     }
 
     /// <summary>
     /// waitingItem减一
     /// </summary>
     /// <param name="waitingItem"></param>
-    public CommandItemInfo RemoveWaitingCommand(CommandItem waitingItem, Action noWaitingObjCallback)
+    public void RemoveWaitingCommand(CommandItem waitingItem, Action noWaitingObjCallback)
     {
-        CommandItemInfo waitingItemInfo = _waitingItemInfoList[waitingItem];
-        waitingItemInfo.cacheCount--;
+        waitingItem.itemInfo.cacheCount--;
 
         if (_waitingItemList.Count <= 0)
         {
             noWaitingObjCallback.Invoke();
         }
-
-        return waitingItemInfo;
     }
 
     /// <summary>
     /// 检测Index前后的usedItem是否一样，一样则合并
     /// </summary>
     /// <param name="removeUsedItemIndex"></param>
-    private void CheckSameAfterRemoveUsedItem(int removeUsedItemIndex, Action<CommandItem, CommandItemInfo> usedRefreshCallback)
+    private void CombineSameUsedItem(int removeUsedItemIndex)
     {
         if (_usedItemList.Count < 2 || removeUsedItemIndex <= 0 || removeUsedItemIndex >= _usedItemList.Count)
         {
@@ -185,18 +151,17 @@ public class CommandUIModel : MonoBehaviour
         }
 
         CommandItem lastUsedItem = _usedItemList[removeUsedItemIndex - 1];
-        CommandItem currentUsedItem = _usedItemList[removeUsedItemIndex];
-        CommandItemInfo lastUsedItemInfo = _usedItemInfoList[lastUsedItem];
-        CommandItemInfo currentUsedItemInfo = _usedItemInfoList[currentUsedItem];
+        CommandItem nextUsedItem=_usedItemList[removeUsedItemIndex];
 
-        if (lastUsedItemInfo.cacheCommandEnum == currentUsedItemInfo.cacheCommandEnum)
+        if (lastUsedItem.itemInfo.cacheCommandEnum == nextUsedItem.itemInfo.cacheCommandEnum)
         {
-            lastUsedItemInfo.cacheCount += currentUsedItemInfo.cacheCount;
-            _usedItemList.Remove(currentUsedItem);
-            _usedItemInfoList.Remove(currentUsedItem);
-            Destroy(currentUsedItem.gameObject); //对象池处理==================================
-            SetUsedItem(lastUsedItem, 0, usedRefreshCallback);
+            lastUsedItem.itemInfo.cacheCount += nextUsedItem.itemInfo.cacheCount;
+            lastUsedItem.itemInfo.currentTime = nextUsedItem.itemInfo.currentTime;
+            _usedItemList.Remove(nextUsedItem);
+            Destroy(nextUsedItem.gameObject); //对象池处理==================================
         }
+
+        SetUsedItem(lastUsedItem, 0);
     }
 
     /// <summary>
@@ -204,27 +169,22 @@ public class CommandUIModel : MonoBehaviour
     /// </summary>
     /// <param name="usedItem"></param>
     /// <param name="timeAddon"></param>
-    private void SetUsedItem(CommandItem usedItem, int timeAddon, Action<CommandItem, CommandItemInfo> usedRefreshCallback)
+    private void SetUsedItem(CommandItem usedItem, int timeAddon)
     {
         if (_usedItemList.Count == 0)
         {
             return;
         }
 
-        CommandItemInfo usedItemInfo;
         for (int i = _usedItemList.IndexOf(usedItem); i < _usedItemList.Count; i++)
         {
-            usedItemInfo = _usedItemInfoList[_usedItemList[i]];
-            usedItemInfo.currentTime += timeAddon;
-            usedRefreshCallback.Invoke(_usedItemList[i], usedItemInfo);
+            _usedItemList[i].itemInfo.currentTime += timeAddon;
         }
-
-        CommandItem lastUsedItem = _usedItemList[^1];
-        CommandItemInfo lastUsedItemInfo = _usedItemInfoList[lastUsedItem];
-        lastUsedItemInfo.currentTime = _currentNeedTime;
-        usedRefreshCallback.Invoke(lastUsedItem, lastUsedItemInfo);
-
-        usedItemInfo = _usedItemInfoList[usedItem];
-        usedRefreshCallback.Invoke(usedItem, usedItemInfo);
+        
+        if (usedItem.itemInfo.cacheCount<=0)
+        {
+            _usedItemList.Remove(usedItem);
+            Destroy(usedItem.gameObject);//对象池处理=====================================================
+        }
     }
 }

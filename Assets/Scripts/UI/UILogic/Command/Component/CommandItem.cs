@@ -12,13 +12,15 @@ public class CommandItem : MonoBehaviour
     [SerializeField] private Button clickBtn;
     [SerializeField] protected CanvasGroup canvasGroup;
     [SerializeField] private UIDragComponent btnDragCmp;
+    [HideInInspector]public CommandItemInfo itemInfo;
 
 
-    public virtual void Init(CommandType commandEnum, Transform onDragParent)
+    public virtual void Init(CommandType commandEnum, Transform onDragParent,CommandItemInfo itemInfoT)
     {
         transform.Find("Decorate").Find("ClickBtnBg").Find("Text (Legacy)").GetComponent<Text>().text = commandEnum.ToString();
         clickBtn.transform.Find("Text (Legacy)").GetComponent<Text>().text = commandEnum.ToString();
         btnDragCmp.InitDragComponent(onDragParent);
+        itemInfo = itemInfoT;
     }
 
     /// <summary>

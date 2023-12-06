@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\Core\Manager\BgmManager.cs" />
      <Compile Include="Assets\Scripts\Core\Manager\FsmManager.cs" />
      <Compile Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Scripts\BillboardLineRendererCircle.cs" />
+     <Compile Include="Assets\Scripts\UI\UILogic\Command\Component\CommandItemInfo.cs" />
      <Compile Include="Assets\Scripts\Core\Manager\ConfigManager\CsvReader.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\BattleFsm\Fsm\BattleCommandInputState.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\BattleFsm\Fsm\BattlePauseState.cs" />
@@ -96,7 +97,6 @@
      <Compile Include="Assets\Scripts\Core\Base\Singleton\BaseSingleTon.cs" />
      <Compile Include="Assets\Scripts\Core\Manager\ConfigManager\ConfigManager.cs" />
      <Compile Include="Assets\Res\FlatKit\Demos\Common\Scripts\AutoLoadPipelineAsset.cs" />
-     <Compile Include="Assets\Scripts\UI\UILogic\Command\Component\CommandItemInfo.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Valley\Valley-FogImageEffect-Presets" />
      <Folder Include="Assets\Res\FlatKit\Demos\Common" />
