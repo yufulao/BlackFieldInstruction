@@ -20,6 +20,9 @@ public class CommandUICtrl : UICtrlBase
     [SerializeField] private Transform usedItemContainer;
     [SerializeField] private Transform waitingItemContainer;
 
+    private readonly Dictionary<CommandItemInfo, CommandItem> _usedItemInfoDic = new Dictionary<CommandItemInfo, CommandItem>();
+    private readonly Dictionary<CommandItemInfo, CommandItem> _waitingItemInfoDic = new Dictionary<CommandItemInfo, CommandItem>();
+
     public override void OnInit(params object[] param)
     {
         _model = GetComponent<CommandUIModel>();
@@ -41,29 +44,34 @@ public class CommandUICtrl : UICtrlBase
     /// 获取所有UsedItem
     /// </summary>
     /// <returns></returns>
-    public List<CommandItem> GetAllUsedItem()
+    public List<CommandItemInfo> GetAllUsedItem()
     {
         return _model.GetUsedItemList();
+    }
+    
+    protected override void BindEvent()
+    {
+        startBtn.onClick.AddListener(() => BattleManager.Instance.ChangeToCommandExcuteState());
     }
 
     /// <summary>
     /// 没有可选指令时
     /// </summary>
-    public void NoWaitingObj()
+    private void NoWaitingObj()
     {
     }
 
     /// <summary>
     /// 没有输入指令时
     /// </summary>
-    public void NoUsedObj()
+    private void NoUsedObj()
     {
     }
 
     /// <summary>
     /// 更新上方显示的的当前时间text
     /// </summary>
-    public void RefreshCurrentTimeText(int currentTime, int stageTime = -1)
+    private void RefreshCurrentTimeText(int currentTime, int stageTime = -1)
     {
         if (stageTime != -1)
         {
@@ -78,7 +86,7 @@ public class CommandUICtrl : UICtrlBase
     /// </summary>
     /// <param name="waitingItem"></param>
     /// <returns></returns>
-    public CommandItem CreateUsedItem(CommandItem waitingItem)
+    private CommandItem CreateUsedItem(CommandItem waitingItem)
     {
         CommandItem usedItem = Instantiate(AssetManager.Instance.LoadAsset<GameObject>(ConfigManager.Instance.cfgPrefab["CommandItem"].prefabPath)
             , usedItemContainer).GetComponent<CommandItem>();
@@ -93,12 +101,35 @@ public class CommandUICtrl : UICtrlBase
         usedItem.SetBtnOnClick(UsedItemOnClick);
         usedItem.SetDragAction(UsedItemDragFilter, UsedBtnOnBeginDrag, UsedItemOnEndDrag);
         usedItem.SetValidDragAction(usedScroll.OnBeginDrag, usedScroll.OnDrag, usedScroll.OnEndDrag);
+        _usedItemInfoDic.Add(usedItemInfo, usedItem);
         return usedItem;
     }
 
-    protected override void BindEvent()
+    /// <summary>
+    /// 生成一个WaitingItem
+    /// </summary>
+    /// <param name="commandEnum"></param>
+    /// <param name="needTime"></param>
+    /// <param name="count"></param>
+    /// <returns></returns>
+    private CommandItem CreateWaitingItem(CommandType commandEnum,int needTime,int count)
     {
-        startBtn.onClick.AddListener(() => BattleManager.Instance.ChangeToCommandExcuteState());
+        CommandItem item = Instantiate(AssetManager.Instance.LoadAsset<GameObject>(ConfigManager.Instance.cfgPrefab["CommandItem"].prefabPath)
+            , waitingItemContainer).GetComponent<CommandItem>();
+
+        CommandItemInfo info = new CommandItemInfo()
+        {
+            cacheCommandEnum = commandEnum,
+            cacheCount = count,
+            cacheTime = needTime
+        };
+
+        item.Init(commandEnum, transform, info);
+        item.SetBtnOnClick(WaitingItemOnClick);
+        item.SetDragAction(WaitingItemDragFilter, null, WaitingItemOnEndDrag);
+        item.SetValidDragAction(waitingScroll.OnBeginDrag, waitingScroll.OnDrag, waitingScroll.OnEndDrag);
+
+        return item;
     }
 
     /// <summary>
@@ -112,35 +143,25 @@ public class CommandUICtrl : UICtrlBase
             Debug.LogError("没传参数CfgStage");
             return;
         }
+        _waitingItemInfoDic.Clear();
 
         RowCfgStage rowCfgStage = param[0] as RowCfgStage;
         Dictionary<int, int> commandDic = rowCfgStage.commandDic;
         Dictionary<int, int> commandTime = rowCfgStage.commandTime;
-        List<CommandItem> originalItemList = new List<CommandItem>();
+        List<CommandItemInfo> originalItemList = new List<CommandItemInfo>();
         foreach (var pair in commandDic)
         {
             CommandType commandEnum = (CommandType) pair.Key;
-            CommandItem item = Instantiate(AssetManager.Instance.LoadAsset<GameObject>(ConfigManager.Instance.cfgPrefab["CommandItem"].prefabPath)
-                , waitingItemContainer).GetComponent<CommandItem>();
             int needTime = ConfigManager.Instance.cfgCommand[commandEnum.ToString()].needTime; //默认值
             if (commandTime.ContainsKey(pair.Key)) //有设置这个指令的needTime，否则用默认needTime
             {
                 needTime = commandTime[pair.Key];
             }
 
-            CommandItemInfo info = new CommandItemInfo()
-            {
-                cacheCommandEnum = commandEnum,
-                cacheCount = pair.Value,
-                cacheTime = needTime
-            };
-
-            item.Init(commandEnum, transform, info);
-            item.SetBtnOnClick(WaitingItemOnClick);
-            item.SetDragAction(WaitingItemDragFilter, null, WaitingItemOnEndDrag);
-            item.SetValidDragAction(waitingScroll.OnBeginDrag, waitingScroll.OnDrag, waitingScroll.OnEndDrag);
-            item.Refresh(info.cacheCount,info.cacheTime);
-            originalItemList.Add(item);
+            CommandItem item = CreateWaitingItem(commandEnum, needTime, pair.Value);
+            item.Refresh(item.itemInfo.cacheCount, item.itemInfo.cacheTime);
+            originalItemList.Add(item.itemInfo);
+            _waitingItemInfoDic.Add(item.itemInfo,item );
         }
 
         _model.OnInit(originalItemList, rowCfgStage);
@@ -152,15 +173,22 @@ public class CommandUICtrl : UICtrlBase
     /// </summary>
     private void RefreshUsedItemList()
     {
-        List<CommandItem> needRefreshUsedItems = _model.GetUsedItemList();
-        if (needRefreshUsedItems==null)
+        List<CommandItemInfo> needRefreshUsedItemInfos = _model.GetUsedItemList();
+        if (needRefreshUsedItemInfos == null)
         {
             return;
         }
 
-        for (int i = 0; i < needRefreshUsedItems.Count; i++)
+        for (int i = 0; i < needRefreshUsedItemInfos.Count; i++)
         {
-            needRefreshUsedItems[i].Refresh(needRefreshUsedItems[i].itemInfo.cacheCount,needRefreshUsedItems[i].itemInfo.currentTime);
+            CommandItem usedItem = _usedItemInfoDic[needRefreshUsedItemInfos[i]];
+            if (usedItem.itemInfo.cacheCount<=0)
+            {
+                _usedItemInfoDic.Remove(usedItem.itemInfo);
+                _model.RemoveUsedItemInfo(usedItem.itemInfo);
+                Destroy(usedItem.gameObject);//对象池解决======================================================================
+            }
+            usedItem.Refresh(usedItem.itemInfo.cacheCount, usedItem.itemInfo.currentTime);
         }
     }
 
@@ -170,9 +198,9 @@ public class CommandUICtrl : UICtrlBase
     /// <param name="usedItem"></param>
     private void UsedItemOnClick(CommandItem usedItem)
     {
-        CommandItem waitingItem = _model.AddWaitingCommand(usedItem);
-        waitingItem.Refresh(waitingItem.itemInfo.cacheCount, waitingItem.itemInfo.cacheTime);
-        _model.RemoveUsedCommand(usedItem, NoUsedObj);
+        CommandItemInfo waitingItemInfo = _model.AddWaitingCommand(usedItem.itemInfo);
+        _waitingItemInfoDic[waitingItemInfo].Refresh(waitingItemInfo.cacheCount, waitingItemInfo.cacheTime);
+        _model.RemoveUsedCommand(usedItem.itemInfo, NoUsedObj);
 
         RefreshUsedItemList();
         RefreshCurrentTimeText(_model.GetCurrentNeedTime());
@@ -184,13 +212,13 @@ public class CommandUICtrl : UICtrlBase
     /// <param name="waitingItem"></param>
     private void WaitingItemOnClick(CommandItem waitingItem)
     {
-        _model.RemoveWaitingCommand(waitingItem, NoWaitingObj);
+        _model.RemoveWaitingCommand(waitingItem.itemInfo, NoWaitingObj);
         waitingItem.Refresh(waitingItem.itemInfo.cacheCount, waitingItem.itemInfo.cacheTime);
-        bool hasSame= _model.TryAddSameUsedCommand(waitingItem);
+        bool hasSame = _model.TryAddSameUsedCommand(waitingItem.itemInfo);
         if (!hasSame)
         {
-            CommandItem usedItem= CreateUsedItem(waitingItem);
-            _model.AddUsedCommand(waitingItem, usedItem);
+            CommandItem usedItem = CreateUsedItem(waitingItem);
+            _model.AddUsedCommand(waitingItem.itemInfo, usedItem.itemInfo);
         }
 
         RefreshUsedItemList();

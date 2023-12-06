@@ -104,13 +104,13 @@ public class CommandManager : MonoSingleton<CommandManager>
     private void PrepareCommand()
     {
         _usedCommandList.Clear();
-        List<CommandItem> usedItemList = _viewCtrl.GetAllUsedItem();
-        for (int i = 0; i < usedItemList.Count; i++)
+        List<CommandItemInfo> usedItemInfoList = _viewCtrl.GetAllUsedItem();
+        for (int i = 0; i < usedItemInfoList.Count; i++)
         {
-            for (int j = 0; j < usedItemList[i].itemInfo.cacheCount; j++)
+            for (int j = 0; j < usedItemInfoList[i].cacheCount; j++)
             {
                 //Debug.Log(usedObjList[i].commandList[j]);
-                AddCommand(usedItemList[i].itemInfo.cacheCommandEnum);
+                AddCommand(usedItemInfoList[i].cacheCommandEnum);
             }
         }
         //Debug.Log(_usedCommandList.Count);
