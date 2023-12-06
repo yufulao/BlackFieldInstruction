@@ -41,7 +41,7 @@ public class CommandUICtrl : UICtrlBase
     /// 获取所有UsedItem
     /// </summary>
     /// <returns></returns>
-    public List<UsedCommandItem> GetAllUsedItem()
+    public List<CommandItemInfo> GetAllUsedItem()
     {
         return _model.GetUsedItemList();
     }
@@ -76,15 +76,23 @@ public class CommandUICtrl : UICtrlBase
     /// <summary>
     /// 生成一个UsedItem
     /// </summary>
-    /// <param name="waitingItem"></param>
+    /// <param name="waitingItemInfo"></param>
     /// <returns></returns>
-    public UsedCommandItem CreateUsedItem(WaitingCommandItem waitingItem)
+    public void CreateUsedItem(CommandItemInfo waitingItemInfo, Action<CommandItem, CommandItemInfo> callback)
     {
-        UsedCommandItem usedItem = Instantiate(AssetManager.Instance.LoadAsset<GameObject>(ConfigManager.Instance.cfgPrefab["UsedCommandItem"].prefabPath)
-            , usedItemContainer).GetComponent<UsedCommandItem>();
-        usedItem.Init(waitingItem.cacheCommandEnum, transform,1,waitingItem.cacheTime);
-        usedItem.SetAction(OnUsedItemOnClick, usedScroll.OnBeginDrag, usedScroll.OnDrag, usedScroll.OnEndDrag);
-        return usedItem;
+        CommandItem usedItem = Instantiate(AssetManager.Instance.LoadAsset<GameObject>(ConfigManager.Instance.cfgPrefab["CommandItem"].prefabPath)
+            , usedItemContainer).GetComponent<CommandItem>();
+        CommandItemInfo usedItemInfo = new CommandItemInfo()
+        {
+            cacheCommandEnum = waitingItemInfo.cacheCommandEnum,
+            cacheCount = 1,
+            cacheTime = waitingItemInfo.cacheTime
+        };
+        usedItem.Init(usedItemInfo.cacheCommandEnum, transform);
+        usedItem.SetBtnOnClick(OnUsedItemOnClick);
+        usedItem.SetDragAction(UsedItemDragFilter, UsedBtnOnBeginDrag, UsedItemOnEndDrag);
+        usedItem.SetValidDragAction(usedScroll.OnBeginDrag, usedScroll.OnDrag, usedScroll.OnEndDrag);
+        callback?.Invoke(usedItem,usedItemInfo);
     }
 
     protected override void BindEvent()
@@ -107,24 +115,33 @@ public class CommandUICtrl : UICtrlBase
         RowCfgStage rowCfgStage = param[0] as RowCfgStage;
         Dictionary<int, int> commandDic = rowCfgStage.commandDic;
         Dictionary<int, int> commandTime = rowCfgStage.commandTime;
-        List<WaitingCommandItem> originalWaitingItemList = new List<WaitingCommandItem>();
+        Dictionary<CommandItem, CommandItemInfo> originalItemInfoList = new Dictionary<CommandItem, CommandItemInfo>();
         foreach (var pair in commandDic)
         {
             CommandType commandEnum = (CommandType) pair.Key;
-            WaitingCommandItem waitingItem = Instantiate(AssetManager.Instance.LoadAsset<GameObject>(ConfigManager.Instance.cfgPrefab["WaitingCommandItem"].prefabPath)
-                , waitingItemContainer).GetComponent<WaitingCommandItem>();
+            CommandItem item = Instantiate(AssetManager.Instance.LoadAsset<GameObject>(ConfigManager.Instance.cfgPrefab["CommandItem"].prefabPath)
+                , waitingItemContainer).GetComponent<CommandItem>();
             int needTime = ConfigManager.Instance.cfgCommand[commandEnum.ToString()].needTime; //默认值
             if (commandTime.ContainsKey(pair.Key)) //有设置这个指令的needTime，否则用默认needTime
             {
                 needTime = commandTime[pair.Key];
             }
 
-            waitingItem.Init(commandEnum, transform, pair.Value, needTime);
-            waitingItem.SetAction(OnWaitingItemOnClick, waitingScroll.OnBeginDrag, waitingScroll.OnDrag, waitingScroll.OnEndDrag);
-            originalWaitingItemList.Add(waitingItem);
+            item.Init(commandEnum, transform);
+            item.SetBtnOnClick(WaitingItemOnClick);
+            item.SetDragAction(WaitingItemDragFilter, null, WaitingItemOnEndDrag);
+            item.SetValidDragAction(waitingScroll.OnBeginDrag, waitingScroll.OnDrag, waitingScroll.OnEndDrag);
+
+            CommandItemInfo info = new CommandItemInfo()
+            {
+                cacheCommandEnum = commandEnum,
+                cacheCount = pair.Value,
+                cacheTime = needTime
+            };
+            originalItemInfoList.Add(item, info);
         }
 
-        _model.OnInit(this, originalWaitingItemList, rowCfgStage);
+        _model.OnInit(this, originalItemInfoList, rowCfgStage);
         RefreshCurrentTimeText(0, rowCfgStage.stageTime);
     }
 
@@ -135,17 +152,98 @@ public class CommandUICtrl : UICtrlBase
     /// <param name="usedItem"></param>
     private void OnUsedItemOnClick(CommandItem usedItem)
     {
-        _model.AddWaitingCommand(usedItem as UsedCommandItem);
-        _model.RemoveUsedCommand(usedItem as UsedCommandItem, -usedItem.cacheTime);
+        _model.AddWaitingCommand(usedItem);
+        _model.RemoveUsedCommand(usedItem);
     }
 
     /// <summary>
     /// 点击waitingObj
     /// </summary>
     /// <param name="waitingItem"></param>
-    private void OnWaitingItemOnClick(CommandItem waitingItem)
+    private void WaitingItemOnClick(CommandItem waitingItem)
     {
-        _model.RemoveWaitingCommand(waitingItem as WaitingCommandItem);
-        _model.AddUsedCommand(waitingItem as WaitingCommandItem);
+        _model.RemoveWaitingCommand(waitingItem);
+        _model.AddUsedCommand(waitingItem);
+    }
+
+
+    private bool WaitingItemDragFilter(GameObject obj)
+    {
+        if (obj.name == "UsedCommandItemList")
+        {
+            return true; //保留
+        }
+
+        return false; //移除
+    }
+
+    private void WaitingItemOnEndDrag(CommandItem waitingItem,List<GameObject> resultObjs)
+    {
+        if (resultObjs == null)
+        {
+            return;
+        }
+
+        for (int i = 0; i < resultObjs.Count; i++)
+        {
+            if (resultObjs[i].name == "UsedCommandItemList")
+            {
+                WaitingItemOnClick(waitingItem);
+                break;
+            }
+        }
+    }
+
+    private bool UsedItemDragFilter(GameObject obj)
+    {
+        //Debug.Log(obj.name);
+        if (obj.name == "WaitingCommandItemList")
+        {
+            return true; //保留
+        }
+
+        return false; //移除
+    }
+
+    private void UsedItemOnEndDrag(CommandItem usedItem,List<GameObject> resultObjs)
+    {
+        if (resultObjs == null)
+        {
+            UsedBtnOnEndDragFail(usedItem);
+            return;
+        }
+
+        for (int i = 0; i < resultObjs.Count; i++)
+        {
+            if (resultObjs[i].name == "WaitingCommandItemList")
+            {
+                OnUsedItemOnClick(usedItem);
+                return;
+            }
+        }
+
+        UsedBtnOnEndDragFail(usedItem);
+    }
+
+    /// <summary>
+    /// 只剩下一个usedBtn拖拽失败的事件，恢复count和currentTime显示
+    /// </summary>
+    private void UsedBtnOnEndDragFail(CommandItem usedItem)
+    {
+        if (_model.GetCommandInfo(usedItem,true).cacheCount <= 1)
+        {
+            usedItem.ShowItem();
+        }
+    }
+
+    /// <summary>
+    /// 只剩下一个usedBtn开始拖拽的事件，隐藏count和currentTime显示
+    /// </summary>
+    private void UsedBtnOnBeginDrag(CommandItem usedItem)
+    {
+        if (_model.GetCommandInfo(usedItem,true).cacheCount <= 1)
+        {
+            usedItem.HideItem();
+        }
     }
 }

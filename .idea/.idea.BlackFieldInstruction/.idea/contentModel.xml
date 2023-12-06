@@ -520,8 +520,7 @@
                 <e p="CommandUIModel.cs" t="Include" />
                 <e p="Component" t="Include">
                   <e p="CommandItem.cs" t="Include" />
-                  <e p="UsedCommandItem.cs" t="Include" />
-                  <e p="WaitingCommandItem.cs" t="Include" />
+                  <e p="CommandItemInfo.cs" t="Include" />
                 </e>
               </e>
             </e>

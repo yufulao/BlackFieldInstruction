@@ -12,39 +12,48 @@ public class CommandItem : MonoBehaviour
     [SerializeField] private Button clickBtn;
     [SerializeField] protected CanvasGroup canvasGroup;
     [SerializeField] private UIDragComponent btnDragCmp;
-
-    [HideInInspector]public CommandType cacheCommandEnum;
-    [HideInInspector]public int cacheCount;
-    [HideInInspector]public int cacheTime;
     protected Action<CommandItem> cacheBtnOnClick;
 
 
-    public virtual void Init(CommandType commandEnum, Transform onDragParent,int count,int time)
+    public virtual void Init(CommandType commandEnum, Transform onDragParent)
     {
-        cacheCommandEnum = commandEnum;
-        cacheCount = count;
-        cacheTime = time;
-        transform.Find("Decorate").Find("ClickBtnBg").Find("Text (Legacy)").GetComponent<Text>().text = cacheCommandEnum.ToString();
-        clickBtn.transform.Find("Text (Legacy)").GetComponent<Text>().text = cacheCommandEnum.ToString();
+        transform.Find("Decorate").Find("ClickBtnBg").Find("Text (Legacy)").GetComponent<Text>().text = commandEnum.ToString();
+        clickBtn.transform.Find("Text (Legacy)").GetComponent<Text>().text = commandEnum.ToString();
         btnDragCmp.InitDragComponent(onDragParent);
-    }
-
-    public virtual void SetAction(Action<CommandItem> btnOnClick, Func<GameObject, bool> filter, Action onBeginDrag, Action<List<GameObject>> onEndDrag, Action<PointerEventData> scrollOnBeginDrag,
-        Action<PointerEventData> scrollOnDrag, Action<PointerEventData> scrollOnEndDrag)
-    {
-        cacheBtnOnClick = btnOnClick;
-        clickBtn.transform.GetComponent<Button>().onClick.AddListener(() => { btnOnClick?.Invoke(this); });
-        btnDragCmp.SetDragAction(filter, onBeginDrag, onEndDrag);
-        btnDragCmp.SetValidDragAction(scrollOnBeginDrag, scrollOnDrag, scrollOnEndDrag);
     }
 
     /// <summary>
     /// 更新单个可选指令的显示
     /// </summary>
-    public virtual void Refresh()
+    public virtual void Refresh(int count, int time)
     {
-        countText.text = "x" + cacheCount.ToString();
-        timeText.text = cacheTime.ToString() + "s";
+        countText.text = "x" + count.ToString();
+        timeText.text = time.ToString() + "s";
     }
 
+    public void SetBtnOnClick(Action<CommandItem> btnOnClick)
+    {
+        clickBtn.transform.GetComponent<Button>().onClick.AddListener(() => { btnOnClick?.Invoke(this); });
+    }
+
+    public void SetDragAction(Func<GameObject, bool> filter, Action<CommandItem> onBeginDrag, Action<CommandItem, List<GameObject>> onEndDrag)
+    {
+        btnDragCmp.SetDragAction(filter, () => { onBeginDrag?.Invoke(this); }, (objs) => { onEndDrag?.Invoke(this, objs); });
+    }
+
+    public void SetValidDragAction(Action<PointerEventData> validOnBeginDrag, Action<PointerEventData> validOnDrag, Action<PointerEventData> validOnEndDrag)
+    {
+        btnDragCmp.SetValidDragAction(validOnBeginDrag, validOnDrag, validOnEndDrag);
+    }
+
+
+    public void ShowItem()
+    {
+        canvasGroup.alpha = 1;
+    }
+
+    public void HideItem()
+    {
+        canvasGroup.alpha = 0;
+    }
 }

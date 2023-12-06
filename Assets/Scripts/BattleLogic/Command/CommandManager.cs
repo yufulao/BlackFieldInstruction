@@ -104,7 +104,7 @@ public class CommandManager : MonoSingleton<CommandManager>
     private void PrepareCommand()
     {
         _usedCommandList.Clear();
-        List<UsedCommandItem> usedItemList = _viewCtrl.GetAllUsedItem();
+        List<CommandItemInfo> usedItemList = _viewCtrl.GetAllUsedItem();
         for (int i = 0; i < usedItemList.Count; i++)
         {
             for (int j = 0; j < usedItemList[i].cacheCount; j++)

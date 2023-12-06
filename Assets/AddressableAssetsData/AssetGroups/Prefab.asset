@@ -18,11 +18,7 @@ MonoBehaviour:
   m_GUID: 0e4849983b6a2be418f37fdce629fe36
   m_SerializeEntries:
   - m_GUID: 380f0cb507129174bba16d37f59e42b9
-    m_Address: Assets/AddressableAssets/Prefab/UsedCommandObj.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: b7836a66f4ce87a46b2a35c876156d79
-    m_Address: Assets/AddressableAssets/Prefab/WaitingCommandObj.prefab
+    m_Address: Assets/AddressableAssets/Prefab/CommandItem.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

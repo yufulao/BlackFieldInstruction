@@ -1,7 +1,7 @@
 key#prefabPath#None#None#None#None#None
 key#预设路径#None#None#None#None#None
 string#string#None#None#None#None#None
-WaitingCommandItem#Assets/AddressableAssets/Prefab/WaitingCommandObj.prefab#None#None#None#None#None
-UsedCommandItem#Assets/AddressableAssets/Prefab/UsedCommandObj.prefab#None#None#None#None#None
+CommandItem#Assets/AddressableAssets/Prefab/CommandItem.prefab#None#None#None#None#None
+None#None#None#None#None#None#None
 None#None#None#None#None#None#None
 None#None#None#None#None#None#None
