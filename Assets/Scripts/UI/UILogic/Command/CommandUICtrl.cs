@@ -92,9 +92,9 @@ public class CommandUICtrl : UICtrlBase
         usedItem.SetBtnOnClick(OnUsedItemOnClick);
         usedItem.SetDragAction(UsedItemDragFilter, UsedBtnOnBeginDrag, UsedItemOnEndDrag);
         usedItem.SetValidDragAction(usedScroll.OnBeginDrag, usedScroll.OnDrag, usedScroll.OnEndDrag);
-        callback?.Invoke(usedItem,usedItemInfo);
+        callback?.Invoke(usedItem, usedItemInfo);
     }
-    
+
     protected override void BindEvent()
     {
         startBtn.onClick.AddListener(() => BattleManager.Instance.ChangeToCommandExcuteState());
@@ -141,10 +141,14 @@ public class CommandUICtrl : UICtrlBase
             originalItemInfoList.Add(item, info);
         }
 
-        _model.OnInit(this, originalItemInfoList, rowCfgStage);
+        _model.OnInit(originalItemInfoList, rowCfgStage);
         RefreshCurrentTimeText(0, rowCfgStage.stageTime);
     }
 
+    private void RefreshUsedCallback(CommandItem usedItem, CommandItemInfo usedItemInfo)
+    {
+        usedItem.Refresh(usedItemInfo.cacheCount, usedItemInfo.currentTime);
+    }
 
     /// <summary>
     /// 点击usedObj
@@ -152,8 +156,9 @@ public class CommandUICtrl : UICtrlBase
     /// <param name="usedItem"></param>
     private void OnUsedItemOnClick(CommandItem usedItem)
     {
-        _model.AddWaitingCommand(usedItem);
-        _model.RemoveUsedCommand(usedItem);
+        _model.AddWaitingCommand(usedItem, (item, info) => { item.Refresh(info.cacheCount, info.cacheTime); });
+        _model.RemoveUsedCommand(usedItem, NoUsedObj, RefreshUsedCallback);
+        RefreshCurrentTimeText(_model.GetCurrentNeedTime());
     }
 
     /// <summary>
@@ -162,8 +167,15 @@ public class CommandUICtrl : UICtrlBase
     /// <param name="waitingItem"></param>
     private void WaitingItemOnClick(CommandItem waitingItem)
     {
-        _model.RemoveWaitingCommand(waitingItem);
-        _model.AddUsedCommand(waitingItem);
+        CommandItemInfo waitingItemInfo = _model.RemoveWaitingCommand(waitingItem, NoWaitingObj);
+        waitingItem.Refresh(waitingItemInfo.cacheCount, waitingItemInfo.cacheTime);
+        waitingItemInfo = _model.AddSameUsedCommand(waitingItem, RefreshUsedCallback);
+        if (waitingItemInfo != null)
+        {
+            CreateUsedItem(waitingItemInfo, (item, info) => { _model.AddUsedCommand(waitingItem, item, info, RefreshUsedCallback); });
+        }
+
+        RefreshCurrentTimeText(_model.GetCurrentNeedTime());
     }
 
     /// <summary>
@@ -186,7 +198,7 @@ public class CommandUICtrl : UICtrlBase
     /// </summary>
     /// <param name="waitingItem"></param>
     /// <param name="resultObjs"></param>
-    private void WaitingItemOnEndDrag(CommandItem waitingItem,List<GameObject> resultObjs)
+    private void WaitingItemOnEndDrag(CommandItem waitingItem, List<GameObject> resultObjs)
     {
         if (resultObjs == null)
         {
@@ -224,7 +236,7 @@ public class CommandUICtrl : UICtrlBase
     /// </summary>
     /// <param name="usedItem"></param>
     /// <param name="resultObjs"></param>
-    private void UsedItemOnEndDrag(CommandItem usedItem,List<GameObject> resultObjs)
+    private void UsedItemOnEndDrag(CommandItem usedItem, List<GameObject> resultObjs)
     {
         if (resultObjs == null)
         {
@@ -249,7 +261,7 @@ public class CommandUICtrl : UICtrlBase
     /// </summary>
     private void UsedBtnOnEndDragFail(CommandItem usedItem)
     {
-        if (_model.GetCommandInfo(usedItem,true).cacheCount <= 1)
+        if (_model.GetCommandInfo(usedItem, true).cacheCount <= 1)
         {
             usedItem.ShowItem();
         }
@@ -260,7 +272,7 @@ public class CommandUICtrl : UICtrlBase
     /// </summary>
     private void UsedBtnOnBeginDrag(CommandItem usedItem)
     {
-        if (_model.GetCommandInfo(usedItem,true).cacheCount <= 1)
+        if (_model.GetCommandInfo(usedItem, true).cacheCount <= 1)
         {
             usedItem.HideItem();
         }
