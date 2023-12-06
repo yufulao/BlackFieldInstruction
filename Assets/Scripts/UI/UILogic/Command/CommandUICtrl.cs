@@ -94,7 +94,7 @@ public class CommandUICtrl : UICtrlBase
         usedItem.SetValidDragAction(usedScroll.OnBeginDrag, usedScroll.OnDrag, usedScroll.OnEndDrag);
         callback?.Invoke(usedItem,usedItemInfo);
     }
-
+    
     protected override void BindEvent()
     {
         startBtn.onClick.AddListener(() => BattleManager.Instance.ChangeToCommandExcuteState());
@@ -166,7 +166,11 @@ public class CommandUICtrl : UICtrlBase
         _model.AddUsedCommand(waitingItem);
     }
 
-
+    /// <summary>
+    /// waitingItem的拖拽过滤器
+    /// </summary>
+    /// <param name="obj"></param>
+    /// <returns></returns>
     private bool WaitingItemDragFilter(GameObject obj)
     {
         if (obj.name == "UsedCommandItemList")
@@ -177,6 +181,11 @@ public class CommandUICtrl : UICtrlBase
         return false; //移除
     }
 
+    /// <summary>
+    /// waitingItem的拖拽结束事件
+    /// </summary>
+    /// <param name="waitingItem"></param>
+    /// <param name="resultObjs"></param>
     private void WaitingItemOnEndDrag(CommandItem waitingItem,List<GameObject> resultObjs)
     {
         if (resultObjs == null)
@@ -194,6 +203,11 @@ public class CommandUICtrl : UICtrlBase
         }
     }
 
+    /// <summary>
+    /// usedItem的拖拽过滤器
+    /// </summary>
+    /// <param name="obj"></param>
+    /// <returns></returns>
     private bool UsedItemDragFilter(GameObject obj)
     {
         //Debug.Log(obj.name);
@@ -205,6 +219,11 @@ public class CommandUICtrl : UICtrlBase
         return false; //移除
     }
 
+    /// <summary>
+    /// usedItem的拖拽结束事件
+    /// </summary>
+    /// <param name="usedItem"></param>
+    /// <param name="resultObjs"></param>
     private void UsedItemOnEndDrag(CommandItem usedItem,List<GameObject> resultObjs)
     {
         if (resultObjs == null)

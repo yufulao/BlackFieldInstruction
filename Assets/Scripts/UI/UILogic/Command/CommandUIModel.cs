@@ -50,6 +50,12 @@ public class CommandUIModel : MonoBehaviour
         return usedItemInfoList;
     }
 
+    /// <summary>
+    /// 获取item的itemInfo
+    /// </summary>
+    /// <param name="item"></param>
+    /// <param name="isUsedItemInfo"></param>
+    /// <returns></returns>
     public CommandItemInfo GetCommandInfo(CommandItem item,bool isUsedItemInfo)
     {
         if (isUsedItemInfo)
