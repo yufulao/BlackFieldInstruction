@@ -94,7 +94,7 @@ public class CommandUICtrl : UICtrlBase
         usedItem.Init(usedItemInfo.cacheCommandEnum, transform);
         usedItem.SetBtnOnClick(UsedItemOnClick);
         usedItem.SetDragAction(UsedItemDragFilter, UsedBtnOnBeginDrag, UsedItemOnEndDrag);
-        usedItem.SetValidDragAction(usedScroll.OnBeginDrag, usedScroll.OnDrag, usedScroll.OnEndDrag);
+        usedItem.SetInvalidDragAction(usedScroll.OnBeginDrag, usedScroll.OnDrag, usedScroll.OnEndDrag);
         _usedItemInfoDic.Add(usedItemInfo, usedItem);
         return usedItemInfo;
     }
@@ -114,7 +114,7 @@ public class CommandUICtrl : UICtrlBase
         item.Init(commandEnum, transform);
         item.SetBtnOnClick(WaitingItemOnClick);
         item.SetDragAction(WaitingItemDragFilter, null, WaitingItemOnEndDrag);
-        item.SetValidDragAction(waitingScroll.OnBeginDrag, waitingScroll.OnDrag, waitingScroll.OnEndDrag);
+        item.SetInvalidDragAction(waitingScroll.OnBeginDrag, waitingScroll.OnDrag, waitingScroll.OnEndDrag);
 
         callback?.Invoke(item, info);
     }
@@ -312,7 +312,6 @@ public class CommandUICtrl : UICtrlBase
     /// </summary>
     private void UsedBtnOnBeginDrag(CommandItem usedItem)
     {
-        
         if (GetUsedInfoByItem(usedItem).cacheCount <= 1)
         {
             usedItem.HideItem();

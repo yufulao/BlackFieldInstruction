@@ -15,8 +15,8 @@ public class UIDragComponent : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     private CanvasGroup _canvasGroup;
 
     private Func<GameObject, bool> _filter;
-    private Action<List<GameObject>> _onEndDrag;
-    private Action _onBeginDrag;
+    private Action<List<GameObject>,bool> _onEndDrag;
+    private Action<PointerEventData> _onBeginDrag;
     private Action<PointerEventData> _invalidBeginDragDispatch; //无效拖拽开始时转发的事件
     private Action<PointerEventData> _invalidOnDragDispatch; //无效拖拽中转发的事件
     private Action<PointerEventData> _invalidEndDragDispatch; //无效拖拽结束时转发的事件
@@ -36,14 +36,14 @@ public class UIDragComponent : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         _dragRectTransform = _cacheObjOnDrag.GetComponent<RectTransform>();
     }
 
-    public void SetDragAction(Func<GameObject, bool> filter, Action onBeginDrag = null, Action<List<GameObject>> onEndDrag = null)
+    public void SetDragAction(Func<GameObject, bool> filter, Action<PointerEventData> onBeginDrag = null, Action<List<GameObject>,bool> onEndDrag = null)
     {
         _filter = filter;
         _onBeginDrag = onBeginDrag;
         _onEndDrag = onEndDrag;
     }
 
-    public void SetValidDragAction(Action<PointerEventData> invalidBeginDragDispatch = null, Action<PointerEventData> invalidOnDragDispatch = null,
+    public void SetInvalidDragAction(Action<PointerEventData> invalidBeginDragDispatch = null, Action<PointerEventData> invalidOnDragDispatch = null,
         Action<PointerEventData> invalidEndDragDispatch = null)
     {
         _invalidBeginDragDispatch = invalidBeginDragDispatch;
@@ -62,7 +62,7 @@ public class UIDragComponent : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         _isValidDragging = true;
         _hadSetValidDrag = false;
 
-        _onBeginDrag?.Invoke();
+        _onBeginDrag?.Invoke(eventData);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -103,6 +103,7 @@ public class UIDragComponent : MonoBehaviour, IBeginDragHandler, IEndDragHandler
             return;
         }
 
+        //正常的valid的endDrag，相对的是OnChangeInvalidDrag
         if (_graphic)
         {
             _graphic.raycastTarget = true;
@@ -116,7 +117,7 @@ public class UIDragComponent : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         _cacheObjOnDrag.SetActive(false);
         _canvasGroup.alpha = 1f;
 
-        _onEndDrag?.Invoke(Filtrate(results));
+        _onEndDrag?.Invoke(Filtrate(results),true);//true指的是，是validDrag
     }
 
     private void SetValidDragging(PointerEventData eventData)
@@ -129,9 +130,31 @@ public class UIDragComponent : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         if (angle < validDragAngleForHorizontal)
         {
             _invalidBeginDragDispatch?.Invoke(eventData);
-            OnEndDrag(eventData);
+            OnChangeInvalidDrag(eventData);//切换为InvalidDrag的时候执行
             _isValidDragging = false;
         }
+    }
+
+    /// <summary>
+    /// 切换为invalidDrag的时候需要做的事，执行了这个就不会执行正常的validOnEndDrag
+    /// </summary>
+    /// <param name="eventData"></param>
+    private void OnChangeInvalidDrag(PointerEventData eventData)
+    {
+        if (_graphic)
+        {
+            _graphic.raycastTarget = true;
+        }
+
+        PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
+        pointerEventData.position = eventData.position;
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerEventData, results);
+        _cacheObjOnDrag.SetActive(false);
+        _canvasGroup.alpha = 1f;
+
+        _onEndDrag?.Invoke(Filtrate(results),false);//false指的是，不是validDrag
     }
 
     private List<GameObject> Filtrate(List<RaycastResult> results)

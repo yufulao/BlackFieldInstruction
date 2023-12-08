@@ -51,10 +51,13 @@
      <Compile Include="Assets\Res\FlatKit\Demos\Common\Scripts\Motion\Editor\LinearMotionEditor.cs" />
      <Compile Include="Assets\Res\FlatKit\[Render Pipeline] URP\Water\Editor\Tooltips.cs" />
      <Compile Include="Assets\Res\FlatKit\Shaders\Editor\Tooltips.cs" />
+     <Compile Include="Assets\Res\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter\Editor\WelcomeWindow.cs" />
      <Folder Include="Assets\Res\FlatKit\Shaders\GradientSkybox\Editor" />
+     <Folder Include="Assets\Res\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter\Editor\Resources" />
      <Folder Include="Assets\Editor" />
      <Folder Include="Assets\Res\FlatKit\[Render Pipeline] URP\Water\Editor" />
      <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Editor" />
+     <Folder Include="Assets\Res\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter\Editor" />
      <Folder Include="Assets\Res\FlatKit\Demos\Common\Scripts\Motion\Editor" />
      <Folder Include="Assets\Res\JMO Assets\Cartoon FX Easy Editor\Editor" />
      <Folder Include="Assets\Res\FlatKit\Shaders\Editor" />

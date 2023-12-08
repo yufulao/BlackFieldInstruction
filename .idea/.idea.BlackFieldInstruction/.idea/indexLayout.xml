@@ -38,7 +38,6 @@
       <Path>.plastic</Path>
       <Path>Logs</Path>
       <Path>RabiConfig</Path>
-      <Path>Temp</Path>
       <Path>UserSettings</Path>
       <Path>obj</Path>
     </explicitExcludes>

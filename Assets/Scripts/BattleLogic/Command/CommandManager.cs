@@ -9,6 +9,7 @@ public class CommandManager : MonoSingleton<CommandManager>
 {
     private CommandUICtrl _viewCtrl;
     private RowCfgStage _rowCfgStage;
+    private BattleUnitPlayer _player;
 
     private readonly List<IEnumerator> _usedCommandList=new List<IEnumerator>();
 
@@ -16,9 +17,10 @@ public class CommandManager : MonoSingleton<CommandManager>
     /// 初始化
     /// </summary>
     /// <param name="rowCfgStage"></param>
-    public void InitCommandManager(RowCfgStage rowCfgStage)
+    public void InitCommandManager(RowCfgStage rowCfgStage,BattleUnitPlayer player)
     {
         _rowCfgStage = rowCfgStage;
+        _player = player;
         _usedCommandList.Clear();
         _viewCtrl = UIManager.Instance.GetCtrl("CommandView", rowCfgStage) as CommandUICtrl;
     }
@@ -45,25 +47,23 @@ public class CommandManager : MonoSingleton<CommandManager>
     /// <param name="commandType"></param>
     public void AddCommand(CommandType commandType)
     {
-        Player player = GridManager.Instance.player;
-
         switch (commandType)
         {
             case CommandType.Up:
-                _usedCommandList.Add(player.MoveCommand(CommandType.Up)); 
+                _usedCommandList.Add(_player.MoveCommand(CommandType.Up)); 
                 break;
             case CommandType.Down:
-                _usedCommandList.Add( player.MoveCommand(CommandType.Down));
+                _usedCommandList.Add( _player.MoveCommand(CommandType.Down));
                 break;
             case CommandType.Right:
-                _usedCommandList.Add( player.MoveCommand(CommandType.Right));
+                _usedCommandList.Add( _player.MoveCommand(CommandType.Right));
                 break;
             case CommandType.Left:
-                _usedCommandList.Add( player.MoveCommand(CommandType.Left));
+                _usedCommandList.Add( _player.MoveCommand(CommandType.Left));
                 break;
             case CommandType.Wait:
-                _usedCommandList.Add( player.MoveCommand(CommandType.Wait));
-                _usedCommandList.Add(player.MoveCommand(CommandType.Wait));
+                _usedCommandList.Add( _player.MoveCommand(CommandType.Wait));
+                _usedCommandList.Add(_player.MoveCommand(CommandType.Wait));
                 break;
             default:
                 Debug.Log("没有添加这个command的方法" + commandType.ToString());
@@ -78,24 +78,6 @@ public class CommandManager : MonoSingleton<CommandManager>
     {
         PrepareCommand();
         ExcuteCommand();
-    }
-
-    /// <summary>
-    /// 执行当前指令
-    /// </summary>
-    /// <param name="end"></param>
-    public void ExcuteCommand()
-    {
-        if (_usedCommandList.Count != 0)
-        {
-            IEnumerator command =  _usedCommandList[0];
-            //Debug.Log("执行指令"+_usedCommandList[0]);
-            StartCoroutine(command);
-            _usedCommandList.RemoveAt(0);
-            return;
-        }
-
-        OnExcuteCommandEnd();
     }
 
     /// <summary>
@@ -115,12 +97,29 @@ public class CommandManager : MonoSingleton<CommandManager>
         }
         //Debug.Log(_usedCommandList.Count);
     }
+    
+    /// <summary>
+    /// 执行当前指令
+    /// </summary>
+    public void ExcuteCommand()
+    {
+        if (_usedCommandList.Count != 0)
+        {
+            IEnumerator command =  _usedCommandList[0];
+            //Debug.Log("执行指令"+_usedCommandList[0]);
+            StartCoroutine(command);
+            _usedCommandList.RemoveAt(0);
+            return;
+        }
+
+        OnExcuteCommandEnd();
+    }
 
     /// <summary>
     /// 所有指令执行完毕
     /// </summary>
     private void OnExcuteCommandEnd()
     {
-        BattleManager.Instance.BattleEnd(GridManager.Instance.CheckPlayerGetTarget());
+        BattleManager.Instance.BattleEnd(BattleManager.Instance.CheckPlayerGetTarget());
     }
 }

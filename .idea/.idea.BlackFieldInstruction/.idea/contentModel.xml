@@ -21,12 +21,24 @@
             <e p="CfgStage.txt" t="Include" />
             <e p="CfgUi.txt" t="Include" />
           </e>
+          <e p="Modle" t="Include" />
           <e p="Prefab" t="Include">
             <e p="Material" t="Include" />
+            <e p="Material_dst" t="Include" />
           </e>
           <e p="Scene" t="Include" />
           <e p="Sfx" t="Include" />
+          <e p="Sprite" t="Include" />
           <e p="Ui" t="Include" />
+          <e p="Vfx" t="Include">
+            <e p="Character" t="Include" />
+            <e p="Environment" t="Include">
+              <e p="Fire" t="Include" />
+              <e p="lightning" t="Include" />
+              <e p="Water" t="Include" />
+              <e p="wind" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="AddressableAssetsData" t="Include">
           <e p="Android" t="Include" />
@@ -123,6 +135,20 @@
           </e>
         </e>
         <e p="Res" t="Include">
+          <e p="EmaceArt" t="Include">
+            <e p="FREE EpicMobile 3d Voxel Forest And Atols - Winter" t="Include">
+              <e p="Editor" t="Include">
+                <e p="Resources" t="Include" />
+                <e p="WelcomeWindow.cs" t="Include" />
+              </e>
+              <e p="Materials" t="Include" />
+              <e p="Meshes" t="Include" />
+              <e p="Prefabs" t="Include" />
+              <e p="Scenes" t="Include" />
+              <e p="Sky" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+          </e>
           <e p="Feel" t="Include">
             <e p="FeelDemos" t="Include">
               <e p="_Common" t="Include">
@@ -2218,6 +2244,119 @@
               <e p="Readme Cartoon FX Remaster.txt" t="Include" />
             </e>
           </e>
+          <e p="Low Poly Simple Urban City 3D Asset Pack" t="Include">
+            <e p="Models" t="Include">
+              <e p="Buildings" t="Include" />
+              <e p="Props" t="Include">
+                <e p="Boxes" t="Include" />
+                <e p="Other" t="Include" />
+                <e p="Road_Signs" t="Include" />
+              </e>
+              <e p="Roads" t="Include" />
+              <e p="Vehicles" t="Include">
+                <e p="Buses" t="Include" />
+                <e p="Cars" t="Include" />
+                <e p="Emergency_Vehicles" t="Include" />
+                <e p="Main_Hero_Trucks" t="Include" />
+                <e p="Pickups" t="Include" />
+                <e p="Trams" t="Include" />
+                <e p="Trucks" t="Include" />
+              </e>
+            </e>
+            <e p="Prefabs" t="Include">
+              <e p="Buildings" t="Include" />
+              <e p="Props" t="Include">
+                <e p="Boxes" t="Include" />
+                <e p="Other" t="Include" />
+                <e p="Road_Signs" t="Include" />
+              </e>
+              <e p="Roads" t="Include" />
+              <e p="Vehicles" t="Include">
+                <e p="Buses" t="Include" />
+                <e p="Cars" t="Include" />
+                <e p="Emergency_Vehicles" t="Include" />
+                <e p="Main_Hero_Trucks" t="Include" />
+                <e p="Pickups" t="Include" />
+                <e p="Trams" t="Include" />
+                <e p="Trucks" t="Include" />
+              </e>
+            </e>
+            <e p="Scenes" t="Include" />
+            <e p="Textures" t="Include" />
+          </e>
+          <e p="mmmm" t="Include">
+            <e p="3D Road Tiles" t="Include">
+              <e p="Materials" t="Include" />
+            </e>
+            <e p="kenney_3d-road-tiles" t="Include">
+              <e p="Convert" t="Include">
+                <e p="Three.js (Blender)" t="Include">
+                  <e p="readme.txt" t="Include" />
+                </e>
+              </e>
+              <e p="License.txt" t="Include" />
+              <e p="Models" t="Include">
+                <e p="gLTF" t="Include" />
+              </e>
+              <e p="Unity package" t="Include" />
+            </e>
+            <e p="kenney_medieval-town-base" t="Include">
+              <e p="License.txt" t="Include" />
+              <e p="Models" t="Include" />
+              <e p="Unity package" t="Include" />
+            </e>
+            <e p="Medieval Town (base)" t="Include">
+              <e p="Materials" t="Include" />
+            </e>
+          </e>
+          <e p="Off Axis Studios" t="Include">
+            <e p="Polyworks" t="Include">
+              <e p="Demos" t="Include" />
+              <e p="Extras" t="Include" />
+              <e p="Meshes" t="Include">
+                <e p="Atlased" t="Include">
+                  <e p="Prototype" t="Include">
+                    <e p="Materials" t="Include" />
+                  </e>
+                </e>
+                <e p="MaterialsOnly" t="Include">
+                  <e p="Prototype" t="Include">
+                    <e p="Materials" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="Prefabs" t="Include">
+                <e p="Atlased" t="Include">
+                  <e p="Prototype" t="Include">
+                    <e p="Blocks - Blue" t="Include" />
+                    <e p="Blocks - Green" t="Include" />
+                    <e p="Blocks - Red" t="Include" />
+                    <e p="Blocks - Yellow" t="Include" />
+                  </e>
+                </e>
+                <e p="MaterialsOnly" t="Include">
+                  <e p="Prototype" t="Include">
+                    <e p="Blocks - Blue" t="Include" />
+                    <e p="Blocks - Green" t="Include" />
+                    <e p="Blocks - Red" t="Include" />
+                    <e p="Blocks - Yellow" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="Planets" t="Include">
+            <e p="Materials" t="Include">
+              <e p="Materials" t="Include" />
+            </e>
+            <e p="Models" t="Include">
+              <e p="Materials" t="Include" />
+            </e>
+            <e p="Scene" t="Include" />
+            <e p="Shader" t="Include">
+              <e p="two_side_shader.shader" t="Include" />
+            </e>
+          </e>
           <e p="Platformer Kit" t="Include">
             <e p="License.txt" t="Include" />
             <e p="Models" t="Include">
@@ -2231,8 +2370,68 @@
           </e>
         </e>
         <e p="Resources" t="Include" />
+        <e p="Robot" t="Include">
+          <e p="Plane" t="Include" />
+          <e p="Prefabs" t="Include" />
+          <e p="readme.txt" t="Include" />
+          <e p="Robo controllers" t="Include" />
+          <e p="Robo1" t="Include">
+            <e p="Animations" t="Include">
+              <e p="Robo1 animations list.txt" t="Include" />
+            </e>
+            <e p="Materials" t="Include" />
+            <e p="Models" t="Include" />
+            <e p="Textures" t="Include" />
+          </e>
+          <e p="Robo2" t="Include">
+            <e p="Animations" t="Include">
+              <e p="Robo2 animations list.txt" t="Include" />
+            </e>
+            <e p="Materials" t="Include" />
+            <e p="Models" t="Include" />
+            <e p="Textures" t="Include" />
+          </e>
+          <e p="Robo3" t="Include">
+            <e p="Animations" t="Include">
+              <e p="Robo3 animations list.txt" t="Include" />
+            </e>
+            <e p="Materials" t="Include" />
+            <e p="Models" t="Include" />
+            <e p="Textures" t="Include" />
+          </e>
+          <e p="Stand" t="Include">
+            <e p="Material" t="Include" />
+            <e p="Model" t="Include">
+              <e p="Materials" t="Include" />
+            </e>
+            <e p="Texture" t="Include" />
+          </e>
+          <e p="Standard Assets" t="Include">
+            <e p="Effects" t="Include">
+              <e p="ToonShading" t="Include">
+                <e p="Materials" t="Include" />
+                <e p="Shaders" t="Include">
+                  <e p="ToonBasic.shader" t="Include" />
+                  <e p="ToonBasicOutline.shader" t="Include" />
+                </e>
+                <e p="Textures" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="BattleLogic" t="Include">
+            <e p="Battle" t="Include">
+              <e p="BattleManager.cs" t="Include" />
+              <e p="BattleModel.cs" t="Include" />
+              <e p="BattleView.cs" t="Include" />
+              <e p="Component" t="Include">
+                <e p="BattleUnit.cs" t="Include" />
+                <e p="BattleUnitInfo.cs" t="Include" />
+                <e p="BattleUnitPlayer.cs" t="Include" />
+                <e p="BattleUnitTarget.cs" t="Include" />
+              </e>
+            </e>
             <e p="BattleFsm" t="Include">
               <e p="BattleFsm.cs" t="Include" />
               <e p="Fsm" t="Include">
@@ -2243,17 +2442,12 @@
                 <e p="BattlePauseState.cs" t="Include" />
               </e>
             </e>
-            <e p="BattleManager.cs" t="Include" />
             <e p="Command" t="Include">
               <e p="CommandManager.cs" t="Include" />
             </e>
             <e p="Grid" t="Include">
               <e p="Component" t="Include">
                 <e p="GridCell.cs" t="Include" />
-                <e p="GridObject.cs" t="Include" />
-                <e p="GridObjInfo.cs" t="Include" />
-                <e p="Player.cs" t="Include" />
-                <e p="TargetObject.cs" t="Include" />
               </e>
               <e p="GridManager.cs" t="Include" />
               <e p="GridModel.cs" t="Include" />

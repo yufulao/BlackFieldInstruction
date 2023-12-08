@@ -49,7 +49,7 @@ public class GameManager : MonoSingleton<GameManager>
     IEnumerator Funcc()
     {
         yield return SceneManager.Instance.ChangeSceneAsync("StageTest");
-        BattleManager.Instance.OnInit();
+        BattleManager.Instance.InitBattleManager();
         BattleManager.Instance.EnterStageScene("StageTest");
 
     }
