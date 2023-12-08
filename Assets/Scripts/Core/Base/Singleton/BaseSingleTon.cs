@@ -16,6 +16,6 @@ public class BaseSingleTon<T> where T : new()
             }
 
             return _instance;
-        } 
+        }
     }
 }

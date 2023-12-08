@@ -2,10 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GridView : MonoBehaviour
+public class GridView:MonoBehaviour
 {
     private TextMesh[,] _debugTextArray;
+    [SerializeField] private Transform gridObjContainer;
 
+    public Transform GetGridObjContainer()
+    {
+        return gridObjContainer;
+    }
+    
     /// <summary>
     /// 创建并显示辅助线
     /// </summary>

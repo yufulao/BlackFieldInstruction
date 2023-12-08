@@ -100,7 +100,7 @@ public class BattleManager:MonoSingleton<BattleManager>
     private void ResetBattle()
     {
         ResetBattleParams();
-        GridManager.Instance.ResetGridModel();
+        GridManager.Instance.ResetGridManager();
         _battleFsm.ChangeFsmState(typeof(BattleCommandInputState));
     }
     

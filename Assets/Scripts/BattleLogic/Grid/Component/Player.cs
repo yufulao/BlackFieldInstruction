@@ -64,7 +64,7 @@ public class Player : GridObject
         yield return StartCoroutine(WaitForRotate(targetForward));
         //Debug.Log(GridManager.Instance.CheckWalkable(targetPoint.x, targetPoint.y));
         // Debug.Log(newPoint.x+"  "+newPoint.y);
-        if (GridManager.Instance.CheckWalkable(newPoint.x, newPoint.y))
+        if (GridManager.Instance.CheckCanWalk(newPoint.x, newPoint.y))
         {
             _tweener=_rb.DOMove(GridManager.Instance.GetWorldPositionByPoint(newPoint.x, newPoint.y), during);
             //Debug.Log(GridManager.Instance.GetWorldPositionByPoint(targetPoint.x, targetPoint.y));

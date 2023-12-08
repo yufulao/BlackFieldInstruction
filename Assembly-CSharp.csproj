@@ -47,7 +47,7 @@
      <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoRotate.cs" />
      <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutodestructWhenNoChildren.cs" />
      <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Spawn System\CFX_SpawnSystem.cs" />
-     <Compile Include="Assets\Scripts\BattleLogic\Grid\Component\GridInfo.cs" />
+     <Compile Include="Assets\Scripts\BattleLogic\Grid\Component\GridObjInfo.cs" />
      <Compile Include="Assets\Res\FlatKit\Demos\Common\Scripts\UvScroller.cs" />
      <Compile Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Scripts\FloatingMotion.cs" />
      <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />

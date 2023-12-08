@@ -6243,6 +6243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a039e1c7520013648ab13dd447419e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gridObjContainer: {fileID: 1872215370}
 --- !u!4 &1444882261
 Transform:
   m_ObjectHideFlags: 0
@@ -7852,7 +7853,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1806305455}
-  - component: {fileID: 1806305454}
   m_Layer: 0
   m_Name: GridController
   m_TagString: Untagged
@@ -7860,20 +7860,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1806305454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1806305453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9d2a68e49d866849bc2800acb690dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debugShow: 0
-  player: {fileID: 0}
 --- !u!4 &1806305455
 Transform:
   m_ObjectHideFlags: 0
@@ -8106,7 +8092,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1872215370}
-  - component: {fileID: 1872215369}
   m_Layer: 0
   m_Name: GridMap
   m_TagString: Untagged
@@ -8114,18 +8099,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1872215369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872215368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a74034ca6ace6f4985a8fcb04f2293b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1872215370
 Transform:
   m_ObjectHideFlags: 0
