@@ -18,7 +18,11 @@ MonoBehaviour:
   m_GUID: edc80cb09a487424fb97d6c4e3f7e691
   m_SerializeEntries:
   - m_GUID: 42bd29bdf2feec04ea50b5787a7e5059
-    m_Address: StageTest
+    m_Address: Assets/AddressableAssets/Scene/StageTest.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: af4fd7cfd6e1c37458d27ad7a8387ebe
+    m_Address: Assets/AddressableAssets/Scene/Stage0-1.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

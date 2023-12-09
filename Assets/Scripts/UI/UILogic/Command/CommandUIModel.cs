@@ -14,13 +14,20 @@ public class CommandUIModel
     /// <summary>
     /// 初始化本关卡所有可选指令
     /// </summary>
-    /// <param name="originalItemList">初始指令列表</param>
+    /// <param name="originalItemInfoList">初始指令列表</param>
     /// <returns></returns>
-    public void OnInit(List<WaitingItemInfo> originalItemList)
+    public void OnInit(List<WaitingItemInfo> originalItemInfoList)
     {
         _usedItemInfoList = new List<UsedItemInfo>();
         _currentNeedTime = 0;
-        _waitingItemInfoList = originalItemList;
+        _waitingItemInfoList = originalItemInfoList;
+    }
+
+    public void ResetModel(List<WaitingItemInfo> originalItemInfoList)
+    {
+        _usedItemInfoList.Clear();
+        _currentNeedTime = 0;
+        _waitingItemInfoList = originalItemInfoList;
     }
 
     /// <summary>

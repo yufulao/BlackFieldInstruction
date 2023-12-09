@@ -6,6 +6,7 @@ public class GridView:MonoBehaviour
 {
     private TextMesh[,] _debugTextArray;
     [SerializeField] private Transform gridObjContainer;
+    public bool debugShow;//是否显示辅助线
 
     public Transform GetGridObjContainer()
     {

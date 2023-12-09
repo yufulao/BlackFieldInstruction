@@ -22,30 +22,86 @@ public class CommandManager : MonoSingleton<CommandManager>
         _rowCfgStage = rowCfgStage;
         _player = player;
         _usedCommandList.Clear();
-        _viewCtrl = UIManager.Instance.GetCtrl("CommandView", rowCfgStage) as CommandUICtrl;
+        _viewCtrl = (CommandUICtrl)UIManager.Instance.GetCtrl<CommandUICtrl>("CommandView", rowCfgStage);
     }
 
     /// <summary>
     /// 打开Command页面
     /// </summary>
-    public void OpenCommandView()
+    public void CommandUIOnBeginExcuteCommand()
     {
-        UIManager.Instance.OpenWindow("CommandView");
+        _viewCtrl.CommandUIOnBeginBattleExcuteCommand();
     }
 
     /// <summary>
     /// 关闭command页面
     /// </summary>
-    public void CloseCommandView()
+    public void CommandUIOnEndBattle()
     {
-        UIManager.Instance.CloseWindows("CommandView");
+        _viewCtrl.CommandUIOnEndBattle();
     }
 
+    /// <summary>
+    /// 开始执行指令集
+    /// </summary>
+    public void OnExcuteCommandStart()
+    {
+        PrepareCommand();
+        ExcuteCommand();
+    }
+    
+    /// <summary>
+    /// 执行当前指令
+    /// </summary>
+    public void ExcuteCommand()
+    {
+        if (_usedCommandList.Count != 0)
+        {
+            IEnumerator command =  _usedCommandList[0];
+            //Debug.Log("执行指令"+_usedCommandList[0]);
+            StartCoroutine(command);
+            _usedCommandList.RemoveAt(0);
+            return;
+        }
+
+        OnExcuteCommandEnd();
+    }
+
+    public bool RefreshCacheCurrentTimeTextInExcuting()
+    {
+        bool isTimeOver = _viewCtrl.RefreshCacheCurrentTimeTextInExcuting();
+        if (isTimeOver)
+        {
+            OnExcuteCommandEnd();
+            return true;
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// 预处理指令集
+    /// </summary>
+    private void PrepareCommand()
+    {
+        _usedCommandList.Clear();
+        List<UsedItemInfo> usedItemInfoList = _viewCtrl.GetAllUsedItem();
+        for (int i = 0; i < usedItemInfoList.Count; i++)
+        {
+            for (int j = 0; j < usedItemInfoList[i].cacheCount; j++)
+            {
+                //Debug.Log(usedObjList[i].commandList[j]);
+                AddCommand(usedItemInfoList[i].cacheCommandEnum);
+            }
+        }
+        //Debug.Log(_usedCommandList.Count);
+    }
+    
     /// <summary>
     /// 添加指令到usedObj的commandList
     /// </summary>
     /// <param name="commandType"></param>
-    public void AddCommand(CommandType commandType)
+    private void AddCommand(CommandType commandType)
     {
         switch (commandType)
         {
@@ -69,50 +125,6 @@ public class CommandManager : MonoSingleton<CommandManager>
                 Debug.Log("没有添加这个command的方法" + commandType.ToString());
                 break;
         }
-    }
-
-    /// <summary>
-    /// 开始执行指令集
-    /// </summary>
-    public void OnExcuteCommandStart()
-    {
-        PrepareCommand();
-        ExcuteCommand();
-    }
-
-    /// <summary>
-    /// 预处理指令集
-    /// </summary>
-    private void PrepareCommand()
-    {
-        _usedCommandList.Clear();
-        List<UsedItemInfo> usedItemInfoList = _viewCtrl.GetAllUsedItem();
-        for (int i = 0; i < usedItemInfoList.Count; i++)
-        {
-            for (int j = 0; j < usedItemInfoList[i].cacheCount; j++)
-            {
-                //Debug.Log(usedObjList[i].commandList[j]);
-                AddCommand(usedItemInfoList[i].cacheCommandEnum);
-            }
-        }
-        //Debug.Log(_usedCommandList.Count);
-    }
-    
-    /// <summary>
-    /// 执行当前指令
-    /// </summary>
-    public void ExcuteCommand()
-    {
-        if (_usedCommandList.Count != 0)
-        {
-            IEnumerator command =  _usedCommandList[0];
-            //Debug.Log("执行指令"+_usedCommandList[0]);
-            StartCoroutine(command);
-            _usedCommandList.RemoveAt(0);
-            return;
-        }
-
-        OnExcuteCommandEnd();
     }
 
     /// <summary>

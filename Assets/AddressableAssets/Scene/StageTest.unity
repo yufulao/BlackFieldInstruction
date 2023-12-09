@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4366768, g: 0.48427153, b: 0.56452245, a: 1}
+  m_IndirectSpecularColor: {r: 0.43424192, g: 0.4811309, b: 0.56203675, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2278,6 +2278,7 @@ GameObject:
   - component: {fileID: 327731065}
   - component: {fileID: 327731064}
   - component: {fileID: 327731063}
+  - component: {fileID: 327731068}
   m_Layer: 0
   m_Name: MainCamera (1)
   m_TagString: MainCamera
@@ -2392,6 +2393,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
+--- !u!114 &327731068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327731062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d70c9ba36a8bebe4697e8f8a9da58409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pipelineAsset: {fileID: 11400000, guid: c5e7ae6d68b65b34f9aea870648ef132, type: 2}
 --- !u!1001 &346420916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4455,10 +4469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ba96e4139549f4b8187d7b06cf3e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridObjInfo:
-    walkable: 0
-    originalPoint: {x: 0, y: 0}
-    currentPoint: {x: 0, y: 0}
+  walkable: 0
 --- !u!1001 &717890535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7438,10 +7449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1b81c45c27c2b842bb54781140792e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridObjInfo:
-    walkable: 1
-    originalPoint: {x: 0, y: 0}
-    currentPoint: {x: 0, y: 0}
+  walkable: 0
 --- !u!1001 &1506156433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7922,10 +7930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1b81c45c27c2b842bb54781140792e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridObjInfo:
-    walkable: 1
-    originalPoint: {x: 0, y: 0}
-    currentPoint: {x: 0, y: 0}
+  walkable: 0
 --- !u!1001 &1639213630
 PrefabInstance:
   m_ObjectHideFlags: 0

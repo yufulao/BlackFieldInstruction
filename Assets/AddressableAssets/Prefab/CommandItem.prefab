@@ -814,6 +814,7 @@ MonoBehaviour:
   timeText: {fileID: 4929199135858403139}
   clickBtn: {fileID: 5928066499133606486}
   canvasGroup: {fileID: 6567935416480452225}
+  clickBtnMask: {fileID: 4319384025081012850}
   btnDragCmp: {fileID: 2847634490200647911}
 --- !u!1 &6366011776593961004
 GameObject:

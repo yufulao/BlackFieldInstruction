@@ -161,9 +161,8 @@ public class AssetManager : BaseSingleTon<AssetManager>,IMonoManager
             Debug.Log("路径不能为空");
             yield break;
         }
-        
+        //Debug.Log(path);
         AsyncOperationHandle<SceneInstance> sceneLoadHandle = Addressables.LoadSceneAsync(path, loadSceneMode);
-        yield return sceneLoadHandle;
         sceneLoadHandle.Completed += (handle) =>
         {
             if (handle.Status == AsyncOperationStatus.Succeeded)
@@ -176,7 +175,7 @@ public class AssetManager : BaseSingleTon<AssetManager>,IMonoManager
                 Addressables.Release(handle);
             }
         };
-
+        yield return sceneLoadHandle;
     }
 
     /// <summary>

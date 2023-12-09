@@ -5,7 +5,7 @@ using Rabi;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class BattleManager : BaseSingleTon<BattleManager>
+public class BattleManager : BaseSingleTon<BattleManager>,IMonoManager
 {
     private RowCfgStage _rowCfgStage;
     private BattleFsm _battleFsm;
@@ -17,11 +17,9 @@ public class BattleManager : BaseSingleTon<BattleManager>
     private readonly List<BattleUnit> _allUnits = new List<BattleUnit>();
     private Dictionary<BattleUnit, BattleUnitInfo> _unitInfoDic = new Dictionary<BattleUnit, BattleUnitInfo>();
     private bool _hasInit;
+    private string _cacheStageName;
 
-    /// <summary>
-    /// 初始化BattleManager
-    /// </summary>
-    public void InitBattleManager()
+    public void OnInit()
     {
         if (_hasInit)
         {
@@ -35,14 +33,42 @@ public class BattleManager : BaseSingleTon<BattleManager>
         _hasInit = true;
     }
 
+    public void Update()
+    {
+        
+    }
+
+    public void FixedUpdate()
+    {
+        
+    }
+
+    public void LateUpdate()
+    {
+        
+    }
+
+    public void OnClear()
+    {
+        
+    }
+
     /// <summary>
     /// 进入battle场景
     /// </summary>
     /// <param name="stageName"></param>
     public void EnterStageScene(string stageName)
     {
-        LoadStageCfg(stageName);
+        _cacheStageName = stageName;
+        LoadStageCfg();
         _battleFsm.ChangeFsmState(typeof(BattleInitState));
+    }
+
+    public void ForceStopExcuteCommand()
+    {
+        CommandManager.Instance.StopAllCoroutines();
+        _player.ForceStopPlayerTweener();
+        BattleEnd(false);
     }
 
     /// <summary>
@@ -62,7 +88,8 @@ public class BattleManager : BaseSingleTon<BattleManager>
     /// </summary>
     public void BattleInputStateEnter()
     {
-        CommandManager.Instance.OpenCommandView();
+        UIManager.Instance.OpenWindow("CommandView");
+        CommandManager.Instance.CommandUIOnEndBattle();
     }
 
     /// <summary>
@@ -70,7 +97,6 @@ public class BattleManager : BaseSingleTon<BattleManager>
     /// </summary>
     public void ChangeToCommandExcuteState()
     {
-        CommandManager.Instance.CloseCommandView();
         _battleFsm.ChangeFsmState(typeof(BattleCommandExcuteState));
     }
 
@@ -79,6 +105,7 @@ public class BattleManager : BaseSingleTon<BattleManager>
     /// </summary>
     public void BattleCommandExcuteStateEnter()
     {
+        CommandManager.Instance.CommandUIOnBeginExcuteCommand();
         CommandManager.Instance.OnExcuteCommandStart();
     }
 
@@ -100,7 +127,7 @@ public class BattleManager : BaseSingleTon<BattleManager>
         Debug.Log("游戏结束" + _win);
         if (!_win)
         {
-            ResetBattle();
+            ResetBattleMap();
         }
     }
 
@@ -167,9 +194,9 @@ public class BattleManager : BaseSingleTon<BattleManager>
     }
 
     /// <summary>
-    /// 重置战斗btn事件
+    /// 只重置战斗地图
     /// </summary>
-    private void ResetBattle()
+    private void ResetBattleMap()
     {
         ResetBattleParams();
         ResetUnits();
@@ -181,6 +208,10 @@ public class BattleManager : BaseSingleTon<BattleManager>
     /// </summary>
     private void LoadUnits()
     {
+        _allUnits.Clear();
+        _targetUnits.Clear();
+        _player = null;
+        _unitInfoDic.Clear();
         var gridObjList = GridManager.Instance.GetGridObjContainer().GetComponentsInChildren<BattleUnit>();
         for (int i = 0; i < gridObjList.Length; i++)
         {
@@ -235,6 +266,7 @@ public class BattleManager : BaseSingleTon<BattleManager>
             }
 
             _allUnits[i].gameObject.transform.position = GridManager.Instance.GetWorldPositionByPoint(unitInfo.originalPoint.x, unitInfo.originalPoint.y);
+            //Debug.Log(_allUnits[i].gameObject.name);
             _model.ResetUnitInfo(unitInfo);
         }
     }
@@ -242,10 +274,14 @@ public class BattleManager : BaseSingleTon<BattleManager>
     /// <summary>
     /// 加载场景配置
     /// </summary>
-    /// <param name="stageName"></param>
-    private void LoadStageCfg(string stageName)
+    private void LoadStageCfg()
     {
-        _rowCfgStage = ConfigManager.Instance.cfgStage[stageName];
+        if (string.IsNullOrEmpty(_cacheStageName))
+        {
+            Debug.LogError("battleManager的关卡名为空");
+            return;
+        }
+        _rowCfgStage = ConfigManager.Instance.cfgStage[_cacheStageName];
     }
 
     /// <summary>

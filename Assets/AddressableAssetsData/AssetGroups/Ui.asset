@@ -21,6 +21,10 @@ MonoBehaviour:
     m_Address: Assets/AddressableAssets/UI/CommandView.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: b04d1d93ec1ea2942809c1a695dab770
+    m_Address: Assets/AddressableAssets/UI/StageSelectView.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: a19174961d3b32943af996d43a3fd044, type: 2}
   m_SchemaSet:

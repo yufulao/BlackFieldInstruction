@@ -10,9 +10,13 @@ using UnityEngine.UI;
 public class CommandUICtrl : UICtrlBase
 {
     private CommandUIModel _model;
+    private RowCfgStage _rowCfgStage;
 
     //ui
     [SerializeField] private Button startBtn;
+    [SerializeField] private Button pauseBtn;
+    [SerializeField] private Button resetBtn;
+    [SerializeField] private Button cancelExcuteBtn;
     [SerializeField] private Text currentTimeText;
     [SerializeField] private Text stageTimeText;
     [SerializeField] private ScrollRect usedScroll;
@@ -22,6 +26,7 @@ public class CommandUICtrl : UICtrlBase
 
     private readonly Dictionary<UsedItemInfo, CommandItem> _usedItemInfoDic = new Dictionary<UsedItemInfo, CommandItem>();
     private readonly Dictionary<WaitingItemInfo, CommandItem> _waitingItemInfoDic = new Dictionary<WaitingItemInfo, CommandItem>();
+    private int _cacheCurrentTimeInExcuting;
 
     public override void OnInit(params object[] param)
     {
@@ -49,9 +54,63 @@ public class CommandUICtrl : UICtrlBase
         return _model.GetUsedItemList();
     }
 
+    public void CommandUIOnBeginBattleExcuteCommand()
+    {
+        startBtn.gameObject.SetActive(false);
+        usedScroll.gameObject.SetActive(false);
+        waitingScroll.gameObject.SetActive(false);
+        resetBtn.gameObject.SetActive(false);
+        cancelExcuteBtn.gameObject.SetActive(true);
+        _cacheCurrentTimeInExcuting = 0;
+        RefreshCurrentTimeText(0);
+    }
+    
+    public void CommandUIOnEndBattle()
+    {
+        startBtn.gameObject.SetActive(true);
+        usedScroll.gameObject.SetActive(true);
+        waitingScroll.gameObject.SetActive(true);
+        resetBtn.gameObject.SetActive(true);
+        cancelExcuteBtn.gameObject.SetActive(false);
+        RefreshCurrentTimeText(_model.GetCurrentNeedTime());
+    }
+    
+    public bool RefreshCacheCurrentTimeTextInExcuting()
+    {
+        _cacheCurrentTimeInExcuting++;
+        currentTimeText.color = _cacheCurrentTimeInExcuting > _rowCfgStage.stageTime ? Color.red : Color.black;
+        currentTimeText.text = _cacheCurrentTimeInExcuting.ToString();
+        return _cacheCurrentTimeInExcuting > _rowCfgStage.stageTime;
+    }
+
     protected override void BindEvent()
     {
-        startBtn.onClick.AddListener(() => BattleManager.Instance.ChangeToCommandExcuteState());
+        startBtn.onClick.AddListener(BattleManager.Instance.ChangeToCommandExcuteState);
+        pauseBtn.onClick.AddListener(()=>{});
+        resetBtn.onClick.AddListener(ResetCommandUI);
+        cancelExcuteBtn.onClick.AddListener(BattleManager.Instance.ForceStopExcuteCommand);
+    }
+    
+    /// <summary>
+    /// 重置指令ui
+    /// </summary>
+    private void ResetCommandUI()
+    {
+        if (_usedItemInfoDic.Count!=0)
+        {
+            for (int i = 0; i < usedItemContainer.childCount; i++)
+            {
+                Destroy(usedItemContainer.GetChild(i).gameObject);
+            }
+            for (int i = 0; i < waitingItemContainer.childCount; i++)
+            {
+                Destroy(waitingItemContainer.GetChild(i).gameObject);
+            }
+            _usedItemInfoDic.Clear();
+            _waitingItemInfoDic.Clear();
+            _model.ResetModel(ReLoadOriginalItemList());
+        }
+        RefreshCurrentTimeText(0);
     }
 
     /// <summary>
@@ -78,6 +137,7 @@ public class CommandUICtrl : UICtrlBase
             stageTimeText.text = "/" + stageTime.ToString() + "s";
         }
 
+        currentTimeText.color = currentTime > _rowCfgStage.stageTime ? Color.red : Color.black;
         currentTimeText.text = currentTime.ToString();
     }
 
@@ -133,9 +193,15 @@ public class CommandUICtrl : UICtrlBase
 
         _waitingItemInfoDic.Clear();
 
-        RowCfgStage rowCfgStage = param[0] as RowCfgStage;
-        Dictionary<int, int> commandDic = rowCfgStage.commandDic;
-        Dictionary<int, int> commandTime = rowCfgStage.commandTime;
+        _rowCfgStage = param[0] as RowCfgStage;
+        _model.OnInit(ReLoadOriginalItemList());
+        RefreshCurrentTimeText(0, _rowCfgStage.stageTime);
+    }
+
+    private List<WaitingItemInfo> ReLoadOriginalItemList()
+    {
+        Dictionary<int, int> commandDic = _rowCfgStage.commandDic;
+        Dictionary<int, int> commandTime = _rowCfgStage.commandTime;
         List<WaitingItemInfo> originalItemList = new List<WaitingItemInfo>();
         foreach (var pair in commandDic)
         {
@@ -154,8 +220,7 @@ public class CommandUICtrl : UICtrlBase
             });
         }
 
-        _model.OnInit(originalItemList);
-        RefreshCurrentTimeText(0, rowCfgStage.stageTime);
+        return originalItemList;
     }
 
     /// <summary>
@@ -191,7 +256,9 @@ public class CommandUICtrl : UICtrlBase
     {
         UsedItemInfo usedItemInfo = GetUsedInfoByItem(usedItem);
         WaitingItemInfo waitingItemInfo = _model.AddWaitingCommand(usedItemInfo);
-        _waitingItemInfoDic[waitingItemInfo].Refresh(waitingItemInfo.cacheCount, waitingItemInfo.cacheTime);
+        CommandItem waitingItem=_waitingItemInfoDic[waitingItemInfo];
+        waitingItem.Refresh(waitingItemInfo.cacheCount, waitingItemInfo.cacheTime);
+        waitingItem.UpdateBtnMask(false);
         _model.RemoveUsedCommand(usedItemInfo, NoUsedObj);
 
         RefreshUsedItemList();
@@ -207,6 +274,7 @@ public class CommandUICtrl : UICtrlBase
         WaitingItemInfo waitingItemInfo = GetWaitingInfoByItem(waitingItem);
         _model.RemoveWaitingCommand(waitingItemInfo, NoWaitingObj);
         waitingItem.Refresh(waitingItemInfo.cacheCount, waitingItemInfo.cacheTime);
+        waitingItem.UpdateBtnMask(waitingItemInfo.cacheCount<=0);
         if (!_model.TryAddSameUsedCommand(waitingItemInfo))
         {
             UsedItemInfo usedItemInfo = CreateUsedItem(waitingItemInfo);

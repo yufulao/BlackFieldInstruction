@@ -23,6 +23,7 @@ public class GameManager : MonoSingleton<GameManager>
         _managerList.Add(SfxManager.Instance);
         _managerList.Add(SceneManager.Instance);
         _managerList.Add(UIManager.Instance);
+        _managerList.Add(BattleManager.Instance);
 
         foreach (var manager in _managerList)
         {
@@ -43,15 +44,19 @@ public class GameManager : MonoSingleton<GameManager>
         //     BattleManager.Instance.EnterStageScene("StageTest");
         // }));
         //GameObject obj = CommandManager.Instance.CreatWaitingObj();
-        StartCoroutine(Funcc());
+        UIManager.Instance.OpenWindow("StageSelectView");
     }
 
-    IEnumerator Funcc()
+    public void EnterStage(string stageName,string scenePath)
     {
-        yield return SceneManager.Instance.ChangeSceneAsync("StageTest");
-        BattleManager.Instance.InitBattleManager();
-        BattleManager.Instance.EnterStageScene("StageTest");
+        StartCoroutine(IEnterStage(stageName,scenePath));
+    }
 
+    IEnumerator IEnterStage(string stageName,string scenePath)
+    {
+        yield return SceneManager.Instance.ChangeSceneAsync(scenePath);
+        BattleManager.Instance.EnterStageScene(stageName);
+        GC.Collect();
     }
 
     private void Update()

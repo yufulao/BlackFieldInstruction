@@ -59,6 +59,8 @@
      <Compile Include="Assets\Scripts\Config\CfgPrefab.cs" />
      <Compile Include="Assets\Res\FlatKit\Demos\Common\Scripts\Motion\LinearMotion.cs" />
      <Compile Include="Assets\Scripts\Config\CfgUI.cs" />
+     <Compile Include="Assets\Scripts\UI\UILogic\StageSelect\StageSelectUICtrl.cs" />
+     <Compile Include="Assets\Scripts\UI\UILogic\StageSelect\StageSelectUIModel.cs" />
      <Compile Include="Assets\Scripts\Core\Manager\SceneManager.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\Grid\GridManager.cs" />
      <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
@@ -70,6 +72,7 @@
      <Compile Include="Assets\Scripts\Core\Manager\FsmManager.cs" />
      <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
      <Compile Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Scripts\BillboardLineRendererCircle.cs" />
+     <Compile Include="Assets\Scripts\UI\UILogic\StageSelect\Component\StageItemInfo.cs" />
      <Compile Include="Assets\Scripts\UI\UILogic\Command\Component\CommandItemInfo.cs" />
      <Compile Include="Assets\Scripts\Core\Manager\ConfigManager\CsvReader.cs" />
      <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_ShurikenThreadFix.cs" />
@@ -97,6 +100,7 @@
      <Compile Include="Assets\Scripts\BattleLogic\Battle\Component\BattleUnitTarget.cs" />
      <Compile Include="Assets\Scripts\Config\CfgSfx.cs" />
      <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_InspectorHelp.cs" />
+     <Compile Include="Assets\Scripts\UI\UILogic\StageSelect\Component\StageItem.cs" />
      <Compile Include="Assets\Scripts\Core\Base\Fsm\IFsmState.cs" />
      <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RotateCamera.cs" />
      <Compile Include="Assets\Scripts\Core\Base\Fsm\BaseFsm.cs" />
@@ -305,6 +309,7 @@
      <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Valley\Valley-Textures" />
      <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Fire\Flames Looped" />
      <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Electric" />
+     <Folder Include="Assets\Scripts\UI\UILogic\StageSelect\Component" />
      <Folder Include="Assets\Res\mmmm\Medieval Town (base)" />
      <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Assets\Meshes" />
      <Folder Include="Assets\Robot\Robo1\Materials" />
@@ -346,6 +351,7 @@
      <None Include="Assets\Res\FlatKit\Shaders\StylizedSurface\StylizedSurfaceOutline.shader" />
      <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Materials\Misc" />
      <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Props" />
+     <Folder Include="Assets\Scripts\UI\UILogic\StageSelect" />
      <Folder Include="Assets\Scripts\Config" />
      <Folder Include="Assets\Robot\Standard Assets\Effects\ToonShading\Materials" />
      <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Water" />

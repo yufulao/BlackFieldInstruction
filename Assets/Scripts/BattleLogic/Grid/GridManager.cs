@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class GridManager : BaseSingleTon<GridManager>
 {
-    public bool debugShow;//是否显示辅助线
     // private readonly List<BattleUnit> _allBattleUnits= new List<BattleUnit>();
     private GridModel _gridModel;//动态的，会切换
     private GridView _gridView;
@@ -21,7 +20,7 @@ public class GridManager : BaseSingleTon<GridManager>
         _gridView = GameObject.FindObjectOfType<GridView>();
         _gridModel.Init(rowCfgStage);
 
-        if (debugShow)
+        if (_gridView.debugShow)
         {
             _gridView.ShowDebug(rowCfgStage.width,rowCfgStage.height,rowCfgStage.cellSize);
         }

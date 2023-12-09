@@ -38,7 +38,9 @@
       <Path>.plastic</Path>
       <Path>Logs</Path>
       <Path>RabiConfig</Path>
+      <Path>Temp</Path>
       <Path>UserSettings</Path>
+      <Path>doc</Path>
       <Path>obj</Path>
     </explicitExcludes>
   </component>

@@ -11,6 +11,7 @@ public class CommandItem : MonoBehaviour
     [SerializeField] protected Text timeText;
     [SerializeField] private Button clickBtn;
     [SerializeField] protected CanvasGroup canvasGroup;
+    [SerializeField] private GameObject clickBtnMask;
 
     [SerializeField] private UIDragComponent btnDragCmp;
     // [HideInInspector]public CommandItemInfo itemInfo;
@@ -74,6 +75,11 @@ public class CommandItem : MonoBehaviour
             invalidOnEndDrag?.Invoke(eventData);
             EnableClickBtn();
         });
+    }
+
+    public void UpdateBtnMask( bool active)
+    {
+        clickBtnMask.SetActive(active);
     }
 
     /// <summary>

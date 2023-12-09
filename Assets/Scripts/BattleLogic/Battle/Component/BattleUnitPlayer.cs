@@ -29,6 +29,11 @@ public class BattleUnitPlayer : BattleUnit
         StartCoroutine(WaitForRotate(_originalForwardType));
     }
 
+    public void ForceStopPlayerTweener()
+    {
+        _tweener?.Pause();
+    }
+
     /// <summary>
     /// player移动指令
     /// </summary>
@@ -68,14 +73,19 @@ public class BattleUnitPlayer : BattleUnit
         // Debug.Log(newPoint.x+"  "+newPoint.y);
         if (BattleManager.Instance.CheckWalkable(newPoint.x, newPoint.y))
         {
+            BattleManager.Instance.UpdateUnitPoint(_unitInfo,lastPoint,newPoint);//更新GridObj
             _tweener=_rb.DOMove(GridManager.Instance.GetWorldPositionByPoint(newPoint.x, newPoint.y), during);
             //Debug.Log(GridManager.Instance.GetWorldPositionByPoint(targetPoint.x, targetPoint.y));
             yield return _tweener.WaitForCompletion();
-            BattleManager.Instance.UpdateUnitPoint(_unitInfo,lastPoint,newPoint);//更新GridObj
         }
         else
         {
             yield return new WaitForSeconds(during);
+        }
+
+        if (CommandManager.Instance.RefreshCacheCurrentTimeTextInExcuting())//如果超时了
+        {
+            yield break;
         }
         
         if (!BattleManager.Instance.CheckPlayerGetTarget())
