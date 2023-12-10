@@ -77,6 +77,10 @@ public class CommandItem : MonoBehaviour
         });
     }
 
+    /// <summary>
+    /// 控制btn遮挡的开关
+    /// </summary>
+    /// <param name="active"></param>
     public void UpdateBtnMask( bool active)
     {
         clickBtnMask.SetActive(active);
@@ -97,12 +101,19 @@ public class CommandItem : MonoBehaviour
     {
         canvasGroup.alpha = 0;
     }
-
+    
+    /// <summary>
+    /// 判断为拖拽的时候，取消btn的可交互
+    /// </summary>
     private void DeselectClickBtnOnBeginDrag()
     {
         clickBtn.interactable = false;
     }
 
+    /// <summary>
+    /// 拖拽结束时恢复btn的可交互
+    /// </summary>
+    /// <param name="isValidDrag"></param>
     private void EnableClickBtnOnEndDrag(bool isValidDrag)
     {
         // Debug.Log(isValidDrag);
@@ -111,7 +122,10 @@ public class CommandItem : MonoBehaviour
             EnableClickBtn();
         }
     }
-
+    
+    /// <summary>
+    /// 恢复btn的可交互
+    /// </summary>
     private void EnableClickBtn()
     {
         clickBtn.interactable = true;

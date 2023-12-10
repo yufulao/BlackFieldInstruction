@@ -43,47 +43,47 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BattleLogic\BattleFsm\Fsm\BattleInitState.cs" />
      <Compile Include="Assets\Scripts\Core\Manager\UIManager.cs" />
-     <Compile Include="Assets\Res\FlatKit\Demos\Common\Scripts\Motion\OrbitMotion.cs" />
-     <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoRotate.cs" />
-     <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutodestructWhenNoChildren.cs" />
-     <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Spawn System\CFX_SpawnSystem.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\FlatKit\Demos\Common\Scripts\Motion\OrbitMotion.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoRotate.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutodestructWhenNoChildren.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Spawn System\CFX_SpawnSystem.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\Battle\Component\BattleUnitInfo.cs" />
-     <Compile Include="Assets\Res\FlatKit\Demos\Common\Scripts\UvScroller.cs" />
-     <Compile Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Scripts\FloatingMotion.cs" />
-     <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\FlatKit\Demos\Common\Scripts\UvScroller.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Scripts\FloatingMotion.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
      <Compile Include="Assets\Scripts\Config\CfgCommand.cs" />
      <Compile Include="Assets\Scripts\Core\Base\Manager\IMonoManager.cs" />
      <Compile Include="Assets\Scripts\Core\Manager\InputManager\InputActions.cs" />
      <Compile Include="Assets\Scripts\UI\UILogic\Command\CommandUICtrl.cs" />
-     <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDir.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDir.cs" />
      <Compile Include="Assets\Scripts\Config\CfgPrefab.cs" />
-     <Compile Include="Assets\Res\FlatKit\Demos\Common\Scripts\Motion\LinearMotion.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\FlatKit\Demos\Common\Scripts\Motion\LinearMotion.cs" />
      <Compile Include="Assets\Scripts\Config\CfgUI.cs" />
      <Compile Include="Assets\Scripts\UI\UILogic\StageSelect\StageSelectUICtrl.cs" />
      <Compile Include="Assets\Scripts\UI\UILogic\StageSelect\StageSelectUIModel.cs" />
      <Compile Include="Assets\Scripts\Core\Manager\SceneManager.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\Grid\GridManager.cs" />
-     <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
      <Compile Include="Assets\Scripts\Core\Manager\InputManager\InputManager.cs" />
      <Compile Include="Assets\Scripts\Misc\Def\CommandType.cs" />
      <Compile Include="Assets\Scripts\Core\Manager\AssetManager.cs" />
      <Compile Include="Assets\Scripts\Core\Manager\EventManager\EventManager.cs" />
      <Compile Include="Assets\Scripts\Core\Manager\BgmManager.cs" />
      <Compile Include="Assets\Scripts\Core\Manager\FsmManager.cs" />
-     <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
-     <Compile Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Scripts\BillboardLineRendererCircle.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Scripts\BillboardLineRendererCircle.cs" />
      <Compile Include="Assets\Scripts\UI\UILogic\StageSelect\Component\StageItemInfo.cs" />
      <Compile Include="Assets\Scripts\UI\UILogic\Command\Component\CommandItemInfo.cs" />
      <Compile Include="Assets\Scripts\Core\Manager\ConfigManager\CsvReader.cs" />
-     <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_ShurikenThreadFix.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_ShurikenThreadFix.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\BattleFsm\Fsm\BattleCommandInputState.cs" />
-     <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\BattleFsm\Fsm\BattlePauseState.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\Battle\BattleManager.cs" />
      <Compile Include="Assets\Scripts\UI\Base\UIDragComponent.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\BattleFsm\Fsm\BattleCommandExcuteState.cs" />
-     <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightIntensityFade.cs" />
-     <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightIntensityFade.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\Battle\BattleModel.cs" />
      <Compile Include="Assets\Scripts\UI\Base\UICtrlBase.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\Battle\BattleView.cs" />
@@ -96,13 +96,13 @@
      <Compile Include="Assets\Scripts\BattleLogic\Grid\GridModel.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\Battle\Component\BattleUnitPlayer.cs" />
      <Compile Include="Assets\Scripts\Misc\Util\Utils.cs" />
-     <Compile Include="Assets\Res\FlatKit\[Render Pipeline] URP\Water\Scripts\Buoyancy.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\FlatKit\[Render Pipeline] URP\Water\Scripts\Buoyancy.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\Battle\Component\BattleUnitTarget.cs" />
      <Compile Include="Assets\Scripts\Config\CfgSfx.cs" />
-     <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_InspectorHelp.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_InspectorHelp.cs" />
      <Compile Include="Assets\Scripts\UI\UILogic\StageSelect\Component\StageItem.cs" />
      <Compile Include="Assets\Scripts\Core\Base\Fsm\IFsmState.cs" />
-     <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RotateCamera.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RotateCamera.cs" />
      <Compile Include="Assets\Scripts\Core\Base\Fsm\BaseFsm.cs" />
      <Compile Include="Assets\Scripts\Config\CfgBgm.cs" />
      <Compile Include="Assets\Scripts\Core\Manager\GameManager.cs" />
@@ -113,456 +113,481 @@
      <Compile Include="Assets\Scripts\Misc\Def\ForwardType.cs" />
      <Compile Include="Assets\Scripts\Core\Manager\SfxManager.cs" />
      <Compile Include="Assets\Scripts\Core\Manager\EventManager\EventName.cs" />
-     <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
      <Compile Include="Assets\Scripts\Core\Base\Singleton\BaseSingleTon.cs" />
      <Compile Include="Assets\Scripts\Core\Manager\ConfigManager\ConfigManager.cs" />
-     <Compile Include="Assets\Res\FlatKit\Demos\Common\Scripts\AutoLoadPipelineAsset.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\FlatKit\Demos\Common\Scripts\AutoLoadPipelineAsset.cs" />
      <Folder Include="Assets" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Valley\Valley-FogImageEffect-Presets" />
-     <Folder Include="Assets\Res\FlatKit\Demos\Common" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Models\Vehicles\Emergency_Vehicles" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Models\Buildings" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Models" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Fire" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Valley\Valley-FogImageEffect-Presets" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\Common" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Models\Vehicles\Emergency_Vehicles" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Models\Buildings" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Models" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Fire" />
      <Folder Include="Assets\Robot\Robo1\Textures" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 7 - Var-OutlineImageEffect" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 7 - Var-OutlineImageEffect" />
      <Folder Include="Assets\AddressableAssets\Animation" />
      <None Include="Assets\AddressableAssets\Config\CfgCommand.txt" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Props\Other" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Racing Car" />
-     <Folder Include="Assets\Res\FlatKit" />
-     <Folder Include="Assets\Res\mmmm\kenney_3d-road-tiles\Models" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Props\Other" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Racing Car" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit" />
+     <Folder Include="Assets\Res\ResourcePackages\mmmm\kenney_3d-road-tiles\Models" />
+     <Folder Include="Assets\Res\ResourcePackages\HYPEPOLY - Isometric Tiles Standart Lite\Prefabs\Material 0" />
      <Folder Include="Assets\Robot\Robo1" />
-     <Folder Include="Assets\Res\Graveyard Kit" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks\Meshes" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Smoke" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 5 - Var-Outlines" />
+     <Folder Include="Assets\Res\ResourcePackages\Graveyard Kit" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Meshes" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Smoke" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 5 - Var-Outlines" />
      <Folder Include="Assets\Scripts\Misc" />
      <None Include="Assets\Robot\Robo3\Animations\Robo3 animations list.txt" />
-     <None Include="Assets\Res\mmmm\kenney_medieval-town-base\License.txt" />
-     <Folder Include="Assets\Res\FlatKit\Shaders" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Smoke" />
+     <None Include="Assets\Res\ResourcePackages\mmmm\kenney_medieval-town-base\License.txt" />
+     <Folder Include="Assets\Res\Sprite" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Shaders" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Smoke" />
      <Folder Include="Assets\Robot\Robo2\Models" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Hits\Color Variants" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Models\Vehicles\Buses" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Prefabs" />
-     <Folder Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Room\Room-Materials" />
-     <Folder Include="Assets\Res\mmmm\kenney_3d-road-tiles\Models\gLTF" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Hits\Color Variants" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Shaders" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Models\Vehicles\Buses" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Prefabs" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Room\Room-Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\Tale Monster Cube Env\Prefabs\Base" />
+     <Folder Include="Assets\Res\ResourcePackages\mmmm\kenney_3d-road-tiles\Models\gLTF" />
      <Folder Include="Assets\AddressableAssets\Prefab\Material" />
      <Folder Include="Assets\AddressableAssetsData\AssetGroupTemplates" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Textures" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Textures" />
      <Folder Include="Assets\Robot\Standard Assets\Effects" />
-     <Folder Include="Assets\Res\FlatKit\Shaders\StylizedSurface\LibraryUrp" />
-     <None Include="Assets\Res\FlatKit\Shaders\StylizedSurface\LibraryUrp\LitForwardPass_DR.hlsl" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Mugs" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Stretched" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Shaders\StylizedSurface\LibraryUrp" />
+     <None Include="Assets\Res\ResourcePackages\FlatKit\Shaders\StylizedSurface\LibraryUrp\LitForwardPass_DR.hlsl" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Mugs" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Stretched" />
      <Folder Include="Assets\AddressableAssets\Vfx\Environment\wind" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks\Prefabs\Atlased\Prototype" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Assets\Misc" />
-     <Folder Include="Assets\Res\FlatKit\Demos\Common\URP Configs" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Settings" />
-     <Folder Include="Assets\Res\mmmm\kenney_medieval-town-base\Unity package" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Electric" />
-     <None Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Glow.shader" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Fire" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Texts" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Racing Car\Materials" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Ocean Islands\Ocean Islands Scene - Post-Processing" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks\Meshes\Atlased\Prototype" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Vehicles\Cars" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Misc\Tornado Variants" />
-     <Folder Include="Assets\Res\Platformer Kit" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders" />
-     <None Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Ubershader.shader" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Texts (drag-drop to prefabs)" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Prefabs\Atlased\Prototype" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Assets\Misc" />
+     <Folder Include="Assets\Res\ResourcePackages\Tale Monster Cube Env\Prefabs\Environment" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\Common\URP Configs" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Settings" />
+     <Folder Include="Assets\Res\ResourcePackages\mmmm\kenney_medieval-town-base\Unity package" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Electric" />
+     <None Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Glow.shader" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Fire" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Texts" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Racing Car\Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Water] Ocean Islands\Ocean Islands Scene - Post-Processing" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Meshes\Atlased\Prototype" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Vehicles\Cars" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Misc\Tornado Variants" />
+     <Folder Include="Assets\Res\ResourcePackages\HYPEPOLY - Isometric Tiles Standart Lite\Textures" />
+     <Folder Include="Assets\Res\ResourcePackages\HYPEPOLY - Isometric Tiles Standart Lite\Models" />
+     <Folder Include="Assets\Res\ResourcePackages\Platformer Kit" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders" />
+     <None Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Ubershader.shader" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Texts (drag-drop to prefabs)" />
      <Folder Include="Assets\AddressableAssetsData" />
-     <None Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Shaders\CFXM_MobileParticleAB_Alpha8.shader" />
-     <Folder Include="Assets\Res\FlatKit\Demos\Common\Textures" />
-     <Folder Include="Assets\Res\Graveyard Kit\Models" />
-     <None Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_SETTINGS.cginc" />
+     <None Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Shaders\CFXM_MobileParticleAB_Alpha8.shader" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\Common\Textures" />
+     <Folder Include="Assets\Res\ResourcePackages\Graveyard Kit\Models" />
+     <None Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_SETTINGS.cginc" />
      <Folder Include="Assets\Robot\Robo3\Textures" />
      <Folder Include="Assets\AddressableAssets\Bgm" />
      <None Include="Assets\AddressableAssets\Config\CfgPrefab.txt" />
      <Folder Include="Assets\AddressableAssetsData\AssetGroups" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Scripts" />
-     <Folder Include="Assets\Res\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter\Textures" />
-     <Folder Include="Assets\Res\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter\Materials" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Hits" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Scripts" />
+     <Folder Include="Assets\Res\ResourcePackages\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter\Textures" />
+     <Folder Include="Assets\Res\ResourcePackages\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter\Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Hits" />
      <None Include="Assets\Robot\Robo2\Animations\Robo2 animations list.txt" />
-     <Folder Include="Assets\Res\Platformer Kit\Models\STL format" />
+     <Folder Include="Assets\Res\ResourcePackages\Platformer Kit\Models\STL format" />
      <Folder Include="Assets\AddressableAssets\Config" />
      <Folder Include="Assets\Robot\Stand\Material" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Mugs\Mugs-Materials\2 - OneColorVariousParameters\BlPrMugs-Scene_2_RampTextures" />
-     <None Include="Assets\Res\FlatKit\Shaders\StylizedSurface\LibraryUrp\TerrainLitPasses_DR.hlsl" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Explosions\Firework Variants" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Texts\Variants Font WashYourHand" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks\Prefabs\Atlased\Prototype\Blocks - Red" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Mugs\Mugs-Materials\2 - OneColorVariousParameters\BlPrMugs-Scene_2_RampTextures" />
+     <None Include="Assets\Res\ResourcePackages\FlatKit\Shaders\StylizedSurface\LibraryUrp\TerrainLitPasses_DR.hlsl" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Explosions\Firework Variants" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Texts\Variants Font WashYourHand" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Prefabs\Atlased\Prototype\Blocks - Red" />
      <Folder Include="Assets\AddressableAssets" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Robot Kyle Desert" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Pool\Pool Scene - GradientTextures" />
-     <Folder Include="Assets\Res\Planets\models\Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Robot Kyle Desert" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Water] Pool\Pool Scene - GradientTextures" />
+     <Folder Include="Assets\Res\ResourcePackages\Planets\models\Materials" />
      <Folder Include="Assets\Scripts\UI\UILogic\Command\Component" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Mugs\Resources" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Racing Car\Textures" />
-     <Folder Include="Assets\Res\Platformer Kit\Models\FBX format" />
-     <None Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders\CircleDecal.shader" />
-     <Folder Include="Assets\Res\mmmm\3D Road Tiles\Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Mugs\Resources" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Racing Car\Textures" />
+     <Folder Include="Assets\Res\ResourcePackages\Platformer Kit\Models\FBX format" />
+     <None Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Shaders\CircleDecal.shader" />
+     <Folder Include="Assets\Res\ResourcePackages\mmmm\3D Road Tiles\Materials" />
      <Folder Include="Assets\Settings" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Texts (drag-drop to prefabs)" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Screen Distortion" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Smoke\Color Variants" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Texts (drag-drop to prefabs)" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Screen Distortion" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Smoke\Color Variants" />
      <None Include="Assets\AddressableAssets\Config\CfgStage.txt" />
      <Folder Include="Assets\AddressableAssetsData\AssetGroups\Schemas" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Liquids" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials" />
-     <None Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders\Noise\ClassicNoise3D.hlsl" />
-     <Folder Include="Assets\Res\FlatKit\[Render Pipeline] URP\Water\Scripts" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Liquids" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials" />
+     <None Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Shaders\Noise\ClassicNoise3D.hlsl" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\[Render Pipeline] URP\Water\Scripts" />
      <Folder Include="Assets\Scripts\BattleLogic\Battle" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Wanderer\Wanderer-Models" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks\Meshes\Atlased\Prototype\Materials" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Misc" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Vehicles" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Wanderer\Wanderer-Models" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Meshes\Atlased\Prototype\Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Misc" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Vehicles" />
      <Folder Include="Assets\AddressableAssetsData\DataBuilders" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Mugs\Mugs-Materials\Shared" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Valley\Valley-Terrain" />
-     <None Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR.cginc" />
+     <Folder Include="Assets\Res\ResourcePackages\HYPEPOLY - Isometric Tiles Standart Lite\Prefabs\Material 3" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Mugs\Mugs-Materials\Shared" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Valley\Valley-Terrain" />
+     <None Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR.cginc" />
      <Folder Include="Assets\Scripts\BattleLogic\Grid" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Hits\Color Variants" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Hits\Color Variants" />
      <Folder Include="Assets\Robot\Stand\Texture" />
-     <None Include="Assets\Res\FlatKit\Shaders\StylizedSurface\LibraryUrp\StylizedInput.hlsl" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Misc" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Vehicles\Buses" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Fire\Flames Looped" />
+     <None Include="Assets\Res\ResourcePackages\FlatKit\Shaders\StylizedSurface\LibraryUrp\StylizedInput.hlsl" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Misc" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Vehicles\Buses" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Fire\Flames Looped" />
      <Folder Include="Assets\Robot\Robo2" />
-     <None Include="Assets\Res\FlatKit\Shaders\GradientSkybox\GradientSkybox.shader" />
+     <None Include="Assets\Res\ResourcePackages\FlatKit\Shaders\GradientSkybox\GradientSkybox.shader" />
      <Folder Include="Assets\Scripts\Misc\Def" />
      <Folder Include="Assets\Scripts\Core\Manager\InputManager" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs" />
-     <None Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders\BubbleLineMap.shader" />
-     <Folder Include="Assets\Res\FlatKit\[Render Pipeline] URP\Water\Textures" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Liquids\Variants" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Misc\Variants" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] NormalMapsTree\NormalMapsTree-Models" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks\Prefabs\MaterialsOnly\Prototype\Blocks - Green" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs" />
+     <None Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Shaders\BubbleLineMap.shader" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\[Render Pipeline] URP\Water\Textures" />
+     <Folder Include="Assets\Res\ResourcePackages\TZ_Futuristic Panel Textures Lite\Texture Normals Maps" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Liquids\Variants" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Misc\Variants" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] NormalMapsTree\NormalMapsTree-Models" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Prefabs\MaterialsOnly\Prototype\Blocks - Green" />
      <Folder Include="Assets\Scripts\BattleLogic\Grid\Component" />
      <Folder Include="Assets\AddressableAssets\Scene" />
      <Folder Include="Assets\Robot\Robo1\Animations" />
-     <None Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders\Noise\Common.hlsl" />
-     <Folder Include="Assets\Res\Off Axis Studios" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders\SubGraphs" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Valley\Valley-Materials" />
+     <None Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Shaders\Noise\Common.hlsl" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Shaders\SubGraphs" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Valley\Valley-Materials" />
      <Folder Include="Assets\Robot\Prefabs" />
      <Folder Include="Assets\AddressableAssets\Vfx\Environment\water" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Models\Props\Boxes" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Models\Props\Boxes" />
      <Folder Include="Assets\Robot\Standard Assets" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Models\Props\Road_Signs" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Materials\Fire" />
-     <Folder Include="Assets\Res\FlatKit\[Render Pipeline] URP\Water\Shaders" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Car\Car-Materials\Car-Materials-Shared" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Valley\Valley-Models\Models-Forest-Textured" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Textures" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Various Presets\Water Vessels Scene - GradientTextures" />
-     <Folder Include="Assets\Res\FlatKit\Demos\Common\Textures\Misc\Noise" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Car\Car-Materials\Car-Materials-Set3" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Car\Car-Materials\Car-Materials-Set1" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Vehicles\Trams" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Explosions" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)" />
-     <Folder Include="Assets\Res\mmmm" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Models\Props\Road_Signs" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials\Fire" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\[Render Pipeline] URP\Water\Shaders" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Car\Car-Materials\Car-Materials-Shared" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Valley\Valley-Models\Models-Forest-Textured" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Textures" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Water] Various Presets\Water Vessels Scene - GradientTextures" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\Common\Textures\Misc\Noise" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Car\Car-Materials\Car-Materials-Set3" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Car\Car-Materials\Car-Materials-Set1" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Vehicles\Trams" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Explosions" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)" />
+     <Folder Include="Assets\Res\ResourcePackages\HYPEPOLY - Isometric Tiles Standart Lite\Prefabs\Material 1" />
+     <Folder Include="Assets\Res\ResourcePackages\mmmm" />
      <Folder Include="Assets\AddressableAssets\Vfx\Environment\lightning" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Materials\Decals" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Various Presets" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials\Decals" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Water] Various Presets" />
      <Folder Include="Assets\Scripts\Core\Base" />
-     <Folder Include="Assets\Res\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter\Scenes" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Hits" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders\Noise" />
-     <Folder Include="Assets\Res\Graveyard Kit\Models\STL format" />
-     <None Include="Assets\Res\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase" />
+     <Folder Include="Assets\Res\ResourcePackages\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter\Scenes" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Hits" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Shaders\Noise" />
+     <Folder Include="Assets\Res\ResourcePackages\Graveyard Kit\Models\STL format" />
+     <None Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Fruit Vase" />
      <Folder Include="Assets\Scripts\UI\UILogic\Command" />
-     <Folder Include="Assets\Res\Graveyard Kit\Models\DAE format" />
+     <Folder Include="Assets\Res\ResourcePackages\Graveyard Kit\Models\DAE format" />
      <Folder Include="Assets\Robot\Standard Assets\Effects\ToonShading\Textures" />
      <Folder Include="Assets\AddressableAssets\AudioMixer" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Room" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Various Presets\Water Vessels Scene - Presets" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Room" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Water] Various Presets\Water Vessels Scene - Presets" />
      <Folder Include="Assets\Robot\Robo3\Animations" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks\Prefabs\MaterialsOnly\Prototype\Blocks - Blue" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Prefabs\MaterialsOnly\Prototype\Blocks - Blue" />
      <None Include="Assets\AddressableAssets\Config\CfgSfx.txt" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Materials\Animated" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials\Animated" />
      <Folder Include="Assets\Robot\Stand" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Models\Vehicles\Trucks" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Vehicles\Main_Hero_Trucks" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Fire" />
-     <Folder Include="Assets\Res\FlatKit\[Render Pipeline] URP\EditorAttributes" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Car\Car-Materials" />
-     <Folder Include="Assets\Res\Planets\shader" />
-     <Folder Include="Assets\Res\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Models\Vehicles\Trucks" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Vehicles\Main_Hero_Trucks" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Fire" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\[Render Pipeline] URP\EditorAttributes" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Car\Car-Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\Planets\shader" />
+     <Folder Include="Assets\Res\ResourcePackages\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter" />
      <Folder Include="Assets\Robot\Robo2\Materials" />
      <Folder Include="Assets\Scripts\UI\Base" />
      <Folder Include="Assets\Res" />
      <Folder Include="Assets\Scripts\BattleLogic\Battle\Component" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Valley\Valley-Textures" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Fire\Flames Looped" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Electric" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Valley\Valley-Textures" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Fire\Flames Looped" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Electric" />
      <Folder Include="Assets\Scripts\UI\UILogic\StageSelect\Component" />
-     <Folder Include="Assets\Res\mmmm\Medieval Town (base)" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Assets\Meshes" />
+     <Folder Include="Assets\Res\ResourcePackages\mmmm\Medieval Town (base)" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Assets\Meshes" />
      <Folder Include="Assets\Robot\Robo1\Materials" />
-     <None Include="Assets\Res\Feel\readme.txt" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks\Prefabs\Atlased\Prototype\Blocks - Blue" />
-     <None Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CartoonFX Readme.txt" />
+     <None Include="Assets\Res\ResourcePackages\Feel\readme.txt" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Prefabs\Atlased\Prototype\Blocks - Blue" />
+     <None Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CartoonFX Readme.txt" />
      <Folder Include="Assets\Robot\Robo3\Models" />
-     <None Include="Assets\Res\FlatKit\Shaders\StylizedSurface\LibraryUrp\Lighting_DR.hlsl" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Mugs\Fonts" />
-     <Folder Include="Assets\Res\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter\Sky" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Demo" />
+     <None Include="Assets\Res\ResourcePackages\FlatKit\Shaders\StylizedSurface\LibraryUrp\Lighting_DR.hlsl" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Mugs\Fonts" />
+     <Folder Include="Assets\Res\ResourcePackages\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter\Sky" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Demo" />
      <Folder Include="Assets\Scripts\Core\Base\Fsm" />
      <Folder Include="Assets\Robot\Robo3" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Wanderer" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Wanderer" />
      <None Include="Assets\AddressableAssets\Config\CfgUI.txt" />
      <Folder Include="Assets\AddressableAssets\UI" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Spawn System" />
+     <Folder Include="Assets\Res\ResourcePackages\Tale Monster Cube Env\Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Spawn System" />
      <Folder Include="Assets\Scripts\Core" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks\Prefabs\Atlased" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Prefabs\Atlased" />
      <Folder Include="Assets\Scripts\BattleLogic" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks\Prefabs" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Impacts\Variants" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Models\Vehicles\Main_Hero_Trucks" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Textures (Mobile)" />
-     <Folder Include="Assets\Res\Planets\scene" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Demo\Assets" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Prefabs" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Impacts\Variants" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Models\Vehicles\Main_Hero_Trucks" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Textures (Mobile)" />
+     <Folder Include="Assets\Res\ResourcePackages\Planets\scene" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Demo\Assets" />
      <Folder Include="Assets\Robot\Stand\Model\Materials" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Materials\Stretched" />
-     <None Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders\DesertCloud.hlsl" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Fire\Color Variants" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Fire\Flames Looped\Color Variants" />
-     <None Include="Assets\Res\Feel\license.txt" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Models\Vehicles\Cars" />
-     <Folder Include="Assets\Res\FlatKit\Demos" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Smoke\Color Variants" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials\Stretched" />
+     <None Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Shaders\DesertCloud.hlsl" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Fire\Color Variants" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Fire\Flames Looped\Color Variants" />
+     <None Include="Assets\Res\ResourcePackages\Feel\license.txt" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Models\Vehicles\Cars" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Smoke\Color Variants" />
      <Folder Include="Assets\Robot" />
      <Folder Include="Assets\Scripts\Core\Manager\EventManager" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Water" />
-     <None Include="Assets\Res\FlatKit\Shaders\StylizedSurface\StylizedSurfaceOutline.shader" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Materials\Misc" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Props" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Water" />
+     <None Include="Assets\Res\ResourcePackages\FlatKit\Shaders\StylizedSurface\StylizedSurfaceOutline.shader" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials\Misc" />
+     <Folder Include="Assets\Res\ResourcePackages\HYPEPOLY - Isometric Tiles Standart Lite" />
+     <Folder Include="Assets\Res\ResourcePackages\TZ_Futuristic Panel Textures Lite" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Props" />
      <Folder Include="Assets\Scripts\UI\UILogic\StageSelect" />
      <Folder Include="Assets\Scripts\Config" />
      <Folder Include="Assets\Robot\Standard Assets\Effects\ToonShading\Materials" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Water" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Robot Kyle Desert\Model" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks\Meshes\MaterialsOnly\Prototype" />
-     <Folder Include="Assets\Res\FlatKit\Shaders\GradientSkybox" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Robot Kyle Desert\Textures" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Water" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Robot Kyle Desert\Model" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Meshes\MaterialsOnly\Prototype" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Shaders\GradientSkybox" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Robot Kyle Desert\Textures" />
      <Folder Include="Assets\Robot\Standard Assets\Effects\ToonShading" />
-     <Folder Include="Assets\Res\mmmm\kenney_medieval-town-base\Models" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Car\Car-Materials\Car-Materials-Set2" />
+     <Folder Include="Assets\Res\ResourcePackages\mmmm\kenney_medieval-town-base\Models" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Car\Car-Materials\Car-Materials-Set2" />
      <Folder Include="Assets\Robot\Stand\Model" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert" />
-     <Folder Include="Assets\Res\Graveyard Kit\Models\FBX format" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert" />
+     <Folder Include="Assets\Res\ResourcePackages\Graveyard Kit\Models\FBX format" />
      <Folder Include="Assets\Robot\Robo1\Models" />
-     <Folder Include="Assets\Res\FlatKit\Demos\Common\Textures\Grid" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\Common\Textures\Grid" />
      <Folder Include="Assets\Scripts\Misc\Util" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 6 - Var-TwoColor" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 6 - Var-TwoColor" />
      <Folder Include="Assets\Robot\Plane" />
-     <Folder Include="Assets\Res\Planets\models" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks\Extras" />
+     <Folder Include="Assets\Res\ResourcePackages\Planets\models" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Extras" />
      <Folder Include="Assets\AddressableAssets\Vfx" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks\Prefabs\MaterialsOnly" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Prefabs\MaterialsOnly" />
      <Folder Include="Assets\AddressableAssets\Sprite" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Shaders" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Shaders" />
      <Folder Include="Assets\Scripts\BattleLogic\Command" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)" />
      <None Include="Assets\Robot\Readme.txt" />
      <None Include="Assets\Robot\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Materials\Texts" />
-     <None Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders\DesertPillar.hlsl" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Decals" />
-     <Folder Include="Assets\Res\Platformer Kit\Previews" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Vehicles\Trucks" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Vehicles\Emergency_Vehicles" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] IslandWithTrees\IslandWithTrees-Materials" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Car\Car-Materials\Car-Materials-Set5" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Mugs\Mugs-Models" />
-     <Folder Include="Assets\Res\mmmm\kenney_3d-road-tiles" />
-     <Folder Include="Assets\Res\Feel\MMTools" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks\Prefabs\MaterialsOnly\Prototype" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Models\Roads" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] NormalMapsTree" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Materials" />
-     <Folder Include="Assets\Res\Planets" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials\Texts" />
+     <None Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Shaders\DesertPillar.hlsl" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Decals" />
+     <Folder Include="Assets\Res\ResourcePackages\Platformer Kit\Previews" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Vehicles\Trucks" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Vehicles\Emergency_Vehicles" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] IslandWithTrees\IslandWithTrees-Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Car\Car-Materials\Car-Materials-Set5" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Mugs\Mugs-Models" />
+     <Folder Include="Assets\Res\ResourcePackages\mmmm\kenney_3d-road-tiles" />
+     <Folder Include="Assets\Res\ResourcePackages\HYPEPOLY - Isometric Tiles Standart Lite\Prefabs" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Prefabs\MaterialsOnly\Prototype" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Models\Roads" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] NormalMapsTree" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\Planets" />
      <Folder Include="Assets\AddressableAssets\Prefab" />
-     <Folder Include="Assets\Res\Graveyard Kit\Models\OBJ format" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Explosions" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Fire\Flames Looped\Color Variants" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Mesh" />
-     <Folder Include="Assets\Res\JMO Assets" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks\Prefabs\MaterialsOnly\Prototype\Blocks - Yellow" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Mugs\Mugs-Materials\2 - OneColorVariousParameters" />
-     <Folder Include="Assets\Res\Platformer Kit\Models\OBJ format" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Room\Room-CameraProfiles" />
+     <Folder Include="Assets\Res\ResourcePackages\Graveyard Kit\Models\OBJ format" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Explosions" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Fire\Flames Looped\Color Variants" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Mesh" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Prefabs\MaterialsOnly\Prototype\Blocks - Yellow" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Mugs\Mugs-Materials\2 - OneColorVariousParameters" />
+     <Folder Include="Assets\Res\ResourcePackages\Platformer Kit\Models\OBJ format" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Room\Room-CameraProfiles" />
      <Folder Include="Assets\Scripts\Core\Base\Manager" />
      <None Include="Assets\Robot\Robo1\Animations\Robo1 animations list.txt" />
-     <Folder Include="Assets\Res\Planets\Materials" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Demo\UI Canvas" />
-     <None Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Texts\_Make your own text effect.txt" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Misc" />
-     <None Include="Assets\Res\Planets\shader\two_side_shader.shader" />
+     <Folder Include="Assets\Res\ResourcePackages\Planets\Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Demo\UI Canvas" />
+     <None Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Texts\_Make your own text effect.txt" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Misc" />
+     <None Include="Assets\Res\ResourcePackages\Planets\shader\two_side_shader.shader" />
      <Folder Include="Assets\AddressableAssets\Vfx\Environment\Fire" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Scripts" />
-     <Folder Include="Assets\Res\mmmm\Medieval Town (base)\Materials" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 3 - Mode_Steps-Toony\FV-Scene-3-Ramps" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Ocean Islands\Ocean Islands Scene - Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Scripts" />
+     <Folder Include="Assets\Res\ResourcePackages\mmmm\Medieval Town (base)\Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 3 - Mode_Steps-Toony\FV-Scene-3-Ramps" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Water] Ocean Islands\Ocean Islands Scene - Materials" />
      <Folder Include="Assets\AddressableAssetsData\Windows" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Explosions" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 4 - Mode_Curve-Gradients\FV-Scene-4-Ramps" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Props\Boxes" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Fire\Color Variants" />
-     <Folder Include="Assets\Res\FlatKit\[Render Pipeline] URP" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Easy Editor" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Explosions" />
+     <Folder Include="Assets\Res\ResourcePackages" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 4 - Mode_Curve-Gradients\FV-Scene-4-Ramps" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Props\Boxes" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Fire\Color Variants" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\[Render Pipeline] URP" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Easy Editor" />
      <Folder Include="Assets\AddressableAssets\Vfx\Character" />
-     <Folder Include="Assets\Res\FlatKit\PresetsShared\Materials" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks\Meshes\Atlased" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Water" />
-     <Folder Include="Assets\Res\Graveyard Kit\Models\GLTF format" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Roads" />
-     <Folder Include="Assets\Res\Graveyard Kit\Previews" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders\Library" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Misc" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Wanderer\Wanderer-FogImageEffect-Presets" />
-     <Folder Include="Assets\Res\Feel\MMFeedbacks" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks\Prefabs\MaterialsOnly\Prototype\Blocks - Red" />
-     <None Include="Assets\Res\Platformer Kit\License.txt" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\PresetsShared\Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Meshes\Atlased" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Water" />
+     <Folder Include="Assets\Res\ResourcePackages\TZ_Futuristic Panel Textures Lite\Textures" />
+     <Folder Include="Assets\Res\ResourcePackages\Graveyard Kit\Models\GLTF format" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Roads" />
+     <Folder Include="Assets\Res\ResourcePackages\Graveyard Kit\Previews" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Shaders\Library" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Misc" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Wanderer\Wanderer-FogImageEffect-Presets" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Prefabs\MaterialsOnly\Prototype\Blocks - Red" />
+     <None Include="Assets\Res\ResourcePackages\Platformer Kit\License.txt" />
+     <Folder Include="Assets\Res\ResourcePackages\Tale Monster Cube Env\Prefabs" />
      <Folder Include="Assets\Scripts\BattleLogic\BattleFsm" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Fire" />
-     <Folder Include="Assets\Res\EmaceArt" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Fire" />
+     <Folder Include="Assets\Res\ResourcePackages\EmaceArt" />
      <None Include="Assets\AddressableAssets\Config\CfgBgm.txt" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Ocean Islands\Ocean Islands Scene - Textures" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Materials" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Props\Road_Signs" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Mugs\Mugs-Materials\1 - ColorfulMisc" />
-     <Folder Include="Assets\Res\FlatKit\Shaders\StylizedSurface" />
-     <Folder Include="Assets\Res\FlatKit\Demos\Common\Textures\Misc" />
-     <None Include="Assets\Res\JMO Assets\Cartoon FX Remaster\Readme Cartoon FX Remaster.txt" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Water] Ocean Islands\Ocean Islands Scene - Textures" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Props\Road_Signs" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Mugs\Mugs-Materials\1 - ColorfulMisc" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Shaders\StylizedSurface" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\Common\Textures\Misc" />
+     <None Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\Readme Cartoon FX Remaster.txt" />
      <Folder Include="Assets\Scripts\UI\UILogic" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks\Prefabs\Atlased\Prototype\Blocks - Yellow" />
-     <None Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders\Library\StylizedLighting.hlsl" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Models" />
-     <Folder Include="Assets\Res\FlatKit\[Render Pipeline] URP\Water" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Prefabs\Atlased\Prototype\Blocks - Yellow" />
+     <None Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Shaders\Library\StylizedLighting.hlsl" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Models" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\[Render Pipeline] URP\Water" />
      <Folder Include="Assets\Scripts\Core\Base\Singleton" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] IslandWithTrees" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Robot Kyle Desert\Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\Tale Monster Cube Env" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] IslandWithTrees" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Robot Kyle Desert\Materials" />
      <Folder Include="Assets\Resources" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Electric" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Electric" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks\Meshes\MaterialsOnly" />
-     <Folder Include="Assets\Res\Planets\Materials\Materials" />
-     <Folder Include="Assets\Res\Platformer Kit\Models" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Texts" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Valley\Valley-Materials\TerrainPaintLayers" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Buildings" />
-     <Folder Include="Assets\Res\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter\Prefabs" />
-     <Folder Include="Assets\Res\mmmm\kenney_medieval-town-base" />
-     <Folder Include="Assets\Res\Platformer Kit\Models\DAE format" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks\Meshes\MaterialsOnly\Prototype\Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Electric" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Electric" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Meshes\MaterialsOnly" />
+     <Folder Include="Assets\Res\ResourcePackages\Planets\Materials\Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\Platformer Kit\Models" />
+     <Folder Include="Assets\Res\ResourcePackages\TZ_Futuristic Panel Textures Lite\Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\HYPEPOLY - Isometric Tiles Standart Lite\Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Texts" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Valley\Valley-Materials\TerrainPaintLayers" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Buildings" />
+     <Folder Include="Assets\Res\ResourcePackages\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter\Prefabs" />
+     <Folder Include="Assets\Res\ResourcePackages\mmmm\kenney_medieval-town-base" />
+     <Folder Include="Assets\Res\ResourcePackages\Platformer Kit\Models\DAE format" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Meshes\MaterialsOnly\Prototype\Materials" />
      <Folder Include="Assets\Scripts\Core\Manager" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Mugs\Mugs-Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Mugs\Mugs-Materials" />
      <Folder Include="Assets\Scripts\UI" />
-     <Folder Include="Assets\Res\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter\Meshes" />
+     <Folder Include="Assets\Res\ResourcePackages\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter\Meshes" />
      <Folder Include="Assets\AddressableAssetsData\Android" />
      <Folder Include="Assets\AddressableAssets\Modle" />
-     <Folder Include="Assets\Res\mmmm\kenney_3d-road-tiles\Unity package" />
+     <Folder Include="Assets\Res\ResourcePackages\mmmm\kenney_3d-road-tiles\Unity package" />
      <None Include="Assets\Robot\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Electric\Variants" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Racing Car\Settings" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 2 - Mode_Single" />
-     <Folder Include="Assets\Res\mmmm\3D Road Tiles" />
-     <Folder Include="Assets\Res\FlatKit\PresetsShared\Presets" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Room\Room-Models" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Various Presets\Water Vessels Scene - Textures" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] NormalMapsTree\NormalMapsTree-Textures" />
-     <None Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Electric\Variants" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Racing Car\Settings" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 2 - Mode_Single" />
+     <Folder Include="Assets\Res\ResourcePackages\mmmm\3D Road Tiles" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\PresetsShared\Presets" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Room\Room-Models" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Water] Various Presets\Water Vessels Scene - Textures" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] NormalMapsTree\NormalMapsTree-Textures" />
+     <None Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
      <Folder Include="Assets\AddressableAssets\Sfx" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Pool\Pool Scene - Materials" />
-     <None Include="Assets\Res\FlatKit\Demos\[Demo] Desert\Shaders\Noise\ClassicNoise2D.hlsl" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Water] Pool\Pool Scene - Materials" />
+     <None Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Shaders\Noise\ClassicNoise2D.hlsl" />
      <Folder Include="Assets\Scripts\Core\Manager\ConfigManager" />
      <Folder Include="Assets\Scripts" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Models\Vehicles\Trams" />
-     <Folder Include="Assets\Res\Feel" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Explosions\Variants" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Pool\Pool Scene - Models" />
-     <None Include="Assets\Res\FlatKit\Shaders\StylizedSurface\TerrainLitAdd_DR.shader" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Vehicles\Pickups" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks\Prefabs\Atlased\Prototype\Blocks - Green" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 3 - Mode_Steps-Toony" />
-     <None Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Procedural Ring.shader" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Models\Vehicles\Trams" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Explosions\Variants" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Water] Pool\Pool Scene - Models" />
+     <None Include="Assets\Res\ResourcePackages\FlatKit\Shaders\StylizedSurface\TerrainLitAdd_DR.shader" />
+     <Folder Include="Assets\Res\ResourcePackages\HYPEPOLY - Isometric Tiles Standart Lite\Prefabs\Material 2" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Prefabs\Vehicles\Pickups" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Prefabs\Atlased\Prototype\Blocks - Green" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 3 - Mode_Steps-Toony" />
+     <None Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Procedural Ring.shader" />
      <Folder Include="Assets\AddressableAssets\Prefab\Material_dst" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Models\Vehicles\Pickups" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Explosions\Firework Variants" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Wanderer\Wanderer-CameraProfiles" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Models\Vehicles\Pickups" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Explosions\Firework Variants" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Wanderer\Wanderer-CameraProfiles" />
      <Folder Include="Assets\Scripts\ConfigDef" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Misc\Tornado Variants" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] IslandWithTrees\IslandWithTrees-Models" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Valley\Valley-Models" />
-     <Folder Include="Assets\Res\FlatKit\Demos\Common\Scripts\Motion" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Misc\Tornado Variants" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] IslandWithTrees\IslandWithTrees-Models" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Valley\Valley-Models" />
+     <Folder Include="Assets\Res\ResourcePackages\Tale Monster Cube Env\Prefabs\Props" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\Common\Scripts\Motion" />
      <Folder Include="Assets\Robot\Standard Assets\Effects\ToonShading\Shaders" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Assets" />
-     <None Include="Assets\Res\mmmm\kenney_3d-road-tiles\Convert\Three.js (Blender)\readme.txt" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Assets" />
+     <None Include="Assets\Res\ResourcePackages\mmmm\kenney_3d-road-tiles\Convert\Three.js (Blender)\readme.txt" />
      <Folder Include="Assets\AddressableAssets\Vfx\Environment" />
-     <Folder Include="Assets\Res\Platformer Kit\Models\GLTF format" />
-     <Folder Include="Assets\Res\FlatKit\PresetsShared" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 1 - Mode_None-Completely Flat" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 4 - Mode_Curve-Gradients" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Various Presets\Water Vessels Scene - Models" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Car\Car-Materials\Car-Materials-Set4" />
-     <Folder Include="Assets\Res\mmmm\kenney_3d-road-tiles\Convert" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Prefabs" />
+     <Folder Include="Assets\Res\ResourcePackages\Platformer Kit\Models\GLTF format" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\PresetsShared" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 1 - Mode_None-Completely Flat" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Fruit Vase\FruitVase-Materials\FV-Scene 4 - Mode_Curve-Gradients" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Water] Various Presets\Water Vessels Scene - Models" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Car\Car-Materials\Car-Materials-Set4" />
+     <Folder Include="Assets\Res\ResourcePackages\mmmm\kenney_3d-road-tiles\Convert" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs" />
      <Folder Include="Assets\Robot\Robo2\Textures" />
-     <None Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_URP.cginc" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Materials\Water" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Impacts" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Scenes" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Models\Props\Other" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Valley" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Fire\Variants" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Models\Vehicles" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Assets\Graphics" />
+     <Folder Include="Assets\Res\ResourcePackages\Tale Monster Cube Env\Prefabs\Top" />
+     <None Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_URP.cginc" />
+     <Folder Include="Assets\Res\ResourcePackages\Tale Monster Cube Env\Prefabs\Complex" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials\Water" />
+     <Folder Include="Assets\Res\ResourcePackages\Tale Monster Cube Env\Meshes" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Impacts" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Scenes" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Models\Props\Other" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Valley" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Fire\Variants" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Models\Vehicles" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Assets\Graphics" />
+     <Folder Include="Assets\Res\ResourcePackages\HYPEPOLY - Isometric Tiles Standart Lite\Demo" />
      <Folder Include="Assets\Scripts\BattleLogic\BattleFsm\Fsm" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Textures" />
-     <None Include="Assets\Res\FlatKit\Shaders\StylizedSurface\StylizedSurface.shader" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Valley\Valley-CameraProfiles" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Textures" />
+     <None Include="Assets\Res\ResourcePackages\FlatKit\Shaders\StylizedSurface\StylizedSurface.shader" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Valley\Valley-CameraProfiles" />
      <Folder Include="Assets\Robot\Robo2\Animations" />
-     <None Include="Assets\Res\FlatKit\Shaders\LightPlane.shader" />
-     <None Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_WaterWiggle.shader" />
-     <None Include="Assets\Res\FlatKit\Shaders\StylizedSurface\Terrain.shader" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Materials\Electric" />
-     <None Include="Assets\Res\Graveyard Kit\License.txt" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Models" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Various Presets\Water Vessels Scene - Materials" />
+     <None Include="Assets\Res\ResourcePackages\FlatKit\Shaders\LightPlane.shader" />
+     <None Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_WaterWiggle.shader" />
+     <None Include="Assets\Res\ResourcePackages\FlatKit\Shaders\StylizedSurface\Terrain.shader" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials\Electric" />
+     <None Include="Assets\Res\ResourcePackages\Graveyard Kit\License.txt" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Models" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Water] Various Presets\Water Vessels Scene - Materials" />
      <Folder Include="Assets\Robot\Robo controllers" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Ocean Islands" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Car" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Ocean Islands\Ocean Islands Scene - Models" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] NormalMapsTree\NormalMapsTree-Materials" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Racing Car\Models" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Water] Ocean Islands" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Car" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Water] Ocean Islands\Ocean Islands Scene - Models" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] NormalMapsTree\NormalMapsTree-Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Racing Car\Models" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks" />
      <Folder Include="Assets\Robot\Robo3\Materials" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Wanderer\Wanderer-Materials" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Water] Pool" />
-     <Folder Include="Assets\Res\FlatKit\Demos\[Demo] Car\Car-Models" />
-     <None Include="Assets\Res\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Distortion.shader" />
-     <Folder Include="Assets\Res\Off Axis Studios\Polyworks\Demos" />
-     <Folder Include="Assets\Res\Low Poly Simple Urban City 3D Asset Pack\Models\Props" />
-     <Folder Include="Assets\Res\mmmm\kenney_3d-road-tiles\Convert\Three.js (Blender)" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Animated" />
-     <Folder Include="Assets\Res\FlatKit\Demos\Common\Scripts" />
-     <None Include="Assets\Res\mmmm\kenney_3d-road-tiles\License.txt" />
-     <None Include="Assets\Res\FlatKit\[Render Pipeline] URP\Water\Shaders\Water.shader" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Wanderer\Wanderer-Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Water] Pool" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Car\Car-Models" />
+     <None Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Distortion.shader" />
+     <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Demos" />
+     <Folder Include="Assets\Res\ResourcePackages\Low Poly Simple Urban City 3D Asset Pack\Models\Props" />
+     <Folder Include="Assets\Res\ResourcePackages\mmmm\kenney_3d-road-tiles\Convert\Three.js (Blender)" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Animated" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\Common\Scripts" />
+     <None Include="Assets\Res\ResourcePackages\mmmm\kenney_3d-road-tiles\License.txt" />
+     <None Include="Assets\Res\ResourcePackages\FlatKit\[Render Pipeline] URP\Water\Shaders\Water.shader" />
      <Reference Include="UnityEngine">
      <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -804,37 +829,37 @@
      <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
      <Reference Include="DemiLib">
-     <HintPath>D:\Project\BlackFieldInstruction\Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Unsafe">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Mdb">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Pdb">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
      </Reference>
      <Reference Include="DOTween">
-     <HintPath>D:\Project\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Rocks">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="ReportGeneratorMerged">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="DOTweenPro">
-     <HintPath>D:\Project\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Android.Types">
      <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -1208,194 +1233,203 @@
      <Reference Include="System.Xml.Serialization">
      <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Recorder.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Recorder.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.InternalAPIEngineBridge.001">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VSCode.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.CacheServer">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Addressables">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Searcher.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.IK.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.InputSystem">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Rider.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.EditorCoroutines.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.IK.Runtime">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.ShaderGraph.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Cinemachine">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
      </Reference>
      <Reference Include="com.unity.cinemachine.editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Addressables.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Common.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Recorder">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Recorder.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Extras">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Animation.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Recorder.Base">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Recorder.Base.dll</HintPath>
      </Reference>
      <Reference Include="PPv2URPConverters">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Sprite.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.InternalAPIEditorBridge.001">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Runtime">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.ResourceManager">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Postprocessing.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Extras.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core.Analytics">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Postprocessing.Runtime">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Shared.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core.Environments">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Animation.Runtime">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Common.Runtime">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.ScriptableBuildPipeline">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.ScriptableBuildPipeline.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

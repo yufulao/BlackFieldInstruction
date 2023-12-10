@@ -54,6 +54,9 @@ public class CommandUICtrl : UICtrlBase
         return _model.GetUsedItemList();
     }
 
+    /// <summary>
+    /// 开始执行指令时控制ui
+    /// </summary>
     public void CommandUIOnBeginBattleExcuteCommand()
     {
         startBtn.gameObject.SetActive(false);
@@ -64,7 +67,10 @@ public class CommandUICtrl : UICtrlBase
         _cacheCurrentTimeInExcuting = 0;
         RefreshCurrentTimeText(0);
     }
-    
+
+    /// <summary>
+    /// 结束执行指令时控制ui，包括正常结束和强制结束
+    /// </summary>
     public void CommandUIOnEndBattle()
     {
         startBtn.gameObject.SetActive(true);
@@ -74,7 +80,11 @@ public class CommandUICtrl : UICtrlBase
         cancelExcuteBtn.gameObject.SetActive(false);
         RefreshCurrentTimeText(_model.GetCurrentNeedTime());
     }
-    
+
+    /// <summary>
+    /// 每执行一次指令时调用的刷新左上角的当前时间显示
+    /// </summary>
+    /// <returns></returns>
     public bool RefreshCacheCurrentTimeTextInExcuting()
     {
         _cacheCurrentTimeInExcuting++;
@@ -86,30 +96,33 @@ public class CommandUICtrl : UICtrlBase
     protected override void BindEvent()
     {
         startBtn.onClick.AddListener(BattleManager.Instance.ChangeToCommandExcuteState);
-        pauseBtn.onClick.AddListener(()=>{});
+        pauseBtn.onClick.AddListener(() => { });
         resetBtn.onClick.AddListener(ResetCommandUI);
         cancelExcuteBtn.onClick.AddListener(BattleManager.Instance.ForceStopExcuteCommand);
     }
-    
+
     /// <summary>
     /// 重置指令ui
     /// </summary>
     private void ResetCommandUI()
     {
-        if (_usedItemInfoDic.Count!=0)
+        if (_usedItemInfoDic.Count != 0)
         {
             for (int i = 0; i < usedItemContainer.childCount; i++)
             {
                 Destroy(usedItemContainer.GetChild(i).gameObject);
             }
+
             for (int i = 0; i < waitingItemContainer.childCount; i++)
             {
                 Destroy(waitingItemContainer.GetChild(i).gameObject);
             }
+
             _usedItemInfoDic.Clear();
             _waitingItemInfoDic.Clear();
             _model.ResetModel(ReLoadOriginalItemList());
         }
+
         RefreshCurrentTimeText(0);
     }
 
@@ -170,7 +183,7 @@ public class CommandUICtrl : UICtrlBase
     {
         CommandItem item = Instantiate(AssetManager.Instance.LoadAsset<GameObject>(ConfigManager.Instance.cfgPrefab["CommandItem"].prefabPath)
             , waitingItemContainer).GetComponent<CommandItem>();
-        WaitingItemInfo info = _model.CreatWaitingItemInfo(commandEnum,needTime,count);
+        WaitingItemInfo info = _model.CreatWaitingItemInfo(commandEnum, needTime, count);
         item.Init(commandEnum, transform);
         item.SetBtnOnClick(WaitingItemOnClick);
         item.SetDragAction(WaitingItemDragFilter, null, WaitingItemOnEndDrag);
@@ -198,6 +211,10 @@ public class CommandUICtrl : UICtrlBase
         RefreshCurrentTimeText(0, _rowCfgStage.stageTime);
     }
 
+    /// <summary>
+    /// 初始化waitingItem列表
+    /// </summary>
+    /// <returns></returns>
     private List<WaitingItemInfo> ReLoadOriginalItemList()
     {
         Dictionary<int, int> commandDic = _rowCfgStage.commandDic;
@@ -256,7 +273,7 @@ public class CommandUICtrl : UICtrlBase
     {
         UsedItemInfo usedItemInfo = GetUsedInfoByItem(usedItem);
         WaitingItemInfo waitingItemInfo = _model.AddWaitingCommand(usedItemInfo);
-        CommandItem waitingItem=_waitingItemInfoDic[waitingItemInfo];
+        CommandItem waitingItem = _waitingItemInfoDic[waitingItemInfo];
         waitingItem.Refresh(waitingItemInfo.cacheCount, waitingItemInfo.cacheTime);
         waitingItem.UpdateBtnMask(false);
         _model.RemoveUsedCommand(usedItemInfo, NoUsedObj);
@@ -274,7 +291,7 @@ public class CommandUICtrl : UICtrlBase
         WaitingItemInfo waitingItemInfo = GetWaitingInfoByItem(waitingItem);
         _model.RemoveWaitingCommand(waitingItemInfo, NoWaitingObj);
         waitingItem.Refresh(waitingItemInfo.cacheCount, waitingItemInfo.cacheTime);
-        waitingItem.UpdateBtnMask(waitingItemInfo.cacheCount<=0);
+        waitingItem.UpdateBtnMask(waitingItemInfo.cacheCount <= 0);
         if (!_model.TryAddSameUsedCommand(waitingItemInfo))
         {
             UsedItemInfo usedItemInfo = CreateUsedItem(waitingItemInfo);
@@ -386,7 +403,11 @@ public class CommandUICtrl : UICtrlBase
         }
     }
 
-
+    /// <summary>
+    /// 通过usedItem获取usedInfo
+    /// </summary>
+    /// <param name="item"></param>
+    /// <returns></returns>
     private UsedItemInfo GetUsedInfoByItem(CommandItem item)
     {
         foreach (var pair in _usedItemInfoDic)
@@ -400,6 +421,12 @@ public class CommandUICtrl : UICtrlBase
         Debug.LogWarning("没有这个item的info" + item);
         return null;
     }
+
+    /// <summary>
+    /// 通过waitingItem获取waitingInfo
+    /// </summary>
+    /// <param name="item"></param>
+    /// <returns></returns>
     private WaitingItemInfo GetWaitingInfoByItem(CommandItem item)
     {
         foreach (var pair in _waitingItemInfoDic)

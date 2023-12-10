@@ -41,26 +41,26 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Res\FlatKit\[Render Pipeline] URP\Water\Editor\WaterEditor.cs" />
-     <Compile Include="Assets\Res\FlatKit\Shaders\Editor\StylizedSurfaceEditor.cs" />
-     <Compile Include="Assets\Res\JMO Assets\Cartoon FX Easy Editor\Editor\CFXEasyEditor.cs" />
-     <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Editor\CFX_InspectorHelpEditor.cs" />
-     <Compile Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Editor\CFX_SpawnSystemEditor.cs" />
-     <Compile Include="Assets\Res\FlatKit\Shaders\GradientSkybox\Editor\GradientSkyboxEditor.cs" />
-     <Compile Include="Assets\Res\FlatKit\Shaders\Editor\TerrainEditor.cs" />
-     <Compile Include="Assets\Res\FlatKit\Demos\Common\Scripts\Motion\Editor\LinearMotionEditor.cs" />
-     <Compile Include="Assets\Res\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter\Editor\WelcomeWindow.cs" />
-     <Compile Include="Assets\Res\FlatKit\[Render Pipeline] URP\Water\Editor\Tooltips.cs" />
-     <Compile Include="Assets\Res\FlatKit\Shaders\Editor\Tooltips.cs" />
-     <Folder Include="Assets\Res\FlatKit\Shaders\GradientSkybox\Editor" />
-     <Folder Include="Assets\Res\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter\Editor\Resources" />
+     <Compile Include="Assets\Res\ResourcePackages\FlatKit\[Render Pipeline] URP\Water\Editor\WaterEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\FlatKit\Shaders\Editor\StylizedSurfaceEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Easy Editor\Editor\CFXEasyEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Editor\CFX_InspectorHelpEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Editor\CFX_SpawnSystemEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\FlatKit\Shaders\GradientSkybox\Editor\GradientSkyboxEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\FlatKit\Shaders\Editor\TerrainEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\FlatKit\Demos\Common\Scripts\Motion\Editor\LinearMotionEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter\Editor\WelcomeWindow.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\FlatKit\[Render Pipeline] URP\Water\Editor\Tooltips.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\FlatKit\Shaders\Editor\Tooltips.cs" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Shaders\GradientSkybox\Editor" />
+     <Folder Include="Assets\Res\ResourcePackages\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter\Editor\Resources" />
      <Folder Include="Assets\Editor" />
-     <Folder Include="Assets\Res\FlatKit\[Render Pipeline] URP\Water\Editor" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX (legacy)\Editor" />
-     <Folder Include="Assets\Res\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter\Editor" />
-     <Folder Include="Assets\Res\FlatKit\Demos\Common\Scripts\Motion\Editor" />
-     <Folder Include="Assets\Res\JMO Assets\Cartoon FX Easy Editor\Editor" />
-     <Folder Include="Assets\Res\FlatKit\Shaders\Editor" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\[Render Pipeline] URP\Water\Editor" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Editor" />
+     <Folder Include="Assets\Res\ResourcePackages\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter\Editor" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\Common\Scripts\Motion\Editor" />
+     <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Easy Editor\Editor" />
+     <Folder Include="Assets\Res\ResourcePackages\FlatKit\Shaders\Editor" />
      <Reference Include="UnityEngine">
      <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -326,70 +326,70 @@
      <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Newtonsoft.Json">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="DemiLib">
-     <HintPath>D:\Project\BlackFieldInstruction\Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Antlr3.Runtime">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.YamlDotNet">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
      </Reference>
      <Reference Include="DOTweenProEditor">
-     <HintPath>D:\Project\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTweenPro\Editor\DOTweenProEditor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTweenPro\Editor\DOTweenProEditor.dll</HintPath>
      </Reference>
      <Reference Include="DOTweenEditor">
-     <HintPath>D:\Project\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Unsafe">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
      </Reference>
      <Reference Include="DemiEditor">
-     <HintPath>D:\Project\BlackFieldInstruction\Assets\Plugins\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst.Cecil.Mdb">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.TextureAssets">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.IonicZip">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+     <Reference Include="Unity.Burst.Cecil.Mdb">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
      </Reference>
      <Reference Include="unityplastic">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.IonicZip">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Pdb">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
      </Reference>
      <Reference Include="log4netPlastic">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
      </Reference>
      <Reference Include="DOTween">
-     <HintPath>D:\Project\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Rocks">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="ReportGeneratorMerged">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="DOTweenPro">
-     <HintPath>D:\Project\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
      </Reference>
      <Reference Include="nunit.framework">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Android.Types">
      <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -773,199 +773,208 @@
      <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.TestRunner">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.TestRunner">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Recorder.Editor">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Recorder.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.InternalAPIEngineBridge.001">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VSCode.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Shaders">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.CacheServer">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Addressables">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Searcher.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.IK.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.InputSystem">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Rider.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.EditorCoroutines.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.IK.Runtime">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.ShaderGraph.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Cinemachine">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
      </Reference>
      <Reference Include="com.unity.cinemachine.editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Addressables.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Common.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Recorder">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Recorder.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Extras">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Animation.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Recorder.Base">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Recorder.Base.dll</HintPath>
      </Reference>
      <Reference Include="PPv2URPConverters">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Sprite.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.InternalAPIEditorBridge.001">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Runtime">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.ResourceManager">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Postprocessing.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Tilemap.Extras.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Mathematics">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core.Analytics">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Postprocessing.Runtime">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Universal.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Shared.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core.Environments">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Animation.Runtime">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
      </Reference>
      <Reference Include="Unity.2D.Common.Runtime">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.ScriptableBuildPipeline">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.ScriptableBuildPipeline.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.RenderPipelines.Core.Editor">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

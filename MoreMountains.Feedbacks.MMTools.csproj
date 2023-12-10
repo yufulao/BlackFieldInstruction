@@ -41,78 +41,78 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackPPMovingFilter.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_LoadScene.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_RadioSignal.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackFloatController.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackMMSoundManagerAllSoundsControl.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackRectTransformAnchor.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_MMSoundManagerTrackFade.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackImageAlpha.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackFog.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_RectTransformSizeDelta.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_MMSoundManagerSaveLoad.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackDebugComment.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_DebugComment.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_ImageAlpha.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_MMSoundManagerAllSoundsControl.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_MMSoundManagerSoundFade.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackRectTransformSizeDelta.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_Broadcast.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackPlaylist.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_Property.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMRadio\MMF_FeedbackBase.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackBroadcast.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackCanvasGroup.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackRectTransformPivot.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_DebugLog.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_BroadcastProxy.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackProperty.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_Fog.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_PPMovingFilter.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackRadioSignal.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_MMSoundManagerTrackControl.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackFloatingText.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_ImageFill.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_ShaderController.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_Playlist.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_Blink.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackMMSoundManagerSaveLoad.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackMMSoundManagerTrackFade.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_TextFontSize.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMRadio\Legacy\MMFeedbackBase.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackBlink.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMGhostCamera\MMGhostCamera.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_MMSoundManagerSound.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackMMGameEvent.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackMMSoundManagerSound.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackRectTransformOffset.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackMMSoundManagerSoundControl.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_MMGameEvent.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_Sound.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_MMSoundManagerSoundControl.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackMMSoundManagerSoundFade.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackShaderController.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackDebugLog.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackTextFontSize.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_RectTransformOffset.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackLoadScene.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_FloatController.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_FloatingText.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackFade.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackSound.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_RectTransformPivot.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_RectTransformAnchor.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_CanvasGroup.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_Fade.cs" />
-     <Compile Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackMMSoundManagerTrackControl.cs" />
-     <Folder Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools" />
-     <Folder Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy" />
-     <Folder Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks" />
-     <Folder Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMGhostCamera" />
-     <None Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MoreMountains.Feedbacks.MMTools.asmdef" />
-     <Folder Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMRadio\Legacy" />
-     <Folder Include="Assets\Res\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMRadio" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackPPMovingFilter.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_LoadScene.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_RadioSignal.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackFloatController.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackMMSoundManagerAllSoundsControl.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackRectTransformAnchor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_MMSoundManagerTrackFade.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackImageAlpha.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackFog.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_RectTransformSizeDelta.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_MMSoundManagerSaveLoad.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackDebugComment.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_DebugComment.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_ImageAlpha.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_MMSoundManagerAllSoundsControl.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_MMSoundManagerSoundFade.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackRectTransformSizeDelta.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_Broadcast.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackPlaylist.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_Property.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMRadio\MMF_FeedbackBase.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackBroadcast.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackCanvasGroup.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackRectTransformPivot.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_DebugLog.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_BroadcastProxy.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackProperty.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_Fog.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_PPMovingFilter.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackRadioSignal.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_MMSoundManagerTrackControl.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackFloatingText.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_ImageFill.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_ShaderController.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_Playlist.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_Blink.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackMMSoundManagerSaveLoad.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackMMSoundManagerTrackFade.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_TextFontSize.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMRadio\Legacy\MMFeedbackBase.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackBlink.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMGhostCamera\MMGhostCamera.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_MMSoundManagerSound.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackMMGameEvent.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackMMSoundManagerSound.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackRectTransformOffset.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackMMSoundManagerSoundControl.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_MMGameEvent.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_Sound.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_MMSoundManagerSoundControl.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackMMSoundManagerSoundFade.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackShaderController.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackDebugLog.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackTextFontSize.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_RectTransformOffset.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackLoadScene.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_FloatController.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_FloatingText.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackFade.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackSound.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_RectTransformPivot.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_RectTransformAnchor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_CanvasGroup.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\MMF_Fade.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy\MMFeedbackMMSoundManagerTrackControl.cs" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks\Legacy" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\Feedbacks" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMGhostCamera" />
+     <None Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MoreMountains.Feedbacks.MMTools.asmdef" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMRadio\Legacy" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMFeedbacks\MMFeedbacksForThirdParty\MMTools\MMRadio" />
      <Reference Include="UnityEngine">
      <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -363,67 +363,67 @@
      <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Newtonsoft.Json">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="DemiLib">
-     <HintPath>D:\Project\BlackFieldInstruction\Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Antlr3.Runtime">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.YamlDotNet">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
      </Reference>
      <Reference Include="DOTweenProEditor">
-     <HintPath>D:\Project\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTweenPro\Editor\DOTweenProEditor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTweenPro\Editor\DOTweenProEditor.dll</HintPath>
      </Reference>
      <Reference Include="DOTweenEditor">
-     <HintPath>D:\Project\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Unsafe">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
      </Reference>
      <Reference Include="DemiEditor">
-     <HintPath>D:\Project\BlackFieldInstruction\Assets\Plugins\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst.Cecil.Mdb">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.TextureAssets">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.IonicZip">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+     <Reference Include="Unity.Burst.Cecil.Mdb">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
      </Reference>
      <Reference Include="unityplastic">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.IonicZip">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Pdb">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
      </Reference>
      <Reference Include="log4netPlastic">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
      </Reference>
      <Reference Include="DOTween">
-     <HintPath>D:\Project\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Rocks">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="ReportGeneratorMerged">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="DOTweenPro">
-     <HintPath>D:\Project\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Android.Types">
      <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -798,13 +798,13 @@
      <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="Unity.InputSystem">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

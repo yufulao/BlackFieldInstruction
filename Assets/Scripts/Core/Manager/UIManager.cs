@@ -83,17 +83,17 @@ public class UIManager : BaseSingleTon<UIManager>, IMonoManager
         ctrl.CloseRoot();
     }
 
-    public UICtrlBase GetCtrl<T>(string windowName, params object[] param) where T : UICtrlBase
+    public T GetCtrl<T>(string windowName, params object[] param) where T : UICtrlBase
     {
         if (_allViews.ContainsKey(windowName))
         {
-            return _allViews[windowName];
+            return (T)_allViews[windowName];
         }
 
-        return CreatNewView<T>(windowName, param);
+        return (T)CreatNewView<T>(windowName, param);
     }
 
-    private UICtrlBase CreatNewView<T>(string windowName, params object[] param) where T : UICtrlBase
+    private T CreatNewView<T>(string windowName, params object[] param) where T : UICtrlBase
     {
         RowCfgUI rowCfgUi = _cfgUI[windowName];
         GameObject rootObj = GameObject.Instantiate(AssetManager.Instance.LoadAsset<GameObject>(rowCfgUi.uiPath), _layers[rowCfgUi.layer]);

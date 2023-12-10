@@ -20,6 +20,7 @@
       <Path>Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2</Path>
       <Path>Library/PackageCache/com.unity.performance.profile-analyzer@1.1.1</Path>
       <Path>Library/PackageCache/com.unity.postprocessing@3.3.0</Path>
+      <Path>Library/PackageCache/com.unity.recorder@3.0.3</Path>
       <Path>Library/PackageCache/com.unity.scriptablebuildpipeline@1.20.1</Path>
       <Path>Library/PackageCache/com.unity.searcher@4.9.1</Path>
       <Path>Library/PackageCache/com.unity.services.core@1.6.0</Path>
@@ -38,7 +39,6 @@
       <Path>.plastic</Path>
       <Path>Logs</Path>
       <Path>RabiConfig</Path>
-      <Path>Temp</Path>
       <Path>UserSettings</Path>
       <Path>doc</Path>
       <Path>obj</Path>

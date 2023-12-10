@@ -1,4 +1,4 @@
-public enum ForwardType
+public enum ForwardType//unit的朝向
 {
     Up,
     Down,

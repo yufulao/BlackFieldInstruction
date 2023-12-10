@@ -26,11 +26,21 @@ public class GridManager : BaseSingleTon<GridManager>
         }
     }
 
+    /// <summary>
+    /// 获取gridObj的容器
+    /// </summary>
+    /// <returns></returns>
     public Transform GetGridObjContainer()
     {
         return _gridView.GetGridObjContainer();
     }
 
+    /// <summary>
+    /// 通过坐标获取gridCell
+    /// </summary>
+    /// <param name="x"></param>
+    /// <param name="z"></param>
+    /// <returns></returns>
     public GridCell GetGridCell(int x,int z)
     {
          return _gridModel.GetGridCell(x, z);
@@ -48,11 +58,22 @@ public class GridManager : BaseSingleTon<GridManager>
         return _gridModel.GetWorldPositionByPoint(x,z,y);
     }
 
+    /// <summary>
+    /// 世界坐标转网格坐标
+    /// </summary>
+    /// <param name="worldPosition"></param>
+    /// <returns></returns>
     public Vector2Int GetPointByWorldPosition(Vector3 worldPosition)
     {
         return _gridModel.GetPointByWorldPosition(worldPosition);
     }
 
+    /// <summary>
+    /// 检测xz坐标是否在网格内
+    /// </summary>
+    /// <param name="x"></param>
+    /// <param name="z"></param>
+    /// <returns></returns>
     public bool CheckPointValid(int x,int z)
     {
         return _gridModel.CheckPointValid(x, z);

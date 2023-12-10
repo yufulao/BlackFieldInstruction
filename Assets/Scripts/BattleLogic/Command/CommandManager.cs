@@ -22,7 +22,7 @@ public class CommandManager : MonoSingleton<CommandManager>
         _rowCfgStage = rowCfgStage;
         _player = player;
         _usedCommandList.Clear();
-        _viewCtrl = (CommandUICtrl)UIManager.Instance.GetCtrl<CommandUICtrl>("CommandView", rowCfgStage);
+        _viewCtrl = UIManager.Instance.GetCtrl<CommandUICtrl>("CommandView", rowCfgStage);
     }
 
     /// <summary>
@@ -67,6 +67,10 @@ public class CommandManager : MonoSingleton<CommandManager>
         OnExcuteCommandEnd();
     }
 
+    /// <summary>
+    /// 每执行一次指令就刷新一次左上角的时间显示
+    /// </summary>
+    /// <returns></returns>
     public bool RefreshCacheCurrentTimeTextInExcuting()
     {
         bool isTimeOver = _viewCtrl.RefreshCacheCurrentTimeTextInExcuting();

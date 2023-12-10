@@ -29,6 +29,9 @@ public class BattleUnitPlayer : BattleUnit
         StartCoroutine(WaitForRotate(_originalForwardType));
     }
 
+    /// <summary>
+    /// 强制停止player的动画，强制结束指令执行时调用
+    /// </summary>
     public void ForceStopPlayerTweener()
     {
         _tweener?.Pause();

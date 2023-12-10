@@ -64,6 +64,9 @@ public class BattleManager : BaseSingleTon<BattleManager>,IMonoManager
         _battleFsm.ChangeFsmState(typeof(BattleInitState));
     }
 
+    /// <summary>
+    /// 强制停止指令执行，给commandUICtrl绑定指令执行阶段的取消btn
+    /// </summary>
     public void ForceStopExcuteCommand()
     {
         CommandManager.Instance.StopAllCoroutines();

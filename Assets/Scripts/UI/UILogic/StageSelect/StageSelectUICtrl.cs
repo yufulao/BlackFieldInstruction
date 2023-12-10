@@ -30,6 +30,9 @@ public class StageSelectUICtrl : UICtrlBase
     {
     }
 
+    /// <summary>
+    /// 加载model
+    /// </summary>
     private void ReloadModel()
     {
         List<StageItemInfo> stageInfos = new List<StageItemInfo>();
@@ -43,6 +46,9 @@ public class StageSelectUICtrl : UICtrlBase
         _model.InitModel(stageInfos);
     }
 
+    /// <summary>
+    /// 初始化items列表
+    /// </summary>
     private void InitView()
     {
         List<StageItemInfo> stageInfos = _model.GetStageItemInfoList();

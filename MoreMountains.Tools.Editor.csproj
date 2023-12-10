@@ -41,90 +41,90 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMCamera\MMAspectRatioSafeZonesEditor.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMMaintenance\MMGroupSelection.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMAttributes\MMDropdownAttributeDrawer.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMAttributes\MMMonoBehaviourFieldInfo.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMAI\AIActionInspectorDrawer.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMUtilities\ManagerIconEditor.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMUtilities\MMLayerPropertyDrawer.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMAI\AITransitionInspectorDrawer.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMParticles\MMTrailRendererSortingLayerEditor.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMAttributes\MMConditionAttributeDrawer.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMUtilities\MMDebugEditor.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMActivation\MMTriggerAndCollisionEditor.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMMovement\MMAutoRotateEditor.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMParticles\MMRendererSortingLayerEditor.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMGizmos\MMGizmoEditor.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMVision\MMConeOfVisionInspector.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMPropertyControllers\FloatControllerEditor.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMAchievements\MMAchievementListInspector.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMUtilities\MMTransformRandomizerEditor.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMReorderableList\ReorderableDrawer.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMCollisions\MMMeshToPolygonCollider2D.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMRadio\MMPropertyEmitterDrawer.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMUtilities\MMScreenshotEditor.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMReorderableList\MMReorderableList.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMMaintenance\MMCleanupMissingScripts.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMAttributes\MMReadOnlyAttributeDrawer.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMAttributes\MMMonoBehaviourDrawer.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMAttributes\MMVectorAttributeDrawer.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMVision\MMConeOfVision2DInspector.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMProcedural\MMTilemapGeneratorEditor.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMRadio\MMRadioSignalEditor.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMMaintenance\MMFindMissingScriptsRecursively.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMAudio\MMSoundManager\MMSoundManagerEditor.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMAI\AIBrainEditor.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMAttributes\MMColorAttributeDrawer.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMObjectBounds\ObjectBoundsEditor.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMMovement\MMPathMovement\MMPathMovementEditor.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMMaintenance\MMCleanEmptyFolders.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMAttributes\MMEnumConditionAttributeDrawer.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMAttributes\MMInformationDrawer.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMGUI\MMHealthBarEditor.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMMaintenance\MMLockInspector.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMMovement\MMPathMovement\MMPathEditor.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMAttributes\MMBackgroundColorAttributeDrawer.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMCurves\MMPlotterEditor.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMAttributes\MMMenuHelp.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMMaintenance\MMFindPrefabsByMono.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMRadio\MMRadioSignalGeneratorEditor.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMAttributes\MMMonoBehaviourDrawerHelper.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMAttributes\MMHiddenAttributeDrawer.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMTween\MMTweenTypeDrawer.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMRadio\MMPropertyReceiverDrawer.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMRadio\MMPropertyPickerDrawer.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMAudio\AudioAnalyzer\MMAudioAnalyzerEditor.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMAttributes\MMMonoBehaviourDrawerStyle.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMAchievements\MMAchievementMenu.cs" />
-     <Compile Include="Assets\Res\Feel\MMTools\Editor\MMPropertyControllers\ShaderControllerEditor.cs" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMVision" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMMaintenance" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMTween" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMAudio\MMSoundManager" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMMovement" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMParticles" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMMovement\MMPathMovement" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMCurves" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMActivation" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMAI" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMAudio\AudioAnalyzer" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMUtilities" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMCamera" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMAttributes" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMCurves\Editor" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMGizmos" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMProcedural" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMAchievements" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMPropertyControllers" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMAudio" />
-     <None Include="Assets\Res\Feel\MMTools\Editor\MoreMountains.Tools.Editor.asmdef" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMObjectBounds" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMGUI" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMCollisions" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMRadio" />
-     <Folder Include="Assets\Res\Feel\MMTools\Editor\MMReorderableList" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMCamera\MMAspectRatioSafeZonesEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMMaintenance\MMGroupSelection.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAttributes\MMDropdownAttributeDrawer.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAttributes\MMMonoBehaviourFieldInfo.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAI\AIActionInspectorDrawer.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMUtilities\ManagerIconEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMUtilities\MMLayerPropertyDrawer.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAI\AITransitionInspectorDrawer.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMParticles\MMTrailRendererSortingLayerEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAttributes\MMConditionAttributeDrawer.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMUtilities\MMDebugEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMActivation\MMTriggerAndCollisionEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMMovement\MMAutoRotateEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMParticles\MMRendererSortingLayerEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMGizmos\MMGizmoEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMVision\MMConeOfVisionInspector.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMPropertyControllers\FloatControllerEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAchievements\MMAchievementListInspector.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMUtilities\MMTransformRandomizerEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMReorderableList\ReorderableDrawer.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMCollisions\MMMeshToPolygonCollider2D.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMRadio\MMPropertyEmitterDrawer.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMUtilities\MMScreenshotEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMReorderableList\MMReorderableList.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMMaintenance\MMCleanupMissingScripts.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAttributes\MMReadOnlyAttributeDrawer.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAttributes\MMMonoBehaviourDrawer.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAttributes\MMVectorAttributeDrawer.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMVision\MMConeOfVision2DInspector.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMProcedural\MMTilemapGeneratorEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMRadio\MMRadioSignalEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMMaintenance\MMFindMissingScriptsRecursively.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAudio\MMSoundManager\MMSoundManagerEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAI\AIBrainEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAttributes\MMColorAttributeDrawer.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMObjectBounds\ObjectBoundsEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMMovement\MMPathMovement\MMPathMovementEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMMaintenance\MMCleanEmptyFolders.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAttributes\MMEnumConditionAttributeDrawer.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAttributes\MMInformationDrawer.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMGUI\MMHealthBarEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMMaintenance\MMLockInspector.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMMovement\MMPathMovement\MMPathEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAttributes\MMBackgroundColorAttributeDrawer.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMCurves\MMPlotterEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAttributes\MMMenuHelp.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMMaintenance\MMFindPrefabsByMono.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMRadio\MMRadioSignalGeneratorEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAttributes\MMMonoBehaviourDrawerHelper.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAttributes\MMHiddenAttributeDrawer.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMTween\MMTweenTypeDrawer.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMRadio\MMPropertyReceiverDrawer.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMRadio\MMPropertyPickerDrawer.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAudio\AudioAnalyzer\MMAudioAnalyzerEditor.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAttributes\MMMonoBehaviourDrawerStyle.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAchievements\MMAchievementMenu.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMPropertyControllers\ShaderControllerEditor.cs" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMVision" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMMaintenance" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMTween" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAudio\MMSoundManager" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMMovement" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMParticles" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMMovement\MMPathMovement" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMCurves" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMActivation" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAI" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAudio\AudioAnalyzer" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMUtilities" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMCamera" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAttributes" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMCurves\Editor" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMGizmos" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMProcedural" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAchievements" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMPropertyControllers" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMAudio" />
+     <None Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MoreMountains.Tools.Editor.asmdef" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMObjectBounds" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMGUI" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMCollisions" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMRadio" />
+     <Folder Include="Assets\Res\ResourcePackages\Feel\MMTools\Editor\MMReorderableList" />
      <Reference Include="UnityEngine">
      <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -390,70 +390,70 @@
      <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Newtonsoft.Json">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="DemiLib">
-     <HintPath>D:\Project\BlackFieldInstruction\Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Antlr3.Runtime">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.YamlDotNet">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
      </Reference>
      <Reference Include="DOTweenProEditor">
-     <HintPath>D:\Project\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTweenPro\Editor\DOTweenProEditor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTweenPro\Editor\DOTweenProEditor.dll</HintPath>
      </Reference>
      <Reference Include="DOTweenEditor">
-     <HintPath>D:\Project\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Unsafe">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
      </Reference>
      <Reference Include="DemiEditor">
-     <HintPath>D:\Project\BlackFieldInstruction\Assets\Plugins\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Burst.Cecil.Mdb">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DemiLib\Core\Editor\DemiEditor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.TextureAssets">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.IonicZip">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+     <Reference Include="Unity.Burst.Cecil.Mdb">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
      </Reference>
      <Reference Include="unityplastic">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.IonicZip">
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Pdb">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
      </Reference>
      <Reference Include="log4netPlastic">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.collab-proxy@1.17.6\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
      </Reference>
      <Reference Include="DOTween">
-     <HintPath>D:\Project\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Burst.Cecil.Rocks">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
      </Reference>
      <Reference Include="ReportGeneratorMerged">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="DOTweenPro">
-     <HintPath>D:\Project\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Assets\Plugins\Demigiant\DOTweenPro\DOTweenPro.dll</HintPath>
      </Reference>
      <Reference Include="nunit.framework">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Android.Types">
      <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
@@ -837,16 +837,16 @@
      <HintPath>D:\app\Unity Hub\2021.3.14f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.TestRunner">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.TestRunner">
-     <HintPath>D:\Project\BlackFieldInstruction\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
+     <HintPath>D:\Project\BlackFieldInstruction\BlackFieldInstruction\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,4 @@
-public enum CommandType
+public enum CommandType///指令的种类
 {
     //移动
     Up,
