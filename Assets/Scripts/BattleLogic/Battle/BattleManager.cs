@@ -100,7 +100,7 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
     }
 
     /// <summary>
-    /// battleCommandExcute阶段的enter
+    /// battleCommandExecute阶段的enter
     /// </summary>
     public void BattleCommandExecuteStateEnter()
     {
@@ -130,6 +130,14 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
         }
     }
 
+    /// <summary>
+    /// 检测是否到达target
+    /// </summary>
+    public bool CheckPlayerGetTarget()
+    {
+        return CheckCellForUnit<BattleUnit>(_player, UnitType.Target);
+    }
+    
     /// <summary>
     /// 检测格子是否可走
     /// </summary>
@@ -164,34 +172,55 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
         return true;
     }
 
-    /// <summary>
-    /// player每次Move之后检测是否抵达目标，以及当指令结束完毕时再调用一次计算本轮最终结果
-    /// </summary>
-    public bool CheckPlayerGetTarget()
+    public bool CheckCellForUnit<T>(BattleUnit unit, UnitType unitType, Action<List<T>> callback = null) where T : BattleUnit
     {
-        if (CheckCellForUnit(_player, UnitType.Target).Count != 0)
+        BattleUnitInfo unitInfo = _unitInfoDic[unit];
+        List<BattleUnitInfo> cellInfos = _model.GetUnitInfoByGridCell(GridManager.Instance.GetGridCell(unitInfo.currentPoint));
+        if (cellInfos==null)
         {
-            BattleEnd(true);
+            return false;
+        }
+        List<T> results = new List<T>();
+        for (int i = 0; i < cellInfos.Count; i++)
+        {
+            if (cellInfos[i].unitType == unitType)
+            {
+                results.Add((T) GetUnitByUnitInfo(cellInfos[i]));
+            }
+        }
+
+        if (results.Count != 0)
+        {
+            callback?.Invoke(results);
             return true;
         }
 
         return false;
     }
-
-    public List<BattleUnit> CheckCellForUnit(BattleUnit unit, UnitType unitType)
+    
+    public bool CheckCellForOrderPoint<T>(Vector2Int orderPoint, UnitType unitType, Action<List<T>> callback = null) where T : BattleUnit
     {
-        BattleUnitInfo unitInfo = _unitInfoDic[unit];
-        List<BattleUnitInfo> cellInfos = _model.GetUnitInfoByGridCell(GridManager.Instance.GetGridCell(unitInfo.currentPoint));
-        List<BattleUnit> results = new List<BattleUnit>();
+        List<BattleUnitInfo> cellInfos = _model.GetUnitInfoByGridCell(GridManager.Instance.GetGridCell(orderPoint));
+        List<T> results = new List<T>();
+        if (cellInfos==null)
+        {
+            return false;
+        }
         for (int i = 0; i < cellInfos.Count; i++)
         {
             if (cellInfos[i].unitType == unitType)
             {
-                results.Add(GetUnitByUnitInfo(cellInfos[i]));
+                results.Add((T) GetUnitByUnitInfo(cellInfos[i]));
             }
         }
 
-        return results;
+        if (results.Count != 0)
+        {
+            callback?.Invoke(results);
+            return true;
+        }
+
+        return false;
     }
 
     /// <summary>
@@ -250,6 +279,7 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
             }
 
             _unitInfoDic.Add(gridObjList[i], unitInfo);
+            //Debug.Log(gridObjList[i]+"--->"+unitInfo.unitType);
         }
 
         if (_player == null || _targetUnits.Count == 0)
@@ -269,6 +299,7 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
         {
             case UnitType.Player:
                 _player = unit.transform.GetComponent<BattleUnitPlayer>();
+                //Debug.Log(unit.gameObject.name);
                 break;
             case UnitType.Target:
                 _targetUnits.Add(unit.transform.GetComponent<BattleUnitTarget>());
@@ -393,7 +424,7 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
     /// 销毁一个unit
     /// </summary>
     /// <param name="unit"></param>
-    private void DestoryUnit(BattleUnit unit) //对象池处理================================================================================================
+    private void DestroyUnit(BattleUnit unit) //对象池处理================================================================================================
     {
         BattleUnitInfo info = _unitInfoDic[unit];
         Vector2Int infoCurrentPoint = info.currentPoint;

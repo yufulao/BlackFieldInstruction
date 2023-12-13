@@ -141,7 +141,9 @@
             </e>
           </e>
           <e p="Prefab" t="Include">
+            <e p="BattleUnit" t="Include" />
             <e p="Material" t="Include" />
+            <e p="Vfx" t="Include" />
           </e>
           <e p="ResourcePackages" t="Include">
             <e p="BOXOPHOBIC" t="Include">
@@ -2685,26 +2687,25 @@
             <e p="Battle" t="Include">
               <e p="BattleManager.cs" t="Include" />
               <e p="BattleModel.cs" t="Include" />
-              <e p="BattleView.cs" t="Include" />
-              <e p="Component" t="Include">
+              <e p="BattleUnit" t="Include">
                 <e p="BattleUnit.cs" t="Include" />
                 <e p="BattleUnitBrokenBuilding.cs" t="Include" />
                 <e p="BattleUnitBrokenBuildingFsm" t="Include">
-                  <e p="BrokenBuildingFsm.cs" t="Include" />
-                  <e p="FsmState" t="Include">
-                    <e p="BuildingBrokenState.cs" t="Include" />
-                    <e p="BuildingCleanState.cs" t="Include" />
-                    <e p="BuildingNormalState.cs" t="Include" />
-                    <e p="BuildingRuinState.cs" t="Include" />
-                  </e>
+                  <e p="BuildingBrokenState.cs" t="Include" />
+                  <e p="BuildingCleanState.cs" t="Include" />
+                  <e p="BuildingRuinState.cs" t="Include" />
+                  <e p="BuildingUnbrokenState.cs" t="Include" />
                 </e>
                 <e p="BattleUnitFire.cs" t="Include" />
                 <e p="BattleUnitInfo.cs" t="Include" />
                 <e p="BattleUnitMeteorite.cs" t="Include" />
+                <e p="BattleUnitPeople.cs" t="Include" />
                 <e p="BattleUnitPlayer.cs" t="Include" />
+                <e p="BattleUnitRuin.cs" t="Include" />
                 <e p="BattleUnitTarget.cs" t="Include" />
                 <e p="BattleUnitTornado.cs" t="Include" />
               </e>
+              <e p="BattleView.cs" t="Include" />
             </e>
             <e p="BattleFsm" t="Include">
               <e p="BattleFsm.cs" t="Include" />
@@ -2740,8 +2741,14 @@
           <e p="Core" t="Include">
             <e p="Base" t="Include">
               <e p="Fsm" t="Include">
-                <e p="BaseFsm.cs" t="Include" />
-                <e p="IFsmState.cs" t="Include" />
+                <e p="FsmComponent" t="Include">
+                  <e p="FsmComponent.cs" t="Include" />
+                  <e p="IFsmComponentState.cs" t="Include" />
+                </e>
+                <e p="GlobalFsm" t="Include">
+                  <e p="BaseFsm.cs" t="Include" />
+                  <e p="IFsmState.cs" t="Include" />
+                </e>
               </e>
               <e p="Manager" t="Include">
                 <e p="IMonoManager.cs" t="Include" />
@@ -2775,6 +2782,7 @@
           </e>
           <e p="Misc" t="Include">
             <e p="Def" t="Include">
+              <e p="BrokenBuildingStateType.cs" t="Include" />
               <e p="CommandType.cs" t="Include" />
               <e p="ForwardType.cs" t="Include" />
               <e p="UnitType.cs" t="Include" />

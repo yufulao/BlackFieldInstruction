@@ -9,4 +9,5 @@ public enum UnitType
     People,//人群
     Car,//车
     Tornado,//龙卷风
+    Ruin,//废墟
 }
