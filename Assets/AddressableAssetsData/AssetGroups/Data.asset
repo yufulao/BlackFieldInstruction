@@ -37,12 +37,12 @@ MonoBehaviour:
     m_Address: Assets/AddressableAssets/Config/CfgCommand.txt
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 17fa649883f7bf243af94341ec37b0f7
-    m_Address: Assets/AddressableAssets/Config/CfgUI.txt
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: 22a46d9d13f50304987e297792666511
     m_Address: Assets/AddressableAssets/Config/CfgPrefab.txt
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 17fa649883f7bf243af94341ec37b0f7
+    m_Address: Assets/AddressableAssets/Config/CfgUI.txt
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

@@ -1,5 +1,8 @@
 using System;
 
 public enum EventName{
-    Click
+    Click,
+    OnCommandExecuteStart,
+    OnCommandExecute,
+    OnCommandExecuteEnd
 }

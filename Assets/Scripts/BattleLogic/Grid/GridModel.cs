@@ -25,6 +25,11 @@ public class GridModel
         CreatMap();
     }
 
+    public float GetPerCellSize()
+    {
+        return _cellSize;
+    }
+
     /// <summary>
     /// 世界坐标转网格坐标
     /// </summary>

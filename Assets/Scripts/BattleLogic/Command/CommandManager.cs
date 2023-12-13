@@ -28,9 +28,9 @@ public class CommandManager : MonoSingleton<CommandManager>
     /// <summary>
     /// 打开Command页面
     /// </summary>
-    public void CommandUIOnBeginExcuteCommand()
+    public void CommandUIOnBeginExecuteCommand()
     {
-        _viewCtrl.CommandUIOnBeginBattleExcuteCommand();
+        _viewCtrl.CommandUIOnBeginBattleExecuteCommand();
     }
 
     /// <summary>
@@ -44,39 +44,41 @@ public class CommandManager : MonoSingleton<CommandManager>
     /// <summary>
     /// 开始执行指令集
     /// </summary>
-    public void OnExcuteCommandStart()
+    public void OnExecuteCommandStart()
     {
         PrepareCommand();
-        ExcuteCommand();
+        EventManager.Instance.Dispatch(EventName.OnCommandExecuteStart);
+        ExecuteCommand();
     }
     
     /// <summary>
     /// 执行当前指令
     /// </summary>
-    public void ExcuteCommand()
+    public void ExecuteCommand()
     {
         if (_usedCommandList.Count != 0)
         {
             IEnumerator command =  _usedCommandList[0];
             //Debug.Log("执行指令"+_usedCommandList[0]);
             StartCoroutine(command);
+            EventManager.Instance.Dispatch(EventName.OnCommandExecute);
             _usedCommandList.RemoveAt(0);
             return;
         }
 
-        OnExcuteCommandEnd();
+        OnExecuteCommandEnd();
     }
 
     /// <summary>
     /// 每执行一次指令就刷新一次左上角的时间显示
     /// </summary>
     /// <returns></returns>
-    public bool RefreshCacheCurrentTimeTextInExcuting()
+    public bool RefreshCacheCurrentTimeTextInExecuting()
     {
-        bool isTimeOver = _viewCtrl.RefreshCacheCurrentTimeTextInExcuting();
+        bool isTimeOver = _viewCtrl.RefreshCacheCurrentTimeTextInExecuting();
         if (isTimeOver)
         {
-            OnExcuteCommandEnd();
+            OnExecuteCommandEnd();
             return true;
         }
 
@@ -134,8 +136,9 @@ public class CommandManager : MonoSingleton<CommandManager>
     /// <summary>
     /// 所有指令执行完毕
     /// </summary>
-    private void OnExcuteCommandEnd()
+    private void OnExecuteCommandEnd()
     {
+        EventManager.Instance.Dispatch(EventName.OnCommandExecuteEnd);
         BattleManager.Instance.BattleEnd(BattleManager.Instance.CheckPlayerGetTarget());
     }
 }

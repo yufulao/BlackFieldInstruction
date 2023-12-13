@@ -1,0 +1,17 @@
+{
+    "MANAGER_NAME": "ConfigManager.cs",
+    "MANAGER_TARGET_FOLDER": "../RabiProject/Assets/Scripts/Core/Manager/CommonManager/ConfigManager",
+    "XLSX_FOLDER": "./xlsx",
+    "DATA_TARGET_FOLDER": "../RabiProject/Assets/AddressableAssets/Config",
+    "SCRIPTS_TARGET_FOLDER": "../RabiProject/Assets/Scripts/Config",
+    "MANAGER_PATH": "../RabiProject/Assets/Scripts/Core/Manager/CommonManager/ConfigManager/ConfigManager.cs",
+    "MANIFEST_PATH": "./xlsx/manifest.txt",
+    "SUFFIX": ".cs",
+    "ASSET_MANAGER_INIT_CODE": "AssetManager.Instance.OnInit();",
+    "ENUM_TARGET_FOLDER": "../RabiProject/Assets/Scripts/ConfigEnum",
+    "IS_ATTRIBUTE_EXIST": true,
+    "ENUM_MARK": "EnumName",
+    "ANNOTATE_MARK": "Annotate",
+    "GROUP_MARK": "*",
+    "NAME_SPACE_NAME": "Rabi"
+}

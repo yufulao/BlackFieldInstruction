@@ -968,6 +968,10 @@
       <Project>{78d44f5c-90fe-a967-497c-7d4cbfb0a612}</Project>
       <Name>ExternAttributes.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
+      <Project>{8ca5092d-70c5-dafb-1ac6-93404119f553}</Project>
+      <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="FlatKit.Utils.Editor.csproj">
       <Project>{6684a651-197d-ea38-d5b3-61f63f6ad2e1}</Project>
       <Name>FlatKit.Utils.Editor</Name>
@@ -1012,6 +1016,10 @@
       <Project>{e48343ee-a485-9e4d-e06a-dc7e711a22ab}</Project>
       <Name>KinoBloom.Runtime</Name>
     </ProjectReference>
+    <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
+      <Project>{83f5a22e-8f5c-1db8-3428-6b82b4ddbe13}</Project>
+      <Name>Boxophobic.Utils.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="CFXRDemo.csproj">
       <Project>{c6622478-9843-71b6-934d-11ba1513245e}</Project>
       <Name>CFXRDemo</Name>
@@ -1019,6 +1027,10 @@
     <ProjectReference Include="MoreMountains.Feedbacks.MMTools.csproj">
       <Project>{6ccac8b5-79fb-5cc8-e80d-b3f3b1313b35}</Project>
       <Name>MoreMountains.Feedbacks.MMTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
+      <Project>{c8c14a63-07f2-777d-3ca0-91e47981da14}</Project>
+      <Name>Boxophobic.Utils.Scripts</Name>
     </ProjectReference>
     <ProjectReference Include="MoreMountains.Feedbacks.csproj">
       <Project>{3b091918-ac7b-15ff-8323-6f2877fa20ff}</Project>

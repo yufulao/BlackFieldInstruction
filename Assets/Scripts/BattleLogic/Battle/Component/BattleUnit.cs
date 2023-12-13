@@ -6,16 +6,22 @@ using UnityEngine;
 public class BattleUnit:MonoBehaviour
 {
     public bool walkable;
+    public UnitType unitType;
 
 
-    public virtual void OnInit()
+    public virtual void OnUnitInit()
     {
         
     }
 
-    public virtual void OnReset()
+    public virtual void OnUnitReset()
     {
 
+    }
+
+    public virtual void OnUnitDestroy()
+    {
+        
     }
 
 }

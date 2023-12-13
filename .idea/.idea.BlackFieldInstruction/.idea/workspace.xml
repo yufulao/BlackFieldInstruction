@@ -4,89 +4,98 @@
     <list default="true" id="c32e2bb8-491b-4f2b-9861-08339f7cd850" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.plastic/plastic.changes" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.changes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.plastic/plastic.wktree" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.wktree" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Animation.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgStage.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgStage.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Modle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Prefab/Material.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Prefab/Material/dirt.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Prefab/Material/dirt.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Prefab/Material/grass.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Prefab/Material/grass.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Prefab/Material_dst.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Prefab/Obj0.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Prefab/Obj0.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage0-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage0-1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/StageTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/StageTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/StageTest.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/StageTest.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Sprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Character.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/Fire.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/Fire/BigBoom.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/Fire/BigBoom.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/Fire/BigFire.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/Fire/BigFire.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/Fire/RockBoom.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/Fire/RockBoom.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/Fire/littleFire.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/Fire/littleFire.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/lightning.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/lightning/LightBlack.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/lightning/LightBlack.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/lightning/Lighting.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/lightning/Lighting.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/water.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/water/CFX_Fountain_Loop.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/water/CFX_Fountain_Loop.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/water/CFX_Splash+Text.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/water/CFX_Splash+Text.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/water/CFX_Water_Sprinkler.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/water/CFX_Water_Sprinkler.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/wind.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/wind/Storm.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/wind/Storm.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/wind/Wind_straight.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Vfx/Environment/wind/Wind_straight.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Scene.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Scene.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/BattleFsm/Fsm.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/BattleFsm/Fsm/BattleCommandExcuteState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/BattleFsm/Fsm/BattleCommandExcuteState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/BattleFsm/Fsm/BattleCommandInputState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/BattleFsm/Fsm/BattleCommandInputState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/BattleFsm/Fsm/BattleEndState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/BattleFsm/Fsm/BattleEndState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/BattleFsm/Fsm/BattleInitState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/BattleFsm/Fsm/BattleInitState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/BattleFsm/Fsm/BattlePauseState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/BattleFsm/Fsm/BattlePauseState.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Command/CommandManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Command/CommandManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Grid/GridManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Grid/GridManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Def/CommandType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Def/CommandType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Def/ForwardType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Def/ForwardType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Grid/GridModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Grid/GridModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Config/CfgBgm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Config/CfgBgm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Config/CfgCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Config/CfgCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Config/CfgPrefab.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Config/CfgPrefab.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Config/CfgSfx.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Config/CfgSfx.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Config/CfgStage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Config/CfgStage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Config/CfgUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Config/CfgUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/EventManager/EventName.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/EventManager/EventName.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/CommandUICtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/CommandUICtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/CommandItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/CommandItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelect/Component/StageItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelect/Component/StageItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelect/StageSelectUICtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelect/StageSelectUICtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelect/StageSelectUIModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelect/StageSelectUIModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CFXRDemo.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CFXRDemo.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CFXREditor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CFXREditor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CFXRRuntime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CFXRRuntime.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExternAttributes.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ExternAttributes.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlatKit.Utils.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FlatKit.Utils.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KinoBloom.Runtime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/KinoBloom.Runtime.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lofelt.NiceVibrations.Demo.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Lofelt.NiceVibrations.Demo.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lofelt.NiceVibrations.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Lofelt.NiceVibrations.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lofelt.NiceVibrations.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Lofelt.NiceVibrations.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker2-prev.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker3-prev.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker4-prev.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/Packages-Update.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/Packages-Update.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoreMountains.Feedbacks.Cinemachine.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoreMountains.Feedbacks.Cinemachine.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoreMountains.Feedbacks.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoreMountains.Feedbacks.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoreMountains.Feedbacks.HDRP.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoreMountains.Feedbacks.HDRP.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoreMountains.Feedbacks.MMTools.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoreMountains.Feedbacks.MMTools.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoreMountains.Feedbacks.NiceVibrations.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoreMountains.Feedbacks.NiceVibrations.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoreMountains.Feedbacks.PostProcessing.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoreMountains.Feedbacks.PostProcessing.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoreMountains.Feedbacks.TextMeshPro.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoreMountains.Feedbacks.TextMeshPro.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoreMountains.Feedbacks.URP.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoreMountains.Feedbacks.URP.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoreMountains.Feedbacks.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoreMountains.Feedbacks.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoreMountains.Tools.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoreMountains.Tools.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MoreMountains.Tools.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MoreMountains.Tools.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlackFieldInstruction.sln" beforeDir="false" afterPath="$PROJECT_DIR$/BlackFieldInstruction.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker2.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker3.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToonyColorsPro.Demo.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ToonyColorsPro.Demo.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.RenderPipelines.Universal.Runtime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.RenderPipelines.Universal.Runtime.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RabiConfig/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/RabiConfig/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RabiConfig/xlsx/Stage.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/RabiConfig/xlsx/Stage.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/场景编辑规范.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/添加关卡规范.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/调教渲染.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor-firstpass.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor-firstpass.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-firstpass.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-firstpass.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/CFXRDemo.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/CFXRDemo.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/CFXREditor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/CFXREditor.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/CFXRRuntime.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/CFXRRuntime.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/ExternAttributes.Editor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/ExternAttributes.Editor.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/FlatKit.Utils.Editor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/FlatKit.Utils.Editor.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/KinoBloom.Runtime.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/KinoBloom.Runtime.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Lofelt.NiceVibrations.Demo.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Lofelt.NiceVibrations.Demo.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Lofelt.NiceVibrations.Editor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Lofelt.NiceVibrations.Editor.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Lofelt.NiceVibrations.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Lofelt.NiceVibrations.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/MoreMountains.Feedbacks.Cinemachine.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/MoreMountains.Feedbacks.Cinemachine.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/MoreMountains.Feedbacks.Editor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/MoreMountains.Feedbacks.Editor.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/MoreMountains.Feedbacks.HDRP.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/MoreMountains.Feedbacks.HDRP.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/MoreMountains.Feedbacks.MMTools.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/MoreMountains.Feedbacks.MMTools.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/MoreMountains.Feedbacks.NiceVibrations.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/MoreMountains.Feedbacks.NiceVibrations.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/MoreMountains.Feedbacks.PostProcessing.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/MoreMountains.Feedbacks.PostProcessing.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/MoreMountains.Feedbacks.TextMeshPro.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/MoreMountains.Feedbacks.TextMeshPro.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/MoreMountains.Feedbacks.URP.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/MoreMountains.Feedbacks.URP.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/MoreMountains.Feedbacks.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/MoreMountains.Feedbacks.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/MoreMountains.Tools.Editor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/MoreMountains.Tools.Editor.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/MoreMountains.Tools.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/MoreMountains.Tools.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/ToonyColorsPro.Demo.Editor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/ToonyColorsPro.Demo.Editor.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Unity.RenderPipelines.Universal.Runtime.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Unity.RenderPipelines.Universal.Runtime.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,14 +106,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitBrokenBuildingFsm/FsmState/BuildingBrokenState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Config/CfgSfx.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/105DA115-9EC9-496A-B931-0694C7B11DD2/92/8e6839b2/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitTornado.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventData/PointerEventData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitBrokenBuildingFsm/BrokenBuildingFsm.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/Def/UnitType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/Addressables.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4297588C-8C1C-4E0A-A6A6-8CB3F8BE8477/7a/075948c0/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelect/StageSelectUICtrl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4297588C-8C1C-4E0A-A6A6-8CB3F8BE8477/06/8ac3cf22/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4297588C-8C1C-4E0A-A6A6-8CB3F8BE8477/51/f323a1ad/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitBrokenBuildingFsm/FsmState/BuildingCleanState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitFire.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/AddressablesImpl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/CommandUIModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.19.19/Runtime/ResourceManager/Util/MonoBehaviourCallbackHooks.cs" root0="SKIP_HIGHLIGHTING" />
@@ -113,37 +128,9 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Command/CommandViewView.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Command/WaitingCommandObj.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Command/CommandViewCtrl.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIBase/UIDragComponent.cs" />
-      <option value="$PROJECT_DIR$/RabiConfig/config.json" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Grid/GridMap.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/CommandViewCtrl.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/CommandPanelCtrl.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/UsedCommandObj.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/CommandObj.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Misc/Def/CommandItemType.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Base/UICtrlBase.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/UsedItemList.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/WaitingCommandItem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/WaitingItemList.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/ItemListView.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/UsedCommandItem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/BattleManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/CommandItemInfo.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Core/Base/Singleton/BaseSingleTon.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/BattleView.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/BattleModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Grid/Component/GridObject.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Grid/Component/GridObjInfo.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Grid/Component/TargetObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Grid/Component/Player.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Grid/Component/GridCell.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitInfo.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Grid/GridModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnit.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/Base/UIDragComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Grid/GridView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/CommandUIModel.cs" />
@@ -153,17 +140,45 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelect/Component/StageItem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelect/StageSelectUICtrl.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelect/StageSelectUIModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/CommandUICtrl.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/Component/CommandItem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitPlayer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Grid/GridManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Misc/Def/ForwardType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Misc/Def/CommandType.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/AssetManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/SceneManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/UIManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Config/CfgBgm.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Config/CfgCommand.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Config/CfgPrefab.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Config/CfgSfx.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Config/CfgStage.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Config/CfgUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/RabiConfig/config.json" />
+      <option value="$PROJECT_DIR$/RabiConfig/config.json" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Misc/Def/UnitGridCostType.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Grid/Component/GridInfo.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitInfo.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnit.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/EventManager/EventManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitFire.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Grid/GridModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/EventManager/EventName.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Command/CommandManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/BattleFsm/Fsm/BattleCommandExcuteState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitMeteorite.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Grid/GridManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitTornado.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/CommandUICtrl.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitPlayer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitDestructibleBuilding.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Misc/Def/UnitType.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitBrokenBuildingFsm/BrokenBuildingFsm.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitBrokenBuildingFsm/FsmState/BuildingBrokenState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitBrokenBuildingFsm/FsmState/BuildingNormalState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitBrokenBuildingFsm/FsmState/BuildingRuinState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitBrokenBuildingFsm/FsmState/BuildingCleanState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/Component/BattleUnitBrokenBuilding.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2YfmWTHyDG31Uyxe68gME1pkkrg" />
@@ -248,6 +263,8 @@
       <workItem from="1702095204363" duration="16118000" />
       <workItem from="1702140407114" duration="1453000" />
       <workItem from="1702199125816" duration="2123000" />
+      <workItem from="1702278095044" duration="3806000" />
+      <workItem from="1702363186180" duration="34601000" />
     </task>
     <servers />
   </component>

@@ -57,12 +57,14 @@ public class BattleModel
     /// <summary>
     /// 创建一个UnitInfo
     /// </summary>
+    /// <param name="unitTypeT"></param>
     /// <param name="objPoint"></param>
     /// <returns></returns>
-    public BattleUnitInfo CreatUnitInfo(Vector2Int objPoint)
+    public BattleUnitInfo CreatUnitInfo(UnitType unitTypeT,Vector2Int objPoint)
     {
         return new BattleUnitInfo()
         {
+            unitType = unitTypeT,
             currentPoint = objPoint,
             originalPoint = objPoint
         };

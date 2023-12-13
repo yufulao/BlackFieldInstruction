@@ -10,7 +10,6 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="AddressableAssets" t="Include">
-          <e p="Animation" t="Include" />
           <e p="AudioMixer" t="Include" />
           <e p="Bgm" t="Include" />
           <e p="Config" t="Include">
@@ -21,24 +20,10 @@
             <e p="CfgStage.txt" t="Include" />
             <e p="CfgUi.txt" t="Include" />
           </e>
-          <e p="Modle" t="Include" />
-          <e p="Prefab" t="Include">
-            <e p="Material" t="Include" />
-            <e p="Material_dst" t="Include" />
-          </e>
+          <e p="Prefab" t="Include" />
           <e p="Scene" t="Include" />
           <e p="Sfx" t="Include" />
-          <e p="Sprite" t="Include" />
           <e p="Ui" t="Include" />
-          <e p="Vfx" t="Include">
-            <e p="Character" t="Include" />
-            <e p="Environment" t="Include">
-              <e p="Fire" t="Include" />
-              <e p="lightning" t="Include" />
-              <e p="Water" t="Include" />
-              <e p="wind" t="Include" />
-            </e>
-          </e>
         </e>
         <e p="AddressableAssetsData" t="Include">
           <e p="Android" t="Include" />
@@ -135,7 +120,169 @@
           </e>
         </e>
         <e p="Res" t="Include">
+          <e p="Modle" t="Include">
+            <e p="Crwods" t="Include">
+              <e p="Animations" t="Include" />
+              <e p="Demo_Scenes" t="Include">
+                <e p="Demo" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="CityPeople.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Materials" t="Include">
+                <e p="mobile" t="Include" />
+                <e p="standard" t="Include" />
+              </e>
+              <e p="Meshes" t="Include">
+                <e p="Animated" t="Include" />
+              </e>
+              <e p="Prefabs" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+          </e>
+          <e p="Prefab" t="Include">
+            <e p="Material" t="Include" />
+          </e>
           <e p="ResourcePackages" t="Include">
+            <e p="BOXOPHOBIC" t="Include">
+              <e p="Skybox Cubemap Extended" t="Include">
+                <e p="Core" t="Include">
+                  <e p="Editor" t="Include">
+                    <e p="Boxophobic.SkyboxCubemapExtended.Editor.asmdef" t="Include" />
+                    <e p="SkyboxExtendedHub.cs" t="Include" />
+                    <e p="SkyboxExtendedShaderGUI.cs" t="Include" />
+                    <e p="SkyboxExtendedWindows.cs" t="Include" />
+                  </e>
+                  <e p="Functions" t="Include" />
+                  <e p="Shaders" t="Include">
+                    <e p="Skybox Cubemap Blend.shader" t="Include" />
+                    <e p="Skybox Cubemap Extended.shader" t="Include" />
+                  </e>
+                </e>
+                <e p="Demo" t="Include">
+                  <e p="Materials" t="Include" />
+                  <e p="Meshes" t="Include" />
+                  <e p="Prefabs" t="Include" />
+                  <e p="Settings" t="Include" />
+                  <e p="Textures" t="Include" />
+                </e>
+              </e>
+              <e p="User" t="Include" />
+              <e p="Utils" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="Boxophobic.Utils.Editor.asmdef" t="Include" />
+                  <e p="Constants" t="Include">
+                    <e p="Constants.cs" t="Include" />
+                  </e>
+                  <e p="SettingsUtils" t="Include">
+                    <e p="LoadSettingsData.cs" t="Include" />
+                    <e p="SaveSettingsData.cs" t="Include" />
+                  </e>
+                  <e p="StyledGUI" t="Include">
+                    <e p="DrawInspectorBanner.cs" t="Include" />
+                    <e p="DrawInspectorCategory.cs" t="Include" />
+                    <e p="DrawWindowBanner.cs" t="Include" />
+                    <e p="DrawWindowCategory.cs" t="Include" />
+                  </e>
+                  <e p="StyledInspector" t="Include">
+                    <e p="StyledBannerDrawer.cs" t="Include" />
+                    <e p="StyledButtonDrawer.cs" t="Include" />
+                    <e p="StyledCategoryDrawer.cs" t="Include" />
+                    <e p="StyledEnumDrawer.cs" t="Include" />
+                    <e p="StyledIndentDrawer.cs" t="Include" />
+                    <e p="StyledInteractiveDrawer.cs" t="Include" />
+                    <e p="StyledLayersDrawer.cs" t="Include" />
+                    <e p="StyledMaskDrawer.cs" t="Include" />
+                    <e p="StyledMessageDrawer.cs" t="Include" />
+                    <e p="StyledRangeOptionsDrawer.cs" t="Include" />
+                    <e p="StyledSpaceDrawer.cs" t="Include" />
+                    <e p="StyledTextDrawer.cs" t="Include" />
+                    <e p="StyledTexturePreviewDrawer.cs" t="Include" />
+                  </e>
+                  <e p="StyledMaterial" t="Include">
+                    <e p="StyledBannerDrawer.cs" t="Include" />
+                    <e p="StyledButtonDrawer.cs" t="Include" />
+                    <e p="StyledCategoryDrawer.cs" t="Include" />
+                    <e p="StyledDiffusionMaterialDrawer.cs" t="Include" />
+                    <e p="StyledEmissiveIntensityDrawer.cs" t="Include" />
+                    <e p="StyledEnumDrawer.cs" t="Include" />
+                    <e p="StyledIndentDrawer.cs" t="Include" />
+                    <e p="StyledInteractiveDrawer.cs" t="Include" />
+                    <e p="StyledLayersDrawer.cs" t="Include" />
+                    <e p="StyledMaskDrawer.cs" t="Include" />
+                    <e p="StyledMessageDrawer.cs" t="Include" />
+                    <e p="StyledOptionsSliderDrawer.cs" t="Include" />
+                    <e p="StyledRemapSliderDrawer.cs" t="Include" />
+                    <e p="StyledSpaceDrawer.cs" t="Include" />
+                    <e p="StyledTextDrawer.cs" t="Include" />
+                    <e p="StyledTextureDrawer.cs" t="Include" />
+                    <e p="StyledTextureSingleLineDrawer.cs" t="Include" />
+                    <e p="StyledToggleDrawer.cs" t="Include" />
+                    <e p="StyledVectorDrawer.cs" t="Include" />
+                  </e>
+                  <e p="StyledMono" t="Include">
+                    <e p="StyledMonoBehaviourEditor.cs" t="Include" />
+                    <e p="StyledScriptableObjectEditor.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Scripts" t="Include">
+                  <e p="Boxophobic.Utils.Scripts.asmdef" t="Include" />
+                  <e p="SettingsUtils" t="Include">
+                    <e p="SettingsData.cs" t="Include" />
+                  </e>
+                  <e p="StyledGizmos" t="Include">
+                    <e p="StyledLabelGizmo.cs" t="Include" />
+                  </e>
+                  <e p="StyledInspector" t="Include">
+                    <e p="StyledBanner.cs" t="Include" />
+                    <e p="StyledButton.cs" t="Include" />
+                    <e p="StyledCategory.cs" t="Include" />
+                    <e p="StyledEnum.cs" t="Include" />
+                    <e p="StyledIndent.cs" t="Include" />
+                    <e p="StyledInteractive.cs" t="Include" />
+                    <e p="StyledLayers.cs" t="Include" />
+                    <e p="StyledMask.cs" t="Include" />
+                    <e p="StyledMessage.cs" t="Include" />
+                    <e p="StyledRangeOptions.cs" t="Include" />
+                    <e p="StyledSpace.cs" t="Include" />
+                    <e p="StyledText.cs" t="Include" />
+                    <e p="StyledTexturePreview.cs" t="Include" />
+                  </e>
+                  <e p="StyledMono" t="Include">
+                    <e p="StyledMonoBehaviour.cs" t="Include" />
+                    <e p="StyledScriptableObject.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+            <e p="Desert City" t="Include">
+              <e p="Demo" t="Include" />
+              <e p="Models" t="Include">
+                <e p="Civilian_Buildings" t="Include">
+                  <e p="Materials" t="Include" />
+                </e>
+                <e p="Props" t="Include">
+                  <e p="Materials" t="Include" />
+                </e>
+                <e p="Terrain" t="Include">
+                  <e p="Materials" t="Include" />
+                </e>
+                <e p="Trees" t="Include">
+                  <e p="Materials" t="Include" />
+                </e>
+                <e p="Unique_Buildings" t="Include">
+                  <e p="Materials" t="Include" />
+                </e>
+              </e>
+              <e p="Post_Processing_Preset" t="Include" />
+              <e p="Prefabs" t="Include">
+                <e p="prefab_civilian_buildings" t="Include" />
+                <e p="prefab_props" t="Include" />
+                <e p="prefab_terrain" t="Include" />
+                <e p="prefab_trees" t="Include" />
+                <e p="prefab_unique_buildings" t="Include" />
+              </e>
+            </e>
             <e p="EmaceArt" t="Include">
               <e p="FREE EpicMobile 3d Voxel Forest And Atols - Winter" t="Include">
                 <e p="Editor" t="Include">
@@ -2257,6 +2404,22 @@
                 <e p="Readme Cartoon FX Remaster.txt" t="Include" />
               </e>
             </e>
+            <e p="Low Poly Hexagons" t="Include">
+              <e p="Assets" t="Include">
+                <e p="Materials" t="Include" />
+                <e p="Models" t="Include">
+                  <e p="Hexagons" t="Include" />
+                  <e p="Objects" t="Include" />
+                </e>
+                <e p="Prefabs" t="Include">
+                  <e p="Combination Examples" t="Include" />
+                  <e p="Hexagons" t="Include" />
+                  <e p="Objects" t="Include" />
+                </e>
+                <e p="Scenes" t="Include" />
+                <e p="Textures" t="Include" />
+              </e>
+            </e>
             <e p="Low Poly Simple Urban City 3D Asset Pack" t="Include">
               <e p="Models" t="Include">
                 <e p="Buildings" t="Include" />
@@ -2296,6 +2459,54 @@
               </e>
               <e p="Scenes" t="Include" />
               <e p="Textures" t="Include" />
+            </e>
+            <e p="LowPoly Nature Pack" t="Include">
+              <e p="Animations" t="Include">
+                <e p="Animals" t="Include" />
+                <e p="Charakter" t="Include" />
+              </e>
+              <e p="Cutscenes" t="Include" />
+              <e p="Materials" t="Include">
+                <e p="Charakter" t="Include">
+                  <e p="Hair" t="Include" />
+                  <e p="Hat" t="Include" />
+                  <e p="Shirt" t="Include" />
+                  <e p="Skin" t="Include" />
+                  <e p="Trouseres" t="Include" />
+                </e>
+                <e p="Fire" t="Include" />
+                <e p="Others" t="Include" />
+                <e p="Stones" t="Include" />
+                <e p="Trees" t="Include" />
+              </e>
+              <e p="Meshes" t="Include">
+                <e p="Animals" t="Include" />
+                <e p="Charakter" t="Include" />
+                <e p="Mountains" t="Include" />
+                <e p="Others" t="Include" />
+                <e p="Plants" t="Include" />
+                <e p="Stones" t="Include" />
+                <e p="Terrain" t="Include" />
+                <e p="Trees" t="Include" />
+              </e>
+              <e p="Particles" t="Include" />
+              <e p="Prefabs" t="Include">
+                <e p="Animals" t="Include" />
+                <e p="Charakter" t="Include" />
+                <e p="Fire" t="Include">
+                  <e p="Burning Objects" t="Include" />
+                </e>
+                <e p="Mountains" t="Include" />
+                <e p="Others" t="Include" />
+                <e p="Plants" t="Include" />
+                <e p="Stones" t="Include" />
+                <e p="Terrain" t="Include" />
+                <e p="Trees" t="Include">
+                  <e p="Autumn" t="Include" />
+                  <e p="Spring" t="Include" />
+                </e>
+              </e>
+              <e p="Scenes" t="Include" />
             </e>
             <e p="mmmm" t="Include">
               <e p="3D Road Tiles" t="Include">
@@ -2398,7 +2609,19 @@
               <e p="Textures" t="Include" />
             </e>
           </e>
+          <e p="Skybox" t="Include">
+            <e p="Skybox Cubemap Blend.shader" t="Include" />
+          </e>
           <e p="Sprite" t="Include" />
+          <e p="Vfx" t="Include">
+            <e p="Character" t="Include" />
+            <e p="Environment" t="Include">
+              <e p="Fire" t="Include" />
+              <e p="lightning" t="Include" />
+              <e p="Water" t="Include" />
+              <e p="wind" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="Resources" t="Include" />
         <e p="Robot" t="Include">
@@ -2450,6 +2673,13 @@
             </e>
           </e>
         </e>
+        <e p="Ruin" t="Include">
+          <e p="Materials" t="Include" />
+          <e p="Models" t="Include" />
+          <e p="Palettes" t="Include" />
+          <e p="Prefabs" t="Include" />
+          <e p="Scenes" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
           <e p="BattleLogic" t="Include">
             <e p="Battle" t="Include">
@@ -2458,14 +2688,27 @@
               <e p="BattleView.cs" t="Include" />
               <e p="Component" t="Include">
                 <e p="BattleUnit.cs" t="Include" />
+                <e p="BattleUnitBrokenBuilding.cs" t="Include" />
+                <e p="BattleUnitBrokenBuildingFsm" t="Include">
+                  <e p="BrokenBuildingFsm.cs" t="Include" />
+                  <e p="FsmState" t="Include">
+                    <e p="BuildingBrokenState.cs" t="Include" />
+                    <e p="BuildingCleanState.cs" t="Include" />
+                    <e p="BuildingNormalState.cs" t="Include" />
+                    <e p="BuildingRuinState.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="BattleUnitFire.cs" t="Include" />
                 <e p="BattleUnitInfo.cs" t="Include" />
+                <e p="BattleUnitMeteorite.cs" t="Include" />
                 <e p="BattleUnitPlayer.cs" t="Include" />
                 <e p="BattleUnitTarget.cs" t="Include" />
+                <e p="BattleUnitTornado.cs" t="Include" />
               </e>
             </e>
             <e p="BattleFsm" t="Include">
               <e p="BattleFsm.cs" t="Include" />
-              <e p="Fsm" t="Include">
+              <e p="FsmState" t="Include">
                 <e p="BattleCommandExcuteState.cs" t="Include" />
                 <e p="BattleCommandInputState.cs" t="Include" />
                 <e p="BattleEndState.cs" t="Include" />
@@ -2534,6 +2777,7 @@
             <e p="Def" t="Include">
               <e p="CommandType.cs" t="Include" />
               <e p="ForwardType.cs" t="Include" />
+              <e p="UnitType.cs" t="Include" />
             </e>
             <e p="Util" t="Include">
               <e p="Utils.cs" t="Include" />
@@ -2567,6 +2811,9 @@
         <e p="Settings" t="Include" />
       </e>
       <e p="BlackFieldInstruction.sln" t="IncludeFlat" />
+      <e p="Boxophobic.SkyboxCubemapExtended.Editor.csproj" t="IncludeRecursive" />
+      <e p="Boxophobic.Utils.Editor.csproj" t="IncludeRecursive" />
+      <e p="Boxophobic.Utils.Scripts.csproj" t="IncludeRecursive" />
       <e p="CFXRDemo.csproj" t="IncludeRecursive" />
       <e p="CFXREditor.csproj" t="IncludeRecursive" />
       <e p="CFXRRuntime.csproj" t="IncludeRecursive" />

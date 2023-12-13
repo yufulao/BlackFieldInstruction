@@ -57,7 +57,7 @@ public class CommandUICtrl : UICtrlBase
     /// <summary>
     /// 开始执行指令时控制ui
     /// </summary>
-    public void CommandUIOnBeginBattleExcuteCommand()
+    public void CommandUIOnBeginBattleExecuteCommand()
     {
         startBtn.gameObject.SetActive(false);
         usedScroll.gameObject.SetActive(false);
@@ -85,7 +85,7 @@ public class CommandUICtrl : UICtrlBase
     /// 每执行一次指令时调用的刷新左上角的当前时间显示
     /// </summary>
     /// <returns></returns>
-    public bool RefreshCacheCurrentTimeTextInExcuting()
+    public bool RefreshCacheCurrentTimeTextInExecuting()
     {
         _cacheCurrentTimeInExcuting++;
         currentTimeText.color = _cacheCurrentTimeInExcuting > _rowCfgStage.stageTime ? Color.red : Color.black;
@@ -95,10 +95,10 @@ public class CommandUICtrl : UICtrlBase
 
     protected override void BindEvent()
     {
-        startBtn.onClick.AddListener(BattleManager.Instance.ChangeToCommandExcuteState);
+        startBtn.onClick.AddListener(BattleManager.Instance.ChangeToCommandExecuteState);
         pauseBtn.onClick.AddListener(() => { });
         resetBtn.onClick.AddListener(ResetCommandUI);
-        cancelExcuteBtn.onClick.AddListener(BattleManager.Instance.ForceStopExcuteCommand);
+        cancelExcuteBtn.onClick.AddListener(BattleManager.Instance.ForceStopExecuteCommand);
     }
 
     /// <summary>

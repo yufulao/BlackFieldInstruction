@@ -45,6 +45,19 @@ public class GridManager : BaseSingleTon<GridManager>
     {
          return _gridModel.GetGridCell(x, z);
     }
+    public GridCell GetGridCell(Vector2Int vector2Int)
+    {
+        return _gridModel.GetGridCell(vector2Int.x, vector2Int.y);
+    }
+    
+    /// <summary>
+    /// 获取每格的长宽
+    /// </summary>
+    /// <returns></returns>
+    public float GetPerCellSize()
+    {
+        return _gridModel.GetPerCellSize();
+    }
 
     /// <summary>
     /// 网格坐标转世界坐标

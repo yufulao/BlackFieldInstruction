@@ -6,35 +6,23 @@ using DG.Tweening;
 
 public class BattleUnitPlayer : BattleUnit
 {
-    private Rigidbody _rb;
-    private Animator _animator;
+    [SerializeField]private Rigidbody _rb;
+    [SerializeField]private Animator _animator;
+    [SerializeField]private ForwardType _originalForwardType= ForwardType.Up;
     private ForwardType _currentForwardType;
-    private ForwardType _originalForwardType;
-    private Tweener _tweener;
+    private Sequence _sequence;
 
-    private BattleUnitInfo _unitInfo;//这个unitInfo只可读不可修改
-
-    public void InitPlayer(BattleUnitInfo unitInfo)
+    public override void OnUnitInit()
     {
-        _unitInfo = unitInfo;
-        _originalForwardType = ForwardType.Up;
-        _currentForwardType = _originalForwardType;
-        _rb = GetComponent<Rigidbody>();
-        _animator = GetComponent<Animator>();
+        base.OnUnitInit();
+        StartCoroutine(WaitForRotate(_originalForwardType,0f));
     }
 
-    public override void OnReset()
+    public override void OnUnitReset()
     {
-        base.OnReset();
-        StartCoroutine(WaitForRotate(_originalForwardType));
-    }
-
-    /// <summary>
-    /// 强制停止player的动画，强制结束指令执行时调用
-    /// </summary>
-    public void ForceStopPlayerTweener()
-    {
-        _tweener?.Pause();
+        base.OnUnitReset();
+        _sequence?.Kill();
+        StartCoroutine(WaitForRotate(_originalForwardType,0f));
     }
 
     /// <summary>
@@ -45,7 +33,7 @@ public class BattleUnitPlayer : BattleUnit
     /// <returns></returns>
     public IEnumerator MoveCommand(CommandType commandEnum,float during=1f)
     {
-        Vector2Int lastPoint=_unitInfo.currentPoint;
+        Vector2Int lastPoint=GridManager.Instance.GetPointByWorldPosition(transform.position);
         ForwardType targetForward = _currentForwardType;
         Vector2Int newPoint=lastPoint;
         switch (commandEnum)
@@ -71,29 +59,37 @@ public class BattleUnitPlayer : BattleUnit
                 break;
         }
         
-        yield return StartCoroutine(WaitForRotate(targetForward));
+        if (_currentForwardType!=targetForward)
+        {
+            yield return StartCoroutine(WaitForRotate(targetForward,0.3f));
+            during -= 0.3f;
+        }
         //Debug.Log(GridManager.Instance.CheckWalkable(targetPoint.x, targetPoint.y));
         // Debug.Log(newPoint.x+"  "+newPoint.y);
         if (BattleManager.Instance.CheckWalkable(newPoint.x, newPoint.y))
         {
-            BattleManager.Instance.UpdateUnitPoint(_unitInfo,lastPoint,newPoint);//更新GridObj
-            _tweener=_rb.DOMove(GridManager.Instance.GetWorldPositionByPoint(newPoint.x, newPoint.y), during);
+            _sequence?.Kill();
+            _sequence = DOTween.Sequence();
+            _sequence.Append(transform.DOMove(GridManager.Instance.GetWorldPositionByPoint(newPoint.x, newPoint.y), during));
+            _sequence.SetAutoKill(false);
             //Debug.Log(GridManager.Instance.GetWorldPositionByPoint(targetPoint.x, targetPoint.y));
-            yield return _tweener.WaitForCompletion();
+            yield return _sequence.WaitForCompletion();
         }
         else
         {
             yield return new WaitForSeconds(during);
         }
+        
+        BattleManager.Instance.UpdateUnitPoint(this);//更新GridObj
 
-        if (CommandManager.Instance.RefreshCacheCurrentTimeTextInExcuting())//如果超时了
+        if (CommandManager.Instance.RefreshCacheCurrentTimeTextInExecuting())//如果超时了
         {
             yield break;
         }
         
         if (!BattleManager.Instance.CheckPlayerGetTarget())
         {
-            CommandManager.Instance.ExcuteCommand();
+            CommandManager.Instance.ExecuteCommand();
         }
     }
     
@@ -103,29 +99,27 @@ public class BattleUnitPlayer : BattleUnit
     /// <param name="targetForward">目标方向</param>
     /// <param name="during">旋转时间</param>
     /// <returns></returns>
-    private IEnumerator WaitForRotate(ForwardType targetForward,float during=0.5f)
+    private IEnumerator WaitForRotate(ForwardType targetForward,float during=0.3f)
     {
-        if (_currentForwardType==targetForward)
-        {
-            yield break;
-        }
+        _sequence?.Kill();
+        _sequence = DOTween.Sequence();
         switch (targetForward)
         {
             case ForwardType.Up:
-                _tweener=transform.DORotate(new Vector3(0,0,0),during);
+                _sequence.Append(transform.DORotate(new Vector3(0,0,0),during)) ;
                 break;
             case ForwardType.Down:
-                _tweener=transform.DORotate(new Vector3(0,180,0),during);
+                _sequence.Append(transform.DORotate(new Vector3(0,180,0),during));
                 break;
             case ForwardType.Left:
-                _tweener=transform.DORotate(new Vector3(0,-90,0),during);
+                _sequence.Append(transform.DORotate(new Vector3(0,-90,0),during));
                 break;
             case ForwardType.Right:
-                _tweener=transform.DORotate(new Vector3(0,90,0),during);
+                _sequence.Append(transform.DORotate(new Vector3(0,90,0),during));
                 break;
         }
 
-        yield return _tweener.WaitForCompletion();
+        yield return _sequence.WaitForCompletion();
         _currentForwardType = targetForward;
     } 
     

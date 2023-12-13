@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFXRRuntime", "CFXRRuntime.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lofelt.NiceVibrations.Demo", "Lofelt.NiceVibrations.Demo.csproj", "{04f9258e-e029-1cf4-a377-828be4b25d4c}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boxophobic.Utils.Scripts", "Boxophobic.Utils.Scripts.csproj", "{c8c14a63-07f2-777d-3ca0-91e47981da14}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreMountains.Feedbacks.Cinemachine", "MoreMountains.Feedbacks.Cinemachine.csproj", "{9510d83d-15b6-07df-c3a2-bf0d2f3ad0f7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lofelt.NiceVibrations", "Lofelt.NiceVibrations.csproj", "{0ab8b95b-e3c8-e1f3-3295-5db272255a13}"
@@ -36,6 +38,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KinoBloom.Runtime", "KinoBloom.Runtime.csproj", "{e48343ee-a485-9e4d-e06a-dc7e711a22ab}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreMountains.Tools.Editor", "MoreMountains.Tools.Editor.csproj", "{3ccca8b4-0d8b-5c38-c1ea-cf1f3d7c8fbd}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boxophobic.Utils.Editor", "Boxophobic.Utils.Editor.csproj", "{83f5a22e-8f5c-1db8-3428-6b82b4ddbe13}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{8809fbfb-c809-95fa-d494-002634cf173e}"
 EndProject
@@ -50,6 +54,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlatKit.Utils.Editor", "FlatKit.Utils.Editor.csproj", "{6684a651-197d-ea38-d5b3-61f63f6ad2e1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToonyColorsPro.Demo.Editor", "ToonyColorsPro.Demo.Editor.csproj", "{2940040b-fd7f-e83c-1ef3-0efd7b12b76e}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boxophobic.SkyboxCubemapExtended.Editor", "Boxophobic.SkyboxCubemapExtended.Editor.csproj", "{8ca5092d-70c5-dafb-1ac6-93404119f553}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lofelt.NiceVibrations.Editor", "Lofelt.NiceVibrations.Editor.csproj", "{48ddaead-c625-2498-2bbb-51e03284e9f4}"
 EndProject
@@ -86,6 +92,8 @@ Global
 		{5d7b841b-192e-7a11-7787-d6f23d6d8601}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04f9258e-e029-1cf4-a377-828be4b25d4c}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{04f9258e-e029-1cf4-a377-828be4b25d4c}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{c8c14a63-07f2-777d-3ca0-91e47981da14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{c8c14a63-07f2-777d-3ca0-91e47981da14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9510d83d-15b6-07df-c3a2-bf0d2f3ad0f7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9510d83d-15b6-07df-c3a2-bf0d2f3ad0f7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0ab8b95b-e3c8-e1f3-3295-5db272255a13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -94,6 +102,8 @@ Global
 		{e48343ee-a485-9e4d-e06a-dc7e711a22ab}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3ccca8b4-0d8b-5c38-c1ea-cf1f3d7c8fbd}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3ccca8b4-0d8b-5c38-c1ea-cf1f3d7c8fbd}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83f5a22e-8f5c-1db8-3428-6b82b4ddbe13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83f5a22e-8f5c-1db8-3428-6b82b4ddbe13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8809fbfb-c809-95fa-d494-002634cf173e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8809fbfb-c809-95fa-d494-002634cf173e}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0d4d93f7-5b94-a01a-0e99-7925ff204890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -108,6 +118,8 @@ Global
 		{6684a651-197d-ea38-d5b3-61f63f6ad2e1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2940040b-fd7f-e83c-1ef3-0efd7b12b76e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2940040b-fd7f-e83c-1ef3-0efd7b12b76e}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ca5092d-70c5-dafb-1ac6-93404119f553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ca5092d-70c5-dafb-1ac6-93404119f553}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48ddaead-c625-2498-2bbb-51e03284e9f4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{48ddaead-c625-2498-2bbb-51e03284e9f4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection

@@ -3,20 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using Rabi;
 using Unity.VisualScripting;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
-public class BattleManager : BaseSingleTon<BattleManager>,IMonoManager
+public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
 {
     private RowCfgStage _rowCfgStage;
     private BattleFsm _battleFsm;
-    private bool _win;
     private BattleModel _model;
     private BattleView _view;
     private BattleUnitPlayer _player;
     private readonly List<BattleUnitTarget> _targetUnits = new List<BattleUnitTarget>();
     private readonly List<BattleUnit> _allUnits = new List<BattleUnit>();
-    private Dictionary<BattleUnit, BattleUnitInfo> _unitInfoDic = new Dictionary<BattleUnit, BattleUnitInfo>();
+    private readonly Dictionary<BattleUnit, BattleUnitInfo> _unitInfoDic = new Dictionary<BattleUnit, BattleUnitInfo>();
     private bool _hasInit;
+    private bool _win;
     private string _cacheStageName;
 
     public void OnInit()
@@ -35,22 +36,18 @@ public class BattleManager : BaseSingleTon<BattleManager>,IMonoManager
 
     public void Update()
     {
-        
     }
 
     public void FixedUpdate()
     {
-        
     }
 
     public void LateUpdate()
     {
-        
     }
 
     public void OnClear()
     {
-        
     }
 
     /// <summary>
@@ -67,10 +64,9 @@ public class BattleManager : BaseSingleTon<BattleManager>,IMonoManager
     /// <summary>
     /// 强制停止指令执行，给commandUICtrl绑定指令执行阶段的取消btn
     /// </summary>
-    public void ForceStopExcuteCommand()
+    public void ForceStopExecuteCommand()
     {
         CommandManager.Instance.StopAllCoroutines();
-        _player.ForceStopPlayerTweener();
         BattleEnd(false);
     }
 
@@ -98,7 +94,7 @@ public class BattleManager : BaseSingleTon<BattleManager>,IMonoManager
     /// <summary>
     /// 开始执行指令，预留给commandUICtrl注册_startBtn的click监听
     /// </summary>
-    public void ChangeToCommandExcuteState()
+    public void ChangeToCommandExecuteState()
     {
         _battleFsm.ChangeFsmState(typeof(BattleCommandExcuteState));
     }
@@ -106,10 +102,10 @@ public class BattleManager : BaseSingleTon<BattleManager>,IMonoManager
     /// <summary>
     /// battleCommandExcute阶段的enter
     /// </summary>
-    public void BattleCommandExcuteStateEnter()
+    public void BattleCommandExecuteStateEnter()
     {
-        CommandManager.Instance.CommandUIOnBeginExcuteCommand();
-        CommandManager.Instance.OnExcuteCommandStart();
+        CommandManager.Instance.CommandUIOnBeginExecuteCommand();
+        CommandManager.Instance.OnExecuteCommandStart();
     }
 
     /// <summary>
@@ -173,16 +169,29 @@ public class BattleManager : BaseSingleTon<BattleManager>,IMonoManager
     /// </summary>
     public bool CheckPlayerGetTarget()
     {
-        for (int i = 0; i < _targetUnits.Count; i++)
+        if (CheckCellForUnit(_player, UnitType.Target).Count != 0)
         {
-            if (_model.IsSameCurrentPoint(_unitInfoDic[_player], _unitInfoDic[_targetUnits[i]]))
-            {
-                BattleEnd(true);
-                return true;
-            }
+            BattleEnd(true);
+            return true;
         }
 
         return false;
+    }
+
+    public List<BattleUnit> CheckCellForUnit(BattleUnit unit, UnitType unitType)
+    {
+        BattleUnitInfo unitInfo = _unitInfoDic[unit];
+        List<BattleUnitInfo> cellInfos = _model.GetUnitInfoByGridCell(GridManager.Instance.GetGridCell(unitInfo.currentPoint));
+        List<BattleUnit> results = new List<BattleUnit>();
+        for (int i = 0; i < cellInfos.Count; i++)
+        {
+            if (cellInfos[i].unitType == unitType)
+            {
+                results.Add(GetUnitByUnitInfo(cellInfos[i]));
+            }
+        }
+
+        return results;
     }
 
     /// <summary>
@@ -194,6 +203,12 @@ public class BattleManager : BaseSingleTon<BattleManager>,IMonoManager
     public void UpdateUnitPoint(BattleUnitInfo unitInfo, Vector2Int lastPoint, Vector2Int newPoint)
     {
         _model.UpdateUnitPoint(unitInfo, lastPoint, newPoint);
+    }
+
+    public void UpdateUnitPoint(BattleUnit unit)
+    {
+        BattleUnitInfo info = _unitInfoDic[unit];
+        _model.UpdateUnitPoint(info, info.currentPoint, GridManager.Instance.GetPointByWorldPosition(unit.gameObject.transform.position));
     }
 
     /// <summary>
@@ -220,23 +235,13 @@ public class BattleManager : BaseSingleTon<BattleManager>,IMonoManager
         {
             //创建并添加数据
             Vector2Int objPoint = GridManager.Instance.GetPointByWorldPosition(gridObjList[i].transform.position);
-            BattleUnitInfo unitInfo = _model.CreatUnitInfo(objPoint);
+            BattleUnitInfo unitInfo = _model.CreatUnitInfo(gridObjList[i].unitType, objPoint);
             _allUnits.Add(gridObjList[i]);
             _model.AddGridCellUnitInfo(objPoint.x, objPoint.y, unitInfo);
+            SwitchUnitWhenLoadUnits(gridObjList[i], unitInfo);
 
             //初始化数据
-            gridObjList[i].OnInit();
-
-            if (gridObjList[i] is BattleUnitPlayer)
-            {
-                _player = (BattleUnitPlayer) gridObjList[i];
-                _player.InitPlayer(unitInfo);//player只能读取info不能修改info
-            }
-
-            if (gridObjList[i] is BattleUnitTarget)
-            {
-                _targetUnits.Add((BattleUnitTarget) gridObjList[i]);
-            }
+            gridObjList[i].OnUnitInit();
 
             if (_unitInfoDic.ContainsKey(gridObjList[i]))
             {
@@ -254,6 +259,24 @@ public class BattleManager : BaseSingleTon<BattleManager>,IMonoManager
     }
 
     /// <summary>
+    /// 特定unit的加载事件
+    /// </summary>
+    /// <param name="unit"></param>
+    /// <param name="info"></param>
+    private void SwitchUnitWhenLoadUnits(BattleUnit unit, BattleUnitInfo info)
+    {
+        switch (unit.unitType)
+        {
+            case UnitType.Player:
+                _player = unit.transform.GetComponent<BattleUnitPlayer>();
+                break;
+            case UnitType.Target:
+                _targetUnits.Add(unit.transform.GetComponent<BattleUnitTarget>());
+                break;
+        }
+    }
+
+    /// <summary>
     /// 重置所有unit
     /// </summary>
     private void ResetUnits()
@@ -261,16 +284,11 @@ public class BattleManager : BaseSingleTon<BattleManager>,IMonoManager
         //强制归位
         for (int i = 0; i < _allUnits.Count; i++)
         {
-            _allUnits[i].OnReset();
             BattleUnitInfo unitInfo = _unitInfoDic[_allUnits[i]];
-            if (_model.IsNoMove(unitInfo))
-            {
-                continue;
-            }
-
             _allUnits[i].gameObject.transform.position = GridManager.Instance.GetWorldPositionByPoint(unitInfo.originalPoint.x, unitInfo.originalPoint.y);
-            //Debug.Log(_allUnits[i].gameObject.name);
+            //Debug.Log(_allUnits[i].gameObject.name + "--->" + _allUnits[i].gameObject.transform.position);
             _model.ResetUnitInfo(unitInfo);
+            _allUnits[i].OnUnitReset();
         }
     }
 
@@ -284,6 +302,7 @@ public class BattleManager : BaseSingleTon<BattleManager>,IMonoManager
             Debug.LogError("battleManager的关卡名为空");
             return;
         }
+
         _rowCfgStage = ConfigManager.Instance.cfgStage[_cacheStageName];
     }
 
@@ -336,5 +355,52 @@ public class BattleManager : BaseSingleTon<BattleManager>,IMonoManager
 
         Debug.LogWarning("没有这个item的info" + unitInfo);
         return null;
+    }
+
+    /// <summary>
+    /// 生成一个unit
+    /// </summary>
+    /// <param name="unitPrefabName"></param>
+    /// <param name="unitType"></param>
+    /// <param name="point"></param>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
+    private T CreateUnit<T>(string unitPrefabName, UnitType unitType, Vector2Int point) where T : BattleUnit
+    {
+        T unit = GameObject.Instantiate(AssetManager.Instance.LoadAsset<GameObject>(ConfigManager.Instance.cfgPrefab[unitPrefabName].prefabPath)
+            , GridManager.Instance.GetWorldPositionByPoint(point.x, point.y), Quaternion.identity).GetComponent<T>();
+        unit.gameObject.transform.SetParent(GridManager.Instance.GetGridObjContainer());
+        BattleUnitInfo info = _model.CreatUnitInfo(unitType, point);
+        _allUnits.Add(unit);
+        _model.AddGridCellUnitInfo(point.x, point.y, info);
+        SwitchUnitWhenLoadUnits(unit, info);
+        //初始化数据
+        unit.OnUnitInit();
+
+        if (_unitInfoDic.ContainsKey(unit))
+        {
+            _unitInfoDic[unit] = info;
+        }
+        else
+        {
+            _unitInfoDic.Add(unit, info);
+        }
+
+        return unit;
+    }
+
+    /// <summary>
+    /// 销毁一个unit
+    /// </summary>
+    /// <param name="unit"></param>
+    private void DestoryUnit(BattleUnit unit) //对象池处理================================================================================================
+    {
+        BattleUnitInfo info = _unitInfoDic[unit];
+        Vector2Int infoCurrentPoint = info.currentPoint;
+        _model.RemoveGridCellUnitInfo(infoCurrentPoint.x, infoCurrentPoint.y, info);
+        _unitInfoDic.Remove(unit);
+        _allUnits.Remove(unit);
+        unit.OnUnitDestroy();
+        GameObject.Destroy(unit.gameObject);
     }
 }

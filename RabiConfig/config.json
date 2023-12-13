@@ -1,7 +1,7 @@
 {
     "MANAGER_NAME": "ConfigManager.cs",
     "MANAGER_TARGET_FOLDER": "../Assets/Scripts/Core/Manager/ConfigManager",
-    "XLSX_FOLDER": "./xlsx",
+    "XLSX_FOLDER": "./xlsx/",
     "DATA_TARGET_FOLDER": "../Assets/AddressableAssets/Config",
     "SCRIPTS_TARGET_FOLDER": "../Assets/Scripts/Config",
     "MANAGER_PATH": "../Assets/Scripts/Core/Manager/ConfigManager/ConfigManager.cs",
