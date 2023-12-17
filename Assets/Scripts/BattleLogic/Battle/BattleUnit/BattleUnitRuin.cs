@@ -19,10 +19,14 @@ public class BattleUnitRuin : BattleUnit
         yield return base.CheckOverlap();
         if (currentActive)
         {
-            CheckCellAfterActive();
+            CheckUnit();
         }
     }
 
+    /// <summary>
+    /// 设置废墟obj的可见状态，同时设置walkable
+    /// </summary>
+    /// <param name="active"></param>
     public void SetRuinActive(bool active)
     {
         currentActive = active;
@@ -31,7 +35,10 @@ public class BattleUnitRuin : BattleUnit
         SetVfxActive(active);
     }
 
-    private void CheckCellAfterActive()
+    /// <summary>
+    /// 检测特定unit
+    /// </summary>
+    private void CheckUnit()
     {
         BattleManager.Instance.CheckCellForUnit<BattleUnitFire>(this, UnitType.Fire, (fires) =>
         {
@@ -49,6 +56,10 @@ public class BattleUnitRuin : BattleUnit
         });
     }
 
+    /// <summary>
+    /// 播放和停止废墟倒塌的特效
+    /// </summary>
+    /// <param name="active"></param>
     private void SetVfxActive(bool active)
     {
         if (active)

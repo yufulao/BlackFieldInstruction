@@ -49,7 +49,7 @@ public class BattleUnitPlayer : BattleUnit
     }
 
     /// <summary>
-    /// player移动指令
+    /// 计算当前指令的目标坐标点
     /// </summary>
     /// <param name="commandEnum">指令类型</param>
     /// <returns></returns>
@@ -91,6 +91,10 @@ public class BattleUnitPlayer : BattleUnit
         _cacheTargetPoint = targetPoint;
     }
 
+    /// <summary>
+    /// 每次执行指令时
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator ExecuteEveryCommand()
     {
         if (car != null)
@@ -108,6 +112,10 @@ public class BattleUnitPlayer : BattleUnit
         yield return Move(_cacheTargetPoint, during);
     }
 
+    /// <summary>
+    /// 刷新player的可见状态
+    /// </summary>
+    /// <param name="active"></param>
     public void RefreshPlayerObjActive(bool active)
     {
         playerObj.SetActive(active);
@@ -117,6 +125,9 @@ public class BattleUnitPlayer : BattleUnit
         }
     }
 
+    /// <summary>
+    /// 重置unit
+    /// </summary>
     private void ResetAll()
     {
         RefreshPlayerObjActive(true);
@@ -125,6 +136,12 @@ public class BattleUnitPlayer : BattleUnit
         StartCoroutine(WaitForRotate(originalForwardType, 0f));
     }
 
+    /// <summary>
+    /// 执行移动
+    /// </summary>
+    /// <param name="targetPoint"></param>
+    /// <param name="during"></param>
+    /// <returns></returns>
     private IEnumerator Move(Vector2Int targetPoint, float during)
     {
         if (!CheckBeforePlayerMove(targetPoint)) //移动前检测

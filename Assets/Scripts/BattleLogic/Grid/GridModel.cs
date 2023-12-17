@@ -25,6 +25,10 @@ public class GridModel
         CreatMap();
     }
 
+    /// <summary>
+    /// 获取每个地块的实际长度(宽度)
+    /// </summary>
+    /// <returns></returns>
     public float GetPerCellSize()
     {
         return _cellSize;
@@ -55,6 +59,12 @@ public class GridModel
         return new Vector3(x * _cellSize, y, z * _cellSize);
     }
 
+    /// <summary>
+    /// 通过坐标点x和z，获取地块cell
+    /// </summary>
+    /// <param name="x"></param>
+    /// <param name="z"></param>
+    /// <returns></returns>
     public GridCell GetGridCell(int x, int z)
     {
         return _map[x, z];

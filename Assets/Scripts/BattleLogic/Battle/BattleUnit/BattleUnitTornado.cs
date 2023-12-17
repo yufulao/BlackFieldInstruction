@@ -50,7 +50,7 @@ public class BattleUnitTornado : BattleUnit
     public override IEnumerator CheckOverlap()
     {
         yield return base.CheckOverlap();
-        CheckCurrentPoint();
+        CheckUnit();
     }
 
     public override IEnumerator Calculate(CommandType commandType)
@@ -59,6 +59,9 @@ public class BattleUnitTornado : BattleUnit
         ResetTweener();
     }
 
+    /// <summary>
+    /// 重置unit
+    /// </summary>
     private void ResetAll()
     {
         _cacheDelayTime = delayTime;
@@ -66,6 +69,9 @@ public class BattleUnitTornado : BattleUnit
         ResetTweener();
     }
 
+    /// <summary>
+    /// 重置tweener
+    /// </summary>
     private void ResetTweener()
     {
         _cacheLastPosition = transform.position;
@@ -76,6 +82,9 @@ public class BattleUnitTornado : BattleUnit
         _sequence.SetAutoKill(false);
     }
 
+    /// <summary>
+    /// 当第一条指令开始执行时，应用是否一开始就可以自动移动
+    /// </summary>
     private void OnCommandMainStart()
     {
         if (moveOnStart)
@@ -84,6 +93,10 @@ public class BattleUnitTornado : BattleUnit
         }
     }
 
+    /// <summary>
+    /// 每次执行指令时
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator ActionEveryExecute()
     {
         if (!_hasStartMove)
@@ -102,6 +115,10 @@ public class BattleUnitTornado : BattleUnit
         BattleManager.Instance.UpdateUnitPoint(this);
     }
 
+    /// <summary>
+    /// 计算下一个指令执行时的目标坐标点
+    /// </summary>
+    /// <returns></returns>
     private Vector3 CalculateNextTargetPosition()
     {
         Vector3 targetPosition = transform.position;
@@ -133,6 +150,10 @@ public class BattleUnitTornado : BattleUnit
         return targetPosition;
     }
 
+    /// <summary>
+    /// 调头前先设置改变当前朝向，再应用当前朝向的动画
+    /// </summary>
+    /// <returns></returns>
     private Vector3 TurnRound()
     {
         switch (_currentForward)
@@ -151,10 +172,13 @@ public class BattleUnitTornado : BattleUnit
                 break;
         }
 
-        return CalculateNextTargetPosition();
+        return CalculateNextTargetPosition();//应用当前朝向的动画
     }
 
-    private void CheckCurrentPoint()
+    /// <summary>
+    /// 检测特定unit
+    /// </summary>
+    private void CheckUnit()
     {
         if (BattleManager.Instance.CheckCellForUnit<BattleUnitPlayer>(this, UnitType.Player))
         {

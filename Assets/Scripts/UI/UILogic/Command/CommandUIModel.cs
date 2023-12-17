@@ -23,6 +23,10 @@ public class CommandUIModel
         _waitingItemInfoList = originalItemInfoList;
     }
 
+    /// <summary>
+    /// 重置model
+    /// </summary>
+    /// <param name="originalItemInfoList"></param>
     public void ResetModel(List<WaitingItemInfo> originalItemInfoList)
     {
         _usedItemInfoList.Clear();
@@ -34,7 +38,7 @@ public class CommandUIModel
     /// 获取usedCommandList
     /// </summary>
     /// <returns></returns>
-    public List<UsedItemInfo> GetUsedItemList()
+    public List<UsedItemInfo> GetUsedItemList()//可以优化==============================================================================================================================
     {
         List<UsedItemInfo> usedItemInfoList = new List<UsedItemInfo>();
         for (int i = 0; i < _usedItemInfoList.Count; i++)

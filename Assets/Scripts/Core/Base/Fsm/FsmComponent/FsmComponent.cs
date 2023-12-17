@@ -44,6 +44,10 @@ public class FsmComponent<Owner>
         _currentFsmState?.OnUpdate(_owner);
     }
 
+    /// <summary>
+    /// 创建fsm组件
+    /// </summary>
+    /// <param name="owner"></param>
     public FsmComponent(Owner owner)
     {
         _owner = owner;

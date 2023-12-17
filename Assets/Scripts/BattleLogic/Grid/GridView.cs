@@ -8,6 +8,10 @@ public class GridView:MonoBehaviour
     [SerializeField] private Transform gridObjContainer;
     public bool debugShow;//是否显示辅助线
 
+    /// <summary>
+    /// 获取所有unit的container
+    /// </summary>
+    /// <returns></returns>
     public Transform GetGridObjContainer()
     {
         return gridObjContainer;

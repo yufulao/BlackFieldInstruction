@@ -22,6 +22,10 @@ public class BattleUnitPeople : BattleUnit
         ResetAll();
     }
 
+    /// <summary>
+    /// 设置人群的状态
+    /// </summary>
+    /// <param name="active"></param>
     public void SetPeopleActive(bool active)
     {
         if (currentActive!=active)
@@ -31,13 +35,12 @@ public class BattleUnitPeople : BattleUnit
         }
     }
 
+    /// <summary>
+    /// 重置unit
+    /// </summary>
     private void ResetAll()
     {
         SetPeopleActive(originalActive);
     }
-
-    // private void Update()
-    // {
-    //     Debug.Log(peopleObj.activeInHierarchy);
-    // }
+    
 }

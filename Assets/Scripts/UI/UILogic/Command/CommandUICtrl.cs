@@ -92,7 +92,7 @@ public class CommandUICtrl : UICtrlBase
         currentTimeText.text = _cacheCurrentTimeInExcuting.ToString();
         return _cacheCurrentTimeInExcuting > _rowCfgStage.stageTime;
     }
-
+    
     protected override void BindEvent()
     {
         startBtn.onClick.AddListener(BattleManager.Instance.ChangeToCommandExecuteState);

@@ -55,6 +55,9 @@ public class CommandManager : MonoSingleton<CommandManager>
         _commandFsm.ChangeFsmState(typeof(CommandMainStartState));
     }
 
+    /// <summary>
+    /// 第一条指令开始执行前的状态enter
+    /// </summary>
     public void CommandMainStartStateEnter()
     {
         PrepareCommand();
@@ -62,11 +65,18 @@ public class CommandManager : MonoSingleton<CommandManager>
         _commandFsm.ChangeFsmState(typeof(CommandCalculateState));
     }
 
+    /// <summary>
+    /// unit计算targetPoint阶段的enter
+    /// </summary>
     public void CommandCalculateStateEnter()
     {
         _fsmCoroutine = StartCoroutine(ICommandCalculateStateEnter());
     }
 
+    /// <summary>
+    /// 等待全部unit计算结束时，进入指令执行开始时状态
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator ICommandCalculateStateEnter()
     {
         _calculateList.Clear();
@@ -88,16 +98,26 @@ public class CommandManager : MonoSingleton<CommandManager>
         _commandFsm.ChangeFsmState(typeof(CommandExecuteStartState));
     }
 
+    /// <summary>
+    /// 指令开始执行时的状态，暂无，直接跳转到指令执行中阶段
+    /// </summary>
     public void CommandExecuteStartStateEnter()
     {
         _commandFsm.ChangeFsmState(typeof(CommandExecutingState));
     }
 
+    /// <summary>
+    /// 指令执行中阶段的enter，相当于开始执行指令时
+    /// </summary>
     public void CommandExecutingStateEnter()
     {
         _fsmCoroutine = StartCoroutine(ICommandExecutingStateEnter());
     }
 
+    /// <summary>
+    /// 等待所有unit都执行完指令，才进入检查重叠unit，检测特定unit阶段
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator ICommandExecutingStateEnter()
     {
         _executeList.Clear();
@@ -117,11 +137,18 @@ public class CommandManager : MonoSingleton<CommandManager>
         _commandFsm.ChangeFsmState(typeof(CommandCheckOverlapState));
     }
 
+    /// <summary>
+    /// unit检测特定unit阶段enter
+    /// </summary>
     public void CommandCheckOverlapStateEnter()
     {
         _fsmCoroutine = StartCoroutine(ICommandCheckOverlapStateEnter());
     }
 
+    /// <summary>
+    /// 等待所有unit都检测完特定unit才进入指令执行结束阶段
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator ICommandCheckOverlapStateEnter()
     {
         _checkOverlapList.Clear();
@@ -141,6 +168,9 @@ public class CommandManager : MonoSingleton<CommandManager>
         _commandFsm.ChangeFsmState(typeof(CommandExecuteEndState));
     }
 
+    /// <summary>
+    /// 指令执行结束阶段的enter
+    /// </summary>
     public void CommandExecuteEndStateEnter()
     {
         if (_viewCtrl.RefreshCacheCurrentTimeTextInExecuting()) //更新左上角时间，如果超时
@@ -161,6 +191,9 @@ public class CommandManager : MonoSingleton<CommandManager>
         _commandFsm.ChangeFsmState(typeof(CommandCalculateState));
     }
 
+    /// <summary>
+    /// 所有指令都执行完毕时
+    /// </summary>
     public void CommandMainEndStateEnter()
     {
         if (_fsmCoroutine != null)
@@ -169,13 +202,16 @@ public class CommandManager : MonoSingleton<CommandManager>
         }
     }
 
+    /// <summary>
+    /// 强制停止指令执行阶段，切换到所有指令都执行结束阶段
+    /// </summary>
     public void ForceChangeToMainEnd()
     {
         _commandFsm.ChangeFsmState(typeof(CommandMainEndState));
     }
 
     /// <summary>
-    /// 预处理指令集
+    /// 预处理指令集，把usedCommand里所有的指令都加载到list中
     /// </summary>
     private void PrepareCommand()
     {
@@ -196,6 +232,9 @@ public class CommandManager : MonoSingleton<CommandManager>
         //Debug.Log(_usedCommandList.Count);
     }
 
+    /// <summary>
+    /// 初始化commandManager的状态机
+    /// </summary>
     private void InitCommandFsm()
     {
         _commandFsm = FsmManager.Instance.GetFsmByName<CommandFsm>("CommandManager");

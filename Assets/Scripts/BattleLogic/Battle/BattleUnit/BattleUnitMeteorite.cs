@@ -47,6 +47,9 @@ public class BattleUnitMeteorite : BattleUnit
         yield return ActionEveryExecute();
     }
 
+    /// <summary>
+    /// 在指令一开始时应用，是否一开始就下落陨石
+    /// </summary>
     private void OnCommandMainStart()
     {
         if (fallOnStart)
@@ -55,6 +58,9 @@ public class BattleUnitMeteorite : BattleUnit
         }
     }
 
+    /// <summary>
+    /// 重置unit
+    /// </summary>
     private void ResetAll()
     {
         _hasStartFall = false;
@@ -66,6 +72,9 @@ public class BattleUnitMeteorite : BattleUnit
         ResetTweener();
     }
 
+    /// <summary>
+    /// 重新设置tweener
+    /// </summary>
     private void ResetTweener()
     {
         _sequence?.Kill();
@@ -76,6 +85,10 @@ public class BattleUnitMeteorite : BattleUnit
         _sequence.SetAutoKill(false);
     }
 
+    /// <summary>
+    /// 每次执行指令时
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator ActionEveryExecute()
     {
         if (!_hasStartFall)

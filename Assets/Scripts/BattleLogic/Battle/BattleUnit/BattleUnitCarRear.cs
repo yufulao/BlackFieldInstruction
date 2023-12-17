@@ -50,6 +50,10 @@ public class BattleUnitCarRear : BattleUnit
         }
     }
 
+    /// <summary>
+    /// 每次执行指令时
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator ExecuteEveryCommand()
     {
         if (_player == null)
@@ -100,6 +104,11 @@ public class BattleUnitCarRear : BattleUnit
         _player.RefreshPlayerObjActive(false);
     }
 
+    /// <summary>
+    /// 执行调头还是下车
+    /// </summary>
+    /// <param name="commandForward"></param>
+    /// <returns></returns>
     private IEnumerator TurnAroundOrGetOff(ForwardType commandForward)
     {
         //_currentForward != targetForward;
@@ -145,6 +154,10 @@ public class BattleUnitCarRear : BattleUnit
         yield return GetOff(commandForward);
     }
 
+    /// <summary>
+    /// 执行行驶
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator Drive()
     {
         Vector2Int rearTargetPoint = Vector2Int.zero;
@@ -173,6 +186,11 @@ public class BattleUnitCarRear : BattleUnit
         yield return _sequence.WaitForCompletion();
     }
 
+    /// <summary>
+    /// 执行调头
+    /// </summary>
+    /// <param name="targetForwardType"></param>
+    /// <returns></returns>
     private IEnumerator TurnAround(ForwardType targetForwardType)
     {
         Vector2Int frontTargetPoint = Vector2Int.zero;
@@ -190,6 +208,11 @@ public class BattleUnitCarRear : BattleUnit
         yield return new WaitForSeconds(1f);
     }
 
+    /// <summary>
+    /// 执行下车
+    /// </summary>
+    /// <param name="targetForward"></param>
+    /// <returns></returns>
     private IEnumerator GetOff(ForwardType targetForward)
     {
         Vector2Int getOffPoint = GridManager.Instance.GetPointByWorldPosition(carFront.transform.position);
@@ -260,7 +283,7 @@ public class BattleUnitCarRear : BattleUnit
     }
 
     /// <summary>
-    /// 检查是否符合车朝向的两格移动
+    /// 检测车是行驶两格还是一格还是不能行驶，返回可不可以行驶
     /// </summary>
     /// <returns></returns>
     private bool IfCanDrive(Action<Vector2Int,Vector2Int> callback)
@@ -340,24 +363,39 @@ public class BattleUnitCarRear : BattleUnit
         return BattleManager.Instance.CheckWalkable(carFrontTargetPoint);
     }
 
+    /// <summary>
+    /// 调头失败
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator TurnAroundFail()
     {
         transform.DOShakePosition(0.2f, 0.1f, 1, 0.1f, true);
         yield return new WaitForSeconds(1f);
     }
 
+    /// <summary>
+    /// 行驶失败
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator DriveFail()
     {
         transform.DOShakePosition(0.5f);
         yield return new WaitForSeconds(1f);
     }
 
+    /// <summary>
+    /// 下车失败
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator GetOffFail()
     {
         transform.DOShakePosition(0.5f);
         yield return new WaitForSeconds(1f);
     }
 
+    /// <summary>
+    /// 刷新车obj的朝向和位置
+    /// </summary>
     private void RefreshCarObj()
     {
         switch (_currentForward)
@@ -384,6 +422,9 @@ public class BattleUnitCarRear : BattleUnit
         //Debug.Log(_currentForward);
     }
 
+    /// <summary>
+    /// 重置unit
+    /// </summary>
     private void ResetAll()
     {
         //车头车尾 已归位

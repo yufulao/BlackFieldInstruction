@@ -172,11 +172,24 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
         return true;
     }
 
+    /// <summary>
+    /// 检测当前坐标点是否可以通过
+    /// </summary>
+    /// <param name="point"></param>
+    /// <returns></returns>
     public bool CheckWalkable(Vector2Int point)
     {
         return CheckWalkable(point.x, point.y);
     }
 
+    /// <summary>
+    /// 检测传入的unit的当前地块上是否有T的unit
+    /// </summary>
+    /// <param name="unit"></param>
+    /// <param name="unitType"></param>
+    /// <param name="callback"></param>
+    /// <typeparam name="T">有的话就通过回调返回T的unitList</typeparam>
+    /// <returns></returns>
     public bool CheckCellForUnit<T>(BattleUnit unit, UnitType unitType, Action<List<T>> callback = null) where T : BattleUnit
     {
         BattleUnitInfo unitInfo = _unitInfoDic[unit];
@@ -203,6 +216,14 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
         return false;
     }
     
+    /// <summary>
+    /// 检测传入的地块上是否有T的unit
+    /// </summary>
+    /// <param name="orderPoint"></param>
+    /// <param name="unitType"></param>
+    /// <param name="callback"></param>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
     public bool CheckCellForOrderPoint<T>(Vector2Int orderPoint, UnitType unitType, Action<List<T>> callback = null) where T : BattleUnit
     {
         if (!GridManager.Instance.CheckPointValid(orderPoint.x,orderPoint.y))
@@ -233,7 +254,7 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
     }
 
     /// <summary>
-    /// 更新单个GridCell
+    /// 更新单个GridCell，三个重载
     /// </summary>
     /// <param name="unitInfo">需要更新的gridObject</param>
     /// <param name="lastPoint">更新之前的point坐标</param>
@@ -253,6 +274,10 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
         _model.UpdateUnitPoint(info, info.currentPoint, GridManager.Instance.GetPointByWorldPosition(unit.gameObject.transform.position));
     }
 
+    /// <summary>
+    /// 获取所有unit
+    /// </summary>
+    /// <returns></returns>
     public List<BattleUnit> GetAllUnit()
     {
         return _allUnits;

@@ -27,6 +27,10 @@ public class UIDragComponent : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     private bool _hadSetValidDrag; //是否已经设置了有效拖拽
 
 
+    /// <summary>
+    /// 初始化拖拽组件，需要手动初始化
+    /// </summary>
+    /// <param name="onDragParent"></param>
     public void InitDragComponent(Transform onDragParent)
     {
         _canvasGroup = gameObject.GetComponent<CanvasGroup>();
@@ -36,6 +40,12 @@ public class UIDragComponent : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         _dragRectTransform = _cacheObjOnDrag.GetComponent<RectTransform>();
     }
 
+    /// <summary>
+    /// 设置拖拽的事件，包括过滤器，开始拖拽，拖拽结束
+    /// </summary>
+    /// <param name="filter"></param>
+    /// <param name="onBeginDrag"></param>
+    /// <param name="onEndDrag"></param>
     public void SetDragAction(Func<GameObject, bool> filter, Action<PointerEventData> onBeginDrag = null, Action<List<GameObject>,bool> onEndDrag = null)
     {
         _filter = filter;
@@ -43,6 +53,12 @@ public class UIDragComponent : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         _onEndDrag = onEndDrag;
     }
 
+    /// <summary>
+    /// 设置当前是否是有效拖拽，（有效拖拽即拖拽的是目标ui）
+    /// </summary>
+    /// <param name="invalidBeginDragDispatch"></param>
+    /// <param name="invalidOnDragDispatch"></param>
+    /// <param name="invalidEndDragDispatch"></param>
     public void SetInvalidDragAction(Action<PointerEventData> invalidBeginDragDispatch = null, Action<PointerEventData> invalidOnDragDispatch = null,
         Action<PointerEventData> invalidEndDragDispatch = null)
     {
@@ -51,6 +67,10 @@ public class UIDragComponent : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         _invalidEndDragDispatch = invalidEndDragDispatch;
     }
 
+    /// <summary>
+    /// 开始拖拽时
+    /// </summary>
+    /// <param name="eventData"></param>
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (_graphic)
@@ -65,6 +85,10 @@ public class UIDragComponent : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         _onBeginDrag?.Invoke(eventData);
     }
 
+    /// <summary>
+    /// 拖拽过程中
+    /// </summary>
+    /// <param name="eventData"></param>
     public void OnDrag(PointerEventData eventData)
     {
         //最小输入
@@ -72,7 +96,7 @@ public class UIDragComponent : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         {
             if (Vector2.Distance(eventData.position, _originalPos) > validDragDistance)
             {
-                SetValidDragging(eventData);
+                SetValidDragging(eventData);//设置本次拖拽事件，是否是无效拖拽
                 _hadSetValidDrag = true;
             }
 
@@ -95,6 +119,10 @@ public class UIDragComponent : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         _dragRectTransform.position = eventData.position;
     }
 
+    /// <summary>
+    /// 拖拽结束时
+    /// </summary>
+    /// <param name="eventData"></param>
     public void OnEndDrag(PointerEventData eventData)
     {
         if (!_isValidDragging)
@@ -120,6 +148,10 @@ public class UIDragComponent : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         _onEndDrag?.Invoke(Filtrate(results),true);//true指的是，是validDrag
     }
 
+    /// <summary>
+    /// 设置本次拖拽事件，是否是无效拖拽
+    /// </summary>
+    /// <param name="eventData"></param>
     private void SetValidDragging(PointerEventData eventData)
     {
         //偏移向量
@@ -157,6 +189,11 @@ public class UIDragComponent : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         _onEndDrag?.Invoke(Filtrate(results),false);//false指的是，不是validDrag
     }
 
+    /// <summary>
+    /// 结束拖拽时，过滤不需要的ui穿透的结果
+    /// </summary>
+    /// <param name="results"></param>
+    /// <returns></returns>
     private List<GameObject> Filtrate(List<RaycastResult> results)
     {
         for (int i = 0; i < results.Count; i++)

@@ -83,6 +83,13 @@ public class UIManager : BaseSingleTon<UIManager>, IMonoManager
         ctrl.CloseRoot();
     }
 
+    /// <summary>
+    /// 获取ui的controller
+    /// </summary>
+    /// <param name="windowName"></param>
+    /// <param name="param"></param>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
     public T GetCtrl<T>(string windowName, params object[] param) where T : UICtrlBase
     {
         if (_allViews.ContainsKey(windowName))
@@ -93,6 +100,13 @@ public class UIManager : BaseSingleTon<UIManager>, IMonoManager
         return (T)CreatNewView<T>(windowName, param);
     }
 
+    /// <summary>
+    /// 创建一个新的ui
+    /// </summary>
+    /// <param name="windowName"></param>
+    /// <param name="param"></param>
+    /// <typeparam name="T"></typeparam>
+    /// <returns></returns>
     private T CreatNewView<T>(string windowName, params object[] param) where T : UICtrlBase
     {
         RowCfgUI rowCfgUi = _cfgUI[windowName];

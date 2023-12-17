@@ -65,7 +65,10 @@ public class StageSelectUICtrl : UICtrlBase
         }
     }
 
-
+    /// <summary>
+    /// 创建一个关卡item
+    /// </summary>
+    /// <returns></returns>
     private StageItem CreateStageItem()
     {
         return Instantiate(AssetManager.Instance.LoadAsset<GameObject>(ConfigManager.Instance.cfgPrefab["StageItem"].prefabPath)

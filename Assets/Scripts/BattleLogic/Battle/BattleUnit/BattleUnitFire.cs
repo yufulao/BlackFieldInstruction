@@ -25,10 +25,14 @@ public class BattleUnitFire : BattleUnit
         yield  return base.CheckOverlap();
         if (currentActive)
         {
-            CheckCellAfterActive();
+            CheckUnit();
         }
     }
 
+    /// <summary>
+    /// 设置火的状态
+    /// </summary>
+    /// <param name="active"></param>
     public void SetFireActive(bool active)
     {
         if (currentActive!=active)
@@ -38,11 +42,18 @@ public class BattleUnitFire : BattleUnit
         }
     }
 
+    /// <summary>
+    /// 重置unit
+    /// </summary>
     private void ResetAll()
     {
         SetVfxActive(originalActive);
     }
 
+    /// <summary>
+    /// 开启或关闭火的特效
+    /// </summary>
+    /// <param name="active"></param>
     private void SetVfxActive(bool active)
     {
         if (active)
@@ -53,7 +64,10 @@ public class BattleUnitFire : BattleUnit
         fireVfx.Stop();
     }
     
-    private void CheckCellAfterActive()
+    /// <summary>
+    /// 检测特定unit
+    /// </summary>
+    private void CheckUnit()
     {
         BattleManager.Instance.CheckCellForUnit<BattleUnitPeople>(this, UnitType.People, (people) =>
         {

@@ -59,35 +59,55 @@ public class BattleUnitBrokenBuilding : BattleUnit
         }
     }
     
+    /// <summary>
+    /// 获取是否这一格是否可以移动
+    /// </summary>
+    /// <returns></returns>
     public bool GetWalkable()
     {
         return currentStateType == BrokenBuildingStateType.Ruin || currentStateType == BrokenBuildingStateType.Clean;
     }
 
+    /// <summary>
+    /// 完好建筑状态enter
+    /// </summary>
     public void BuildingUnbrokenStateEnter()
     {
         unBrokenBuilding.SetActive(true);
         brokenBuilding.SetActive(false);
     }
 
+    /// <summary>
+    /// 破损建筑状态enter
+    /// </summary>
     public void BuildingBrokenStateEnter()
     {
         unBrokenBuilding.SetActive(false);
         brokenBuilding.SetActive(true);
     }
 
+    /// <summary>
+    /// 废墟状态enter
+    /// </summary>
     public void BuildingRuinStateEnter()
     {
         brokenBuilding.SetActive(false);
         ruinUnit.SetRuinActive(true);
     }
 
+    /// <summary>
+    /// 废墟清除后状态enter
+    /// </summary>
     public void BuildingCleanStateEnter()
     {
         ruinUnit.gameObject.SetActive(false);
         ruinUnit.SetRuinActive(false);
     }
 
+    /// <summary>
+    /// 破坏建筑
+    /// </summary>
+    /// <param name="forwardType"></param>
     public void BrokenBuilding(ForwardType forwardType)
     {
         switch (currentStateType)
@@ -105,6 +125,10 @@ public class BattleUnitBrokenBuilding : BattleUnit
         }
     }
 
+    /// <summary>
+    /// 完好建筑变到破损建筑
+    /// </summary>
+    /// <param name="forwardType"></param>
     private void ToBroken(ForwardType forwardType)
     {
         currentStateType = BrokenBuildingStateType.Broken;
@@ -112,6 +136,10 @@ public class BattleUnitBrokenBuilding : BattleUnit
         _fsm.ChangeFsmState(typeof(BuildingBrokenState));
     }
     
+    /// <summary>
+    /// 破损建筑变到废墟
+    /// </summary>
+    /// <param name="forwardType"></param>
     private void ToRuin(ForwardType forwardType)
     {
         walkable = true;
@@ -139,12 +167,18 @@ public class BattleUnitBrokenBuilding : BattleUnit
         _fsm.ChangeFsmState(typeof(BuildingRuinState));
     }
 
+    /// <summary>
+    /// 废墟变到清除
+    /// </summary>
     private void ToClean()
     {
         currentStateType = BrokenBuildingStateType.Clean;
         _fsm.ChangeFsmState(typeof(BuildingCleanState));
     }
 
+    /// <summary>
+    /// 初始化状态机
+    /// </summary>
     private void InitFsm()
     {
         _fsm = new FsmComponent<BattleUnitBrokenBuilding>(this);
@@ -157,6 +191,9 @@ public class BattleUnitBrokenBuilding : BattleUnit
         //fsm此时处于挂起状态，没有state
     }
 
+    /// <summary>
+    /// 重置unit
+    /// </summary>
     private void ResetAll()
     {
         walkable = false;
@@ -168,6 +205,9 @@ public class BattleUnitBrokenBuilding : BattleUnit
         ResetFsm();
     }
     
+    /// <summary>
+    /// 重置状态机
+    /// </summary>
     private void ResetFsm()
     {
         switch (currentStateType)
