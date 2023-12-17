@@ -6,15 +6,18 @@ using UnityEngine;
 public class BattleUnitBrokenBuilding : BattleUnit
 {
     [SerializeField] private BrokenBuildingStateType originalStateType;
-    [SerializeField] private float timeFromRuinToClean;
+    [SerializeField] private int timeToRuin;
+    [SerializeField] private int timeToClean;
     [HideInInspector] public BrokenBuildingStateType currentStateType;
-
+    [SerializeField] private ForwardType forwardForBrokenAtStart;
     [SerializeField] private BattleUnitRuin ruinUnit;
     [SerializeField] private GameObject unBrokenBuilding;
     [SerializeField] private GameObject brokenBuilding;
-
-
+    
     private FsmComponent<BattleUnitBrokenBuilding> _fsm;
+    private ForwardType _cacheForward;
+    private int _cacheTimeToRuin;
+    private int _cacheTimeToClean;
 
     private void Update()
     {
@@ -34,6 +37,33 @@ public class BattleUnitBrokenBuilding : BattleUnit
         ResetAll();
     }
 
+    public override IEnumerator Execute()
+    {
+        yield return base.Execute();
+        switch (currentStateType)
+        {
+            case BrokenBuildingStateType.Broken:
+                _cacheTimeToRuin--;
+                if (_cacheTimeToRuin<0)
+                {
+                    ToRuin(_cacheForward);
+                }
+                break;
+            case BrokenBuildingStateType.Ruin:
+                _cacheTimeToClean--;
+                if (_cacheTimeToClean<0)
+                {
+                    ToClean();
+                }
+                break;
+        }
+    }
+    
+    public bool GetWalkable()
+    {
+        return currentStateType == BrokenBuildingStateType.Ruin || currentStateType == BrokenBuildingStateType.Clean;
+    }
+
     public void BuildingUnbrokenStateEnter()
     {
         unBrokenBuilding.SetActive(true);
@@ -48,7 +78,8 @@ public class BattleUnitBrokenBuilding : BattleUnit
 
     public void BuildingRuinStateEnter()
     {
-        StartCoroutine(RuinToClean());
+        brokenBuilding.SetActive(false);
+        ruinUnit.SetRuinActive(true);
     }
 
     public void BuildingCleanStateEnter()
@@ -62,10 +93,10 @@ public class BattleUnitBrokenBuilding : BattleUnit
         switch (currentStateType)
         {
             case BrokenBuildingStateType.Unbroken:
-                UnbrokenToBroken();
+                ToBroken(forwardType);
                 break;
             case BrokenBuildingStateType.Broken:
-                BrokenToRuin(forwardType);
+                ToRuin(forwardType);
                 break;
             case BrokenBuildingStateType.Ruin:
                 break;
@@ -74,20 +105,15 @@ public class BattleUnitBrokenBuilding : BattleUnit
         }
     }
 
-    public bool GetWalkable()
-    {
-        return currentStateType == BrokenBuildingStateType.Ruin || currentStateType == BrokenBuildingStateType.Clean;
-    }
-
-    private void UnbrokenToBroken()
+    private void ToBroken(ForwardType forwardType)
     {
         currentStateType = BrokenBuildingStateType.Broken;
+        _cacheForward = forwardType;
         _fsm.ChangeFsmState(typeof(BuildingBrokenState));
     }
-
-    private void BrokenToRuin(ForwardType forwardType)
+    
+    private void ToRuin(ForwardType forwardType)
     {
-        brokenBuilding.SetActive(false);
         walkable = true;
         currentStateType = BrokenBuildingStateType.Ruin;
         Vector3 targetRuinPosition = transform.position;
@@ -109,15 +135,12 @@ public class BattleUnitBrokenBuilding : BattleUnit
         }
 
         ruinUnit.gameObject.transform.position = targetRuinPosition;
-        ruinUnit.SetRuinActive(true);
-        BattleManager.Instance.UpdateUnitPoint(ruinUnit);
-        ruinUnit.CheckCellAfterActive();
+        BattleManager.Instance.UpdateUnitPoint(ruinUnit,GridManager.Instance.GetPointByWorldPosition(targetRuinPosition));
         _fsm.ChangeFsmState(typeof(BuildingRuinState));
     }
 
-    private IEnumerator RuinToClean()
+    private void ToClean()
     {
-        yield return new WaitForSeconds(timeFromRuinToClean);
         currentStateType = BrokenBuildingStateType.Clean;
         _fsm.ChangeFsmState(typeof(BuildingCleanState));
     }
@@ -136,10 +159,17 @@ public class BattleUnitBrokenBuilding : BattleUnit
 
     private void ResetAll()
     {
-        StopAllCoroutines();
         walkable = false;
         currentStateType = originalStateType;
+        _cacheForward = forwardForBrokenAtStart;
+        _cacheTimeToRuin = timeToRuin;
+        _cacheTimeToClean = timeToClean;
         ruinUnit.SetRuinActive(false);
+        ResetFsm();
+    }
+    
+    private void ResetFsm()
+    {
         switch (currentStateType)
         {
             case BrokenBuildingStateType.Unbroken:

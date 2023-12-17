@@ -5,28 +5,42 @@ using UnityEngine;
 public class BattleUnitFire : BattleUnit
 {
     [SerializeField] private bool originalActive; //初始是否在燃烧
-    [SerializeField] private ParticleSystem fireVfx; //初始是否在燃烧
+    [SerializeField] public ParticleSystem fireVfx; //初始是否在燃烧
     [HideInInspector] public bool currentActive; //当前是否在燃烧
 
-    
+    public override void OnUnitInit()
+    {
+        base.OnUnitInit();
+        ResetAll();
+    }
 
     public override void OnUnitReset()
     {
         base.OnUnitReset();
-        currentActive = originalActive;
-        gameObject.SetActive(currentActive);
-        SetVfxActive(currentActive);
+        ResetAll();
+    }
+
+    public override IEnumerator CheckOverlap()
+    {
+        yield  return base.CheckOverlap();
+        if (currentActive)
+        {
+            CheckCellAfterActive();
+        }
     }
 
     public void SetFireActive(bool active)
     {
-        currentActive = active;
-        gameObject.SetActive(active);
-        SetVfxActive(active);
-        if (active)
+        if (currentActive!=active)
         {
-            CheckCellAfterActive();
+            currentActive = active;
+            SetVfxActive(active);
         }
+    }
+
+    private void ResetAll()
+    {
+        SetVfxActive(originalActive);
     }
 
     private void SetVfxActive(bool active)
@@ -39,7 +53,7 @@ public class BattleUnitFire : BattleUnit
         fireVfx.Stop();
     }
     
-    public void CheckCellAfterActive()
+    private void CheckCellAfterActive()
     {
         BattleManager.Instance.CheckCellForUnit<BattleUnitPeople>(this, UnitType.People, (people) =>
         {

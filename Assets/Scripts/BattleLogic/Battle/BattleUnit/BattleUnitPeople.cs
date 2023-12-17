@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,12 +24,20 @@ public class BattleUnitPeople : BattleUnit
 
     public void SetPeopleActive(bool active)
     {
-        peopleObj.SetActive(active);
+        if (currentActive!=active)
+        {
+            currentActive = active;
+            peopleObj.SetActive(currentActive);
+        }
     }
 
     private void ResetAll()
     {
-        currentActive = originalActive;
-        SetPeopleActive(currentActive);
+        SetPeopleActive(originalActive);
     }
+
+    // private void Update()
+    // {
+    //     Debug.Log(peopleObj.activeInHierarchy);
+    // }
 }

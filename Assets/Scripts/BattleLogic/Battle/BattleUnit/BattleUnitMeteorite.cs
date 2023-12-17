@@ -11,24 +11,21 @@ public class BattleUnitMeteorite : BattleUnit
     [SerializeField] private int fallTime;
     [SerializeField] private GameObject meteorite;
     [SerializeField] private Transform targetFallPosition;
-    [SerializeField] private BattleUnitFire _unitFire;
+    [SerializeField] private BattleUnitFire unitFire;
+    [SerializeField] private ParticleSystem boomVfx;
+    private Vector3 _meteoriteOriginalPosition;
 
     private Sequence _sequence;
     private bool _hasStartFall;
-    private bool _hadPlayTween;
-    private EventManager.TypeEvent _onCommandExecuteStartAction;
-    private EventManager.TypeEvent _onCommandExecuteAction;
     private int _cacheDelayTime;
-    private Vector3 _meteoriteOriginalPosition;
+    private int _cacheFallTime;
 
 
     public override void OnUnitInit()
     {
         base.OnUnitInit();
+        EventManager.Instance.AddListener(EventName.CommandMainStart,OnCommandMainStart);
         _meteoriteOriginalPosition = meteorite.transform.position;
-        SetAction();
-        EventManager.Instance.AddListener(EventName.OnCommandExecuteStart, _onCommandExecuteStartAction);
-        EventManager.Instance.AddListener(EventName.OnCommandExecute, _onCommandExecuteAction);
         ResetAll();
     }
 
@@ -41,17 +38,16 @@ public class BattleUnitMeteorite : BattleUnit
     public override void OnUnitDestroy()
     {
         base.OnUnitDestroy();
-        EventManager.Instance.RemoveListener(EventName.OnCommandExecuteStart, _onCommandExecuteStartAction);
-        EventManager.Instance.RemoveListener(EventName.OnCommandExecute, _onCommandExecuteAction);
+        EventManager.Instance.RemoveListener(EventName.CommandMainStart,OnCommandMainStart);
     }
 
-    private void SetAction()
+    public override IEnumerator Execute()
     {
-        _onCommandExecuteStartAction += OnCommandExecuteStart;
-        _onCommandExecuteAction += ActionEveryExecute;
+        yield return base.Execute();
+        yield return ActionEveryExecute();
     }
 
-    private void OnCommandExecuteStart()
+    private void OnCommandMainStart()
     {
         if (fallOnStart)
         {
@@ -62,9 +58,11 @@ public class BattleUnitMeteorite : BattleUnit
     private void ResetAll()
     {
         _hasStartFall = false;
-        _hadPlayTween = false;
         _cacheDelayTime = delayTime;
-        _unitFire.SetFireActive(false);
+        _cacheFallTime = fallTime;
+        meteorite.SetActive(true);
+        //unitFire.SetFireActive(true);//fire单位自己有reset
+        boomVfx.Stop();
         ResetTweener();
     }
 
@@ -72,34 +70,38 @@ public class BattleUnitMeteorite : BattleUnit
     {
         _sequence?.Kill();
         _sequence = DOTween.Sequence();
-        meteorite.SetActive(true);
         meteorite.transform.position = _meteoriteOriginalPosition;
         _sequence.Append(meteorite.transform.DOMove(targetFallPosition.position, fallTime));
         _sequence.Pause();
         _sequence.SetAutoKill(false);
-        _sequence.onComplete += OnMeteoriteFallDone;
     }
 
-    private void ActionEveryExecute()
+    private IEnumerator ActionEveryExecute()
     {
         if (!_hasStartFall)
         {
-            return;
+            yield break;
         }
         
         if (_cacheDelayTime > 0)
         {
             _cacheDelayTime--;
-            return;
+            yield break;
         }
 
-        if (_hadPlayTween)
+        if (_cacheFallTime<=0)//已经降落完毕了
         {
-            return;
+            yield break;
         }
         
-        _sequence.Play();
-        _hadPlayTween = true;
+        _sequence?.Play();
+        yield return new WaitForSeconds(1f);
+        _sequence?.Pause();
+        _cacheFallTime--;
+        if (_cacheFallTime<=0)
+        {
+            OnMeteoriteFallDone();
+        }
     }
 
     /// <summary>
@@ -108,6 +110,8 @@ public class BattleUnitMeteorite : BattleUnit
     private void OnMeteoriteFallDone()
     {
         meteorite.SetActive(false);
-        _unitFire.SetFireActive(true);
+        unitFire.SetFireActive(true);
+        unitFire.fireVfx.Play();
+        boomVfx.Play();
     }
 }

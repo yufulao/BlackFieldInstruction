@@ -6,81 +6,140 @@ using DG.Tweening;
 
 public class BattleUnitPlayer : BattleUnit
 {
-    [SerializeField]private Rigidbody _rb;
-    [SerializeField]private Animator _animator;
-    [SerializeField]private ForwardType _originalForwardType= ForwardType.Up;
+    [SerializeField] private GameObject playerObj;
+    [SerializeField] private Rigidbody rb;
+    [SerializeField] private Animator animator;
+    [SerializeField] private ForwardType originalForwardType = ForwardType.Up;
     private ForwardType _currentForwardType;
     private Sequence _sequence;
+    [HideInInspector] public BattleUnitCarRear car;
+    [HideInInspector] private Transform _cachePlayerParent;
+    private Vector2Int _cacheTargetPoint;
+    private ForwardType _cacheTargetForward;
 
     public override void OnUnitInit()
     {
         base.OnUnitInit();
-        StartCoroutine(WaitForRotate(_originalForwardType,0f));
+        _cachePlayerParent = transform.parent;
+        ResetAll();
     }
 
     public override void OnUnitReset()
     {
         base.OnUnitReset();
-        _sequence?.Kill();
-        StartCoroutine(WaitForRotate(_originalForwardType,0f));
+        ResetAll();
+    }
+
+    public override IEnumerator Calculate(CommandType commandType)
+    {
+        yield return base.Calculate(commandType);
+        CalculateTarget(commandType);
+    }
+
+    public override IEnumerator Execute()
+    {
+        yield return base.Execute();
+        yield return ExecuteEveryCommand();
+    }
+
+    public override IEnumerator CheckOverlap()
+    {
+        yield return base.CheckOverlap();
+        CheckAfterPlayerMove();
     }
 
     /// <summary>
     /// player移动指令
     /// </summary>
     /// <param name="commandEnum">指令类型</param>
-    /// <param name="during">移动时间</param>
     /// <returns></returns>
-    public IEnumerator MoveCommand(CommandType commandEnum,float during=1f)
+    private void CalculateTarget(CommandType commandEnum)
     {
-        Vector2Int lastPoint=GridManager.Instance.GetPointByWorldPosition(transform.position);
+        Vector2Int lastPoint = GridManager.Instance.GetPointByWorldPosition(transform.position);
         ForwardType targetForward = _currentForwardType;
-        Vector2Int newPoint=lastPoint;
+        Vector2Int targetPoint = lastPoint;
         switch (commandEnum)
         {
             case CommandType.Up:
                 targetForward = ForwardType.Up;
-                newPoint = new Vector2Int(lastPoint.x, lastPoint.y + 1);
+                targetPoint = new Vector2Int(lastPoint.x, lastPoint.y + 1);
                 break;
             case CommandType.Down:
                 targetForward = ForwardType.Down;
-                newPoint = new Vector2Int(lastPoint.x, lastPoint.y-1);
+                targetPoint = new Vector2Int(lastPoint.x, lastPoint.y - 1);
                 break;
             case CommandType.Left:
                 targetForward = ForwardType.Left;
-                newPoint = new Vector2Int(lastPoint.x-1, lastPoint.y);
+                targetPoint = new Vector2Int(lastPoint.x - 1, lastPoint.y);
                 break;
             case CommandType.Right:
                 targetForward = ForwardType.Right;
-                newPoint = new Vector2Int(lastPoint.x+1, lastPoint.y);
+                targetPoint = new Vector2Int(lastPoint.x + 1, lastPoint.y);
                 break;
             case CommandType.Wait:
-                newPoint = new Vector2Int(lastPoint.x, lastPoint.y);
+                targetPoint = new Vector2Int(lastPoint.x, lastPoint.y);
                 break;
         }
-        
-        if (_currentForwardType!=targetForward)
+
+        if (car != null)
         {
-            yield return StartCoroutine(WaitForRotate(targetForward,0.3f));
-            during -= 0.3f;
+            //在车内时转存车的指令
+            return;
         }
-        yield return CheckTargetCell(newPoint,during);
+
+        _cacheTargetForward = targetForward;
+        _cacheTargetPoint = targetPoint;
     }
 
-    private IEnumerator CheckTargetCell(Vector2Int targetPoint,float during)
+    private IEnumerator ExecuteEveryCommand()
     {
-        if (!CheckBeforePlayerMove(targetPoint))//移动前检测
+        if (car != null)
         {
-            yield return new WaitForSeconds(during);
-            CommandManager.Instance.ExecuteCommand();
+            //在车内时转存车的指令
             yield break;
         }
+        
+        float during = 1f;
+        if (_currentForwardType != _cacheTargetForward)
+        {
+            yield return StartCoroutine(WaitForRotate(_cacheTargetForward, 0.3f));
+            during -= 0.3f;
+        }
+        yield return Move(_cacheTargetPoint, during);
+    }
+
+    public void RefreshPlayerObjActive(bool active)
+    {
+        playerObj.SetActive(active);
+        if (active)
+        {
+            transform.SetParent(_cachePlayerParent);
+        }
+    }
+
+    private void ResetAll()
+    {
+        RefreshPlayerObjActive(true);
+        _sequence?.Kill();
+        car = null;
+        StartCoroutine(WaitForRotate(originalForwardType, 0f));
+    }
+
+    private IEnumerator Move(Vector2Int targetPoint, float during)
+    {
+        if (!CheckBeforePlayerMove(targetPoint)) //移动前检测
+        {
+            yield return new WaitForSeconds(during);
+            yield break;
+        }
+
         if (BattleManager.Instance.CheckWalkable(targetPoint.x, targetPoint.y))
         {
             _sequence?.Kill();
             _sequence = DOTween.Sequence();
             _sequence.Append(transform.DOMove(GridManager.Instance.GetWorldPositionByPoint(targetPoint.x, targetPoint.y), during));
             _sequence.SetAutoKill(false);
+            BattleManager.Instance.UpdateUnitPoint(this,targetPoint); //更新GridObj
             //Debug.Log(GridManager.Instance.GetWorldPositionByPoint(targetPoint.x, targetPoint.y));
             yield return _sequence.WaitForCompletion();
         }
@@ -88,21 +147,8 @@ public class BattleUnitPlayer : BattleUnit
         {
             yield return new WaitForSeconds(during);
         }
-        
-        BattleManager.Instance.UpdateUnitPoint(this);//更新GridObj
-
-        if (CommandManager.Instance.RefreshCacheCurrentTimeTextInExecuting())//如果超时了
-        {
-            yield break;
-        }
-        
-        if (!CheckAfterPlayerMove())//移动后检测
-        {
-            yield break;
-        }
-        CommandManager.Instance.ExecuteCommand();
     }
-    
+
     /// <summary>
     /// player移动前的检测
     /// </summary>
@@ -122,35 +168,45 @@ public class BattleUnitPlayer : BattleUnit
             }
         });
 
+        BattleManager.Instance.CheckCellForOrderPoint<BattleUnitCarRear>(targetPoint, UnitType.CarRear, (rear) =>
+        {
+            car = rear[0];
+            rear[0].GetOn(this);
+        });
+
         return canWalk;
     }
-    
+
     /// <summary>
     /// player移动后的检测
     /// </summary>
-    private bool CheckAfterPlayerMove()
+    private void CheckAfterPlayerMove()
     {
-        if (BattleManager.Instance.CheckPlayerGetTarget())
+        if (BattleManager.Instance.CheckPlayerGetTarget() && car == null)
         {
+            CommandManager.Instance.ForceChangeToMainEnd();
             BattleManager.Instance.BattleEnd(true);
-            return false;
+            return;
         }
-        if (BattleManager.Instance.CheckCellForUnit<BattleUnitFire>(this, UnitType.Fire))
+
+        if (BattleManager.Instance.CheckCellForUnit<BattleUnitFire>(this, UnitType.Fire) && car == null)
         {
+            CommandManager.Instance.ForceChangeToMainEnd();
             BattleManager.Instance.BattleEnd(false);
-            return false;
+            return;
         }
 
         BattleManager.Instance.CheckCellForUnit<BattleUnitPeople>(this, UnitType.People, (people) =>
         {
-            for (int i = 0; i < people.Count; i++)
+            if (car==null)
             {
-                people[i].SetPeopleActive(false);
-                //todo
+                for (int i = 0; i < people.Count; i++)
+                {
+                    people[i].SetPeopleActive(false);
+                    //todo 加积分
+                }
             }
         });
-
-        return true;
     }
 
     /// <summary>
@@ -159,28 +215,27 @@ public class BattleUnitPlayer : BattleUnit
     /// <param name="targetForward">目标方向</param>
     /// <param name="during">旋转时间</param>
     /// <returns></returns>
-    private IEnumerator WaitForRotate(ForwardType targetForward,float during=0.3f)
+    private IEnumerator WaitForRotate(ForwardType targetForward, float during = 0.3f)
     {
         _sequence?.Kill();
         _sequence = DOTween.Sequence();
         switch (targetForward)
         {
             case ForwardType.Up:
-                _sequence.Append(transform.DORotate(new Vector3(0,0,0),during)) ;
+                _sequence.Append(transform.DORotate(new Vector3(0, 0, 0), during));
                 break;
             case ForwardType.Down:
-                _sequence.Append(transform.DORotate(new Vector3(0,180,0),during));
+                _sequence.Append(transform.DORotate(new Vector3(0, 180, 0), during));
                 break;
             case ForwardType.Left:
-                _sequence.Append(transform.DORotate(new Vector3(0,-90,0),during));
+                _sequence.Append(transform.DORotate(new Vector3(0, -90, 0), during));
                 break;
             case ForwardType.Right:
-                _sequence.Append(transform.DORotate(new Vector3(0,90,0),during));
+                _sequence.Append(transform.DORotate(new Vector3(0, 90, 0), during));
                 break;
         }
 
         yield return _sequence.WaitForCompletion();
         _currentForwardType = targetForward;
-    } 
-    
+    }
 }

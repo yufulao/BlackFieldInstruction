@@ -69,7 +69,7 @@ public class CommandUIModel
             currentTime = GetCurrentNeedTime()
         };
     }
-    
+
     /// <summary>
     /// 生成一个waitingItemInfo
     /// </summary>
@@ -86,7 +86,7 @@ public class CommandUIModel
             cacheTime = needTime
         };
     }
-    
+
     /// <summary>
     /// 尝试添加usedList末尾相同的ItemInfo
     /// </summary>
@@ -129,10 +129,10 @@ public class CommandUIModel
         int timeAddon = -usedItemInfo.cacheTime;
         _currentNeedTime += timeAddon;
         usedItemInfo.cacheCount--;
-        
+
         int removeUsedItemIndex = _usedItemInfoList.IndexOf(usedItemInfo);
         SetUsedItem(usedItemInfo, timeAddon);
-        if (usedItemInfo.cacheCount<=0)
+        if (usedItemInfo.cacheCount <= 0)
         {
             CombineSameUsedItem(removeUsedItemIndex);
         }
@@ -198,13 +198,15 @@ public class CommandUIModel
     /// <param name="removeUsedItemIndex"></param>
     private void CombineSameUsedItem(int removeUsedItemIndex)
     {
-        if (_usedItemInfoList.Count < 3 || removeUsedItemIndex == 0 || removeUsedItemIndex >= _usedItemInfoList.Count)
+        Debug.Log(removeUsedItemIndex);
+        Debug.Log(_usedItemInfoList.Count);
+        if (_usedItemInfoList.Count < 3 || removeUsedItemIndex == 0 || removeUsedItemIndex + 1 >= _usedItemInfoList.Count)
         {
             return;
         }
 
         UsedItemInfo lastUsedItemInfo = _usedItemInfoList[removeUsedItemIndex - 1];
-        UsedItemInfo nextUsedItemInfo=_usedItemInfoList[removeUsedItemIndex+1];
+        UsedItemInfo nextUsedItemInfo = _usedItemInfoList[removeUsedItemIndex + 1];
 
         if (lastUsedItemInfo.cacheCommandEnum == nextUsedItemInfo.cacheCommandEnum)
         {

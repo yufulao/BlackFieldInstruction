@@ -17,14 +17,6 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: edc80cb09a487424fb97d6c4e3f7e691
   m_SerializeEntries:
-  - m_GUID: af4fd7cfd6e1c37458d27ad7a8387ebe
-    m_Address: Assets/AddressableAssets/Scene/Stage0-1.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 6b09eebf3a6dfaf42b41fe59d9bcda5c
-    m_Address: Assets/AddressableAssets/Scene/Stage0-0.unity
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   - m_GUID: 7d7e104bc611f20439a6711f56515bd9
     m_Address: Assets/AddressableAssets/Scene/StageTest.unity
     m_ReadOnly: 0

@@ -172,6 +172,11 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
         return true;
     }
 
+    public bool CheckWalkable(Vector2Int point)
+    {
+        return CheckWalkable(point.x, point.y);
+    }
+
     public bool CheckCellForUnit<T>(BattleUnit unit, UnitType unitType, Action<List<T>> callback = null) where T : BattleUnit
     {
         BattleUnitInfo unitInfo = _unitInfoDic[unit];
@@ -200,6 +205,10 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
     
     public bool CheckCellForOrderPoint<T>(Vector2Int orderPoint, UnitType unitType, Action<List<T>> callback = null) where T : BattleUnit
     {
+        if (!GridManager.Instance.CheckPointValid(orderPoint.x,orderPoint.y))
+        {
+            return false;
+        }
         List<BattleUnitInfo> cellInfos = _model.GetUnitInfoByGridCell(GridManager.Instance.GetGridCell(orderPoint));
         List<T> results = new List<T>();
         if (cellInfos==null)
@@ -233,11 +242,20 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
     {
         _model.UpdateUnitPoint(unitInfo, lastPoint, newPoint);
     }
-
+    public void UpdateUnitPoint(BattleUnit unit, Vector2Int newPoint)
+    {
+        BattleUnitInfo unitInfo = _unitInfoDic[unit];
+        _model.UpdateUnitPoint(unitInfo, unitInfo.currentPoint, newPoint);
+    }
     public void UpdateUnitPoint(BattleUnit unit)
     {
         BattleUnitInfo info = _unitInfoDic[unit];
         _model.UpdateUnitPoint(info, info.currentPoint, GridManager.Instance.GetPointByWorldPosition(unit.gameObject.transform.position));
+    }
+
+    public List<BattleUnit> GetAllUnit()
+    {
+        return _allUnits;
     }
 
     /// <summary>
@@ -315,6 +333,7 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
         //强制归位
         for (int i = 0; i < _allUnits.Count; i++)
         {
+            _allUnits[i].StopAllCoroutines();
             BattleUnitInfo unitInfo = _unitInfoDic[_allUnits[i]];
             _allUnits[i].gameObject.transform.position = GridManager.Instance.GetWorldPositionByPoint(unitInfo.originalPoint.x, unitInfo.originalPoint.y);
             //Debug.Log(_allUnits[i].gameObject.name + "--->" + _allUnits[i].gameObject.transform.position);

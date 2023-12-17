@@ -19,15 +19,13 @@ public class BattleUnitTornado : BattleUnit
     private int _cacheDelayTime;
     private ForwardType _currentForward;
     private bool _hasStartMove; //包括delay
-    private bool _isPlayingTween;
+    private Vector3 _cacheLastPosition;
 
     public override void OnUnitInit()
     {
         base.OnUnitInit();
         _perMoveCellTime = Mathf.Round(1f / speed);
-        SetAction();
-        EventManager.Instance.AddListener(EventName.OnCommandExecuteStart, _onCommandExecuteStartAction);
-        EventManager.Instance.AddListener(EventName.OnCommandExecute, _onCommandExecuteAction);
+        EventManager.Instance.AddListener(EventName.CommandMainStart, OnCommandMainStart);
         ResetAll();
     }
 
@@ -40,19 +38,29 @@ public class BattleUnitTornado : BattleUnit
     public override void OnUnitDestroy()
     {
         base.OnUnitDestroy();
-        EventManager.Instance.RemoveListener(EventName.OnCommandExecuteStart, _onCommandExecuteStartAction);
-        EventManager.Instance.RemoveListener(EventName.OnCommandExecute, _onCommandExecuteAction);
+        EventManager.Instance.RemoveListener(EventName.CommandMainStart, OnCommandMainStart);
     }
 
-    private void SetAction()
+    public override IEnumerator Execute()
     {
-        _onCommandExecuteStartAction += OnCommandExecuteStart;
-        _onCommandExecuteAction += ActionEveryExecute;
+        yield return base.Execute();
+        yield return ActionEveryExecute();
+    }
+
+    public override IEnumerator CheckOverlap()
+    {
+        yield return base.CheckOverlap();
+        CheckCurrentPoint();
+    }
+
+    public override IEnumerator Calculate(CommandType commandType)
+    {
+        yield return base.Calculate(commandType);
+        ResetTweener();
     }
 
     private void ResetAll()
     {
-        _isPlayingTween = false;
         _cacheDelayTime = delayTime;
         _currentForward = originalForwardType;
         ResetTweener();
@@ -60,23 +68,15 @@ public class BattleUnitTornado : BattleUnit
 
     private void ResetTweener()
     {
+        _cacheLastPosition = transform.position;
         _sequence?.Kill();
         _sequence = DOTween.Sequence();
         _sequence.Append(transform.DOMove(CalculateNextTargetPosition(), _perMoveCellTime));
         _sequence.Pause();
         _sequence.SetAutoKill(false);
-        _sequence.onComplete += OnMoveComplete;
     }
 
-    private void OnMoveComplete()
-    {
-        _isPlayingTween = false;
-        BattleManager.Instance.UpdateUnitPoint(this);
-        CheckCurrentPoint();
-        ResetTweener();
-    }
-
-    private void OnCommandExecuteStart()
+    private void OnCommandMainStart()
     {
         if (moveOnStart)
         {
@@ -84,26 +84,22 @@ public class BattleUnitTornado : BattleUnit
         }
     }
 
-    private void ActionEveryExecute()
+    private IEnumerator ActionEveryExecute()
     {
         if (!_hasStartMove)
         {
-            return;
+            yield break;
         }
 
         if (_cacheDelayTime > 0)
         {
             _cacheDelayTime--;
-            return;
-        }
-
-        if (_isPlayingTween)
-        {
-            return;
+            yield break;
         }
 
         _sequence.Play();
-        _isPlayingTween = true;
+        yield return _sequence.WaitForCompletion();
+        BattleManager.Instance.UpdateUnitPoint(this);
     }
 
     private Vector3 CalculateNextTargetPosition()
@@ -160,6 +156,12 @@ public class BattleUnitTornado : BattleUnit
 
     private void CheckCurrentPoint()
     {
+        if (BattleManager.Instance.CheckCellForUnit<BattleUnitPlayer>(this, UnitType.Player))
+        {
+            BattleManager.Instance.BattleEnd(false);
+            return;
+        }
+        
         BattleManager.Instance.CheckCellForUnit<BattleUnitFire>(this, UnitType.Fire, (fireUnits) =>
         {
             for (int i = 0; i < fireUnits.Count; i++)
@@ -175,5 +177,11 @@ public class BattleUnitTornado : BattleUnit
                 people[i].SetPeopleActive(false);
             }
         });
+
+        if (BattleManager.Instance.CheckCellForUnit<BattleUnitCarFront>(this, UnitType.CarFront)||BattleManager.Instance.CheckCellForUnit<BattleUnitCarRear>(this, UnitType.CarRear))
+        {
+            transform.position = _cacheLastPosition;
+            BattleManager.Instance.UpdateUnitPoint(this);
+        }
     }
 }

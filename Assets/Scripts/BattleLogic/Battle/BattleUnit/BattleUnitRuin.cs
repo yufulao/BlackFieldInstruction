@@ -14,6 +14,15 @@ public class BattleUnitRuin : BattleUnit
         SetVfxActive(currentActive);
     }
 
+    public override IEnumerator CheckOverlap()
+    {
+        yield return base.CheckOverlap();
+        if (currentActive)
+        {
+            CheckCellAfterActive();
+        }
+    }
+
     public void SetRuinActive(bool active)
     {
         currentActive = active;
@@ -22,7 +31,7 @@ public class BattleUnitRuin : BattleUnit
         SetVfxActive(active);
     }
 
-    public void CheckCellAfterActive()
+    private void CheckCellAfterActive()
     {
         BattleManager.Instance.CheckCellForUnit<BattleUnitFire>(this, UnitType.Fire, (fires) =>
         {
@@ -49,6 +58,4 @@ public class BattleUnitRuin : BattleUnit
         }
         ruinVfx.Stop();
     }
-    
-    
 }
