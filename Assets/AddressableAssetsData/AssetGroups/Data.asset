@@ -21,30 +21,42 @@ MonoBehaviour:
     m_Address: AudioMixer
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1b0b49f64ebc5084b8f61b4fb2d81706
     m_Address: Assets/AddressableAssets/Config/CfgBgm.txt
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9547d644ec728c2488469c5abc161920
     m_Address: Assets/AddressableAssets/Config/CfgSfx.txt
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4309c7688fe714d44b296931462e0933
     m_Address: Assets/AddressableAssets/Config/CfgStage.txt
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 30cb75fe4dcbcd848ac0ec9d726d8ba7
     m_Address: Assets/AddressableAssets/Config/CfgCommand.txt
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 22a46d9d13f50304987e297792666511
     m_Address: Assets/AddressableAssets/Config/CfgPrefab.txt
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 17fa649883f7bf243af94341ec37b0f7
     m_Address: Assets/AddressableAssets/Config/CfgUI.txt
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 841ae2d0948acfc4cb6c9b5d9422e45c
+    m_Address: Assets/AddressableAssets/Config/CfgMap.txt
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: a19174961d3b32943af996d43a3fd044, type: 2}
   m_SchemaSet:

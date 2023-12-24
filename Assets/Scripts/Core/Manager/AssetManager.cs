@@ -101,7 +101,7 @@ public class AssetManager : BaseSingleTon<AssetManager>,IMonoManager
     {
         if (string.IsNullOrEmpty(path))
         {
-            Debug.Log("路径不能为空");
+            Debug.LogError("路径不能为空");
             return null;
         }
         
@@ -118,9 +118,9 @@ public class AssetManager : BaseSingleTon<AssetManager>,IMonoManager
 
         T asset = handle.WaitForCompletion();//挂起当前线程，直到操作完成为止
         
-        if (asset == null)
+        if (!asset)
         {
-            Debug.Log("加载失败"+path);
+            Debug.LogError("加载失败"+path);
         }
 
         return asset;

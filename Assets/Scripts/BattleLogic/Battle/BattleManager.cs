@@ -78,7 +78,7 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
         InitBattleParams();
         GridManager.Instance.InitGridManager(_rowCfgStage); //重新获取场景中的model和view
         LoadUnits();
-        CommandManager.Instance.InitCommandManager(_rowCfgStage, _player);
+        CommandManager.Instance.InitCommandManager(_rowCfgStage);
         _battleFsm.ChangeFsmState(typeof(BattleCommandInputState));
     }
 
@@ -325,9 +325,13 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
             //Debug.Log(gridObjList[i]+"--->"+unitInfo.unitType);
         }
 
-        if (_player == null || _targetUnits.Count == 0)
+        if (_player == null )
         {
-            Debug.LogError("场景中没有player或目标");
+            Debug.LogError("场景中没有player");
+        }
+        if (_targetUnits.Count == 0)
+        {
+            Debug.LogError("场景中没有目标");
         }
     }
 

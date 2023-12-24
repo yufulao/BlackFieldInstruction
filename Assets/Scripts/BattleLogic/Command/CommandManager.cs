@@ -9,7 +9,6 @@ public class CommandManager : MonoSingleton<CommandManager>
 {
     private CommandUICtrl _viewCtrl;
     private RowCfgStage _rowCfgStage;
-    private BattleUnitPlayer _player;
     private readonly List<CommandType> _usedCommandList = new List<CommandType>();
     private CommandFsm _commandFsm;
     private Coroutine _fsmCoroutine;
@@ -22,10 +21,9 @@ public class CommandManager : MonoSingleton<CommandManager>
     /// 初始化
     /// </summary>
     /// <param name="rowCfgStage"></param>
-    public void InitCommandManager(RowCfgStage rowCfgStage, BattleUnitPlayer player)
+    public void InitCommandManager(RowCfgStage rowCfgStage)
     {
         _rowCfgStage = rowCfgStage;
-        _player = player;
         _usedCommandList.Clear();
         _viewCtrl = UIManager.Instance.GetCtrl<CommandUICtrl>("CommandView", rowCfgStage);
         InitCommandFsm(); //挂起状态

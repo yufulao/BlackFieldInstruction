@@ -21,6 +21,12 @@ MonoBehaviour:
     m_Address: Assets/AddressableAssets/Scene/StageTest.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7bd80717d0fb51d488ee049958590f7c
+    m_Address: StageSelectScene
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: a19174961d3b32943af996d43a3fd044, type: 2}
   m_SchemaSet:

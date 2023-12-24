@@ -91,6 +91,7 @@ public class BattleUnitBrokenBuilding : BattleUnit
     /// </summary>
     public void BuildingRuinStateEnter()
     {
+        unBrokenBuilding.SetActive(false);
         brokenBuilding.SetActive(false);
         ruinUnit.SetRuinActive(true);
     }
@@ -214,11 +215,13 @@ public class BattleUnitBrokenBuilding : BattleUnit
         {
             case BrokenBuildingStateType.Unbroken:
             case BrokenBuildingStateType.Clean:
-            case BrokenBuildingStateType.Ruin:
                 _fsm.ChangeFsmState(typeof(BuildingUnbrokenState));
                 break;
             case BrokenBuildingStateType.Broken:
                 _fsm.ChangeFsmState(typeof(BuildingBrokenState));
+                break;
+            case  BrokenBuildingStateType.Ruin:
+                _fsm.ChangeFsmState(typeof(BuildingRuinState));
                 break;
         }
     }

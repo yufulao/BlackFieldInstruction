@@ -53,6 +53,7 @@ public class SceneManager : BaseSingleTon<SceneManager>,IMonoManager
             }
             // 激活加载的场景
             UnityEngine.SceneManagement.SceneManager.SetActiveScene(sceneInstance.Scene);
+            EventManager.Instance.Dispatch(EventName.ChangeScene);
         });
     }
 

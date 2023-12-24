@@ -15,6 +15,7 @@
           <e p="Config" t="Include">
             <e p="CfgBgm.txt" t="Include" />
             <e p="CfgCommand.txt" t="Include" />
+            <e p="CfgMap.txt" t="Include" />
             <e p="CfgPrefab.txt" t="Include" />
             <e p="CfgSfx.txt" t="Include" />
             <e p="CfgStage.txt" t="Include" />
@@ -155,6 +156,16 @@
                   <e p="Materials" t="Include" />
                   <e p="Models" t="Include" />
                   <e p="Palettes" t="Include" />
+                </e>
+                <e p="Tent" t="Include">
+                  <e p="Materials" t="Include" />
+                  <e p="Prefabs" t="Include" />
+                  <e p="RAW MODEL" t="Include" />
+                  <e p="readme.txt" t="Include" />
+                  <e p="Scripts" t="Include">
+                    <e p="rorateslow.cs" t="Include" />
+                  </e>
+                  <e p="Textures" t="Include" />
                 </e>
               </e>
             </e>
@@ -868,46 +879,6 @@
                 <e p="Textures" t="Include" />
               </e>
             </e>
-            <e p="Low Poly Simple Urban City 3D Asset Pack" t="Include">
-              <e p="Models" t="Include">
-                <e p="Buildings" t="Include" />
-                <e p="Props" t="Include">
-                  <e p="Boxes" t="Include" />
-                  <e p="Other" t="Include" />
-                  <e p="Road_Signs" t="Include" />
-                </e>
-                <e p="Roads" t="Include" />
-                <e p="Vehicles" t="Include">
-                  <e p="Buses" t="Include" />
-                  <e p="Cars" t="Include" />
-                  <e p="Emergency_Vehicles" t="Include" />
-                  <e p="Main_Hero_Trucks" t="Include" />
-                  <e p="Pickups" t="Include" />
-                  <e p="Trams" t="Include" />
-                  <e p="Trucks" t="Include" />
-                </e>
-              </e>
-              <e p="Prefabs" t="Include">
-                <e p="Buildings" t="Include" />
-                <e p="Props" t="Include">
-                  <e p="Boxes" t="Include" />
-                  <e p="Other" t="Include" />
-                  <e p="Road_Signs" t="Include" />
-                </e>
-                <e p="Roads" t="Include" />
-                <e p="Vehicles" t="Include">
-                  <e p="Buses" t="Include" />
-                  <e p="Cars" t="Include" />
-                  <e p="Emergency_Vehicles" t="Include" />
-                  <e p="Main_Hero_Trucks" t="Include" />
-                  <e p="Pickups" t="Include" />
-                  <e p="Trams" t="Include" />
-                  <e p="Trucks" t="Include" />
-                </e>
-              </e>
-              <e p="Scenes" t="Include" />
-              <e p="Textures" t="Include" />
-            </e>
             <e p="LowPoly Nature Pack" t="Include">
               <e p="Animations" t="Include">
                 <e p="Animals" t="Include" />
@@ -1292,6 +1263,7 @@
           <e p="Config" t="Include">
             <e p="CfgBgm.cs" t="Include" />
             <e p="CfgCommand.cs" t="Include" />
+            <e p="CfgMap.cs" t="Include" />
             <e p="CfgPrefab.cs" t="Include" />
             <e p="CfgSfx.cs" t="Include" />
             <e p="CfgStage.cs" t="Include" />
@@ -1321,13 +1293,13 @@
             <e p="Manager" t="Include">
               <e p="AssetManager.cs" t="Include" />
               <e p="BgmManager.cs" t="Include" />
+              <e p="CameraManager.cs" t="Include" />
               <e p="ConfigManager" t="Include">
                 <e p="ConfigManager.cs" t="Include" />
                 <e p="CsvReader.cs" t="Include" />
               </e>
               <e p="EventManager" t="Include">
                 <e p="EventManager.cs" t="Include" />
-                <e p="EventName.cs" t="Include" />
               </e>
               <e p="FsmManager.cs" t="Include" />
               <e p="GameManager.cs" t="Include" />
@@ -1344,7 +1316,9 @@
             <e p="Def" t="Include">
               <e p="BrokenBuildingStateType.cs" t="Include" />
               <e p="CommandType.cs" t="Include" />
+              <e p="EventName.cs" t="Include" />
               <e p="ForwardType.cs" t="Include" />
+              <e p="MapAreaDef.cs" t="Include" />
               <e p="UnitType.cs" t="Include" />
             </e>
             <e p="Util" t="Include">
@@ -1357,7 +1331,7 @@
               <e p="UIDragComponent.cs" t="Include" />
             </e>
             <e p="UILogic" t="Include">
-              <e p="Command" t="Include">
+              <e p="CommandUI" t="Include">
                 <e p="CommandUICtrl.cs" t="Include" />
                 <e p="CommandUIModel.cs" t="Include" />
                 <e p="Component" t="Include">
@@ -1365,12 +1339,23 @@
                   <e p="CommandItemInfo.cs" t="Include" />
                 </e>
               </e>
-              <e p="StageSelect" t="Include">
+              <e p="StageSelectUI" t="Include">
                 <e p="Component" t="Include">
                   <e p="StageItem.cs" t="Include" />
                   <e p="StageItemInfo.cs" t="Include" />
                 </e>
                 <e p="StageSelectUICtrl.cs" t="Include" />
+                <e p="StageSelectUIFsm" t="Include">
+                  <e p="FsmState" t="Include">
+                    <e p="AreaChangingState.cs" t="Include" />
+                    <e p="AreaSelectState.cs" t="Include" />
+                    <e p="AreaToMapState.cs" t="Include" />
+                    <e p="MapChangingState.cs" t="Include" />
+                    <e p="MapSelectState.cs" t="Include" />
+                    <e p="MapToAreaState.cs" t="Include" />
+                  </e>
+                  <e p="StageSelectUIFsm.cs" t="Include" />
+                </e>
                 <e p="StageSelectUIModel.cs" t="Include" />
               </e>
             </e>

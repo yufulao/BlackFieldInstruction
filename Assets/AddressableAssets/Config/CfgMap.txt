@@ -1,0 +1,5 @@
+key#mapName#areaCount#cameraPosition#area0CameraPosition#area1CameraPosition#area2CameraPosition#area3CameraPosition#area4CameraPosition#area5CameraPosition#area6CameraPosition
+key#地图名#地图区域的数量#摄像机位置#0区域的摄像机位置和旋转角度和深度#1区域的摄像机位置#2区域的摄像机位置#3区域的摄像机位置#4区域的摄像机位置#5区域的摄像机位置#6区域的摄像机位置
+string#string#int#List<float>#List<float>#List<float>#List<float>#List<float>#List<float>#List<float>#List<float>
+0#Dessert#3#-7.2,67.83,-44,79,-29,2.6,116#-50.4,22.9,-63.2,79,-29,2.6,116#-14.5,16.7,-47.3,79,-29,2.6,116#3.2,16.8,-22.3,79,-29,2.6,116#None#None#None#None
+1#Island#3#316,146,44,81.8,-889,-170,34#316,146,44,81.8,-889,-170,34#316,146,44,81.8,-889,-170,34#316,146,44,81.8,-889,-170,34#None#None#None#None

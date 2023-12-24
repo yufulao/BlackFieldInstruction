@@ -62,6 +62,10 @@ public class BattleUnitRuin : BattleUnit
     /// <param name="active"></param>
     private void SetVfxActive(bool active)
     {
+        if (!ruinVfx)
+        {
+            return;
+        }
         if (active)
         {
             ruinVfx.Play();

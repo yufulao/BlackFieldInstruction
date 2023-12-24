@@ -206,12 +206,21 @@ public class BattleUnitPlayer : BattleUnit
             return;
         }
 
-        if (BattleManager.Instance.CheckCellForUnit<BattleUnitFire>(this, UnitType.Fire) && car == null)
+        BattleManager.Instance.CheckCellForUnit<BattleUnitFire>(this, UnitType.Fire, (fires) =>
         {
-            CommandManager.Instance.ForceChangeToMainEnd();
-            BattleManager.Instance.BattleEnd(false);
-            return;
-        }
+            if (car==null)
+            {
+                for (int i = 0; i < fires.Count; i++)
+                {
+                    if (fires[i].currentActive)
+                    {
+                        CommandManager.Instance.ForceChangeToMainEnd();
+                        BattleManager.Instance.BattleEnd(false);
+                        return;
+                    }
+                }
+            }
+        });
 
         BattleManager.Instance.CheckCellForUnit<BattleUnitPeople>(this, UnitType.People, (people) =>
         {
