@@ -1,7 +1,0 @@
-key#audioClipPath#None#None#None
-bgm名#资源路径#None#None#None
-string#string#None#None#None
-TestBgm#Assets/AddressableAssets/Bgm/TestBgm#None#None#None
-None#None#None#None#None
-None#None#None#None#None
-None#None#None#None#None
