@@ -1347,12 +1347,15 @@
                 <e p="StageSelectUICtrl.cs" t="Include" />
                 <e p="StageSelectUIFsm" t="Include">
                   <e p="FsmState" t="Include">
-                    <e p="AreaChangingState.cs" t="Include" />
-                    <e p="AreaSelectState.cs" t="Include" />
-                    <e p="AreaToMapState.cs" t="Include" />
-                    <e p="MapChangingState.cs" t="Include" />
-                    <e p="MapSelectState.cs" t="Include" />
-                    <e p="MapToAreaState.cs" t="Include" />
+                    <e p="HighChangingState.cs" t="Include" />
+                    <e p="HighSelectState.cs" t="Include" />
+                    <e p="HighToMidState.cs" t="Include" />
+                    <e p="LowChangingState.cs" t="Include" />
+                    <e p="LowSelectState.cs" t="Include" />
+                    <e p="LowToMidState.cs" t="Include" />
+                    <e p="MidState.cs" t="Include" />
+                    <e p="MidToHighState.cs" t="Include" />
+                    <e p="MidToLowState.cs" t="Include" />
                   </e>
                   <e p="StageSelectUIFsm.cs" t="Include" />
                 </e>

@@ -50,7 +50,7 @@ public class GameManager : MonoSingleton<GameManager>
 
     private IEnumerator TestStart()
     {
-        yield return SceneManager.Instance.ChangeSceneAsync("StageSelectScene");
+        yield return SceneManager.Instance.ChangeSceneAsync("MainScene");
         UIManager.Instance.OpenWindow("StageSelectView");
     }
 

@@ -6,8 +6,8 @@ using UnityEngine;
 public class StageSelectUIModel
 {
     private List<StageItemInfo> _stageItemInfoList;
-    private int _currentMapId;//cfgMap中有id的含义
-    private int _currentAreaId;
+    private int _currentHighId;//cfgMap中有id的含义
+    private int _currentLowId;
 
     private List<float> _cacheCameraParamsList = new List<float>();
 
@@ -23,7 +23,7 @@ public class StageSelectUIModel
             StageItemInfo stageInfo = CreateStageItemInfo(stages[i].key, stages[i].scenePath);
             _stageItemInfoList.Add(stageInfo);
         }
-        _currentMapId = 0;
+        _currentHighId = 0;
     }
 
     /// <summary>
@@ -47,53 +47,53 @@ public class StageSelectUIModel
     /// <summary>
     /// 切换到上一个地图
     /// </summary>
-    public void GetPreMapId()
+    public void GetPreHighId()
     {
-        _currentMapId--;
-        if (_currentMapId<0)
+        _currentHighId--;
+        if (_currentHighId<0)
         {
-            _currentMapId = ConfigManager.Instance.cfgMap.AllConfigs.Count - 1;
+            _currentHighId = ConfigManager.Instance.cfgMap.AllConfigs.Count - 1;
         }
 
-        ResetAreaId();
+        ResetLowId();
     }
 
     /// <summary>
     /// 切换到下一个地图
     /// </summary>
-    public void GetNextMapId()
+    public void GetNextHighId()
     {
         //Debug.Log(ConfigManager.Instance.cfgMap.AllConfigs.Count);
-        _currentMapId++;
-        if (_currentMapId>ConfigManager.Instance.cfgMap.AllConfigs.Count-1)
+        _currentHighId++;
+        if (_currentHighId>ConfigManager.Instance.cfgMap.AllConfigs.Count-1)
         {
-            _currentMapId = 0;
+            _currentHighId = 0;
         }
 
-        ResetAreaId();
+        ResetLowId();
     }
 
     /// <summary>
     /// 切换到上一个区域
     /// </summary>
-    public void GetPreAreaId()
+    public void GetPreLowId()
     {
-        _currentAreaId--;
-        if (_currentAreaId<0)
+        _currentLowId--;
+        if (_currentLowId<0)
         {
-            _currentAreaId = ConfigManager.Instance.cfgMap.AllConfigs.Count - 1;
+            _currentLowId = ConfigManager.Instance.cfgMap.AllConfigs.Count - 1;
         }
     }
 
     /// <summary>
     /// 切换到下一个区域
     /// </summary>
-    public void GetNextAreaId()
+    public void GetNextLowId()
     {
-        _currentAreaId++;
-        if (_currentAreaId>ConfigManager.Instance.cfgMap[_currentMapId].areaCount-1)
+        _currentLowId++;
+        if (_currentLowId>ConfigManager.Instance.cfgMap[_currentHighId].lowCount-1)
         {
-            _currentAreaId = 0;
+            _currentLowId = 0;
         }
     }
 
@@ -101,46 +101,59 @@ public class StageSelectUIModel
     /// 获取该地图摄像机参数
     /// </summary>
     /// <returns></returns>
-    public (Vector3,Vector3, float) GetMapCameraParams()
+    public (Vector3,Vector3, float) GetHighCameraParams()
     {
-        _cacheCameraParamsList=ConfigManager.Instance.cfgMap[_currentMapId].cameraPosition;
-        Vector3 cameraPosition = new Vector3(_cacheCameraParamsList[0], _cacheCameraParamsList[1], _cacheCameraParamsList[2]);
-        Vector3 cameraRotation=new Vector3(_cacheCameraParamsList[3], _cacheCameraParamsList[4], _cacheCameraParamsList[5]);
-        float cameraFileOfView = _cacheCameraParamsList[6];
-        return (cameraPosition,cameraRotation,cameraFileOfView);
+        _cacheCameraParamsList=ConfigManager.Instance.cfgMap[_currentHighId].highCameraParams;
+        return TranslateCameraParams();
+    }
+    
+    public (Vector3,Vector3, float) GetMidCameraParams()
+    {
+        _cacheCameraParamsList=ConfigManager.Instance.cfgMap[_currentHighId].midCameraParams;
+        return TranslateCameraParams();
+    }
+
+    public int GetLowCount()
+    {
+        return ConfigManager.Instance.cfgMap[_currentHighId].lowCount;
     }
 
     /// <summary>
     /// 获取该区域摄像机参数
     /// </summary>
     /// <returns></returns>
-    public (Vector3,Vector3, float) GetAreaCameraParams()
+    public (Vector3,Vector3, float) GetLowCameraParams()
     {
-        switch (_currentAreaId)
+        switch (_currentLowId)
         {
             case MapAreaDef.Area0:
-                _cacheCameraParamsList = ConfigManager.Instance.cfgMap[_currentMapId].area0CameraPosition;
+                _cacheCameraParamsList = ConfigManager.Instance.cfgMap[_currentHighId].lowACameraParams;
                 break;
             case MapAreaDef.Area1:
-                _cacheCameraParamsList = ConfigManager.Instance.cfgMap[_currentMapId].area1CameraPosition;
+                _cacheCameraParamsList = ConfigManager.Instance.cfgMap[_currentHighId].lowBCameraParams;
                 break;
             case MapAreaDef.Area2:
-                _cacheCameraParamsList = ConfigManager.Instance.cfgMap[_currentMapId].area2CameraPosition;
+                _cacheCameraParamsList = ConfigManager.Instance.cfgMap[_currentHighId].lowCCameraParams;
                 break;
             case MapAreaDef.Area3:
-                _cacheCameraParamsList = ConfigManager.Instance.cfgMap[_currentMapId].area3CameraPosition;
+                _cacheCameraParamsList = ConfigManager.Instance.cfgMap[_currentHighId].lowDCameraParams;
                 break;
             case MapAreaDef.Area4:
-                _cacheCameraParamsList = ConfigManager.Instance.cfgMap[_currentMapId].area4CameraPosition;
+                _cacheCameraParamsList = ConfigManager.Instance.cfgMap[_currentHighId].lowECameraParams;
                 break;
             case MapAreaDef.Area5:
-                _cacheCameraParamsList = ConfigManager.Instance.cfgMap[_currentMapId].area5CameraPosition;
+                _cacheCameraParamsList = ConfigManager.Instance.cfgMap[_currentHighId].lowFCameraParams;
                 break;
             case MapAreaDef.Area6:
-                _cacheCameraParamsList = ConfigManager.Instance.cfgMap[_currentMapId].area6CameraPosition;
+                _cacheCameraParamsList = ConfigManager.Instance.cfgMap[_currentHighId].lowGCameraParams;
                 break;
         }
-        
+
+        return TranslateCameraParams();
+    }
+
+    private (Vector3,Vector3, float) TranslateCameraParams()
+    {
         Vector3 cameraPosition = new Vector3(_cacheCameraParamsList[0], _cacheCameraParamsList[1], _cacheCameraParamsList[2]);
         Vector3 cameraRotation = new Vector3(_cacheCameraParamsList[3], _cacheCameraParamsList[4], _cacheCameraParamsList[5]);
         float cameraFileOfView = _cacheCameraParamsList[6];
@@ -165,9 +178,9 @@ public class StageSelectUIModel
     /// <summary>
     /// 重置区域id
     /// </summary>
-    private void ResetAreaId()
+    private void ResetLowId()
     {
-        _currentAreaId = 0;
+        _currentLowId = 0;
     }
     
 }

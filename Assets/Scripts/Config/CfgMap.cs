@@ -18,15 +18,16 @@ namespace Rabi
     {
         public string key; //key
         public string mapName; //地图名
-        public int areaCount; //地图区域的数量
-        public List<float> cameraPosition; //摄像机位置
-        public List<float> area0CameraPosition; //0区域的摄像机位置和旋转角度和深度
-        public List<float> area1CameraPosition; //1区域的摄像机位置
-        public List<float> area2CameraPosition; //2区域的摄像机位置
-        public List<float> area3CameraPosition; //3区域的摄像机位置
-        public List<float> area4CameraPosition; //4区域的摄像机位置
-        public List<float> area5CameraPosition; //5区域的摄像机位置
-        public List<float> area6CameraPosition; //6区域的摄像机位置
+        public int lowCount; //地图区域的数量
+        public List<float> highCameraParams; //high摄像机参数
+        public List<float> midCameraParams; //mid摄像机参数
+        public List<float> lowACameraParams; //A区域的摄像机参数
+        public List<float> lowBCameraParams; //B区域的摄像机参数
+        public List<float> lowCCameraParams; //C区域的摄像机参数
+        public List<float> lowDCameraParams; //D区域的摄像机参数
+        public List<float> lowECameraParams; //E区域的摄像机参数
+        public List<float> lowFCameraParams; //F区域的摄像机参数
+        public List<float> lowGCameraParams; //G区域的摄像机参数
     }
 
     public class CfgMap
@@ -79,7 +80,7 @@ namespace Rabi
         private RowCfgMap ParseRow(string[] col)
         {
             //列越界
-            if (col.Length < 11)
+            if (col.Length < 12)
             {
                 Debug.LogError($"配置表字段行数越界:{GetType()}");
                 return null;
@@ -89,15 +90,16 @@ namespace Rabi
             var rowHelper = new RowHelper(col);
             data.key = CsvUtility.ToString(rowHelper.ReadNextCol()); //key
             data.mapName = CsvUtility.ToString(rowHelper.ReadNextCol()); //地图名
-            data.areaCount = CsvUtility.ToInt(rowHelper.ReadNextCol()); //地图区域的数量
-            data.cameraPosition = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //摄像机位置
-            data.area0CameraPosition = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //0区域的摄像机位置和旋转角度和深度
-            data.area1CameraPosition = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //1区域的摄像机位置
-            data.area2CameraPosition = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //2区域的摄像机位置
-            data.area3CameraPosition = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //3区域的摄像机位置
-            data.area4CameraPosition = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //4区域的摄像机位置
-            data.area5CameraPosition = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //5区域的摄像机位置
-            data.area6CameraPosition = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //6区域的摄像机位置
+            data.lowCount = CsvUtility.ToInt(rowHelper.ReadNextCol()); //地图区域的数量
+            data.highCameraParams = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //high摄像机参数
+            data.midCameraParams = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //mid摄像机参数
+            data.lowACameraParams = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //A区域的摄像机参数
+            data.lowBCameraParams = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //B区域的摄像机参数
+            data.lowCCameraParams = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //C区域的摄像机参数
+            data.lowDCameraParams = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //D区域的摄像机参数
+            data.lowECameraParams = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //E区域的摄像机参数
+            data.lowFCameraParams = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //F区域的摄像机参数
+            data.lowGCameraParams = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //G区域的摄像机参数
             return data;
         }
     }

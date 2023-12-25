@@ -2,69 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3228c15b-aee8-4d3c-81d1-dfe6a07eed27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelect/StageSelectFsm/FsmState.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.plastic/plastic.changes" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.changes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.plastic/plastic.wktree" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.wktree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgMap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgMap.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgStage.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgStage.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage0-0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage0-0.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-1.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-1.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-4.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-5.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-6.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/StageTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/StageTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/StartUp.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/StartUp.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/UI/CommandView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/UI/CommandView.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Rank1-Map.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Rank1-Map.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Rank2-Map.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Rank2-Map.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage2-3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage2-3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage2-4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage2-4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage2-5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage2-5.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage2-6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage2-6.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/StageSelectScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/StageSelectScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Scene.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Scene.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitBrokenBuilding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitBrokenBuilding.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitRuin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitRuin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Command/CommandManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Command/CommandManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/AssetManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/AssetManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/ConfigManager/ConfigManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/ConfigManager/ConfigManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/EventManager/EventName.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Def/EventName.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/EventManager/EventName.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Def/EventName.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Config/CfgMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Config/CfgMap.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/SceneManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/CommandUICtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/Command/CommandUICtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelect/StageSelectUICtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelect/StageSelectUICtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelect/StageSelectUIModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelect/StageSelectUIModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Boxophobic.SkyboxCubemapExtended.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Boxophobic.SkyboxCubemapExtended.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Boxophobic.Utils.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Boxophobic.Utils.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Boxophobic.Utils.Scripts.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Boxophobic.Utils.Scripts.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CFXRDemo.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CFXRDemo.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CFXREditor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CFXREditor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CFXRRuntime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CFXRRuntime.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExternAttributes.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ExternAttributes.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlatKit.Utils.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FlatKit.Utils.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KinoBloom.Runtime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/KinoBloom.Runtime.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker2-prev.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker3-prev.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUICtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUICtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/AreaChangingState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/AreaChangingState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/AreaSelectState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/AreaSelectState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/AreaToMapState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/AreaToMapState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/MapChangingState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/MapChangingState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/MapSelectState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/MapSelectState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/MapToAreaState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/MapToAreaState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker2.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker3.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker3.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker4.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker4.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker5.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker6.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker7.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RabiConfig/xlsx/Bgm.xlsx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RabiConfig/xlsx/Command.xlsx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RabiConfig/xlsx/Prefab.xlsx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RabiConfig/xlsx/Sfx.xlsx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RabiConfig/xlsx/Map.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/RabiConfig/xlsx/Map.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RabiConfig/xlsx/Stage.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/RabiConfig/xlsx/Stage.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RabiConfig/xlsx/Stage.xlsx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RabiConfig/xlsx/UI.xlsx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RabiConfig/xlsx/manifest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RabiConfig/xlsx/manifest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RabiConfig/xlsx/manifest.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToonyColorsPro.Demo.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ToonyColorsPro.Demo.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.RenderPipelines.Universal.Runtime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.RenderPipelines.Universal.Runtime.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor-firstpass.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor-firstpass.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csproj.AssemblyReference.cache" afterDir="false" />
@@ -96,19 +87,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUICtrl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BE91CA7E-8F3B-4648-90AB-1D48B84E94EA/87/136b8494/ILogger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/Def/MapAreaDef.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/HighToMidState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.addressables@1.21.19/Runtime/ResourceManager/Util/MonoBehaviourCallbackHooks.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/EventManager/EventName.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitBrokenBuildingFsm/BuildingRuinState.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnit.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitCarRear.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitMeteorite.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitPeople.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitTornado.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Grid/GridModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Grid/GridView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Core/Base/Fsm/FsmComponent/FsmComponent.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/UIManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Misc/Def/BrokenBuildingStateType.cs" />
@@ -147,8 +130,17 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/MapChangingState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/Component/StageItemInfo.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/Component/StageItem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/CameraManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/HighChangingState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/HighSelectState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/LowChangingState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/HighToMidState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/LowSelectState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/LowToMidState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/MidState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/MidToHighState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIFsm/FsmState/MidToLowState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUIModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Ui/UILogic/StageSelectUI/StageSelectUICtrl.cs" />
     </changedPaths>
@@ -201,7 +193,8 @@
       <workItem from="1702707303950" duration="31179000" />
       <workItem from="1703084294314" duration="1084000" />
       <workItem from="1703220952097" duration="5572000" />
-      <workItem from="1703341916337" duration="24795000" />
+      <workItem from="1703341916337" duration="26679000" />
+      <workItem from="1703513323294" duration="4074000" />
     </task>
     <servers />
   </component>

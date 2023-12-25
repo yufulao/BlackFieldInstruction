@@ -10,14 +10,17 @@ using MouseButton = UnityEngine.InputSystem.LowLevel.MouseButton;
 
 public class StageSelectUICtrl : UICtrlBase
 {
-    [SerializeField] private GameObject mapUIFrame;
-    [SerializeField] private GameObject areaUIFrame;
-    [SerializeField] private Button preMapBtn;
-    [SerializeField] private Button nextMapBtn;
-    [SerializeField] private Button mapEnterMask;
-    [SerializeField] private Button preAreaBtn;
-    [SerializeField] private Button nextAreaBtn;
-    [SerializeField] private Button areaBackBtn;
+    [SerializeField] private GameObject highUIFrame;
+    [SerializeField] private GameObject midUIFrame;
+    [SerializeField] private GameObject lowUIFrame;
+    [SerializeField] private Button preHighBtn;
+    [SerializeField] private Button nextHighBtn;
+    [SerializeField] private Button highEnterMask;
+    [SerializeField] private Button midEnterMask;
+    [SerializeField] private Button midBackBtn;
+    [SerializeField] private Button preLowBtn;
+    [SerializeField] private Button nextLowBtn;
+    [SerializeField] private Button lowBackBtn;
 
     private StageSelectUIModel _model;
     private FsmComponent<StageSelectUICtrl> _fsm;
@@ -33,7 +36,7 @@ public class StageSelectUICtrl : UICtrlBase
         _model = new StageSelectUIModel();
         _model.InitModel();
         BindEvent();
-        _fsm.ChangeFsmState(typeof(MapSelectState));
+        _fsm.ChangeFsmState(typeof(HighSelectState));
     }
 
     public override void OpenRoot()
@@ -49,54 +52,73 @@ public class StageSelectUICtrl : UICtrlBase
 
     protected override void BindEvent()
     {
-        preMapBtn.onClick.AddListener(OnPreMapBtnClick);
-        nextMapBtn.onClick.AddListener(OnNextMapBtnClick);
-        mapEnterMask.onClick.AddListener(OnMapEnterMaskClick);
-        preAreaBtn.onClick.AddListener(OnPreAreaBtnClick);
-        nextAreaBtn.onClick.AddListener(OnNextAreaBtnClick);
-        areaBackBtn.onClick.AddListener(OnAreaBackBtnClick);
+        preHighBtn.onClick.AddListener(OnPreHighBtnClick);
+        nextHighBtn.onClick.AddListener(OnNextHighBtnClick);
+        highEnterMask.onClick.AddListener(OnHighEnterMaskClick);
+        midEnterMask.onClick.AddListener(OnMidEnterMaskClick);
+        midBackBtn.onClick.AddListener(OnMidBackBtnClick);
+        preLowBtn.onClick.AddListener(OnPreLowBtnClick);
+        nextLowBtn.onClick.AddListener(OnNextLowBtnClick);
+        lowBackBtn.onClick.AddListener(OnLowBackBtnClick);
     }
 
     /// <summary>
     /// 地图选择阶段
     /// </summary>
-    public void MapSelectStateEnter()
+    public void HighSelectStateEnter()
     {
-        mapUIFrame.SetActive(true);
-        areaUIFrame.SetActive(false);
+        highUIFrame.SetActive(true);
+        midUIFrame.SetActive(false);
+        lowUIFrame.SetActive(false);
     }
 
     /// <summary>
     /// 切换地图中
     /// </summary>
-    public void MapChangingStateEnter()
+    public void HighChangingStateEnter()
     {
-        mapUIFrame.SetActive(false);
-        areaUIFrame.SetActive(false);
+        CloseAllFrame();
     }
 
     /// <summary>
     /// 地图选择阶段切换到区域选择阶段
     /// </summary>
-    public void MapToAreaStateEnter()
+    public void HighToMidStateEnter()
     {
-        mapUIFrame.SetActive(false);
-        areaUIFrame.SetActive(false);
+        CloseAllFrame();
+    }
+    
+    public void MidStateEnter()
+    {
+        highUIFrame.SetActive(false);
+        midUIFrame.SetActive(true);
+        lowUIFrame.SetActive(false);
+    }
+    
+    public void MidToHighStateEnter()
+    {
+        CloseAllFrame();
+    }
+    
+    public void MidToLowStateEnter()
+    {
+        CloseAllFrame();
     }
 
     /// <summary>
     /// 区域选择阶段
     /// </summary>
-    public void AreaSelectStateEnter()
+    public void LowSelectStateEnter()
     {
-        mapUIFrame.SetActive(false);
-        areaUIFrame.SetActive(true);
+        highUIFrame.SetActive(false);
+        midUIFrame.SetActive(false);
+        lowUIFrame.SetActive(true);
     }
 
     /// <summary>
     /// 区域选择阶段，检测点击
     /// </summary>
-    public void AreaSelectStateUpdate()
+    public void LowSelectStateUpdate()
     {
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
@@ -115,19 +137,17 @@ public class StageSelectUICtrl : UICtrlBase
     /// <summary>
     /// 切换区域阶段
     /// </summary>
-    public void AreaChangingStateEnter()
+    public void LowChangingStateEnter()
     {
-        mapUIFrame.SetActive(false);
-        areaUIFrame.SetActive(false);
+        CloseAllFrame();
     }
 
     /// <summary>
     /// 从区域选择阶段切换到地图选择阶段
     /// </summary>
-    public void AreaToMapStateEnter()
+    public void LowToMidStateEnter()
     {
-        mapUIFrame.SetActive(false);
-        areaUIFrame.SetActive(false);
+        CloseAllFrame();
     }
 
     /// <summary>
@@ -144,63 +164,89 @@ public class StageSelectUICtrl : UICtrlBase
     /// <summary>
     /// 点击进入地图btn
     /// </summary>
-    private void OnMapEnterMaskClick()
+    private void OnHighEnterMaskClick()
     {
-        StartCoroutine(MapToArea());
+        StartCoroutine(HighToMid());
     }
 
     //点击上一个地图btn
-    private void OnPreMapBtnClick()
+    private void OnPreHighBtnClick()
     {
-        _model.GetPreMapId();
-        StartCoroutine(UpdateMap(0f));
+        _model.GetPreHighId();
+        StartCoroutine(UpdateHigh(0f));
     }
 
     /// <summary>
     /// 点击下一个地图btn
     /// </summary>
-    private void OnNextMapBtnClick()
+    private void OnNextHighBtnClick()
     {
-        _model.GetNextMapId();
-        StartCoroutine(UpdateMap(0f));
+        _model.GetNextHighId();
+        StartCoroutine(UpdateHigh(0f));
+    }
+    
+    private void OnMidEnterMaskClick()
+    {
+        if (_model.GetLowCount()<=0)
+        {
+            return;
+        }
+        StartCoroutine(MidToLow());
+    }
+    
+    private void OnMidBackBtnClick()
+    {
+        StartCoroutine(MidToHigh());
     }
 
     /// <summary>
     /// 点击上一个区域btn
     /// </summary>
-    private void OnPreAreaBtnClick()
+    private void OnPreLowBtnClick()
     {
-        _model.GetPreAreaId();
-        StartCoroutine(UpdateArea(0.5f));
+        _model.GetPreLowId();
+        StartCoroutine(UpdateLow(0.5f));
     }
 
     /// <summary>
     /// 点击下一个区域btn
     /// </summary>
-    private void OnNextAreaBtnClick()
+    private void OnNextLowBtnClick()
     {
-        _model.GetNextAreaId();
-        StartCoroutine(UpdateArea(0.5f));
+        _model.GetNextLowId();
+        StartCoroutine(UpdateLow(0.5f));
     }
 
     /// <summary>
     /// 点击返回地图btn
     /// </summary>
-    private void OnAreaBackBtnClick()
+    private void OnLowBackBtnClick()
     {
-        StartCoroutine(AreaToMap());
+        StartCoroutine(LowToMid());
     }
     
-    private IEnumerator MapToArea()
+    private IEnumerator HighToMid()
     {
-        _fsm.ChangeFsmState(typeof(MapToAreaState));
-        yield return UpdateArea(0.5f);
+        _fsm.ChangeFsmState(typeof(HighToMidState));
+        yield return UpdateMid(0.5f);
     }
     
-    private IEnumerator AreaToMap()
+    private IEnumerator MidToHigh()
     {
-        _fsm.ChangeFsmState(typeof(AreaToMapState));
-        yield return UpdateMap(0.5f);
+        _fsm.ChangeFsmState(typeof(MidToHighState));
+        yield return UpdateHigh(0.5f);
+    }
+
+    private IEnumerator MidToLow()
+    {
+        _fsm.ChangeFsmState(typeof(MidToLowState));
+        yield return UpdateLow(0.5f);
+    }
+
+    private IEnumerator LowToMid()
+    {
+        _fsm.ChangeFsmState(typeof(LowToMidState));
+        yield return UpdateMid(0.5f);
     }
 
     /// <summary>
@@ -208,7 +254,7 @@ public class StageSelectUICtrl : UICtrlBase
     /// </summary>
     private void InitView()
     {
-        StartCoroutine(UpdateMap(0f));
+        StartCoroutine(UpdateHigh(1f));
     }
 
     /// <summary>
@@ -216,26 +262,34 @@ public class StageSelectUICtrl : UICtrlBase
     /// </summary>
     /// <param name="during"></param>
     /// <returns></returns>
-    private IEnumerator UpdateMap(float during)
+    private IEnumerator UpdateHigh(float during)
     {
-        _fsm.ChangeFsmState(typeof(MapChangingState));
-        var cameraParams = _model.GetMapCameraParams();
+        _fsm.ChangeFsmState(typeof(HighChangingState));
+        var cameraParams = _model.GetHighCameraParams();
         yield return CameraManager.Instance.MoveObjCamera(cameraParams.Item1, cameraParams.Item2, cameraParams.Item3, during);
         //Debug.Log(cameraParams.Item1 + "  " + cameraParams.Item2 + "  " + cameraParams.Item3);
-        _fsm.ChangeFsmState(typeof(MapSelectState));
+        _fsm.ChangeFsmState(typeof(HighSelectState));
+    }
+    
+    private IEnumerator UpdateMid(float during)
+    {
+        var cameraParams = _model.GetMidCameraParams();
+        yield return CameraManager.Instance.MoveObjCamera(cameraParams.Item1, cameraParams.Item2, cameraParams.Item3, during);
+        //Debug.Log(cameraParams.Item1 + "  " + cameraParams.Item2 + "  " + cameraParams.Item3);
+        _fsm.ChangeFsmState(typeof(MidState));
     }
 
     /// <summary>
     /// 刷新区域
     /// </summary>
     /// <returns></returns>
-    private IEnumerator UpdateArea(float during)
+    private IEnumerator UpdateLow(float during)
     {
-        _fsm.ChangeFsmState(typeof(AreaChangingState));
-        var cameraParams = _model.GetAreaCameraParams();
+        _fsm.ChangeFsmState(typeof(LowChangingState));
+        var cameraParams = _model.GetLowCameraParams();
         yield return CameraManager.Instance.MoveObjCamera(cameraParams.Item1, cameraParams.Item2, cameraParams.Item3, during);
         //Debug.Log(cameraParams.Item1 + "  " + cameraParams.Item2 + "  " + cameraParams.Item3);
-        _fsm.ChangeFsmState(typeof(AreaSelectState));
+        _fsm.ChangeFsmState(typeof(LowSelectState));
     }
 
     /// <summary>
@@ -245,14 +299,24 @@ public class StageSelectUICtrl : UICtrlBase
     {
         _fsm = new FsmComponent<StageSelectUICtrl>(this);
         Dictionary<Type, IFsmComponentState<StageSelectUICtrl>> fsmStates = new Dictionary<Type, IFsmComponentState<StageSelectUICtrl>>();
-        fsmStates.Add(typeof(MapSelectState), new MapSelectState());
-        fsmStates.Add(typeof(MapChangingState), new MapChangingState());
-        fsmStates.Add(typeof(MapToAreaState), new MapToAreaState());
-        fsmStates.Add(typeof(AreaSelectState), new AreaSelectState());
-        fsmStates.Add(typeof(AreaChangingState), new AreaChangingState());
-        fsmStates.Add(typeof(AreaToMapState), new AreaToMapState());
+        fsmStates.Add(typeof(HighChangingState), new HighChangingState());
+        fsmStates.Add(typeof(HighSelectState), new HighSelectState());
+        fsmStates.Add(typeof(HighToMidState), new HighToMidState());
+        fsmStates.Add(typeof(MidState), new MidState());
+        fsmStates.Add(typeof(MidToHighState), new MidToHighState());
+        fsmStates.Add(typeof(MidToLowState), new MidToLowState());
+        fsmStates.Add(typeof(LowChangingState), new LowChangingState());
+        fsmStates.Add(typeof(LowSelectState), new LowSelectState());
+        fsmStates.Add(typeof(LowToMidState), new LowToMidState());
         _fsm.SetFsm(fsmStates);
         //fsm此时处于挂起状态，没有state
+    }
+
+    private void CloseAllFrame()
+    {
+        highUIFrame.SetActive(false);
+        midUIFrame.SetActive(false);
+        lowUIFrame.SetActive(false);
     }
 
     private void Update()
