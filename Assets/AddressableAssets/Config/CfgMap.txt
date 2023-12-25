@@ -1,0 +1,6 @@
+key#mapName#lowCount#highCameraParams#midCameraParams#lowACameraParams#lowBCameraParams#lowCCameraParams#lowDCameraParams#lowECameraParams#lowFCameraParams#lowGCameraParams
+key#地图名#地图区域的数量#high摄像机参数#mid摄像机参数#A区域的摄像机参数#B区域的摄像机参数#C区域的摄像机参数#D区域的摄像机参数#E区域的摄像机参数#F区域的摄像机参数#G区域的摄像机参数
+string#string#int#List<float>#List<float>#List<float>#List<float>#List<float>#List<float>#List<float>#List<float>#List<float>
+0#Dessert#3#3,33,5,80,-527,-120,60#3,20,-2,80,0,50,60#0.5,20,-4.5,80,0,50,33#3,20,-3,80,0,50,20#4.5,20,-0.5,80,0,-2,20#None#None#None#None
+1#Island#3#7,-10.5,-38,196.5,-190,-3.2,60#4.6,-6.3,-20.8,196.5,-190,-3.2,60#9.5,-7.4,-20.8,196.5,-193.5,57.1,27.3#4.1,-7.4,-20.8,196.5,-193.5,57.1,20#0,-6.6,-20,196.5,-193.5,-66.2,20#None#None#None#None
+2#Null#0#-34.5,-16.6,-3.1,-24.2,-273.1,-7.9,60#-18.2,-10.3,0,-24.2,-273.1,-7.9,60#None#None#None#None#None#None#None
