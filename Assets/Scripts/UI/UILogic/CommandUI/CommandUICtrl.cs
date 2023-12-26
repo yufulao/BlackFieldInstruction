@@ -46,6 +46,12 @@ public class CommandUICtrl : UICtrlBase
         gameObject.SetActive(false);
     }
 
+    public void ResetAll(RowCfgStage rowCfgStage)
+    {
+        ReloadModel(rowCfgStage);
+        ResetCommandUI();
+    }
+
     /// <summary>
     /// 获取所有UsedItem
     /// </summary>
@@ -95,7 +101,7 @@ public class CommandUICtrl : UICtrlBase
         currentTimeText.text = _cacheCurrentTimeInExecuting.ToString();
         return _cacheCurrentTimeInExecuting > _rowCfgStage.stageTime;
     }
-    
+
     protected override void BindEvent()
     {
         startBtn.onClick.AddListener(BattleManager.Instance.ChangeToCommandExecuteState);
@@ -104,7 +110,7 @@ public class CommandUICtrl : UICtrlBase
         cancelExecuteBtn.onClick.AddListener(BattleManager.Instance.ForceStopExecuteCommand);
         timeScaleSlider.onValueChanged.AddListener(GameManager.Instance.SetTimeScale);
     }
-
+    
     /// <summary>
     /// 重置指令ui
     /// </summary>

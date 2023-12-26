@@ -46,6 +46,8 @@ public class GameManager : MonoSingleton<GameManager>
         // }));
         //GameObject obj = CommandManager.Instance.CreatWaitingObj();
         StartCoroutine(TestStart());
+        //SaveManager.SetFloat("TestFloat",0.5f);
+        //Debug.Log(SaveManager.GetFloat("TestFloat", 0.1f));
     }
 
     private IEnumerator TestStart()
@@ -54,9 +56,9 @@ public class GameManager : MonoSingleton<GameManager>
         UIManager.Instance.OpenWindow("StageSelectView");
     }
 
-    public void EnterStage(string stageName,string scenePath)
+    public void EnterStage(string stageName)
     {
-        StartCoroutine(IEnterStage(stageName,scenePath));
+        StartCoroutine(IEnterStage(stageName,ConfigManager.Instance.cfgStage[stageName].scenePath));
     }
 
     public void SetTimeScale(float timeScale)

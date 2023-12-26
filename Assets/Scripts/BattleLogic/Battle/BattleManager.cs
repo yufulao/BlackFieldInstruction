@@ -1,9 +1,6 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using Rabi;
-using Unity.VisualScripting;
-using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
@@ -16,13 +13,13 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
     private readonly List<BattleUnitTarget> _targetUnits = new List<BattleUnitTarget>();
     private readonly List<BattleUnit> _allUnits = new List<BattleUnit>();
     private readonly Dictionary<BattleUnit, BattleUnitInfo> _unitInfoDic = new Dictionary<BattleUnit, BattleUnitInfo>();
-    private bool _hasInit;
+    private bool _hadInit;
     private bool _win;
     private string _cacheStageName;
 
     public void OnInit()
     {
-        if (_hasInit)
+        if (_hadInit)
         {
             return;
         }
@@ -31,7 +28,7 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
 
         _model = new BattleModel();
         _view = GameObject.FindObjectOfType<BattleView>();
-        _hasInit = true;
+        _hadInit = true;
     }
 
     public void Update()
@@ -124,10 +121,14 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
     public void BattleEndStateEnter()
     {
         Debug.Log("游戏结束" + _win);
-        if (!_win)
+        if (_win)
         {
-            ResetBattleMap();
+            SaveManager.SetInt(_rowCfgStage.nextStageName, 1);
+            GameManager.Instance.EnterStage(_rowCfgStage.nextStageName);
+            return;
         }
+
+        ResetBattleMap();
     }
 
     /// <summary>
@@ -137,7 +138,7 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
     {
         return CheckCellForUnit<BattleUnit>(_player, UnitType.Target);
     }
-    
+
     /// <summary>
     /// 检测格子是否可走
     /// </summary>
@@ -194,10 +195,11 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
     {
         BattleUnitInfo unitInfo = _unitInfoDic[unit];
         List<BattleUnitInfo> cellInfos = _model.GetUnitInfoByGridCell(GridManager.Instance.GetGridCell(unitInfo.currentPoint));
-        if (cellInfos==null)
+        if (cellInfos == null)
         {
             return false;
         }
+
         List<T> results = new List<T>();
         for (int i = 0; i < cellInfos.Count; i++)
         {
@@ -215,7 +217,7 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
 
         return false;
     }
-    
+
     /// <summary>
     /// 检测传入的地块上是否有T的unit
     /// </summary>
@@ -226,16 +228,18 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
     /// <returns></returns>
     public bool CheckCellForOrderPoint<T>(Vector2Int orderPoint, UnitType unitType, Action<List<T>> callback = null) where T : BattleUnit
     {
-        if (!GridManager.Instance.CheckPointValid(orderPoint.x,orderPoint.y))
+        if (!GridManager.Instance.CheckPointValid(orderPoint.x, orderPoint.y))
         {
             return false;
         }
+
         List<BattleUnitInfo> cellInfos = _model.GetUnitInfoByGridCell(GridManager.Instance.GetGridCell(orderPoint));
         List<T> results = new List<T>();
-        if (cellInfos==null)
+        if (cellInfos == null)
         {
             return false;
         }
+
         for (int i = 0; i < cellInfos.Count; i++)
         {
             if (cellInfos[i].unitType == unitType)
@@ -263,11 +267,13 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
     {
         _model.UpdateUnitPoint(unitInfo, lastPoint, newPoint);
     }
+
     public void UpdateUnitPoint(BattleUnit unit, Vector2Int newPoint)
     {
         BattleUnitInfo unitInfo = _unitInfoDic[unit];
         _model.UpdateUnitPoint(unitInfo, unitInfo.currentPoint, newPoint);
     }
+
     public void UpdateUnitPoint(BattleUnit unit)
     {
         BattleUnitInfo info = _unitInfoDic[unit];
@@ -325,10 +331,11 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
             //Debug.Log(gridObjList[i]+"--->"+unitInfo.unitType);
         }
 
-        if (_player == null )
+        if (_player == null)
         {
             Debug.LogError("场景中没有player");
         }
+
         if (_targetUnits.Count == 0)
         {
             Debug.LogError("场景中没有目标");
@@ -364,7 +371,7 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
         {
             _allUnits[i].StopAllCoroutines();
             BattleUnitInfo unitInfo = _unitInfoDic[_allUnits[i]];
-            _allUnits[i].gameObject.transform.position = GridManager.Instance.GetWorldPositionByPoint(unitInfo.originalPoint.x, unitInfo.originalPoint.y);
+            _allUnits[i].gameObject.transform.position = GridManager.Instance.GetWorldPositionByPoint(unitInfo.originalPoint.x, unitInfo.originalPoint.y,_allUnits[i].gameObject.transform.position.y);
             //Debug.Log(_allUnits[i].gameObject.name + "--->" + _allUnits[i].gameObject.transform.position);
             _model.ResetUnitInfo(unitInfo);
             _allUnits[i].OnUnitReset();

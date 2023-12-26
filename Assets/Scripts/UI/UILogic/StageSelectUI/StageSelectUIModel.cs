@@ -20,7 +20,7 @@ public class StageSelectUIModel
         List<RowCfgStage> stages = ConfigManager.Instance.cfgStage.AllConfigs;
         for (int i = 0; i < stages.Count; i++)
         {
-            StageItemInfo stageInfo = CreateStageItemInfo(stages[i].key, stages[i].scenePath);
+            StageItemInfo stageInfo = CreateStageItemInfo(stages[i].key);
             _stageItemInfoList.Add(stageInfo);
         }
         _currentHighId = 0;
@@ -164,14 +164,12 @@ public class StageSelectUIModel
     /// 生成一个stageItemInfo
     /// </summary>
     /// <param name="stageNameT"></param>
-    /// <param name="scenePathT"></param>
     /// <returns></returns>
-    private StageItemInfo CreateStageItemInfo(string stageNameT,string scenePathT)
+    private StageItemInfo CreateStageItemInfo(string stageNameT)
     {
         return new StageItemInfo()
         {
             stageName = stageNameT,
-            scenePath = scenePathT
         };
     }
 

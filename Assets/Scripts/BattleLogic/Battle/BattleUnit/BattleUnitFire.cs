@@ -11,6 +11,7 @@ public class BattleUnitFire : BattleUnit
     public override void OnUnitInit()
     {
         base.OnUnitInit();
+        currentActive = originalActive;
         ResetAll();
     }
 
@@ -47,7 +48,7 @@ public class BattleUnitFire : BattleUnit
     /// </summary>
     private void ResetAll()
     {
-        SetVfxActive(originalActive);
+        SetFireActive(originalActive);
     }
 
     /// <summary>

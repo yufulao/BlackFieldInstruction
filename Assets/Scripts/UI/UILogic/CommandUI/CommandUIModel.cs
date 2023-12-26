@@ -202,8 +202,8 @@ public class CommandUIModel
     /// <param name="removeUsedItemIndex"></param>
     private void CombineSameUsedItem(int removeUsedItemIndex)
     {
-        Debug.Log(removeUsedItemIndex);
-        Debug.Log(_usedItemInfoList.Count);
+        // Debug.Log(removeUsedItemIndex);
+        // Debug.Log(_usedItemInfoList.Count);
         if (_usedItemInfoList.Count < 3 || removeUsedItemIndex == 0 || removeUsedItemIndex + 1 >= _usedItemInfoList.Count)
         {
             return;

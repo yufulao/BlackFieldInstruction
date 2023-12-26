@@ -16,6 +16,7 @@ public class CommandManager : MonoSingleton<CommandManager>
     private readonly List<Coroutine> _calculateList = new List<Coroutine>();
     private readonly List<Coroutine> _executeList = new List<Coroutine>();
     private readonly List<Coroutine> _checkOverlapList = new List<Coroutine>();
+    private bool _hadInit;
 
     /// <summary>
     /// 初始化
@@ -23,10 +24,17 @@ public class CommandManager : MonoSingleton<CommandManager>
     /// <param name="rowCfgStage"></param>
     public void InitCommandManager(RowCfgStage rowCfgStage)
     {
+        if (_hadInit)
+        {
+            ResetAll(rowCfgStage);
+            return;
+        }
+
         _rowCfgStage = rowCfgStage;
         _usedCommandList.Clear();
         _viewCtrl = UIManager.Instance.GetCtrl<CommandUICtrl>("CommandView", rowCfgStage);
         InitCommandFsm(); //挂起状态
+        _hadInit = true;
     }
 
     /// <summary>
@@ -58,9 +66,17 @@ public class CommandManager : MonoSingleton<CommandManager>
     /// </summary>
     public void CommandMainStartStateEnter()
     {
-        PrepareCommand();
-        EventManager.Instance.Dispatch(EventName.CommandMainStart);
-        _commandFsm.ChangeFsmState(typeof(CommandCalculateState));
+        List<UsedItemInfo> usedItemInfoList = _viewCtrl.GetAllUsedItem();
+        if (usedItemInfoList != null && usedItemInfoList.Count > 0)
+        {
+            PrepareCommand(usedItemInfoList);
+            EventManager.Instance.Dispatch(EventName.CommandMainStart);
+            _commandFsm.ChangeFsmState(typeof(CommandCalculateState));
+            return;
+        }
+
+        //指令数为0
+        BattleManager.Instance.ForceStopExecuteCommand();
     }
 
     /// <summary>
@@ -69,6 +85,18 @@ public class CommandManager : MonoSingleton<CommandManager>
     public void CommandCalculateStateEnter()
     {
         _fsmCoroutine = StartCoroutine(ICommandCalculateStateEnter());
+    }
+
+    /// <summary>
+    /// 重新加载commandManager
+    /// </summary>
+    /// <param name="rowCfgStage"></param>
+    private void ResetAll(RowCfgStage rowCfgStage)
+    {
+        _rowCfgStage = rowCfgStage;
+        _usedCommandList.Clear();
+        _viewCtrl.ResetAll(rowCfgStage);
+        _commandFsm.ChangeFsmState(typeof(CommandMainEndState));
     }
 
     /// <summary>
@@ -84,8 +112,9 @@ public class CommandManager : MonoSingleton<CommandManager>
             _calculateList.Add(StartCoroutine(allUnit[i].Calculate(_usedCommandList[0])));
             //Debug.Log("计算指令"+_usedCommandList[0]);
         }
+
         _usedCommandList.RemoveAt(0);
-        
+
         // 等待所有单位协程执行完毕
         foreach (var coroutine in _calculateList)
         {
@@ -211,10 +240,9 @@ public class CommandManager : MonoSingleton<CommandManager>
     /// <summary>
     /// 预处理指令集，把usedCommand里所有的指令都加载到list中
     /// </summary>
-    private void PrepareCommand()
+    private void PrepareCommand(List<UsedItemInfo> usedItemInfoList)
     {
         _usedCommandList.Clear();
-        List<UsedItemInfo> usedItemInfoList = _viewCtrl.GetAllUsedItem();
         for (int i = 0; i < usedItemInfoList.Count; i++)
         {
             for (int j = 0; j < usedItemInfoList[i].cacheCount; j++)

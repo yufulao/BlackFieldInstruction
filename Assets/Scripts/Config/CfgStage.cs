@@ -24,6 +24,7 @@ namespace Rabi
         public Dictionary<int,int> commandDic; //关卡可用指令
         public Dictionary<int,int> commandTime; //每个指令时长
         public int stageTime; //关卡的时间上限
+        public string nextStageName; //下一关的key
     }
 
     public class CfgStage
@@ -76,7 +77,7 @@ namespace Rabi
         private RowCfgStage ParseRow(string[] col)
         {
             //列越界
-            if (col.Length < 8)
+            if (col.Length < 9)
             {
                 Debug.LogError($"配置表字段行数越界:{GetType()}");
                 return null;
@@ -92,6 +93,7 @@ namespace Rabi
             data.commandDic = CsvUtility.ToDictionary<int,int>(rowHelper.ReadNextCol()); //关卡可用指令
             data.commandTime = CsvUtility.ToDictionary<int,int>(rowHelper.ReadNextCol()); //每个指令时长
             data.stageTime = CsvUtility.ToInt(rowHelper.ReadNextCol()); //关卡的时间上限
+            data.nextStageName = CsvUtility.ToString(rowHelper.ReadNextCol()); //下一关的key
             return data;
         }
     }

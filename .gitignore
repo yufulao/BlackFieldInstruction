@@ -2,3 +2,7 @@
 Assets/Res/
 # 忽略Library整个目录
 Library/
+# 忽略Logs整个目录
+Logs/
+obj/
+Temp/

@@ -1,4 +1,3 @@
-repository "BlackFieldInstruction@yufulao_lixu@cloud.cn"
+rep "BlackFieldInstruction@yufulao_lixu@cloud.cn"
   path "/"
-    smartbranch "/main" 
-     
+    smartbranch "/main"

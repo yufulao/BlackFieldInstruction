@@ -157,7 +157,7 @@ public class StageSelectUICtrl : UICtrlBase
     private void OnStageItemClick(StageItem stageItem)
     {
         StageItemInfo stageInfo = _model.GetStageInfo(stageItem.stageCfgKey);
-        GameManager.Instance.EnterStage(stageInfo.stageName, stageInfo.scenePath);
+        GameManager.Instance.EnterStage(stageInfo.stageName);
         UIManager.Instance.CloseWindows("StageSelectView");
     }
 
