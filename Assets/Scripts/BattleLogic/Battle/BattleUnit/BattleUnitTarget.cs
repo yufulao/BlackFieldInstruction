@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class BattleUnitTarget : BattleUnit
 {
-
+    public int needPeopleCount;
 }

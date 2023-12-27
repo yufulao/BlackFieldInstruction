@@ -111,6 +111,10 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
     /// <returns></returns>
     public void BattleEnd(bool win)
     {
+        if (_win)
+        {
+            return;
+        }
         _win = win;
         _battleFsm.ChangeFsmState(typeof(BattleEndState));
     }
@@ -129,14 +133,6 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
         }
 
         ResetBattleMap();
-    }
-
-    /// <summary>
-    /// 检测是否到达target
-    /// </summary>
-    public bool CheckPlayerGetTarget()
-    {
-        return CheckCellForUnit<BattleUnit>(_player, UnitType.Target);
     }
 
     /// <summary>

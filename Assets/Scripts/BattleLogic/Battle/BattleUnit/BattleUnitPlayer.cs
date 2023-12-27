@@ -16,6 +16,7 @@ public class BattleUnitPlayer : BattleUnit
     [HideInInspector] private Transform _cachePlayerParent;
     private Vector2Int _cacheTargetPoint;
     private ForwardType _cacheTargetForward;
+    private int _currentPeopleCount;
 
     public override void OnUnitInit()
     {
@@ -133,6 +134,7 @@ public class BattleUnitPlayer : BattleUnit
         RefreshPlayerObjActive(true);
         _sequence?.Kill();
         car = null;
+        _currentPeopleCount = 0;
         StartCoroutine(WaitForRotate(originalForwardType, 0f));
     }
 
@@ -199,12 +201,21 @@ public class BattleUnitPlayer : BattleUnit
     /// </summary>
     private void CheckAfterPlayerMove()
     {
-        if (BattleManager.Instance.CheckPlayerGetTarget() && car == null)
+        BattleManager.Instance.CheckCellForUnit<BattleUnitTarget>(this, UnitType.Target, (targets) =>
         {
-            CommandManager.Instance.ForceChangeToMainEnd();
-            BattleManager.Instance.BattleEnd(true);
-            return;
-        }
+            if (car==null)
+            {
+                for (int i = 0; i < targets.Count; i++)
+                {
+                    if (_currentPeopleCount>=targets[i].needPeopleCount)
+                    {
+                        CommandManager.Instance.ForceChangeToMainEnd();
+                        BattleManager.Instance.BattleEnd(true);
+                        return;
+                    }
+                }
+            }
+        });
 
         BattleManager.Instance.CheckCellForUnit<BattleUnitFire>(this, UnitType.Fire, (fires) =>
         {
@@ -229,7 +240,7 @@ public class BattleUnitPlayer : BattleUnit
                 for (int i = 0; i < people.Count; i++)
                 {
                     people[i].SetPeopleActive(false);
-                    //todo 加积分
+                    _currentPeopleCount++;
                 }
             }
         });

@@ -210,7 +210,7 @@ public class CommandManager : MonoSingleton<CommandManager>
         if (_usedCommandList.Count <= 0) //指令全部执行完毕
         {
             _commandFsm.ChangeFsmState(typeof(CommandMainEndState));
-            BattleManager.Instance.BattleEnd(BattleManager.Instance.CheckPlayerGetTarget());
+            BattleManager.Instance.BattleEnd(false);
             return;
         }
 
