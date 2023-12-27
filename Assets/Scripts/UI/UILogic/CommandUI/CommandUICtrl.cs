@@ -105,7 +105,7 @@ public class CommandUICtrl : UICtrlBase
     protected override void BindEvent()
     {
         startBtn.onClick.AddListener(BattleManager.Instance.ChangeToCommandExecuteState);
-        pauseBtn.onClick.AddListener(() => { });
+        pauseBtn.onClick.AddListener(() => { UIManager.Instance.OpenWindow("PauseView");});
         resetBtn.onClick.AddListener(ResetCommandUI);
         cancelExecuteBtn.onClick.AddListener(BattleManager.Instance.ForceStopExecuteCommand);
         timeScaleSlider.onValueChanged.AddListener(GameManager.Instance.SetTimeScale);

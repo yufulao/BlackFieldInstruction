@@ -42,8 +42,22 @@ public class CameraManager : BaseSingleTon<CameraManager>, IMonoManager
         _objSequence?.Kill();
     }
 
+    public void ResetObjCamera()
+    {
+        if (_objCamera)
+        {
+            _objCamera.gameObject.SetActive(false);
+        }
+        _objCamera = _cacheMainObjCamera;
+        _objCamera.gameObject.SetActive(true);
+    }
+
     public IEnumerator MoveObjCamera(Vector3 targetPosition, Vector3 targetRotation, float fieldOfView, float during = 0f)
     {
+        if (!_objCamera)
+        {
+            yield break;
+        }
         _objSequence?.Kill();
         _objSequence = DOTween.Sequence();
         _objSequence.Join(_objCamera.transform.DOLocalMove(targetPosition, during));

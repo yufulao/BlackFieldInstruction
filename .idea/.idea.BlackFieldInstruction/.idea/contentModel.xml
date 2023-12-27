@@ -1579,6 +1579,10 @@
                   <e p="CommandItemInfo.cs" t="Include" />
                 </e>
               </e>
+              <e p="PauseUI" t="Include">
+                <e p="PauseUICtrl.cs" t="Include" />
+                <e p="PauseUIModel.cs" t="Include" />
+              </e>
               <e p="StageSelectUI" t="Include">
                 <e p="Component" t="Include">
                   <e p="StageItem.cs" t="Include" />

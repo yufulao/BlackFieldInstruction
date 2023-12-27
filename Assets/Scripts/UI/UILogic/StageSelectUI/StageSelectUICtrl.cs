@@ -42,7 +42,7 @@ public class StageSelectUICtrl : UICtrlBase
     public override void OpenRoot()
     {
         gameObject.SetActive(true);
-        InitView();
+        ResetView();
     }
 
     public override void CloseRoot()
@@ -250,9 +250,9 @@ public class StageSelectUICtrl : UICtrlBase
     }
 
     /// <summary>
-    /// 初始化View
+    /// 重置View
     /// </summary>
-    private void InitView()
+    private void ResetView()
     {
         StartCoroutine(UpdateHigh(1f));
     }

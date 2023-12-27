@@ -3,5 +3,5 @@ key#所属层级#canvas的层级#预设路径#None#None#None
 string#string#int#string#None#None#None
 CommandView#SceneLayer#0#Assets/AddressableAssets/UI/CommandView.prefab#None#None#None
 StageSelectView#SceneLayer#0#Assets/AddressableAssets/UI/StageSelectView.prefab#None#None#None
-None#None#None#None#None#None#None
+PauseView#NormalLayer#100#Assets/AddressableAssets/UI/PauseView.prefab#None#None#None
 None#None#None#None#None#None#None

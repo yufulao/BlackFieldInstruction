@@ -330,7 +330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 393245547}
   m_Layer: 0
-  m_Name: UiRoot
+  m_Name: UIRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -752,7 +752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d70c9ba36a8bebe4697e8f8a9da58409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pipelineAsset: {fileID: 11400000, guid: ecbd363870e07455ea237f5753668d30, type: 2}
+  pipelineAsset: {fileID: 11400000, guid: dd1859b8c186aa14cab60c0866ed63b8, type: 2}
 --- !u!1 &1598332751
 GameObject:
   m_ObjectHideFlags: 0

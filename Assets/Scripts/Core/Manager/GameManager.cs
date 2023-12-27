@@ -45,27 +45,63 @@ public class GameManager : MonoSingleton<GameManager>
         //     BattleManager.Instance.EnterStageScene("StageTest");
         // }));
         //GameObject obj = CommandManager.Instance.CreatWaitingObj();
-        StartCoroutine(TestStart());
         //SaveManager.SetFloat("TestFloat",0.5f);
         //Debug.Log(SaveManager.GetFloat("TestFloat", 0.1f));
+        ReturnToTitle();
     }
 
-    private IEnumerator TestStart()
+    /// <summary>
+    /// 游戏开始
+    /// </summary>
+    public void ReturnToTitle()
+    {
+        StartCoroutine(IReturnToTitle());
+    }
+
+    /// <summary>
+    /// 游戏开始
+    /// </summary>
+    private IEnumerator IReturnToTitle()
     {
         yield return SceneManager.Instance.ChangeSceneAsync("MainScene");
+        CameraManager.Instance.ResetObjCamera();
+        UIManager.Instance.CloseAllWindows();
         UIManager.Instance.OpenWindow("StageSelectView");
+        GC.Collect();
     }
 
+    /// <summary>
+    /// 进入关卡
+    /// </summary>
+    /// <param name="stageName"></param>
     public void EnterStage(string stageName)
     {
         StartCoroutine(IEnterStage(stageName,ConfigManager.Instance.cfgStage[stageName].scenePath));
     }
 
+    /// <summary>
+    /// 退出游戏
+    /// </summary>
+    public void QuitApplication()
+    {
+        Application.Quit();
+    }
+
+    /// <summary>
+    /// 设置时间速率
+    /// </summary>
+    /// <param name="timeScale"></param>
     public void SetTimeScale(float timeScale)
     {
         Time.timeScale = timeScale;
     }
 
+    /// <summary>
+    /// 进入游戏关卡
+    /// </summary>
+    /// <param name="stageName"></param>
+    /// <param name="scenePath"></param>
+    /// <returns></returns>
     IEnumerator IEnterStage(string stageName,string scenePath)
     {
         yield return SceneManager.Instance.ChangeSceneAsync(scenePath);

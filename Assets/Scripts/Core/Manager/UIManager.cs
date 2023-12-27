@@ -17,7 +17,7 @@ public class UIManager : BaseSingleTon<UIManager>, IMonoManager
     {
         _cfgUI = ConfigManager.Instance.cfgUI;
 
-        _uiRoot = GameObject.Find("UiRoot").transform;
+        _uiRoot = GameObject.Find("UIRoot").transform;
 
         _layers = new Dictionary<string, Transform>();
         _layers.Add("SceneLayer", GameObject.Find("SceneLayer").transform);
@@ -81,6 +81,25 @@ public class UIManager : BaseSingleTon<UIManager>, IMonoManager
         }
 
         ctrl.CloseRoot();
+    }
+    
+    /// <summary>
+    /// 关闭所有页面
+    /// </summary>
+    public void CloseAllWindows()
+    {
+        foreach (var layerStack in _layerStacks)
+        {
+            if (layerStack.Value.Count==0)
+            {
+                continue;
+            }
+            while (layerStack.Value.Count > 0)
+            {
+                UICtrlBase ctrlBefore = layerStack.Value.Pop();
+                ctrlBefore.CloseRoot();
+            }
+        }
     }
 
     /// <summary>

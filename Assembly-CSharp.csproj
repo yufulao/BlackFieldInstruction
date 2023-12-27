@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\UI\UILogic\CommandUI\CommandUIModel.cs" />
      <Compile Include="Assets\Scripts\Core\Manager\SceneManager.cs" />
      <Compile Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo.cs" />
+     <Compile Include="Assets\Scripts\UI\UILogic\PauseUI\PauseUICtrl.cs" />
      <Compile Include="Assets\Scripts\Core\Base\Manager\IMonoManager.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\Battle\BattleView.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\Battle\BattleFsm\FsmState\BattleEndState.cs" />
@@ -137,6 +138,7 @@
      <Compile Include="Assets\Scripts\Core\Base\Singleton\MonoSingleton.cs" />
      <Compile Include="Assets\Scripts\UI\UILogic\StageSelectUI\StageSelectUIFsm\FsmState\HighChangingState.cs" />
      <Compile Include="Assets\Scripts\UI\UILogic\StageSelectUI\StageSelectUIFsm\FsmState\HighToMidState.cs" />
+     <Compile Include="Assets\Scripts\UI\UILogic\PauseUI\PauseUIModel.cs" />
      <Compile Include="Assets\Res\ResourcePackages\FlatKit\Demos\Common\Scripts\UvScroller.cs" />
      <Compile Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\Command\CommandFsm\FsmState\CommandExecuteEndState.cs" />
@@ -427,6 +429,7 @@
      <Folder Include="Assets\Res\ResourcePackages\Planets\shader" />
      <Folder Include="Assets\Res\ResourcePackages\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter" />
      <Folder Include="Assets\Res\ResourcePackages\Robot\Robo2\Materials" />
+     <Folder Include="Assets\Scripts\UI\UILogic\PauseUI" />
      <Folder Include="Assets\Res\ResourcePackages\LowPoly Nature Pack\Materials\Charakter" />
      <Folder Include="Assets\Scripts\UI\Base" />
      <Folder Include="Assets\Res\Vfx\Weather Effect\Environment VFX pack\Prefabs\Butterflies" />
