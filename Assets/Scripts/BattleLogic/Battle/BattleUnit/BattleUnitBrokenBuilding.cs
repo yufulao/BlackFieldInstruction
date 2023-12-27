@@ -91,6 +91,7 @@ public class BattleUnitBrokenBuilding : BattleUnit
     /// </summary>
     public void BuildingRuinStateEnter()
     {
+        walkable = true;
         unBrokenBuilding.SetActive(false);
         brokenBuilding.SetActive(false);
         ruinUnit.SetRuinActive(true);
@@ -143,7 +144,6 @@ public class BattleUnitBrokenBuilding : BattleUnit
     /// <param name="forwardType"></param>
     private void ToRuin(ForwardType forwardType)
     {
-        walkable = true;
         currentStateType = BrokenBuildingStateType.Ruin;
         Vector3 targetRuinPosition = transform.position;
         float cellSize = GridManager.Instance.GetPerCellSize();

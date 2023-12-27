@@ -1943,7 +1943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 655745442338298284, guid: 8fb2b89e652f43e4498011cc2937e857, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.719
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 655745442338298284, guid: 8fb2b89e652f43e4498011cc2937e857, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2008,6 +2008,14 @@ PrefabInstance:
     - target: {fileID: 655745442338298286, guid: 8fb2b89e652f43e4498011cc2937e857, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -16.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378388373500531139, guid: 8fb2b89e652f43e4498011cc2937e857, type: 3}
+      propertyPath: fallTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378388373500531139, guid: 8fb2b89e652f43e4498011cc2937e857, type: 3}
+      propertyPath: delayTime
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2378388373500531148, guid: 8fb2b89e652f43e4498011cc2937e857, type: 3}
       propertyPath: m_Name
@@ -8731,7 +8739,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2378388373500531139, guid: 8fb2b89e652f43e4498011cc2937e857, type: 3}
       propertyPath: fallTime
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378388373500531139, guid: 8fb2b89e652f43e4498011cc2937e857, type: 3}
+      propertyPath: delayTime
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2378388373500531148, guid: 8fb2b89e652f43e4498011cc2937e857, type: 3}
       propertyPath: m_Name
