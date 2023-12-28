@@ -167,6 +167,24 @@ public class BattleUnitBrokenBuilding : BattleUnit
     {
         currentStateType = BrokenBuildingStateType.Broken;
         _cacheForward = forwardType;
+        Vector3 brokenBuildingRotation = Vector3.zero;
+        switch (_cacheForward)
+        {
+            case ForwardType.Up:
+                brokenBuildingRotation = new Vector3(0, 0, 0);
+                break;
+            case ForwardType.Down:
+                brokenBuildingRotation= new Vector3(0, 180, 0);
+                break;
+            case ForwardType.Left:
+                brokenBuildingRotation= new Vector3(0, -90, 0);
+                break;
+            case ForwardType.Right:
+                brokenBuildingRotation= new Vector3(0, 90, 0);
+                break;
+        }
+
+        brokenBuilding.transform.localRotation = Quaternion.Euler(brokenBuildingRotation);
         _fsm.ChangeFsmState(typeof(BuildingBrokenState));
     }
 
