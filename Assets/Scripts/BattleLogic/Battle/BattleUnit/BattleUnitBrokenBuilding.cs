@@ -126,23 +126,12 @@ public class BattleUnitBrokenBuilding : BattleUnit
                 break;
         }
     }
-
-    /// <summary>
-    /// 完好建筑变到破损建筑
-    /// </summary>
-    /// <param name="forwardType"></param>
-    private void ToBroken(ForwardType forwardType)
-    {
-        currentStateType = BrokenBuildingStateType.Broken;
-        _cacheForward = forwardType;
-        _fsm.ChangeFsmState(typeof(BuildingBrokenState));
-    }
     
     /// <summary>
     /// 破损建筑变到废墟
     /// </summary>
     /// <param name="forwardType"></param>
-    private void ToRuin(ForwardType forwardType)
+    public void ToRuin(ForwardType forwardType)
     {
         currentStateType = BrokenBuildingStateType.Ruin;
         Vector3 targetRuinPosition = transform.position;
@@ -164,8 +153,21 @@ public class BattleUnitBrokenBuilding : BattleUnit
         }
 
         ruinUnit.gameObject.transform.position = targetRuinPosition;
-        BattleManager.Instance.UpdateUnitPoint(ruinUnit,GridManager.Instance.GetPointByWorldPosition(targetRuinPosition));
+        Vector2Int targetRuinPoint = GridManager.Instance.GetPointByWorldPosition(targetRuinPosition);
+        BattleManager.Instance.UpdateUnitPoint(ruinUnit,targetRuinPoint);
+        ToRainChain(forwardType,targetRuinPoint);
         _fsm.ChangeFsmState(typeof(BuildingRuinState));
+    }
+
+    /// <summary>
+    /// 完好建筑变到破损建筑
+    /// </summary>
+    /// <param name="forwardType"></param>
+    private void ToBroken(ForwardType forwardType)
+    {
+        currentStateType = BrokenBuildingStateType.Broken;
+        _cacheForward = forwardType;
+        _fsm.ChangeFsmState(typeof(BuildingBrokenState));
     }
 
     /// <summary>
@@ -175,6 +177,23 @@ public class BattleUnitBrokenBuilding : BattleUnit
     {
         currentStateType = BrokenBuildingStateType.Clean;
         _fsm.ChangeFsmState(typeof(BuildingCleanState));
+    }
+
+    /// <summary>
+    /// 倒塌变废墟的链式反应
+    /// </summary>
+    private void ToRainChain(ForwardType forwardType,Vector2Int targetRuinPoint)
+    {
+        BattleManager.Instance.CheckCellForOrderPoint<BattleUnitBrokenBuilding>(targetRuinPoint, UnitType.BrokenBuilding, (buildings) =>
+        {
+            for (int i = 0; i < buildings.Count; i++)
+            {
+                if (buildings[i].currentStateType!=BrokenBuildingStateType.Ruin&&buildings[i].currentStateType!=BrokenBuildingStateType.Clean)
+                {
+                    buildings[i].ToRuin(forwardType);
+                }
+            }
+        });
     }
 
     /// <summary>

@@ -177,6 +177,7 @@ public class CommandUIModel
     /// waitingItem减一
     /// </summary>
     /// <param name="waitingItemInfo"></param>
+    /// <param name="noWaitingObjCallback"></param>
     public void RemoveWaitingCommand(WaitingItemInfo waitingItemInfo, Action noWaitingObjCallback)
     {
         waitingItemInfo.cacheCount--;
