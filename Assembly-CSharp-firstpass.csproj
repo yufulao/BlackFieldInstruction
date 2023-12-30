@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_LimitVelocityOverLifetimeModule.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\ES3.cs" />
+     <Compile Include="Assets\Plugins\SimpleLOD\LODSwitcher.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Referencing\ES3GlobalReferences.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Vector4.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_enum.cs" />
@@ -55,8 +56,10 @@
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_Transform.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Gradient.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Auto Save\ES3AutoSaveMgr.cs" />
+     <Compile Include="Assets\Plugins\SimpleLOD\Extensions\FloatExtensions.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_DateTime.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+     <Compile Include="Assets\Plugins\SimpleLOD\Extensions\Vector3Extensions.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_AudioClip.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_Text.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Readers\ES3JSONReader.cs" />
@@ -82,6 +85,7 @@
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Streams\ES3Stream.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Streams\ES3PlayerPrefsStream.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_ColorBySpeedModule.cs" />
+     <Compile Include="Assets\Plugins\SimpleLOD\Extensions\MeshExtensions.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\ES3InspectorInfo.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Vector3Int.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Writers\ES3CacheWriter.cs" />
@@ -126,6 +130,7 @@
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Reflected Types\ES3ReflectedObjectType.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_ushort.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_MainModule.cs" />
+     <Compile Include="Assets\Plugins\SimpleLOD\Extensions\Texture2DExtensions.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\PlayMaker\ES3PlayMaker.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Auto Save\ES3AutoSave.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Reflected Types\ES3ReflectedComponentType.cs" />
@@ -160,7 +165,9 @@
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_char.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_VelocityOverLifetimeModule.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_PhysicMaterial.cs" />
+     <Compile Include="Assets\Plugins\SimpleLOD\Extensions\RectExtensions.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_RotationOverLifetimeModule.cs" />
+     <Compile Include="Assets\Plugins\Mesh Optimizer\Scripts\OptimizeMesh.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\ES3Type.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\NET Types\ES3Type_Random.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Collection Types\ES33DArrayType.cs" />
@@ -171,6 +178,7 @@
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Readers\ES3Reader.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTweenPro\DOTweenProShortcuts.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Writers\ES3Writer.cs" />
+     <Compile Include="Assets\Plugins\SimpleLOD\LODMaker.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Primitive Types\ES3Type_ES3Ref.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Writers\ES3BinaryWriter.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_SizeBySpeedModule.cs" />
@@ -186,6 +194,7 @@
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_Color32.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Writers\ES3JSONWriter.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Collection Types\ES3ListType.cs" />
+     <Compile Include="Assets\Plugins\SimpleLOD\Extensions\TransformExtensions.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTweenPro\DOTweenDeAudio.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\ES3File.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_SubEmittersModule.cs" />
@@ -196,6 +205,7 @@
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\ES3Spreadsheet.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\ES3UnityObjectType.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types\ES3Type_MeshFilter.cs" />
+     <Compile Include="Assets\Plugins\SimpleLOD\Extensions\GameObjectExtensions.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Collection Types\ES3CollectionType.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\ES3Type_ExternalForcesModule.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Scripts\ES3ReferenceMgrBase.cs" />
@@ -228,11 +238,14 @@
      <Folder Include="Assets\Plugins\TextMesh Pro\Sprites" />
      <Folder Include="Assets\Plugins\Easy Save 3\Scripts\Types\NET Types" />
      <Folder Include="Assets\Plugins\Easy Save 3\Change Log" />
+     <Folder Include="Assets\Plugins\SimpleLOD" />
      <Folder Include="Assets\Plugins\TextMesh Pro\Resources\Sprite Assets" />
      <Folder Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types" />
+     <Folder Include="Assets\Plugins\SimpleLOD\Extensions" />
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <Folder Include="Assets\Plugins\Demigiant\DemiLib\Core" />
      <Folder Include="Assets\Plugins\Easy Save 3\Scripts\Readers" />
+     <Folder Include="Assets\Plugins\Mesh Optimizer\Scripts" />
      <Folder Include="Assets\Plugins\TextMesh Pro\Resources\Fonts &amp; Materials" />
      <Folder Include="Assets\Plugins\Easy Save 3\Scripts\Web" />
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
@@ -242,19 +255,25 @@
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\Plugins\Demigiant\readme_DOTweenPro.txt" />
      <Folder Include="Assets\Plugins\TextMesh Pro\Resources" />
+     <Folder Include="Assets\Plugins\Mesh Optimizer\Examples" />
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets\Plugins\Demigiant\DOTween" />
      <Folder Include="Assets\Plugins\TextMesh Pro" />
+     <Folder Include="Assets\Plugins\Mesh Optimizer" />
+     <Folder Include="Assets\Plugins\Mesh Optimizer\Examples\Mesh\textures" />
      <Folder Include="Assets\Plugins\Easy Save 3\Scripts" />
      <Folder Include="Assets\Plugins\Easy Save 3\Scripts\Types\Unity Types\Component Types" />
      <Folder Include="Assets\Plugins\Easy Save 3\Web" />
      <Folder Include="Assets\Plugins\Easy Save 3" />
+     <None Include="Assets\Plugins\SimpleLOD\ReadMe.txt" />
      <Folder Include="Assets\Plugins\Easy Save 3\Scripts\Streams" />
+     <Folder Include="Assets\Plugins\Mesh Optimizer\Examples\Mesh" />
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\Plugins\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\Plugins\Easy Save 3\Change Log\Change Log.txt" />
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <Folder Include="Assets\Plugins\Mesh Optimizer\Licenses" />
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets\Plugins\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <Folder Include="Assets\Plugins\Easy Save 3\Scripts\Writers" />
@@ -1186,9 +1205,17 @@
       <Project>{c6622478-9843-71b6-934d-11ba1513245e}</Project>
       <Name>CFXRDemo</Name>
     </ProjectReference>
+    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Editor.csproj">
+      <Project>{e22ae564-0b8a-85f1-637a-ea9d64d2af82}</Project>
+      <Name>Whinarn.UnityMeshSimplifier.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="ExternAttributes.Editor.csproj">
       <Project>{78d44f5c-90fe-a967-497c-7d4cbfb0a612}</Project>
       <Name>ExternAttributes.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Runtime.csproj">
+      <Project>{7f8d1012-0beb-0de3-0c0a-ea686a44db3b}</Project>
+      <Name>Whinarn.UnityMeshSimplifier.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
       <Project>{2940040b-fd7f-e83c-1ef3-0efd7b12b76e}</Project>

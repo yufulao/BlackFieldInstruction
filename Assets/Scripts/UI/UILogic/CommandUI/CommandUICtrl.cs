@@ -24,6 +24,7 @@ public class CommandUICtrl : UICtrlBase
     [SerializeField] private ScrollRect waitingScroll;
     [SerializeField] private Transform usedItemContainer;
     [SerializeField] private Transform waitingItemContainer;
+    
 
     private readonly Dictionary<UsedItemInfo, CommandItem> _usedItemInfoDic = new Dictionary<UsedItemInfo, CommandItem>();
     private readonly Dictionary<WaitingItemInfo, CommandItem> _waitingItemInfoDic = new Dictionary<WaitingItemInfo, CommandItem>();
@@ -97,7 +98,7 @@ public class CommandUICtrl : UICtrlBase
     public bool RefreshCacheCurrentTimeTextInExecuting()
     {
         _cacheCurrentTimeInExecuting++;
-        currentTimeText.color = _cacheCurrentTimeInExecuting > _rowCfgStage.stageTime ? Color.red : Color.black;
+        currentTimeText.color = _cacheCurrentTimeInExecuting > _rowCfgStage.stageTime ? Color.red : Color.white;
         currentTimeText.text = _cacheCurrentTimeInExecuting.ToString();
         return _cacheCurrentTimeInExecuting > _rowCfgStage.stageTime;
     }
@@ -116,22 +117,19 @@ public class CommandUICtrl : UICtrlBase
     /// </summary>
     private void ResetCommandUI()
     {
-        if (_usedItemInfoDic.Count != 0)
+        for (int i = 0; i < usedItemContainer.childCount; i++)
         {
-            for (int i = 0; i < usedItemContainer.childCount; i++)
-            {
-                Destroy(usedItemContainer.GetChild(i).gameObject);
-            }
-
-            for (int i = 0; i < waitingItemContainer.childCount; i++)
-            {
-                Destroy(waitingItemContainer.GetChild(i).gameObject);
-            }
-
-            _usedItemInfoDic.Clear();
-            _waitingItemInfoDic.Clear();
-            _model.ResetModel(ReLoadOriginalItemList());
+            Destroy(usedItemContainer.GetChild(i).gameObject);
         }
+
+        for (int i = 0; i < waitingItemContainer.childCount; i++)
+        {
+            Destroy(waitingItemContainer.GetChild(i).gameObject);
+        }
+        
+        _usedItemInfoDic.Clear();
+        _waitingItemInfoDic.Clear();
+        _model.ResetModel(ReLoadOriginalItemList());
 
         RefreshCurrentTimeText(0);
     }
@@ -160,7 +158,7 @@ public class CommandUICtrl : UICtrlBase
             stageTimeText.text = "/" + stageTime.ToString() + "s";
         }
 
-        currentTimeText.color = currentTime > _rowCfgStage.stageTime ? Color.red : Color.black;
+        currentTimeText.color = currentTime > _rowCfgStage.stageTime ? Color.red : Color.white;
         currentTimeText.text = currentTime.ToString();
     }
 

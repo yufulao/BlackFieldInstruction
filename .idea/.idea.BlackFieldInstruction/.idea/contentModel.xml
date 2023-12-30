@@ -18,12 +18,14 @@
             <e p="CfgMap.txt" t="Include" />
             <e p="CfgPrefab.txt" t="Include" />
             <e p="CfgSfx.txt" t="Include" />
+            <e p="CfgSprite.txt" t="Include" />
             <e p="CfgStage.txt" t="Include" />
             <e p="CfgUI.txt" t="Include" />
           </e>
           <e p="Prefab" t="Include" />
           <e p="scene" t="Include" />
           <e p="Sfx" t="Include" />
+          <e p="Sprite" t="Include" />
           <e p="UI" t="Include" />
         </e>
         <e p="AddressableAssetsData" t="Include">
@@ -319,6 +321,65 @@
             </e>
             <e p="Web" t="Include" />
           </e>
+          <e p="Mesh Optimizer" t="Include">
+            <e p="Editor" t="Include">
+              <e p="LODGeneratorHelperEditor.cs" t="Include" />
+              <e p="MeshSaveEditor.cs" t="Include" />
+              <e p="SerializedPropertyExtensions.cs" t="Include" />
+              <e p="Whinarn.UnityMeshSimplifier.Editor.asmdef" t="Include" />
+            </e>
+            <e p="Examples" t="Include">
+              <e p="Mesh" t="Include">
+                <e p="Textures" t="Include" />
+              </e>
+            </e>
+            <e p="Licenses" t="Include" />
+            <e p="Runtime" t="Include">
+              <e p="BlendShape.cs" t="Include" />
+              <e p="Components" t="Include">
+                <e p="LODBackupComponent.cs" t="Include" />
+                <e p="LODGeneratorHelper.cs" t="Include" />
+              </e>
+              <e p="LODGenerator.cs" t="Include" />
+              <e p="LODLevel.cs" t="Include" />
+              <e p="MeshCombiner.cs" t="Include" />
+              <e p="MeshSimplifier.cs" t="Include" />
+              <e p="SimplificationOptions.cs" t="Include" />
+              <e p="Utility" t="Include">
+                <e p="MathHelper.cs" t="Include" />
+                <e p="MeshUtils.cs" t="Include" />
+                <e p="ResizableArray.cs" t="Include" />
+                <e p="SymmetricMatrix.cs" t="Include" />
+                <e p="Vector3d.cs" t="Include" />
+              </e>
+              <e p="Whinarn.UnityMeshSimplifier.Runtime.asmdef" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="OptimizeMesh.cs" t="Include" />
+            </e>
+          </e>
+          <e p="SimpleLOD" t="Include">
+            <e p="Editor" t="Include">
+              <e p="LODSwitcher_Editor.cs" t="Include" />
+              <e p="SimpleLOD_Editor.cs" t="Include" />
+              <e p="SimpleLOD_MaterialPopup.cs" t="Include" />
+              <e p="SimpleLOD_MergePopup.cs" t="Include" />
+              <e p="SimpleLOD_RemoveHiddenPopup.cs" t="Include" />
+              <e p="SimpleLOD_RemovePopup.cs" t="Include" />
+            </e>
+            <e p="Extensions" t="Include">
+              <e p="FloatExtensions.cs" t="Include" />
+              <e p="GameObjectExtensions.cs" t="Include" />
+              <e p="MeshExtensions.cs" t="Include" />
+              <e p="RectExtensions.cs" t="Include" />
+              <e p="Texture2DExtensions.cs" t="Include" />
+              <e p="TransformExtensions.cs" t="Include" />
+              <e p="Vector3Extensions.cs" t="Include" />
+            </e>
+            <e p="LODMaker.cs" t="Include" />
+            <e p="LODSwitcher.cs" t="Include" />
+            <e p="readme.txt" t="Include" />
+          </e>
           <e p="TextMesh Pro" t="Include">
             <e p="Documentation" t="Include" />
             <e p="Fonts" t="Include">
@@ -357,12 +418,17 @@
           </e>
         </e>
         <e p="Res" t="Include">
+          <e p="Mesh" t="Include">
+            <e p="MergedMeshes" t="Include" />
+          </e>
           <e p="Modle" t="Include">
             <e p="Stage" t="Include">
               <e p="BackGround" t="Include">
                 <e p="Ship" t="Include">
                   <e p="Materials and Meshes" t="Include">
-                    <e p="1800early_BrigSloop" t="Include" />
+                    <e p="1800early_BrigSloop" t="Include">
+                      <e p="MergedMeshes" t="Include" />
+                    </e>
                   </e>
                 </e>
               </e>
@@ -396,7 +462,10 @@
                 <e p="Tent" t="Include">
                   <e p="Materials" t="Include" />
                   <e p="Prefabs" t="Include" />
-                  <e p="RAW MODEL" t="Include" />
+                  <e p="RAW MODEL" t="Include">
+                    <e p="MergedMeshes" t="Include" />
+                    <e p="SimplifiedMeshes" t="Include" />
+                  </e>
                   <e p="readme.txt" t="Include" />
                   <e p="Scripts" t="Include">
                     <e p="rorateslow.cs" t="Include" />
@@ -412,6 +481,37 @@
             <e p="VFX" t="Include" />
           </e>
           <e p="ResourcePackages" t="Include">
+            <e p="_Heathen Engineering" t="Include">
+              <e p="Assets" t="Include">
+                <e p="Common" t="Include">
+                  <e p="Images" t="Include">
+                    <e p="Heathen Corporate" t="Include" />
+                  </e>
+                </e>
+                <e p="UX" t="Include">
+                  <e p="HeathenEngineering.UX.asmdef" t="Include" />
+                  <e p="Icons" t="Include">
+                    <e p="Flat Icons [Free]" t="Include">
+                      <e p="Source" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+              <e p="Documentation" t="Include">
+                <e p="UX" t="Include">
+                  <e p="Flat Icons [Free]" t="Include">
+                    <e p="Read Me.txt" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="Samples" t="Include">
+                <e p="UX Examples" t="Include">
+                  <e p="Flat Icons [Free]" t="Include">
+                    <e p="ToggleSetAnimatorBoolean.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
             <e p="BOXOPHOBIC" t="Include">
               <e p="Skybox Cubemap Extended" t="Include">
                 <e p="Core" t="Include">
@@ -527,10 +627,13 @@
               <e p="Demo" t="Include" />
               <e p="Models" t="Include">
                 <e p="Civilian_Buildings" t="Include">
+                  <e p="LODMeshes" t="Include" />
                   <e p="Materials" t="Include" />
+                  <e p="MergedMeshes" t="Include" />
                 </e>
                 <e p="Props" t="Include">
                   <e p="Materials" t="Include" />
+                  <e p="MergedMeshes" t="Include" />
                 </e>
                 <e p="Terrain" t="Include">
                   <e p="Materials" t="Include" />
@@ -540,6 +643,7 @@
                 </e>
                 <e p="Unique_Buildings" t="Include">
                   <e p="Materials" t="Include" />
+                  <e p="MergedMeshes" t="Include" />
                 </e>
               </e>
               <e p="Post_Processing_Preset" t="Include" />
@@ -878,6 +982,15 @@
                 </e>
               </e>
             </e>
+            <e p="FreeAnimatedSpaceMan" t="Include">
+              <e p="animations_legacy" t="Include" />
+              <e p="animations_mecanim" t="Include" />
+              <e p="Materials" t="Include" />
+              <e p="Models" t="Include" />
+              <e p="Prefab" t="Include" />
+              <e p="scene" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
             <e p="Graveyard Kit" t="Include">
               <e p="License.txt" t="Include" />
               <e p="Models" t="Include">
@@ -1078,6 +1191,28 @@
                 <e p="Readme Cartoon FX Remaster.txt" t="Include" />
               </e>
             </e>
+            <e p="kenney_fantasy-ui-borders" t="Include">
+              <e p="License.txt" t="Include" />
+              <e p="PNG" t="Include">
+                <e p="Default" t="Include">
+                  <e p="Border" t="Include" />
+                  <e p="Divider" t="Include" />
+                  <e p="Divider Fade" t="Include" />
+                  <e p="Panel" t="Include" />
+                  <e p="Transparent border" t="Include" />
+                  <e p="Transparent center" t="Include" />
+                </e>
+                <e p="Double" t="Include">
+                  <e p="Border" t="Include" />
+                  <e p="Divider" t="Include" />
+                  <e p="Divider Fade" t="Include" />
+                  <e p="Panel" t="Include" />
+                  <e p="Transparent border" t="Include" />
+                  <e p="Transparent center" t="Include" />
+                </e>
+              </e>
+              <e p="Vector" t="Include" />
+            </e>
             <e p="LaFinca" t="Include">
               <e p="Viking Gods" t="Include">
                 <e p="Thor" t="Include">
@@ -1255,16 +1390,22 @@
                 <e p="1_FBX" t="Include">
                   <e p="Buildings" t="Include">
                     <e p="Doors" t="Include" />
+                    <e p="MergedMeshes" t="Include" />
                     <e p="Walls Towers" t="Include" />
                     <e p="Windows" t="Include" />
                   </e>
                   <e p="Cemetary" t="Include" />
                   <e p="Collision" t="Include" />
                   <e p="Furniture" t="Include" />
-                  <e p="House" t="Include" />
+                  <e p="House" t="Include">
+                    <e p="MergedMeshes" t="Include" />
+                  </e>
                   <e p="Items" t="Include" />
+                  <e p="MergedMeshes" t="Include" />
                   <e p="Plants" t="Include" />
-                  <e p="Terrain" t="Include" />
+                  <e p="Terrain" t="Include">
+                    <e p="MergedMeshes" t="Include" />
+                  </e>
                   <e p="Tools" t="Include" />
                   <e p="Weapons" t="Include" />
                 </e>
@@ -1505,6 +1646,7 @@
             <e p="CfgMap.cs" t="Include" />
             <e p="CfgPrefab.cs" t="Include" />
             <e p="CfgSfx.cs" t="Include" />
+            <e p="CfgSprite.cs" t="Include" />
             <e p="CfgStage.cs" t="Include" />
             <e p="CfgUI.cs" t="Include" />
           </e>
@@ -1619,6 +1761,7 @@
       <e p="CFXRRuntime.csproj" t="IncludeRecursive" />
       <e p="ExternAttributes.Editor.csproj" t="IncludeRecursive" />
       <e p="FlatKit.Utils.Editor.csproj" t="IncludeRecursive" />
+      <e p="HeathenEngineering.UX.csproj" t="IncludeRecursive" />
       <e p="KinoBloom.Runtime.csproj" t="IncludeRecursive" />
       <e p="Library" t="Include">
         <e p="PackageCache" t="Include">
@@ -1843,6 +1986,8 @@
       <e p="Temp\Bin" t="ExcludeRecursive" />
       <e p="ToonyColorsPro.Demo.Editor.csproj" t="IncludeRecursive" />
       <e p="Unity.RenderPipelines.Universal.Runtime.csproj" t="IncludeRecursive" />
+      <e p="Whinarn.UnityMeshSimplifier.Editor.csproj" t="IncludeRecursive" />
+      <e p="Whinarn.UnityMeshSimplifier.Runtime.csproj" t="IncludeRecursive" />
     </e>
   </component>
 </project>

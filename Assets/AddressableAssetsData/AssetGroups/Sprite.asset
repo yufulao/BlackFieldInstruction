@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Sprite
+  m_EditorClassIdentifier: 
+  m_GroupName: Sprite
+  m_Data:
+    m_SerializedData: []
+  m_GUID: f704f4100f828b0459eb1d203877ebd8
+  m_SerializeEntries:
+  - m_GUID: 36255f09c422f6147bdcefd3411726dc
+    m_Address: Assets/AddressableAssets/Sprite/Down.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4bc893a3062880b4a9f88ab8533c51f3
+    m_Address: Assets/AddressableAssets/Sprite/Left.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8174df4b9307bc44296478a02e0a215e
+    m_Address: Assets/AddressableAssets/Sprite/Rgiht.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 59ace3ee386d6a14fbe8323a1eec4207
+    m_Address: Assets/AddressableAssets/Sprite/Up.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 01b7ef860e7da764a8bf8ad1e34797a4
+    m_Address: Assets/AddressableAssets/Sprite/Wait.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: a19174961d3b32943af996d43a3fd044, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: cf2a334c05477064c997fe046bc6606b, type: 2}
+    - {fileID: 11400000, guid: 8a5e62ff025838e45982026d35cec4b6, type: 2}

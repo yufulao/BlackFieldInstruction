@@ -1,0 +1,8 @@
+key#spritePath#None#None#None#None#None
+key#预设路径#None#None#None#None#None
+string#string#None#None#None#None#None
+Down#Assets/AddressableAssets/Sprite/Down.png#None#None#None#None#None
+Up#Assets/AddressableAssets/Sprite/Up.png#None#None#None#None#None
+Right#Assets/AddressableAssets/Sprite/Rgiht.png#None#None#None#None#None
+Left#Assets/AddressableAssets/Sprite/Left.png#None#None#None#None#None
+Wait#Assets/AddressableAssets/Sprite/Wait.png#None#None#None#None#None

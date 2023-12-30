@@ -16,7 +16,9 @@ public class StageSelectUICtrl : UICtrlBase
     [SerializeField] private Button preHighBtn;
     [SerializeField] private Button nextHighBtn;
     [SerializeField] private Button highEnterMask;
+    [SerializeField] private Button highEnterBtn;
     [SerializeField] private Button midEnterMask;
+    [SerializeField] private Button midEnterBtn;
     [SerializeField] private Button midBackBtn;
     [SerializeField] private Button preLowBtn;
     [SerializeField] private Button nextLowBtn;
@@ -55,7 +57,9 @@ public class StageSelectUICtrl : UICtrlBase
         preHighBtn.onClick.AddListener(OnPreHighBtnClick);
         nextHighBtn.onClick.AddListener(OnNextHighBtnClick);
         highEnterMask.onClick.AddListener(OnHighEnterMaskClick);
+        highEnterBtn.onClick.AddListener(OnHighEnterMaskClick);
         midEnterMask.onClick.AddListener(OnMidEnterMaskClick);
+        midEnterBtn.onClick.AddListener(OnMidEnterMaskClick);
         midBackBtn.onClick.AddListener(OnMidBackBtnClick);
         preLowBtn.onClick.AddListener(OnPreLowBtnClick);
         nextLowBtn.onClick.AddListener(OnNextLowBtnClick);

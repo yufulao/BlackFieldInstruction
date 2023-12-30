@@ -157,10 +157,15 @@ public class BattleUnitPlayer : BattleUnit
             _sequence?.Kill();
             _sequence = DOTween.Sequence();
             _sequence.Append(transform.DOMove(GridManager.Instance.GetWorldPositionByPoint(targetPoint.x, targetPoint.y), during));
+            if (GridManager.Instance.GetPointByWorldPosition(transform.position)!=targetPoint)
+            {
+                animator.SetBool("run",true);
+            }
             _sequence.SetAutoKill(false);
             BattleManager.Instance.UpdateUnitPoint(this,targetPoint); //更新GridObj
             //Debug.Log(GridManager.Instance.GetWorldPositionByPoint(targetPoint.x, targetPoint.y));
             yield return _sequence.WaitForCompletion();
+            animator.SetBool("run",false);
         }
         else
         {

@@ -46,15 +46,19 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Plugins\Easy Save 3\Editor\ToolsWindow.cs" />
+     <Compile Include="Assets\Plugins\SimpleLOD\Editor\SimpleLOD_RemovePopup.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3Postprocessor.cs" />
+     <Compile Include="Assets\Plugins\SimpleLOD\Editor\SimpleLOD_RemoveHiddenPopup.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Editor\AutoSaveWindow.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3InspectorInfoEditor.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3PrefabEditor.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3ScriptingDefineSymbols.cs" />
+     <Compile Include="Assets\Plugins\SimpleLOD\Editor\SimpleLOD_MergePopup.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3SettingsEditor.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Editor\SettingsWindow.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Editor\AddES3Prefab.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTweenPro\Editor\DOTweenAnimationInspector.cs" />
+     <Compile Include="Assets\Plugins\SimpleLOD\Editor\LODSwitcher_Editor.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3Window.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Editor\ReferencesWindow.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3EditorUtility.cs" />
@@ -63,6 +67,8 @@
      <Compile Include="Assets\Plugins\Easy Save 3\Editor\TypesWindow.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3EditorStyle.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3GameObjectEditor.cs" />
+     <Compile Include="Assets\Plugins\SimpleLOD\Editor\SimpleLOD_Editor.cs" />
+     <Compile Include="Assets\Plugins\SimpleLOD\Editor\SimpleLOD_MaterialPopup.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTweenPro\Editor\DOTweenPreviewManager.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3GlobalReferencesEditor.cs" />
      <Compile Include="Assets\Plugins\Easy Save 3\Editor\ES3ReferenceMgrEditor.cs" />
@@ -83,6 +89,7 @@
      <None Include="Assets\Plugins\Easy Save 3\Editor\ES3ScriptableObjectTypeTemplate.txt" />
      <None Include="Assets\Plugins\Easy Save 3\Editor\ES3ClassTypeTemplate.txt" />
      <Folder Include="Assets\Plugins\Demigiant\DemiLib\Core\Editor\Imgs" />
+     <Folder Include="Assets\Plugins\SimpleLOD\Editor" />
      <Reference Include="UnityEngine">
      <HintPath>D:\app\Unity\Hub\Editor\2022.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -1045,9 +1052,17 @@
       <Project>{c6622478-9843-71b6-934d-11ba1513245e}</Project>
       <Name>CFXRDemo</Name>
     </ProjectReference>
+    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Editor.csproj">
+      <Project>{e22ae564-0b8a-85f1-637a-ea9d64d2af82}</Project>
+      <Name>Whinarn.UnityMeshSimplifier.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="ExternAttributes.Editor.csproj">
       <Project>{78d44f5c-90fe-a967-497c-7d4cbfb0a612}</Project>
       <Name>ExternAttributes.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Runtime.csproj">
+      <Project>{7f8d1012-0beb-0de3-0c0a-ea686a44db3b}</Project>
+      <Name>Whinarn.UnityMeshSimplifier.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
       <Project>{2940040b-fd7f-e83c-1ef3-0efd7b12b76e}</Project>

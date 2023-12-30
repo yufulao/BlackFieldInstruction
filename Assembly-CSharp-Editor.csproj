@@ -1037,9 +1037,17 @@
       <Project>{c6622478-9843-71b6-934d-11ba1513245e}</Project>
       <Name>CFXRDemo</Name>
     </ProjectReference>
+    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Editor.csproj">
+      <Project>{e22ae564-0b8a-85f1-637a-ea9d64d2af82}</Project>
+      <Name>Whinarn.UnityMeshSimplifier.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="ExternAttributes.Editor.csproj">
       <Project>{78d44f5c-90fe-a967-497c-7d4cbfb0a612}</Project>
       <Name>ExternAttributes.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Runtime.csproj">
+      <Project>{7f8d1012-0beb-0de3-0c0a-ea686a44db3b}</Project>
+      <Name>Whinarn.UnityMeshSimplifier.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
       <Project>{2940040b-fd7f-e83c-1ef3-0efd7b12b76e}</Project>

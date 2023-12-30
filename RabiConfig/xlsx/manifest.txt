@@ -5,3 +5,4 @@ Command.xlsx
 UI.xlsx
 Prefab.xlsx
 Map.xlsx
+Sprite.xlsx

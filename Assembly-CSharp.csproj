@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\BattleLogic\Battle\BattleUnit\BattleUnitTarget.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\Battle\BattleUnit\BattleUnitBrokenBuildingFsm\BuildingCleanState.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\Battle\BattleUnit\BattleUnitBrokenBuilding.cs" />
+     <Compile Include="Assets\Res\ResourcePackages\_Heathen Engineering\Samples\UX Examples\Flat Icons [Free]\ToggleSetAnimatorBoolean.cs" />
      <Compile Include="Assets\Scripts\Core\Base\Singleton\BaseSingleTon.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\Battle\BattleUnit\BattleUnitRuin.cs" />
      <Compile Include="Assets\Scripts\Core\Base\Fsm\FsmComponent\FsmComponent.cs" />
@@ -102,6 +103,7 @@
      <Compile Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\4_Scripts\UVOffset.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\Battle\BattleUnit\BattleUnitInfo.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\Battle\BattleModel.cs" />
+     <Compile Include="Assets\Scripts\Config\CfgSprite.cs" />
      <Compile Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_ShurikenThreadFix.cs" />
      <Compile Include="Assets\Scripts\UI\UILogic\StageSelectUI\StageSelectUIFsm\FsmState\LowSelectState.cs" />
      <Compile Include="Assets\Scripts\UI\Base\UIDragComponent.cs" />
@@ -204,6 +206,7 @@
      <Folder Include="Assets\Res\ResourcePackages\Robot\Robo2\Models" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Hits\Color Variants" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Shaders" />
+     <None Include="Assets\AddressableAssets\Config\CfgSprite.txt" />
      <Folder Include="Assets\Res\Modle\Stage\Unit\Ruin\Materials" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Room\Room-Materials" />
      <Folder Include="Assets\Res\ResourcePackages\Tale Monster Cube Env\Prefabs\Base" />
@@ -215,14 +218,18 @@
      <Folder Include="Assets\Res\ResourcePackages\Low Poly Hexagons\Assets\Models\Objects" />
      <Folder Include="Assets\AddressableAssetsData\AssetGroupTemplates" />
      <Folder Include="Assets\Res\ResourcePackages\BOXOPHOBIC\User" />
+     <Folder Include="Assets\Res\ResourcePackages\_Heathen Engineering\Assets\Common\Images" />
      <Folder Include="Assets\Res\ResourcePackages\Low Poly Hexagons\Assets\Scenes" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)" />
+     <Folder Include="Assets\Res\Modle\Stage\Unit\Tent\RAW MODEL\MergedMeshes" />
+     <Folder Include="Assets\Res\ResourcePackages\Desert City\Models\Props\MergedMeshes" />
      <Folder Include="Assets\Res\ResourcePackages\Robot\Standard Assets\Effects" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Shaders\StylizedSurface\LibraryUrp" />
      <None Include="Assets\Res\ResourcePackages\FlatKit\Shaders\StylizedSurface\LibraryUrp\LitForwardPass_DR.hlsl" />
      <Folder Include="Assets\Res\Vfx\Weather Effect\Environment VFX pack\Demo\Materials" />
      <Folder Include="Assets\Res\ResourcePackages\Desert City\Prefabs" />
      <Folder Include="Assets\Res\ResourcePackages\LaFinca\Viking Gods\Thor\Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\FreeAnimatedSpaceMan\Materials" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Mugs" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Stretched" />
      <Folder Include="Assets\Res\Skybox" />
@@ -237,9 +244,11 @@
      <Folder Include="Assets\Res\ResourcePackages\LowPoly Nature Pack\Materials\Charakter\Hat" />
      <Folder Include="Assets\Res\ResourcePackages\LaFinca\Viking Gods\Thor\Prefab" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Settings" />
+     <Folder Include="Assets\Res\ResourcePackages\FreeAnimatedSpaceMan\Models" />
      <Folder Include="Assets\Res\ResourcePackages\mmmm\kenney_medieval-town-base\Unity package" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Electric" />
      <None Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR Particle Glow.shader" />
+     <Folder Include="Assets\Res\ResourcePackages\Desert City\Models\Unique_Buildings\MergedMeshes" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Fire" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Texts" />
      <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\1_FBX\Items" />
@@ -274,16 +283,20 @@
      <Folder Include="Assets\Res\ResourcePackages\Platformer Kit\Models\STL format" />
      <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\1_FBX\Furniture" />
      <Folder Include="Assets\AddressableAssets\Config" />
+     <Folder Include="Assets\Res\ResourcePackages\FreeAnimatedSpaceMan\Prefab" />
      <Folder Include="Assets\Res\ResourcePackages\Robot\Stand\Material" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Mugs\Mugs-Materials\2 - OneColorVariousParameters\BlPrMugs-Scene_2_RampTextures" />
      <Folder Include="Assets\Res\ResourcePackages\BOXOPHOBIC" />
      <None Include="Assets\Res\ResourcePackages\FlatKit\Shaders\StylizedSurface\LibraryUrp\TerrainLitPasses_DR.hlsl" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Explosions\Firework Variants" />
+     <Folder Include="Assets\Res\Modle\Stage\Unit\Tent\RAW MODEL\SimplifiedMeshes" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Texts\Variants Font WashYourHand" />
      <Folder Include="Assets\Res\ResourcePackages\LowPoly Nature Pack\Meshes\Mountains" />
      <Folder Include="Assets\Res\ResourcePackages\BOXOPHOBIC\Skybox Cubemap Extended\Demo\Textures" />
      <Folder Include="Assets\Res\ResourcePackages\Desert City\Prefabs\prefab_trees" />
+     <Folder Include="Assets\Res\ResourcePackages\_Heathen Engineering\Documentation" />
      <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast" />
+     <Folder Include="Assets\Res\ResourcePackages\_Heathen Engineering" />
      <None Include="Assets\Res\Vfx\Weather Effect\Environment VFX pack\Demo\Readme.txt" />
      <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Prefabs\Atlased\Prototype\Blocks - Red" />
      <Folder Include="Assets\AddressableAssets" />
@@ -294,6 +307,7 @@
      <Folder Include="Assets\Res\ResourcePackages\Planets\models\Materials" />
      <Folder Include="Assets\Res\Modle\Stage" />
      <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\3_Prefabs\Paths and Streets" />
+     <Folder Include="Assets\Res\ResourcePackages\_Heathen Engineering\Samples\UX Examples\Flat Icons [Free]" />
      <Folder Include="Assets\Res\Modle\Stage\BackGround\Ship\Materials and Meshes" />
      <Folder Include="Assets\Scripts\UI\UILogic\CommandUI\Component" />
      <Folder Include="Assets\Scripts\UI\UILogic\StageSelectUI\StageSelectUIFsm" />
@@ -301,7 +315,9 @@
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Mugs\Resources" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Racing Car\Textures" />
      <Folder Include="Assets\Res\ResourcePackages\Platformer Kit\Models\FBX format" />
+     <Folder Include="Assets\Res\ResourcePackages\kenney_fantasy-ui-borders\PNG\Default\Border" />
      <None Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Shaders\CircleDecal.shader" />
+     <Folder Include="Assets\Res\ResourcePackages\kenney_fantasy-ui-borders\PNG\Double\Divider Fade" />
      <Folder Include="Assets\Res\Modle\Stage\Unit\Ruin\Models" />
      <Folder Include="Assets\Res\ResourcePackages\LowPoly Nature Pack\Animations\Charakter" />
      <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\3_Prefabs\Miniscenes" />
@@ -321,6 +337,7 @@
      <None Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Shaders\Noise\ClassicNoise3D.hlsl" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\[Render Pipeline] URP\Water\Scripts" />
      <Folder Include="Assets\Scripts\Core\Base\Fsm\GlobalFsm" />
+     <Folder Include="Assets\Res\ResourcePackages\_Heathen Engineering\Samples\UX Examples" />
      <Folder Include="Assets\Scripts\BattleLogic\Battle" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Wanderer\Wanderer-Models" />
      <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\1_FBX\Buildings\Doors" />
@@ -337,6 +354,7 @@
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Hits\Color Variants" />
      <Folder Include="Assets\Res\Modle\Stage\Unit\Tent\SCRIPTS" />
      <Folder Include="Assets\Res\ResourcePackages\Robot\Stand\Texture" />
+     <Folder Include="Assets\Res\ResourcePackages\_Heathen Engineering\Assets\Common\Images\Heathen Corporate" />
      <None Include="Assets\Res\ResourcePackages\FlatKit\Shaders\StylizedSurface\LibraryUrp\StylizedInput.hlsl" />
      <Folder Include="Assets\Res\ResourcePackages\Realistic Hail Set\Textures" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Misc" />
@@ -383,10 +401,13 @@
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Car\Car-Materials\Car-Materials-Set1" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Explosions" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)" />
+     <Folder Include="Assets\Res\ResourcePackages\kenney_fantasy-ui-borders\PNG\Double\Border" />
      <Folder Include="Assets\Res\ResourcePackages\mmmm" />
+     <Folder Include="Assets\Res\ResourcePackages\kenney_fantasy-ui-borders\PNG\Double\Panel" />
      <Folder Include="Assets\Res\ResourcePackages\Realistic Hail Set\Demo Scene" />
      <Folder Include="Assets\Res\Vfx\Environment\lightning" />
      <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\1_FBX\Weapons" />
+     <Folder Include="Assets\Res\ResourcePackages\kenney_fantasy-ui-borders\PNG" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials\Decals" />
      <Folder Include="Assets\Res\ResourcePackages\BOXOPHOBIC\Skybox Cubemap Extended\Demo\Meshes" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Water] Various Presets" />
@@ -411,6 +432,7 @@
      <Folder Include="Assets\Res\ResourcePackages\Low Poly Hexagons\Assets\Prefabs\Combination Examples" />
      <Folder Include="Assets\Res\ResourcePackages\Robot\Robo3\Animations" />
      <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Prefabs\MaterialsOnly\Prototype\Blocks - Blue" />
+     <Folder Include="Assets\Res\ResourcePackages\kenney_fantasy-ui-borders\PNG\Default\Divider" />
      <None Include="Assets\AddressableAssets\Config\CfgSfx.txt" />
      <Folder Include="Assets\Res\Vfx\Weather Effect\Environment VFX pack\Models" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials\Animated" />
@@ -419,6 +441,8 @@
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Fire" />
      <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\2_Textures" />
+     <None Include="Assets\Res\ResourcePackages\kenney_fantasy-ui-borders\License.txt" />
+     <Folder Include="Assets\Res\ResourcePackages\FreeAnimatedSpaceMan" />
      <Folder Include="Assets\Res\ResourcePackages\BOXOPHOBIC\Skybox Cubemap Extended\Demo\Materials" />
      <Folder Include="Assets\Res\Vfx\Weather Effect\Environment VFX pack\Demo" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\[Render Pipeline] URP\EditorAttributes" />
@@ -477,6 +501,7 @@
      <Folder Include="Assets\Res\ResourcePackages\LowPoly Nature Pack\Prefabs\Fire\Burning Objects" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Textures (Mobile)" />
      <Folder Include="Assets\Res\ResourcePackages\Planets\scene" />
+     <Folder Include="Assets\Res\ResourcePackages\_Heathen Engineering\Assets" />
      <None Include="Assets\Res\ResourcePackages\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Blend.shader" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Demo\Assets" />
      <Folder Include="Assets\Res\ResourcePackages\Robot\Stand\Model\Materials" />
@@ -485,6 +510,7 @@
      <Folder Include="Assets\Res\ResourcePackages\LowPoly Nature Pack\Materials\Trees" />
      <None Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Shaders\DesertCloud.hlsl" />
      <Folder Include="Assets\Res\ResourcePackages\Low Poly Hexagons\Assets\Prefabs\Objects" />
+     <Folder Include="Assets\Res\Modle\Stage\BackGround\Ship\Materials and Meshes\1800early_BrigSloop\MergedMeshes" />
      <Folder Include="Assets\Res\ResourcePackages\Low Poly Hexagons\Assets\Prefabs" />
      <Folder Include="Assets\Res\Modle\Stage\BackGround\Ship\Materials and Meshes\1800early_BrigSloop" />
      <Folder Include="Assets\Res\ResourcePackages\Low Poly Hexagons\Assets\Textures" />
@@ -492,6 +518,7 @@
      <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\3_Prefabs\Tools" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Fire\Flames Looped\Color Variants" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos" />
+     <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\1_FBX\Buildings\MergedMeshes" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Smoke\Color Variants" />
      <Folder Include="Assets\Res\ResourcePackages\Robot" />
      <Folder Include="Assets\Scripts\Core\Manager\EventManager" />
@@ -500,6 +527,8 @@
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials\Misc" />
      <Folder Include="Assets\Res\ResourcePackages\LowPoly Nature Pack\Meshes\Plants" />
      <Folder Include="Assets\Res\ResourcePackages\Desert City\Prefabs\prefab_civilian_buildings" />
+     <Folder Include="Assets\Res\ResourcePackages\_Heathen Engineering\Assets\Common" />
+     <Folder Include="Assets\Res\ResourcePackages\kenney_fantasy-ui-borders\PNG\Double\Transparent border" />
      <Folder Include="Assets\Res\ResourcePackages\TZ_Futuristic Panel Textures Lite" />
      <Folder Include="Assets\Res\Vfx\Weather Effect\Environment VFX pack\Prefabs\Wind_Leaves_Tornado" />
      <Folder Include="Assets\Res\ResourcePackages\BOXOPHOBIC\Skybox Cubemap Extended\Core" />
@@ -515,8 +544,10 @@
      <Folder Include="Assets\Res\ResourcePackages\LowPoly Nature Pack\Materials\Fire" />
      <Folder Include="Assets\Res\ResourcePackages\mmmm\kenney_medieval-town-base\Models" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Car\Car-Materials\Car-Materials-Set2" />
+     <Folder Include="Assets\Res\ResourcePackages\kenney_fantasy-ui-borders\PNG\Default\Transparent center" />
      <Folder Include="Assets\Res\ResourcePackages\Robot\Stand\Model" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert" />
+     <Folder Include="Assets\Res\ResourcePackages\Desert City\Models\Civilian_Buildings\LODMeshes" />
      <Folder Include="Assets\Res\ResourcePackages\Graveyard Kit\Models\FBX format" />
      <Folder Include="Assets\Res\ResourcePackages\Robot\Robo1\Models" />
      <Folder Include="Assets\Res\ResourcePackages\LowPoly Nature Pack\Materials\Stones" />
@@ -535,6 +566,7 @@
      <Folder Include="Assets\Res\Vfx" />
      <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Prefabs\MaterialsOnly" />
      <Folder Include="Assets\Res\ResourcePackages\BOXOPHOBIC\Utils" />
+     <Folder Include="Assets\Res\ResourcePackages\FreeAnimatedSpaceMan\animations_mecanim" />
      <Folder Include="Assets\Res\ResourcePackages\LowPoly Nature Pack\Prefabs\Stones" />
      <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\1_FBX" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Shaders" />
@@ -553,7 +585,9 @@
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Decals" />
      <Folder Include="Assets\Res\ResourcePackages\Platformer Kit\Previews" />
      <Folder Include="Assets\Res\ResourcePackages\LowPoly Nature Pack\Cutscenes" />
+     <Folder Include="Assets\Res\ResourcePackages\kenney_fantasy-ui-borders\Vector" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] IslandWithTrees\IslandWithTrees-Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\1_FBX\Terrain\MergedMeshes" />
      <Folder Include="Assets\Res\ResourcePackages\LowPoly Nature Pack\Meshes\Trees" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Car\Car-Materials\Car-Materials-Set5" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Mugs\Mugs-Models" />
@@ -582,6 +616,7 @@
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Mugs\Mugs-Materials\2 - OneColorVariousParameters" />
      <Folder Include="Assets\Scripts\Core\Base\Fsm\FsmComponent" />
      <Folder Include="Assets\Scripts\BattleLogic\Command\CommandFsm" />
+     <Folder Include="Assets\Res\ResourcePackages\_Heathen Engineering\Samples" />
      <Folder Include="Assets\Res\ResourcePackages\Platformer Kit\Models\OBJ format" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Room\Room-CameraProfiles" />
      <Folder Include="Assets\Scripts\Core\Base\Manager" />
@@ -609,11 +644,15 @@
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Fire\Color Variants" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\[Render Pipeline] URP" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Easy Editor" />
+     <Folder Include="Assets\Res\ResourcePackages\kenney_fantasy-ui-borders\PNG\Double\Transparent center" />
      <Folder Include="Assets\Res\ResourcePackages\LowPoly Nature Pack\Prefabs\Trees" />
      <Folder Include="Assets\Res\Vfx\Weather Effect\Environment VFX pack\Prefabs\SpeedBoost" />
+     <Folder Include="Assets\Res\ResourcePackages\kenney_fantasy-ui-borders" />
      <Folder Include="Assets\Res\Modle\Stage\BackGround" />
+     <Folder Include="Assets\Res\ResourcePackages\kenney_fantasy-ui-borders\PNG\Default" />
      <Folder Include="Assets\Res\Vfx\Character" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\PresetsShared\Materials" />
+     <Folder Include="Assets\Res\Mesh" />
      <None Include="Assets\Res\Modle\Stage\Unit\Tent\ReadMe.txt" />
      <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Meshes\Atlased" />
      <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\1_FBX\Buildings" />
@@ -628,6 +667,7 @@
      <Folder Include="Assets\Res\Vfx\Weather Effect\Environment VFX pack\Prefabs\Sand_stones" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Misc" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Wanderer\Wanderer-FogImageEffect-Presets" />
+     <Folder Include="Assets\Res\Mesh\MergedMeshes" />
      <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Prefabs\MaterialsOnly\Prototype\Blocks - Red" />
      <None Include="Assets\Res\ResourcePackages\Platformer Kit\License.txt" />
      <Folder Include="Assets\Res\ResourcePackages\Tale Monster Cube Env\Prefabs" />
@@ -650,6 +690,7 @@
      <Folder Include="Assets\Res\Vfx\Weather Effect\Environment VFX pack\Demo\Animations" />
      <Folder Include="Assets\Res\Modle\Stage\Unit\Crwods\Prefabs" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Models" />
+     <Folder Include="Assets\Res\ResourcePackages\kenney_fantasy-ui-borders\PNG\Default\Divider Fade" />
      <Folder Include="Assets\Res\Save" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\[Render Pipeline] URP\Water" />
      <Folder Include="Assets\Scripts\Core\Base\Singleton" />
@@ -657,20 +698,25 @@
      <Folder Include="Assets\Res\ResourcePackages\LowPoly Nature Pack\Materials" />
      <Folder Include="Assets\Res\Modle\Stage\Unit\Crwods\Meshes" />
      <Folder Include="Assets\Res\ResourcePackages\Tale Monster Cube Env" />
+     <Folder Include="Assets\Res\ResourcePackages\kenney_fantasy-ui-borders\PNG\Double" />
      <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\1_FBX\Cemetary" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] IslandWithTrees" />
      <Folder Include="Assets\Res\ResourcePackages\LowPoly Nature Pack\Prefabs\Mountains" />
      <Folder Include="Assets\Res\Modle\Stage\Unit\Meteorite\Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\1_FBX\MergedMeshes" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Desert\Robot Kyle Desert\Materials" />
      <Folder Include="Assets\Resources" />
+     <Folder Include="Assets\Res\ResourcePackages\FreeAnimatedSpaceMan\Textures" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs (Mobile)\Electric" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Electric" />
      <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\3_Prefabs\Cemetary" />
      <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Meshes\MaterialsOnly" />
      <Folder Include="Assets\Res\ResourcePackages\Planets\Materials\Materials" />
      <Folder Include="Assets\Res\ResourcePackages\Platformer Kit\Models" />
+     <None Include="Assets\Res\ResourcePackages\_Heathen Engineering\Documentation\UX\Flat Icons [Free]\Read Me.txt" />
      <Folder Include="Assets\Res\ResourcePackages\LowPoly Nature Pack\Prefabs\Animals" />
      <Folder Include="Assets\Res\ResourcePackages\TZ_Futuristic Panel Textures Lite\Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\FreeAnimatedSpaceMan\animations_legacy" />
      <Folder Include="Assets\Res\ResourcePackages\Desert City\Models\Props\Materials" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Texts" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Valley\Valley-Materials\TerrainPaintLayers" />
@@ -682,7 +728,9 @@
      <Folder Include="Assets\Res\Modle\Stage\Unit\Tent" />
      <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks\Meshes\MaterialsOnly\Prototype\Materials" />
      <Folder Include="Assets\Res\ResourcePackages\Desert City\Models\Props" />
+     <Folder Include="Assets\Res\ResourcePackages\kenney_fantasy-ui-borders\PNG\Default\Transparent border" />
      <Folder Include="Assets\Scripts\Core\Manager" />
+     <Folder Include="Assets\AddressableAssets\Sprite" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Mugs\Mugs-Materials" />
      <Folder Include="Assets\Scripts\UI" />
      <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\1_FBX\Terrain" />
@@ -691,6 +739,7 @@
      <Folder Include="Assets\AddressableAssetsData\Android" />
      <Folder Include="Assets\Res\Modle" />
      <Folder Include="Assets\Res\ResourcePackages\mmmm\kenney_3d-road-tiles\Unity package" />
+     <Folder Include="Assets\Res\ResourcePackages\_Heathen Engineering\Documentation\UX\Flat Icons [Free]" />
      <None Include="Assets\Res\ResourcePackages\Robot\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Electric\Variants" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Racing Car\Settings" />
@@ -772,6 +821,7 @@
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Textures" />
      <None Include="Assets\Res\ResourcePackages\FlatKit\Shaders\StylizedSurface\StylizedSurface.shader" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Valley\Valley-CameraProfiles" />
+     <Folder Include="Assets\Res\ResourcePackages\FreeAnimatedSpaceMan\Scene" />
      <Folder Include="Assets\Res\ResourcePackages\Realistic Hail Set\Demo Scene\Scripts" />
      <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\0_DemoScenes\Demoscene" />
      <Folder Include="Assets\Res\ResourcePackages\Robot\Robo2\Animations" />
@@ -786,8 +836,10 @@
      <Folder Include="Assets\Res\ResourcePackages\Desert City\Models\Trees" />
      <None Include="Assets\Res\ResourcePackages\Graveyard Kit\License.txt" />
      <Folder Include="Assets\Res\ResourcePackages\LaFinca\Viking Gods\Thor\Textures\tiara" />
+     <Folder Include="Assets\Res\ResourcePackages\kenney_fantasy-ui-borders\PNG\Default\Panel" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Water] Various Presets\Water Vessels Scene - Materials" />
      <Folder Include="Assets\Res\Vfx\Weather Effect\Environment VFX pack\Prefabs\Bubbles" />
+     <Folder Include="Assets\Res\ResourcePackages\Desert City\Models\Civilian_Buildings\MergedMeshes" />
      <Folder Include="Assets\Res\ResourcePackages\Robot\Robo controllers" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Water] Ocean Islands" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Car" />
@@ -797,6 +849,7 @@
      <Folder Include="Assets\Res\Vfx\Weather Effect\Environment VFX pack\Textures" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Racing Car\Models" />
      <Folder Include="Assets\Res\ResourcePackages\Desert City\Prefabs\prefab_terrain" />
+     <Folder Include="Assets\Res\ResourcePackages\kenney_fantasy-ui-borders\PNG\Double\Divider" />
      <Folder Include="Assets\Res\Modle\Stage\Unit\Crwods\Materials" />
      <Folder Include="Assets\Res\ResourcePackages\Off Axis Studios\Polyworks" />
      <Folder Include="Assets\Res\ResourcePackages\BOXOPHOBIC\Skybox Cubemap Extended\Core\Functions" />
@@ -813,10 +866,12 @@
      <Folder Include="Assets\Res\Vfx\Weather Effect\Environment VFX pack\Demo\Models" />
      <Folder Include="Assets\Res\ResourcePackages\mmmm\kenney_3d-road-tiles\Convert\Three.js (Blender)" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Materials (Mobile)\Animated" />
+     <Folder Include="Assets\Res\ResourcePackages\_Heathen Engineering\Documentation\UX" />
      <Folder Include="Assets\Res\Vfx\Weather Effect\Environment VFX pack\Demo\Scenes" />
      <Folder Include="Assets\Res\ResourcePackages\Realistic Hail Set" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\Common\Scripts" />
      <None Include="Assets\Res\ResourcePackages\mmmm\kenney_3d-road-tiles\License.txt" />
+     <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\1_FBX\House\MergedMeshes" />
      <None Include="Assets\Res\ResourcePackages\FlatKit\[Render Pipeline] URP\Water\Shaders\Water.shader" />
      <Reference Include="UnityEngine">
      <HintPath>D:\app\Unity\Hub\Editor\2022.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -1720,9 +1775,17 @@
       <Project>{c6622478-9843-71b6-934d-11ba1513245e}</Project>
       <Name>CFXRDemo</Name>
     </ProjectReference>
+    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Editor.csproj">
+      <Project>{e22ae564-0b8a-85f1-637a-ea9d64d2af82}</Project>
+      <Name>Whinarn.UnityMeshSimplifier.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="ExternAttributes.Editor.csproj">
       <Project>{78d44f5c-90fe-a967-497c-7d4cbfb0a612}</Project>
       <Name>ExternAttributes.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Runtime.csproj">
+      <Project>{7f8d1012-0beb-0de3-0c0a-ea686a44db3b}</Project>
+      <Name>Whinarn.UnityMeshSimplifier.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
       <Project>{2940040b-fd7f-e83c-1ef3-0efd7b12b76e}</Project>

@@ -21,10 +21,7 @@ MonoBehaviour:
     m_Address: Assets/AddressableAssets/Prefab/CommandItem.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 9b387c44afe5161498b6a16ee17a0753
-    m_Address: Assets/AddressableAssets/Prefab/StageItem.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: a19174961d3b32943af996d43a3fd044, type: 2}
   m_SchemaSet:

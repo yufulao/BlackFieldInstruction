@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Rabi;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -19,8 +20,9 @@ public class CommandItem : MonoBehaviour
 
     public virtual void Init(CommandType commandEnum, Transform onDragParent /*,CommandItemInfo itemInfoT*/)
     {
-        transform.Find("Decorate").Find("ClickBtnBg").Find("Text (Legacy)").GetComponent<Text>().text = commandEnum.ToString();
-        clickBtn.transform.Find("Text (Legacy)").GetComponent<Text>().text = commandEnum.ToString();
+        Sprite commandTypeSprite = AssetManager.Instance.LoadAsset<Sprite>(ConfigManager.Instance.cfgSprite[commandEnum.ToString()].spritePath);
+        transform.Find("Decorate").Find("ClickBtnBg").Find("CommandTypeSprite").GetComponent<Image>().sprite = commandTypeSprite;
+        clickBtn.transform.Find("CommandTypeSprite").GetComponent<Image>().sprite = commandTypeSprite;
         btnDragCmp.InitDragComponent(onDragParent);
         // itemInfo = itemInfoT;
     }
