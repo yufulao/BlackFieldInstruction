@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
     _location: 0
-    path: Res/Save/SaveFile.txt
+    path: SaveFile.txt
     encryptionType: 0
     compressionType: 0
     encryptionPassword: password
-    directory: 1
+    directory: 0
     format: 0
     prettyPrint: 1
     bufferSize: 2048
@@ -38,6 +38,7 @@ MonoBehaviour:
     - CFXRRuntime
     - Cinemachine
     - FbxBuildTestAssets
+    - IngameDebugConsole.Runtime
     - KinoBloom.Runtime
     - Whinarn.UnityMeshSimplifier.Runtime
     showAdvancedSettings: 0

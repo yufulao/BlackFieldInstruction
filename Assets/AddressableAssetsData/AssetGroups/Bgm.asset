@@ -17,10 +17,21 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: e68f12b01ec4dfd448682c90ec7faabe
   m_SerializeEntries:
-  - m_GUID: 844e229b667f2124794195c731be7572
-    m_Address: Assets/AddressableAssets/Bgm/TestBgm
+  - m_GUID: aa57b94d7edb70c4f8982ad8bea454c4
+    m_Address: Assets/AddressableAssets/Bgm/MainScene.mp3
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f4d629ae3a4eb3f40b1ec5e53126a5b8
+    m_Address: Assets/AddressableAssets/Bgm/Rank1.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ca5ddcd7cafd7d47a97cd2424f1c16c
+    m_Address: Assets/AddressableAssets/Bgm/Rank2.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: a19174961d3b32943af996d43a3fd044, type: 2}
   m_SchemaSet:

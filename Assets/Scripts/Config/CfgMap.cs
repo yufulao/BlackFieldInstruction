@@ -19,15 +19,15 @@ namespace Rabi
         public string key; //key
         public string mapName; //地图名
         public int lowCount; //地图区域的数量
-        public List<float> highCameraParams; //high摄像机参数
-        public List<float> midCameraParams; //mid摄像机参数
-        public List<float> lowACameraParams; //A区域的摄像机参数
-        public List<float> lowBCameraParams; //B区域的摄像机参数
-        public List<float> lowCCameraParams; //C区域的摄像机参数
-        public List<float> lowDCameraParams; //D区域的摄像机参数
-        public List<float> lowECameraParams; //E区域的摄像机参数
-        public List<float> lowFCameraParams; //F区域的摄像机参数
-        public List<float> lowGCameraParams; //G区域的摄像机参数
+        public string highCamera; //high摄像机
+        public string midCamera; //mid摄像机
+        public string lowACamera; //A区域的摄像机
+        public string lowBCamera; //B区域的摄像机
+        public string lowCCamera; //C区域的摄像机
+        public string lowDCamera; //D区域的摄像机
+        public string lowECamera; //E区域的摄像机
+        public string lowFCamera; //F区域的摄像机
+        public string lowGCamera; //G区域的摄像机
     }
 
     public class CfgMap
@@ -91,15 +91,15 @@ namespace Rabi
             data.key = CsvUtility.ToString(rowHelper.ReadNextCol()); //key
             data.mapName = CsvUtility.ToString(rowHelper.ReadNextCol()); //地图名
             data.lowCount = CsvUtility.ToInt(rowHelper.ReadNextCol()); //地图区域的数量
-            data.highCameraParams = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //high摄像机参数
-            data.midCameraParams = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //mid摄像机参数
-            data.lowACameraParams = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //A区域的摄像机参数
-            data.lowBCameraParams = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //B区域的摄像机参数
-            data.lowCCameraParams = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //C区域的摄像机参数
-            data.lowDCameraParams = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //D区域的摄像机参数
-            data.lowECameraParams = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //E区域的摄像机参数
-            data.lowFCameraParams = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //F区域的摄像机参数
-            data.lowGCameraParams = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //G区域的摄像机参数
+            data.highCamera = CsvUtility.ToString(rowHelper.ReadNextCol()); //high摄像机
+            data.midCamera = CsvUtility.ToString(rowHelper.ReadNextCol()); //mid摄像机
+            data.lowACamera = CsvUtility.ToString(rowHelper.ReadNextCol()); //A区域的摄像机
+            data.lowBCamera = CsvUtility.ToString(rowHelper.ReadNextCol()); //B区域的摄像机
+            data.lowCCamera = CsvUtility.ToString(rowHelper.ReadNextCol()); //C区域的摄像机
+            data.lowDCamera = CsvUtility.ToString(rowHelper.ReadNextCol()); //D区域的摄像机
+            data.lowECamera = CsvUtility.ToString(rowHelper.ReadNextCol()); //E区域的摄像机
+            data.lowFCamera = CsvUtility.ToString(rowHelper.ReadNextCol()); //F区域的摄像机
+            data.lowGCamera = CsvUtility.ToString(rowHelper.ReadNextCol()); //G区域的摄像机
             return data;
         }
     }

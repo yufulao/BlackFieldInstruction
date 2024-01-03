@@ -13,10 +13,11 @@ public class BattleUnitPlayer : BattleUnit
     private ForwardType _currentForwardType;
     private Sequence _sequence;
     [HideInInspector] public BattleUnitCarRear car;
-    [HideInInspector] private Transform _cachePlayerParent;
+    private Transform _cachePlayerParent;
     private Vector2Int _cacheTargetPoint;
     private ForwardType _cacheTargetForward;
     private int _currentPeopleCount;
+    private bool _cacheIsGetOnCommand;
 
     public override void OnUnitInit()
     {
@@ -29,6 +30,12 @@ public class BattleUnitPlayer : BattleUnit
     {
         base.OnUnitReset();
         ResetAll();
+    }
+
+    public override void OnUnitDestroy()
+    {
+        base.OnUnitDestroy();
+        _sequence?.Kill();
     }
 
     public override IEnumerator Calculate(CommandType commandType)
@@ -98,18 +105,19 @@ public class BattleUnitPlayer : BattleUnit
     /// <returns></returns>
     private IEnumerator ExecuteEveryCommand()
     {
-        if (car != null)
+        if (car)
         {
             //在车内时转存车的指令
             yield break;
         }
-        
+
         float during = 1f;
         if (_currentForwardType != _cacheTargetForward)
         {
             yield return StartCoroutine(WaitForRotate(_cacheTargetForward, 0.3f));
             during -= 0.3f;
         }
+
         yield return Move(_cacheTargetPoint, during);
     }
 
@@ -136,6 +144,8 @@ public class BattleUnitPlayer : BattleUnit
         car = null;
         _currentPeopleCount = 0;
         StartCoroutine(WaitForRotate(originalForwardType, 0f));
+        _cacheIsGetOnCommand = false;
+        animator.SetBool("run", false);
     }
 
     /// <summary>
@@ -149,6 +159,11 @@ public class BattleUnitPlayer : BattleUnit
         if (!CheckBeforePlayerMove(targetPoint)) //移动前检测
         {
             yield return new WaitForSeconds(during);
+            if (_cacheIsGetOnCommand)
+            {
+                car.GetOn(this);
+                _cacheIsGetOnCommand = false;
+            }
             yield break;
         }
 
@@ -157,15 +172,18 @@ public class BattleUnitPlayer : BattleUnit
             _sequence?.Kill();
             _sequence = DOTween.Sequence();
             _sequence.Append(transform.DOMove(GridManager.Instance.GetWorldPositionByPoint(targetPoint.x, targetPoint.y), during));
-            if (GridManager.Instance.GetPointByWorldPosition(transform.position)!=targetPoint)
+            if (GridManager.Instance.GetPointByWorldPosition(transform.position) != targetPoint)
             {
-                animator.SetBool("run",true);
+                SfxManager.Instance.PlaySfx("unit_playerMove");
+                animator.SetBool("run", true);
             }
+
             _sequence.SetAutoKill(false);
-            BattleManager.Instance.UpdateUnitPoint(this,targetPoint); //更新GridObj
+            BattleManager.Instance.UpdateUnitPoint(this, targetPoint); //更新GridObj
             //Debug.Log(GridManager.Instance.GetWorldPositionByPoint(targetPoint.x, targetPoint.y));
             yield return _sequence.WaitForCompletion();
-            animator.SetBool("run",false);
+            SfxManager.Instance.Stop("unit_playerMove");
+            animator.SetBool("run", false);
         }
         else
         {
@@ -194,8 +212,12 @@ public class BattleUnitPlayer : BattleUnit
 
         BattleManager.Instance.CheckCellForOrderPoint<BattleUnitCarRear>(targetPoint, UnitType.CarRear, (rear) =>
         {
+            SfxManager.Instance.PlaySfx("unit_carGetOn");
             car = rear[0];
-            rear[0].GetOn(this);
+            gameObject.transform.SetParent(transform);
+            RefreshPlayerObjActive(false);
+            _cacheIsGetOnCommand = true;
+            canWalk = false;
         });
 
         return canWalk;
@@ -208,13 +230,18 @@ public class BattleUnitPlayer : BattleUnit
     {
         BattleManager.Instance.CheckCellForUnit<BattleUnitTarget>(this, UnitType.Target, (targets) =>
         {
-            if (car==null)
+            if (car == null)
             {
                 for (int i = 0; i < targets.Count; i++)
                 {
-                    if (_currentPeopleCount>=targets[i].needPeopleCount)
+                    if (_currentPeopleCount >= targets[i].needPeopleCount)
                     {
-                        CommandManager.Instance.ForceChangeToMainEnd();
+                        if (CommandManager.Instance.CheckMoreThanTime()) //更新左上角时间，如果超时
+                        {
+                            BattleManager.Instance.BattleEnd(false);
+                            return;
+                        }
+                        
                         BattleManager.Instance.BattleEnd(true);
                         return;
                     }
@@ -224,13 +251,12 @@ public class BattleUnitPlayer : BattleUnit
 
         BattleManager.Instance.CheckCellForUnit<BattleUnitFire>(this, UnitType.Fire, (fires) =>
         {
-            if (car==null)
+            if (car == null)
             {
                 for (int i = 0; i < fires.Count; i++)
                 {
                     if (fires[i].currentActive)
                     {
-                        CommandManager.Instance.ForceChangeToMainEnd();
                         BattleManager.Instance.BattleEnd(false);
                         return;
                     }
@@ -238,14 +264,23 @@ public class BattleUnitPlayer : BattleUnit
             }
         });
 
+        BattleManager.Instance.CheckCellForUnit<BattleUnitTornado>(this, UnitType.Tornado, (tornadoes) =>
+        {
+            if (car == null && tornadoes.Count > 0)
+            {
+                BattleManager.Instance.BattleEnd(false);
+            }
+        });
+
         BattleManager.Instance.CheckCellForUnit<BattleUnitPeople>(this, UnitType.People, (people) =>
         {
-            if (car==null)
+            if (car == null)
             {
                 for (int i = 0; i < people.Count; i++)
                 {
-                    people[i].SetPeopleActive(false);
+                    people[i].PeopleHelp();
                     _currentPeopleCount++;
+                    BattleManager.Instance.SetTargetState(_currentPeopleCount);
                 }
             }
         });

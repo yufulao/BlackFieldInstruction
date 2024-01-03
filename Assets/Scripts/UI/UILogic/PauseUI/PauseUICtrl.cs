@@ -34,10 +34,26 @@ public class PauseUICtrl : UICtrlBase
 
     protected override void BindEvent()
     {
-        backMask.onClick.AddListener(CloseRoot);
-        continueBtn.onClick.AddListener(CloseRoot);
-        returnTitleBtn.onClick.AddListener(OnReturnTitleBtnClick);
-        quitBtn.onClick.AddListener(OnQuitBtnClick);
+        backMask.onClick.AddListener(()=>
+        {
+            SfxManager.Instance.PlaySfx("command_select");
+            CloseRoot();
+        });
+        continueBtn.onClick.AddListener(() =>
+        {
+            SfxManager.Instance.PlaySfx("command_select");
+            CloseRoot();
+        });
+        returnTitleBtn.onClick.AddListener(() =>
+        {
+            SfxManager.Instance.PlaySfx("command_select");
+            OnReturnTitleBtnClick();
+        });
+        quitBtn.onClick.AddListener(()=>
+        {
+            SfxManager.Instance.PlaySfx("command_select");
+            OnQuitBtnClick();
+        });
     }
 
     /// <summary>

@@ -260,7 +260,7 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/Project/google/google.keystore
+  AndroidKeystoreName: "C:/Users/yufulao/Desktop/Tools/\u6742\u9879/google.keystore"
   AndroidKeyaliasName: yufulao
   AndroidEnableArmv9SecurityFeatures: 0
   AndroidBuildApkPerCpuArchitecture: 0

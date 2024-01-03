@@ -133,6 +133,7 @@ public class BattleUnitBrokenBuilding : BattleUnit
     /// <param name="forwardType"></param>
     public void ToRuin(ForwardType forwardType)
     {
+        SfxManager.Instance.PlaySfx("unit_buildingRuin");
         currentStateType = BrokenBuildingStateType.Ruin;
         Vector3 targetRuinPosition = transform.position;
         float cellSize = GridManager.Instance.GetPerCellSize();

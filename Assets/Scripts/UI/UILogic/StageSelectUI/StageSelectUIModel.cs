@@ -21,6 +21,7 @@ public class StageSelectUIModel
         for (int i = 0; i < stages.Count; i++)
         {
             StageItemInfo stageInfo = CreateStageItemInfo(stages[i].key);
+            //Debug.Log(stages[i].key+"  "+stageInfo.stageName);
             _stageItemInfoList.Add(stageInfo);
         }
         _currentHighId = 0;
@@ -101,16 +102,14 @@ public class StageSelectUIModel
     /// 获取该地图摄像机参数
     /// </summary>
     /// <returns></returns>
-    public (Vector3,Vector3, float) GetHighCameraParams()
+    public string GetHighCamera()
     {
-        _cacheCameraParamsList=ConfigManager.Instance.cfgMap[_currentHighId].highCameraParams;
-        return TranslateCameraParams();
+        return ConfigManager.Instance.cfgMap[_currentHighId].highCamera;
     }
     
-    public (Vector3,Vector3, float) GetMidCameraParams()
+    public string GetMidCamera()
     {
-        _cacheCameraParamsList=ConfigManager.Instance.cfgMap[_currentHighId].midCameraParams;
-        return TranslateCameraParams();
+        return ConfigManager.Instance.cfgMap[_currentHighId].midCamera;
     }
 
     public int GetLowCount()
@@ -122,44 +121,29 @@ public class StageSelectUIModel
     /// 获取该区域摄像机参数
     /// </summary>
     /// <returns></returns>
-    public (Vector3,Vector3, float) GetLowCameraParams()
+    public string GetLowCamera()
     {
         switch (_currentLowId)
         {
             case MapAreaDef.Area0:
-                _cacheCameraParamsList = ConfigManager.Instance.cfgMap[_currentHighId].lowACameraParams;
-                break;
+                return ConfigManager.Instance.cfgMap[_currentHighId].lowACamera;
             case MapAreaDef.Area1:
-                _cacheCameraParamsList = ConfigManager.Instance.cfgMap[_currentHighId].lowBCameraParams;
-                break;
+                return ConfigManager.Instance.cfgMap[_currentHighId].lowBCamera;
             case MapAreaDef.Area2:
-                _cacheCameraParamsList = ConfigManager.Instance.cfgMap[_currentHighId].lowCCameraParams;
-                break;
+                return ConfigManager.Instance.cfgMap[_currentHighId].lowCCamera;
             case MapAreaDef.Area3:
-                _cacheCameraParamsList = ConfigManager.Instance.cfgMap[_currentHighId].lowDCameraParams;
-                break;
+                return ConfigManager.Instance.cfgMap[_currentHighId].lowDCamera;
             case MapAreaDef.Area4:
-                _cacheCameraParamsList = ConfigManager.Instance.cfgMap[_currentHighId].lowECameraParams;
-                break;
+                return ConfigManager.Instance.cfgMap[_currentHighId].lowECamera;
             case MapAreaDef.Area5:
-                _cacheCameraParamsList = ConfigManager.Instance.cfgMap[_currentHighId].lowFCameraParams;
-                break;
+                return ConfigManager.Instance.cfgMap[_currentHighId].lowFCamera;
             case MapAreaDef.Area6:
-                _cacheCameraParamsList = ConfigManager.Instance.cfgMap[_currentHighId].lowGCameraParams;
-                break;
+                return ConfigManager.Instance.cfgMap[_currentHighId].lowGCamera;
         }
 
-        return TranslateCameraParams();
+        return null;
     }
 
-    private (Vector3,Vector3, float) TranslateCameraParams()
-    {
-        Vector3 cameraPosition = new Vector3(_cacheCameraParamsList[0], _cacheCameraParamsList[1], _cacheCameraParamsList[2]);
-        Vector3 cameraRotation = new Vector3(_cacheCameraParamsList[3], _cacheCameraParamsList[4], _cacheCameraParamsList[5]);
-        float cameraFileOfView = _cacheCameraParamsList[6];
-        return (cameraPosition,cameraRotation,cameraFileOfView);
-    }
-    
     /// <summary>
     /// 生成一个stageItemInfo
     /// </summary>

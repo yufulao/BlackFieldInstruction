@@ -5,6 +5,7 @@ using System.IO.Enumeration;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using Rabi;
 
 public class CameraManager : BaseSingleTon<CameraManager>, IMonoManager
 {
@@ -48,21 +49,29 @@ public class CameraManager : BaseSingleTon<CameraManager>, IMonoManager
         {
             _objCamera.gameObject.SetActive(false);
         }
+
         _objCamera = _cacheMainObjCamera;
         _objCamera.gameObject.SetActive(true);
     }
 
-    public IEnumerator MoveObjCamera(Vector3 targetPosition, Vector3 targetRotation, float fieldOfView, float during = 0f)
+    public IEnumerator MoveObjCamera(string cameraName, float during = 0f)
     {
         if (!_objCamera)
         {
             yield break;
         }
+
+        List<float> positionParams = ConfigManager.Instance.cfgCamera[cameraName].position;
+        List<float> rotationParams = ConfigManager.Instance.cfgCamera[cameraName].rotation;
+        Vector3 cameraPosition = new Vector3(positionParams[0], positionParams[1], positionParams[2]);
+        Vector3 cameraRotation = new Vector3(rotationParams[0], rotationParams[1], rotationParams[2]);
+        float cameraFieldOfView = ConfigManager.Instance.cfgCamera[cameraName].fieldOfView;
+        
         _objSequence?.Kill();
         _objSequence = DOTween.Sequence();
-        _objSequence.Join(_objCamera.transform.DOLocalMove(targetPosition, during));
-        _objSequence.Join(_objCamera.transform.DOLocalRotateQuaternion(Quaternion.Euler(targetRotation), during));
-        _objSequence.Join(_objCamera.DOFieldOfView(fieldOfView, during));
+        _objSequence.Join(_objCamera.transform.DOLocalMove(cameraPosition, during));
+        _objSequence.Join(_objCamera.transform.DOLocalRotateQuaternion(Quaternion.Euler(cameraRotation), during));
+        _objSequence.Join(_objCamera.DOFieldOfView(cameraFieldOfView, during));
         _objSequence.SetAutoKill(false);
         yield return _objSequence.WaitForCompletion();
     }
@@ -75,22 +84,8 @@ public class CameraManager : BaseSingleTon<CameraManager>, IMonoManager
     private void OnChangeScene()
     {
         _objSequence?.Kill();
-        GameObject sceneObjCameraObj = GameObject.Find("Main Camera");
-        if (!sceneObjCameraObj)
-        {
-            return;
-        }
-
-        Camera sceneObjCamera = sceneObjCameraObj.GetComponent<Camera>() ?? null;
-
-        if (sceneObjCamera)
-        {
-            _cacheMainObjCamera.gameObject.SetActive(false);
-            _objCamera = sceneObjCamera;
-            return;
-        }
-
-        _objCamera = _cacheMainObjCamera;
-        _objCamera.gameObject.SetActive(true);
+        // _cacheMainObjCamera.gameObject.SetActive(false);
+        // _objCamera = Utils.FindTByName<Camera>("Main Camera") ?? _cacheMainObjCamera;
+        // _objCamera.gameObject.SetActive(true);
     }
 }

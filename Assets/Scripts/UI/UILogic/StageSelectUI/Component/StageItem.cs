@@ -11,6 +11,10 @@ public class StageItem : MonoBehaviour
 
     private void Start()
     {
+        if (stageCfgKey=="Stage1-1")
+        {
+            SaveManager.SetInt(stageCfgKey,1);
+        }
         if (SaveManager.GetInt(stageCfgKey, 0) == 1)
         {
             GetComponent<Collider>().enabled = true;

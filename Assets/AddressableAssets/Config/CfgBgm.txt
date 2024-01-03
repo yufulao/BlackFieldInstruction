@@ -1,7 +1,7 @@
 key#audioClipPath#None#None#None
 bgm名#资源路径#None#None#None
 string#string#None#None#None
-TestBgm#Assets/AddressableAssets/Bgm/TestBgm#None#None#None
-None#None#None#None#None
-None#None#None#None#None
+MainScene#Assets/AddressableAssets/Bgm/MainScene.mp3#None#None#None
+Rank1#Assets/AddressableAssets/Bgm/Rank1.mp3#None#None#None
+Rank2#Assets/AddressableAssets/Bgm/Rank2.wav#None#None#None
 None#None#None#None#None

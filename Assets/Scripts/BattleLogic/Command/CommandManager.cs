@@ -200,22 +200,25 @@ public class CommandManager : MonoSingleton<CommandManager>
     /// </summary>
     public void CommandExecuteEndStateEnter()
     {
-        if (_viewCtrl.RefreshCacheCurrentTimeTextInExecuting()) //更新左上角时间，如果超时
-        {
-            _commandFsm.ChangeFsmState(typeof(CommandMainEndState));
-            BattleManager.Instance.BattleEnd(false);
-            return;
-        }
+        _viewCtrl.RefreshCacheCurrentTimeTextInExecuting(); //更新左上角时间
 
         if (_usedCommandList.Count <= 0) //指令全部执行完毕
         {
-            _commandFsm.ChangeFsmState(typeof(CommandMainEndState));
             BattleManager.Instance.BattleEnd(false);
+            _commandFsm.ChangeFsmState(typeof(CommandMainEndState));
             return;
         }
 
         //执行下一个指令
         _commandFsm.ChangeFsmState(typeof(CommandCalculateState));
+    }
+
+    /// <summary>
+    /// 判断是否超时，总指令结束时才判断，局内超时没事
+    /// </summary>
+    public bool CheckMoreThanTime()
+    {
+        return _viewCtrl.CheckMoreThanTime();
     }
 
     /// <summary>
@@ -227,6 +230,7 @@ public class CommandManager : MonoSingleton<CommandManager>
         {
             StopCoroutine(_fsmCoroutine);
         }
+        EventManager.Instance.Dispatch(EventName.CommandMainEnd);
     }
 
     /// <summary>
@@ -234,6 +238,10 @@ public class CommandManager : MonoSingleton<CommandManager>
     /// </summary>
     public void ForceChangeToMainEnd()
     {
+        if (!_hadInit)
+        {
+            return;
+        }
         _commandFsm.ChangeFsmState(typeof(CommandMainEndState));
     }
 

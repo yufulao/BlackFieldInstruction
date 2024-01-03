@@ -17,10 +17,116 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 042d0ddc932a8994db6750e0d55b7799
   m_SerializeEntries:
-  - m_GUID: ab4aac60ad1bfee4f905f3051a444cbb
-    m_Address: Assets/AddressableAssets/Sfx/TestSfx
+  - m_GUID: aaa8d245de1231044890e177a380d0ad
+    m_Address: Assets/AddressableAssets/Sfx/command_select.ogg
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 72a6fa8e1d422af40bf4f3ecb22cb669
+    m_Address: Assets/AddressableAssets/Sfx/command_undo.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 530eadf38ba9137458569270355f62d1
+    m_Address: Assets/AddressableAssets/Sfx/command_useless.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e8f01d2cfa6856340a93ae41d285f106
+    m_Address: Assets/AddressableAssets/Sfx/unit_playerMove.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f44057d1619bca04ca2299b55e7fb01f
+    m_Address: Assets/AddressableAssets/Sfx/level_success.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f6872c9c7fd9a9419faf6bfdcf074d1
+    m_Address: Assets/AddressableAssets/Sfx/lever_fail.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c635b64d5676e224bad875519025959f
+    m_Address: Assets/AddressableAssets/Sfx/stage_cameraBack.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0465a280b8e0d37418a67602fc5b547b
+    m_Address: Assets/AddressableAssets/Sfx/stage_cameraEnter.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 67d774c1b4ee15c4d85a9011946f95de
+    m_Address: Assets/AddressableAssets/Sfx/stage_stageEnter.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fbbd39e0df6daf1438342c70654e720d
+    m_Address: Assets/AddressableAssets/Sfx/unit_buildingRuin.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c298de549f6a41746b28f1eb2baf73b5
+    m_Address: Assets/AddressableAssets/Sfx/unit_carDrive.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 38f6f76dda46fd04095fb8576c4347ab
+    m_Address: Assets/AddressableAssets/Sfx/unit_carDriveFail.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1ab11635f14d6ec4182b06d529f479c8
+    m_Address: Assets/AddressableAssets/Sfx/unit_carGetOff.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4d1e6c1be9a253c4e9332710abf3ce05
+    m_Address: Assets/AddressableAssets/Sfx/unit_carGetOn.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e9563ed42bbf05049a3637b572277cd3
+    m_Address: Assets/AddressableAssets/Sfx/unit_peopleDie01.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3713d07dd84e7864988e69c05fe61873
+    m_Address: Assets/AddressableAssets/Sfx/level_generate.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4bf35c65b0bfb404da57ec64b9939968
+    m_Address: Assets/AddressableAssets/Sfx/unit_rockBoom.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d3800682841a9dc488622809c9cc0412
+    m_Address: Assets/AddressableAssets/Sfx/unit_tornadoMove.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 571d3d10c1e92994884775be45896bc6
+    m_Address: Assets/AddressableAssets/Sfx/unit_peopleDie02.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5ff847ffd57977e4e9a3ab9cae6862e1
+    m_Address: Assets/AddressableAssets/Sfx/unit_peopleDie03.wav
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 17383ef8033754c4884659fcbf8275c6
+    m_Address: Assets/AddressableAssets/Sfx/stage_mapSwitch.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6c673b1dca6fa0c478ece4572dc4a61c
+    m_Address: Assets/AddressableAssets/Sfx/unit_peopleHelp.ogg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: a19174961d3b32943af996d43a3fd044, type: 2}
   m_SchemaSet:

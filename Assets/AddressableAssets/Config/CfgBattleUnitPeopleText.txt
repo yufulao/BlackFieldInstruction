@@ -1,0 +1,7 @@
+key#textList#None#None#None#None#None
+key#预设路径#None#None#None#None#None
+string#List<string>#None#None#None#None#None
+BeforeExecute#谁来救救我..,我们在这里,这是上天的惩罚吗#None#None#None#None#None
+DuringExecute#为什么救援队还没来#None#None#None#None#None
+OnDie#不....#None#None#None#None#None
+OnHelp#得救了#None#None#None#None#None

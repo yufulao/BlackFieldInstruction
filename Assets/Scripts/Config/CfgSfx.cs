@@ -20,6 +20,7 @@ namespace Rabi
         public List<string> audioClipPaths; //资源路径
         public float volume; //初始音量
         public bool oneShot; //是否oneShot
+        public bool loop; //是否循环
     }
 
     public class CfgSfx
@@ -72,7 +73,7 @@ namespace Rabi
         private RowCfgSfx ParseRow(string[] col)
         {
             //列越界
-            if (col.Length < 4)
+            if (col.Length < 5)
             {
                 Debug.LogError($"配置表字段行数越界:{GetType()}");
                 return null;
@@ -84,6 +85,7 @@ namespace Rabi
             data.audioClipPaths = CsvUtility.ToList<string>(rowHelper.ReadNextCol()); //资源路径
             data.volume = CsvUtility.ToFloat(rowHelper.ReadNextCol()); //初始音量
             data.oneShot = CsvUtility.ToBool(rowHelper.ReadNextCol()); //是否oneShot
+            data.loop = CsvUtility.ToBool(rowHelper.ReadNextCol()); //是否循环
             return data;
         }
     }

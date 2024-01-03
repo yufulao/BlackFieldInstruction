@@ -44,7 +44,7 @@ public class GridModel
         // Debug.Log(worldPosition);
         // Debug.Log(_cellSize);
         // Debug.Log(new Vector2Int((int) (worldPosition.x / _cellSize), (int) (worldPosition.z / _cellSize)));
-        return new Vector2Int((int) (worldPosition.x / _cellSize), (int) (worldPosition.z / _cellSize));
+        return new Vector2Int(Mathf.RoundToInt(worldPosition.x / _cellSize), Mathf.RoundToInt(worldPosition.z / _cellSize));
     }
 
     /// <summary>

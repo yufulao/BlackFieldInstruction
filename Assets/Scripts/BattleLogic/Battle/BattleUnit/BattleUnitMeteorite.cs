@@ -38,6 +38,7 @@ public class BattleUnitMeteorite : BattleUnit
     public override void OnUnitDestroy()
     {
         base.OnUnitDestroy();
+        _sequence?.Kill();
         EventManager.Instance.RemoveListener(EventName.CommandMainStart,OnCommandMainStart);
     }
 
@@ -122,6 +123,7 @@ public class BattleUnitMeteorite : BattleUnit
     /// </summary>
     private void OnMeteoriteFallDone()
     {
+        SfxManager.Instance.PlaySfx("unit_rockBoom");
         meteorite.SetActive(false);
         unitFire.SetFireActive(true);
         unitFire.fireVfx.Play();

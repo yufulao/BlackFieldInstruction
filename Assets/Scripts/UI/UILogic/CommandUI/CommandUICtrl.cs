@@ -24,7 +24,8 @@ public class CommandUICtrl : UICtrlBase
     [SerializeField] private ScrollRect waitingScroll;
     [SerializeField] private Transform usedItemContainer;
     [SerializeField] private Transform waitingItemContainer;
-    
+    [SerializeField] private List<Transform> waitingItemTransformList = new List<Transform>();
+
 
     private readonly Dictionary<UsedItemInfo, CommandItem> _usedItemInfoDic = new Dictionary<UsedItemInfo, CommandItem>();
     private readonly Dictionary<WaitingItemInfo, CommandItem> _waitingItemInfoDic = new Dictionary<WaitingItemInfo, CommandItem>();
@@ -73,8 +74,8 @@ public class CommandUICtrl : UICtrlBase
         resetBtn.gameObject.SetActive(false);
         cancelExecuteBtn.gameObject.SetActive(true);
         timeScaleSlider.gameObject.SetActive(false);
-        _cacheCurrentTimeInExecuting = 0;
-        RefreshCurrentTimeText(0);
+        _cacheCurrentTimeInExecuting = 1;
+        RefreshCurrentTimeText(1);
     }
 
     /// <summary>
@@ -95,23 +96,46 @@ public class CommandUICtrl : UICtrlBase
     /// 每执行一次指令时调用的刷新左上角的当前时间显示
     /// </summary>
     /// <returns></returns>
-    public bool RefreshCacheCurrentTimeTextInExecuting()
+    public void RefreshCacheCurrentTimeTextInExecuting()
     {
         _cacheCurrentTimeInExecuting++;
         currentTimeText.color = _cacheCurrentTimeInExecuting > _rowCfgStage.stageTime ? Color.red : Color.white;
         currentTimeText.text = _cacheCurrentTimeInExecuting.ToString();
+    }
+
+    /// <summary>
+    /// 判断是否超时，总指令结束时才判断，局内超时没事
+    /// </summary>
+    public bool CheckMoreThanTime()
+    {
         return _cacheCurrentTimeInExecuting > _rowCfgStage.stageTime;
     }
 
     protected override void BindEvent()
     {
-        startBtn.onClick.AddListener(BattleManager.Instance.ChangeToCommandExecuteState);
-        pauseBtn.onClick.AddListener(() => { UIManager.Instance.OpenWindow("PauseView");});
-        resetBtn.onClick.AddListener(ResetCommandUI);
-        cancelExecuteBtn.onClick.AddListener(BattleManager.Instance.ForceStopExecuteCommand);
+        startBtn.onClick.AddListener(() =>
+        {
+            SfxManager.Instance.PlaySfx("command_select");
+            BattleManager.Instance.ChangeToCommandExecuteState();
+        });
+        pauseBtn.onClick.AddListener(() =>
+        {
+            SfxManager.Instance.PlaySfx("command_select");
+            UIManager.Instance.OpenWindow("PauseView");
+        });
+        resetBtn.onClick.AddListener(() =>
+        {
+            SfxManager.Instance.PlaySfx("command_select");
+            ResetCommandUI();
+        });
+        cancelExecuteBtn.onClick.AddListener(() =>
+        {
+            SfxManager.Instance.PlaySfx("command_select");
+            BattleManager.Instance.ForceStopExecuteCommand();
+        });
         timeScaleSlider.onValueChanged.AddListener(GameManager.Instance.SetTimeScale);
     }
-    
+
     /// <summary>
     /// 重置指令ui
     /// </summary>
@@ -126,7 +150,7 @@ public class CommandUICtrl : UICtrlBase
         {
             Destroy(waitingItemContainer.GetChild(i).gameObject);
         }
-        
+
         _usedItemInfoDic.Clear();
         _waitingItemInfoDic.Clear();
         _model.ResetModel(ReLoadOriginalItemList());
@@ -187,17 +211,17 @@ public class CommandUICtrl : UICtrlBase
     /// <param name="needTime"></param>
     /// <param name="count"></param>
     /// <returns></returns>
-    private void CreateWaitingItem(CommandType commandEnum, int needTime, int count, Action<CommandItem, WaitingItemInfo> callback)
+    private (CommandItem, WaitingItemInfo) CreateWaitingItem(CommandType commandEnum, int needTime, int count)
     {
         CommandItem item = Instantiate(AssetManager.Instance.LoadAsset<GameObject>(ConfigManager.Instance.cfgPrefab["CommandItem"].prefabPath)
             , waitingItemContainer).GetComponent<CommandItem>();
+        item.transform.position = waitingItemTransformList[CommandIndex.GetCommandIndexByType(commandEnum)].position;
         WaitingItemInfo info = _model.CreatWaitingItemInfo(commandEnum, needTime, count);
         item.Init(commandEnum, transform);
         item.SetBtnOnClick(WaitingItemOnClick);
         item.SetDragAction(WaitingItemDragFilter, null, WaitingItemOnEndDrag);
         item.SetInvalidDragAction(waitingScroll.OnBeginDrag, waitingScroll.OnDrag, waitingScroll.OnEndDrag);
-
-        callback?.Invoke(item, info);
+        return (item, info);
     }
 
     /// <summary>
@@ -237,14 +261,14 @@ public class CommandUICtrl : UICtrlBase
                 needTime = commandTime[pair.Key];
             }
 
-            CreateWaitingItem(commandEnum, needTime, pair.Value, (item, info) =>
-            {
-                item.Refresh(info.cacheCount, info.cacheTime);
-                originalItemList.Add(info);
-                _waitingItemInfoDic.Add(info, item);
-            });
+            (CommandItem, WaitingItemInfo) result = CreateWaitingItem(commandEnum, needTime, pair.Value);
+            CommandItem item = result.Item1;
+            WaitingItemInfo info = result.Item2;
+            item.Refresh(info.cacheCount, info.cacheTime);
+            originalItemList.Add(info);
+            _waitingItemInfoDic.Add(info, item);
         }
-
+        
         return originalItemList;
     }
 
@@ -279,6 +303,7 @@ public class CommandUICtrl : UICtrlBase
     /// <param name="usedItem"></param>
     private void UsedItemOnClick(CommandItem usedItem)
     {
+        SfxManager.Instance.PlaySfx("command_undo");
         UsedItemInfo usedItemInfo = GetUsedInfoByItem(usedItem);
         WaitingItemInfo waitingItemInfo = _model.AddWaitingCommand(usedItemInfo);
         CommandItem waitingItem = _waitingItemInfoDic[waitingItemInfo];
@@ -296,6 +321,7 @@ public class CommandUICtrl : UICtrlBase
     /// <param name="waitingItem"></param>
     private void WaitingItemOnClick(CommandItem waitingItem)
     {
+        SfxManager.Instance.PlaySfx("command_select");
         WaitingItemInfo waitingItemInfo = GetWaitingInfoByItem(waitingItem);
         _model.RemoveWaitingCommand(waitingItemInfo, NoWaitingObj);
         waitingItem.Refresh(waitingItemInfo.cacheCount, waitingItemInfo.cacheTime);

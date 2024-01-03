@@ -6,3 +6,5 @@ UI.xlsx
 Prefab.xlsx
 Map.xlsx
 Sprite.xlsx
+BattleUnitPeopleText.xlsx
+Camera.xlsx

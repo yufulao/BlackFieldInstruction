@@ -13,7 +13,9 @@
           <e p="AudioMixer" t="Include" />
           <e p="Bgm" t="Include" />
           <e p="Config" t="Include">
+            <e p="CfgBattleUnitPeopleText.txt" t="Include" />
             <e p="CfgBgm.txt" t="Include" />
+            <e p="CfgCamera.txt" t="Include" />
             <e p="CfgCommand.txt" t="Include" />
             <e p="CfgMap.txt" t="Include" />
             <e p="CfgPrefab.txt" t="Include" />
@@ -321,6 +323,43 @@
             </e>
             <e p="Web" t="Include" />
           </e>
+          <e p="IngameDebugConsole" t="Include">
+            <e p="Android" t="Include">
+              <e p="DebugLogLogcatListener.cs" t="Include" />
+            </e>
+            <e p="Editor" t="Include">
+              <e p="DebugLogManagerEditor.cs" t="Include" />
+              <e p="IngameDebugConsole.Editor.asmdef" t="Include" />
+            </e>
+            <e p="IngameDebugConsole.Runtime.asmdef" t="Include" />
+            <e p="iOS" t="Include" />
+            <e p="Prefabs" t="Include" />
+            <e p="readme.txt" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="CircularBuffer.cs" t="Include" />
+              <e p="Commands" t="Include">
+                <e p="PlayerPrefsCommands.cs" t="Include" />
+                <e p="SceneCommands.cs" t="Include" />
+                <e p="TimeCommands.cs" t="Include" />
+              </e>
+              <e p="ConsoleMethodAttribute.cs" t="Include" />
+              <e p="DebugLogConsole.cs" t="Include" />
+              <e p="DebugLogEntry.cs" t="Include" />
+              <e p="DebugLogItem.cs" t="Include" />
+              <e p="DebugLogItemCopyWebGL.cs" t="Include" />
+              <e p="DebugLogManager.cs" t="Include" />
+              <e p="DebugLogPopup.cs" t="Include" />
+              <e p="DebugLogRecycledListView.cs" t="Include" />
+              <e p="DebugLogResizeListener.cs" t="Include" />
+              <e p="DebugsOnScrollListener.cs" t="Include" />
+              <e p="EventSystemHandler.cs" t="Include" />
+              <e p="InputFieldWarningsFixer.cs" t="Include" />
+            </e>
+            <e p="Sprites" t="Include">
+              <e p="Unused" t="Include" />
+            </e>
+            <e p="WebGL" t="Include" />
+          </e>
           <e p="Mesh Optimizer" t="Include">
             <e p="Editor" t="Include">
               <e p="LODGeneratorHelperEditor.cs" t="Include" />
@@ -418,6 +457,9 @@
           </e>
         </e>
         <e p="Res" t="Include">
+          <e p="Animator" t="Include">
+            <e p="LoadingView" t="Include" />
+          </e>
           <e p="Mesh" t="Include">
             <e p="MergedMeshes" t="Include" />
           </e>
@@ -511,6 +553,158 @@
                   </e>
                 </e>
               </e>
+            </e>
+            <e p="Animated Loading Icons" t="Include">
+              <e p="Animations" t="Include">
+                <e p="Bars anim" t="Include">
+                  <e p="Bars 1" t="Include" />
+                  <e p="Bars 2" t="Include" />
+                  <e p="Bars 3" t="Include" />
+                  <e p="Bars 4" t="Include" />
+                  <e p="Bars 5" t="Include" />
+                  <e p="Bars 6" t="Include" />
+                  <e p="Bars 7" t="Include" />
+                  <e p="Bars 8" t="Include" />
+                  <e p="Bars 9" t="Include" />
+                </e>
+                <e p="Basic anim" t="Include">
+                  <e p="Basic 1" t="Include" />
+                  <e p="Basic 2" t="Include" />
+                  <e p="Basic 3" t="Include" />
+                  <e p="Basic 4" t="Include" />
+                  <e p="Basic 5" t="Include" />
+                </e>
+                <e p="Blinking anim" t="Include">
+                  <e p="Blinking 1" t="Include" />
+                  <e p="Blinking 2" t="Include" />
+                  <e p="Blinking 3" t="Include" />
+                  <e p="Blinking 4" t="Include" />
+                </e>
+                <e p="Circle half rotating anim" t="Include">
+                  <e p="Circle half rotating 1" t="Include" />
+                  <e p="Circle half rotating 2" t="Include" />
+                  <e p="Circle half rotating 3" t="Include" />
+                </e>
+                <e p="Circle half rotating fading anim" t="Include">
+                  <e p="(fast) Circle half rotating fading 1" t="Include" />
+                  <e p="(fast) Circle half rotating fading 2" t="Include" />
+                  <e p="(fast) Circle half rotating fading 3" t="Include" />
+                  <e p="(fast) Circle half rotating fading 4" t="Include" />
+                  <e p="(fast) Circle half rotating fading 5" t="Include" />
+                  <e p="(fast) Circle half rotating fading 6" t="Include" />
+                  <e p="(fast) Circle half rotating fading 7" t="Include" />
+                  <e p="Circle half rotating fading 1" t="Include" />
+                  <e p="Circle half rotating fading 2" t="Include" />
+                  <e p="Circle half rotating fading 3" t="Include" />
+                  <e p="Circle half rotating fading 4" t="Include" />
+                  <e p="Circle half rotating fading 5" t="Include" />
+                  <e p="Circle half rotating fading 6" t="Include" />
+                  <e p="Circle half rotating fading 7" t="Include" />
+                </e>
+                <e p="Circle open rotating anim" t="Include">
+                  <e p="Circle open rotating 1" t="Include" />
+                  <e p="Circle open rotating 2" t="Include" />
+                </e>
+                <e p="Circle quarter rotating anim" t="Include">
+                  <e p="(fast) Circle quarter rotating 1" t="Include" />
+                  <e p="(fast) Circle quarter rotating 2" t="Include" />
+                  <e p="(fast) Circle quarter rotating 3" t="Include" />
+                  <e p="(fast) Circle quarter rotating 4" t="Include" />
+                  <e p="(fast) Circle quarter rotating 5" t="Include" />
+                  <e p="(fast) Circle quarter rotating 6" t="Include" />
+                  <e p="(fast) Circle quarter rotating 7" t="Include" />
+                  <e p="Circle quarter rotating 1" t="Include" />
+                  <e p="Circle quarter rotating 2" t="Include" />
+                  <e p="Circle quarter rotating 3" t="Include" />
+                  <e p="Circle quarter rotating 4" t="Include" />
+                  <e p="Circle quarter rotating 5" t="Include" />
+                  <e p="Circle quarter rotating 6" t="Include" />
+                  <e p="Circle quarter rotating 7" t="Include" />
+                </e>
+                <e p="Circle rotating anim" t="Include">
+                  <e p="Circle rotating 1" t="Include" />
+                  <e p="Circle rotating 2" t="Include" />
+                </e>
+                <e p="Cog anim" t="Include">
+                  <e p="Cog 1" t="Include" />
+                  <e p="Cog 2" t="Include" />
+                  <e p="Cog 3" t="Include" />
+                </e>
+                <e p="Folding anim" t="Include">
+                  <e p="Folding 1" t="Include" />
+                  <e p="Folding 2" t="Include" />
+                  <e p="Folding 3" t="Include" />
+                </e>
+                <e p="Pickaxe anim" t="Include">
+                  <e p="Pickaxe 1" t="Include" />
+                  <e p="Pickaxe 2" t="Include" />
+                  <e p="Pickaxe 3" t="Include" />
+                </e>
+                <e p="Pulsing anim" t="Include">
+                  <e p="Pulsing 1" t="Include" />
+                  <e p="Pulsing 2" t="Include" />
+                  <e p="Pulsing 3" t="Include" />
+                  <e p="Pulsing 4" t="Include" />
+                  <e p="Pulsing 5" t="Include" />
+                </e>
+                <e p="Spinner anim" t="Include">
+                  <e p="Spinner 1" t="Include" />
+                  <e p="Spinner 10" t="Include" />
+                  <e p="Spinner 2" t="Include" />
+                  <e p="Spinner 3" t="Include" />
+                  <e p="Spinner 4" t="Include" />
+                  <e p="Spinner 5" t="Include" />
+                  <e p="Spinner 6" t="Include" />
+                  <e p="Spinner 7" t="Include" />
+                  <e p="Spinner 8" t="Include" />
+                  <e p="Spinner 9" t="Include" />
+                </e>
+                <e p="Squares anim" t="Include">
+                  <e p="Squares 1" t="Include" />
+                  <e p="Squares 2" t="Include" />
+                  <e p="Squares 3" t="Include" />
+                  <e p="Squares 4" t="Include" />
+                  <e p="Squares 5" t="Include" />
+                  <e p="Squares 6" t="Include" />
+                  <e p="Squares 7" t="Include" />
+                  <e p="Squares 8" t="Include" />
+                </e>
+                <e p="Stopwatch anim" t="Include">
+                  <e p="Stopwatch 1" t="Include" />
+                </e>
+                <e p="Sword anim" t="Include">
+                  <e p="Sword 1" t="Include" />
+                  <e p="Sword 2" t="Include" />
+                </e>
+                <e p="Triangle rotating anim" t="Include">
+                  <e p="Triangle rotating 1" t="Include" />
+                  <e p="Triangle rotating 2" t="Include" />
+                </e>
+              </e>
+              <e p="Prefabs" t="Include">
+                <e p="Bars" t="Include" />
+                <e p="Basic" t="Include" />
+                <e p="Blinking" t="Include" />
+                <e p="Circle half rotating" t="Include" />
+                <e p="Circle half rotating fading" t="Include">
+                  <e p="Fast" t="Include" />
+                </e>
+                <e p="Circle open rotating" t="Include" />
+                <e p="Circle quarter rotating" t="Include">
+                  <e p="Fast" t="Include" />
+                </e>
+                <e p="Circle rotating" t="Include" />
+                <e p="Cog" t="Include" />
+                <e p="Folding" t="Include" />
+                <e p="Pickaxe" t="Include" />
+                <e p="Pulsing" t="Include" />
+                <e p="Spinner" t="Include" />
+                <e p="Squares" t="Include" />
+                <e p="Stopwatch" t="Include" />
+                <e p="Sword" t="Include" />
+                <e p="Triangle rotating" t="Include" />
+              </e>
+              <e p="Spritesheet" t="Include" />
             </e>
             <e p="BOXOPHOBIC" t="Include">
               <e p="Skybox Cubemap Extended" t="Include">
@@ -1213,6 +1407,18 @@
               </e>
               <e p="Vector" t="Include" />
             </e>
+            <e p="kenney_space-kit" t="Include">
+              <e p="Isometric" t="Include" />
+              <e p="License.txt" t="Include" />
+              <e p="Models" t="Include">
+                <e p="DAE format" t="Include" />
+                <e p="FBX format" t="Include" />
+                <e p="GLTF format" t="Include" />
+                <e p="OBJ format" t="Include" />
+                <e p="STL format" t="Include" />
+              </e>
+              <e p="Side" t="Include" />
+            </e>
             <e p="LaFinca" t="Include">
               <e p="Viking Gods" t="Include">
                 <e p="Thor" t="Include">
@@ -1382,6 +1588,25 @@
               </e>
               <e p="Previews" t="Include" />
             </e>
+            <e p="Polygonal Particles" t="Include">
+              <e p="Assets" t="Include">
+                <e p="Materials" t="Include" />
+                <e p="Meshes" t="Include">
+                  <e p="Materials" t="Include" />
+                </e>
+                <e p="Prefabs" t="Include">
+                  <e p="Environment" t="Include" />
+                  <e p="Explosions" t="Include" />
+                  <e p="Fire" t="Include" />
+                  <e p="Hit Particles" t="Include" />
+                  <e p="Smoke" t="Include" />
+                  <e p="Water" t="Include" />
+                </e>
+                <e p="Shaders" t="Include">
+                  <e p="GradientBackgroundShader.shader" t="Include" />
+                </e>
+              </e>
+            </e>
             <e p="Rank-Island" t="Include">
               <e p="Cliffy Coast" t="Include">
                 <e p="0_DemoScenes" t="Include">
@@ -1526,22 +1751,6 @@
               <e p="Texture Normals Maps" t="Include" />
               <e p="Textures" t="Include" />
             </e>
-          </e>
-          <e p="Save" t="Include">
-            <e p="SaveFile.txt" t="Include" />
-          </e>
-          <e p="Skybox" t="Include">
-            <e p="Skybox Cubemap Blend.shader" t="Include" />
-          </e>
-          <e p="Sprite" t="Include" />
-          <e p="VFX" t="Include">
-            <e p="Character" t="Include" />
-            <e p="Environment" t="Include">
-              <e p="Fire" t="Include" />
-              <e p="lightning" t="Include" />
-              <e p="Water" t="Include" />
-              <e p="wind" t="Include" />
-            </e>
             <e p="Weather Effect" t="Include">
               <e p="Environment VFX pack" t="Include">
                 <e p="Demo" t="Include">
@@ -1575,6 +1784,19 @@
                 <e p="Textures" t="Include" />
                 <e p="Upgrade for URP" t="Include" />
               </e>
+            </e>
+          </e>
+          <e p="Skybox" t="Include">
+            <e p="Skybox Cubemap Blend.shader" t="Include" />
+          </e>
+          <e p="Sprite" t="Include" />
+          <e p="VFX" t="Include">
+            <e p="Character" t="Include" />
+            <e p="Environment" t="Include">
+              <e p="Fire" t="Include" />
+              <e p="lightning" t="Include" />
+              <e p="Water" t="Include" />
+              <e p="wind" t="Include" />
             </e>
           </e>
         </e>
@@ -1641,7 +1863,9 @@
             </e>
           </e>
           <e p="Config" t="Include">
+            <e p="CfgBattleUnitPeopleText.cs" t="Include" />
             <e p="CfgBgm.cs" t="Include" />
+            <e p="CfgCamera.cs" t="Include" />
             <e p="CfgCommand.cs" t="Include" />
             <e p="CfgMap.cs" t="Include" />
             <e p="CfgPrefab.cs" t="Include" />
@@ -1721,6 +1945,9 @@
                   <e p="CommandItemInfo.cs" t="Include" />
                 </e>
               </e>
+              <e p="LoadingUI" t="Include">
+                <e p="LoadingUICtrl.cs" t="Include" />
+              </e>
               <e p="PauseUI" t="Include">
                 <e p="PauseUICtrl.cs" t="Include" />
                 <e p="PauseUIModel.cs" t="Include" />
@@ -1762,6 +1989,8 @@
       <e p="ExternAttributes.Editor.csproj" t="IncludeRecursive" />
       <e p="FlatKit.Utils.Editor.csproj" t="IncludeRecursive" />
       <e p="HeathenEngineering.UX.csproj" t="IncludeRecursive" />
+      <e p="IngameDebugConsole.Editor.csproj" t="IncludeRecursive" />
+      <e p="IngameDebugConsole.Runtime.csproj" t="IncludeRecursive" />
       <e p="KinoBloom.Runtime.csproj" t="IncludeRecursive" />
       <e p="Library" t="Include">
         <e p="PackageCache" t="Include">

@@ -8,6 +8,7 @@ using UnityEngine;
 public class GameManager : MonoSingleton<GameManager>
 {
     private readonly List<IMonoManager> _managerList = new List<IMonoManager>();
+    public bool test;
     
     protected override void Awake()
     {
@@ -34,6 +35,10 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void Start()
     {
+        if (test)
+        {
+            IsTest();
+        }
         //测试
         //StartCoroutine(BgmManager.Instance.PlayBgmFadeDelay("TestBgm",0f, 0f, 0f));
         //StartCoroutine(SfxManager.Instance.PlaySfx("TestSfx",1f));
@@ -58,16 +63,28 @@ public class GameManager : MonoSingleton<GameManager>
         StartCoroutine(IReturnToTitle());
     }
 
+    private void IsTest()
+    {
+        Instantiate(AssetManager.Instance.LoadAsset<GameObject>(ConfigManager.Instance.cfgUI["IngameDebugView"].uiPath)
+            ,UIManager.Instance.GetUIRoot().Find("NormalLayer"));
+    }
+
     /// <summary>
     /// 游戏开始
     /// </summary>
     private IEnumerator IReturnToTitle()
     {
+        BattleManager.Instance.ForceQuitBattle();
+        UIManager.Instance.CloseAllWindows();
+        UIManager.Instance.OpenWindow("LoadingView");
+        yield return BgmManager.Instance.StopBgmFadeDelay(0f, 0.4f);
+        yield return new WaitForSeconds(0.5f);
         yield return SceneManager.Instance.ChangeSceneAsync("MainScene");
         CameraManager.Instance.ResetObjCamera();
-        UIManager.Instance.CloseAllWindows();
         UIManager.Instance.OpenWindow("StageSelectView");
         GC.Collect();
+        UIManager.Instance.CloseWindows("LoadingView");
+        yield return BgmManager.Instance.PlayBgmFadeDelay("MainScene", 0f, 0f, 0.5f, 0.5f);
     }
 
     /// <summary>
@@ -76,7 +93,7 @@ public class GameManager : MonoSingleton<GameManager>
     /// <param name="stageName"></param>
     public void EnterStage(string stageName)
     {
-        StartCoroutine(IEnterStage(stageName,ConfigManager.Instance.cfgStage[stageName].scenePath));
+        StartCoroutine(IEnterStage(ConfigManager.Instance.cfgStage[stageName]));
     }
 
     /// <summary>
@@ -99,14 +116,20 @@ public class GameManager : MonoSingleton<GameManager>
     /// <summary>
     /// 进入游戏关卡
     /// </summary>
-    /// <param name="stageName"></param>
-    /// <param name="scenePath"></param>
+    /// <param name="rowCfgStage"></param>
     /// <returns></returns>
-    IEnumerator IEnterStage(string stageName,string scenePath)
+    private IEnumerator IEnterStage(RowCfgStage rowCfgStage)
     {
-        yield return SceneManager.Instance.ChangeSceneAsync(scenePath);
-        BattleManager.Instance.EnterStageScene(stageName);
-        GC.Collect();
+        UIManager.Instance.OpenWindow("LoadingView");//加载界面
+        yield return BgmManager.Instance.StopBgmFadeDelay(0f, 0.4f);//关闭bgm
+        yield return new WaitForSeconds(0.5f);
+        yield return SceneManager.Instance.ChangeSceneAsync(rowCfgStage.scenePath);//切换场景
+        BattleManager.Instance.EnterStageScene(rowCfgStage);//battleManager切换状态机
+        StartCoroutine(CameraManager.Instance.MoveObjCamera(rowCfgStage.stageCamera));//切换摄像机
+        SfxManager.Instance.PlaySfx("level_generate");//播放进入关卡音效
+        GC.Collect();//清gc
+        UIManager.Instance.CloseWindows("LoadingView");//关闭加载界面
+        yield return BgmManager.Instance.PlayBgmFadeDelay(rowCfgStage.stageBgm, 0f, 0f, 0.5f, 1f);//播放关卡bgm
     }
 
     private void Update()

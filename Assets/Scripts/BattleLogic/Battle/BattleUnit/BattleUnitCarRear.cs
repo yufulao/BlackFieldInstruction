@@ -29,6 +29,12 @@ public class BattleUnitCarRear : BattleUnit
         ResetAll();
     }
 
+    public override void OnUnitDestroy()
+    {
+        base.OnUnitDestroy();
+        _sequence?.Kill();
+    }
+
     public override IEnumerator Calculate(CommandType commandType)
     {
         yield return base.Calculate(commandType);
@@ -44,7 +50,7 @@ public class BattleUnitCarRear : BattleUnit
     public override IEnumerator CheckOverlap()
     {
         yield return base.CheckOverlap();
-        if (_player!=null)
+        if (_player != null)
         {
             CheckUnit();
         }
@@ -56,17 +62,25 @@ public class BattleUnitCarRear : BattleUnit
     /// <returns></returns>
     private IEnumerator ExecuteEveryCommand()
     {
-        if (_player == null)
+        // if (_cacheIsGetOnCommand)
+        // {
+        //     _cacheIsGetOnCommand = false;
+        //     yield return new WaitForSeconds(1f);
+        //     yield break;
+        // }
+        
+        if (!_player)
         {
             yield break;
         }
-        if (_cacheCommandType==CommandType.Wait)
+
+        if (_cacheCommandType == CommandType.Wait)
         {
             yield return new WaitForSeconds(1f);
             yield break;
         }
-            
-        ForwardType commandForward=ForwardType.Up;
+
+        ForwardType commandForward = ForwardType.Up;
         switch (_cacheCommandType)
         {
             case CommandType.Up:
@@ -82,13 +96,14 @@ public class BattleUnitCarRear : BattleUnit
                 commandForward = ForwardType.Left;
                 break;
         }
+        
 
-        if (_currentForward!=commandForward)
+        if (_currentForward != commandForward)
         {
             yield return TurnAroundOrGetOff(commandForward);
             yield break;
         }
-            
+
         yield return Drive();
     }
 
@@ -99,11 +114,8 @@ public class BattleUnitCarRear : BattleUnit
     public void GetOn(BattleUnitPlayer player)
     {
         _player = player;
-        _player.car = this;
-        _player.gameObject.transform.SetParent(transform);
-        _player.RefreshPlayerObjActive(false);
     }
-
+    
     /// <summary>
     /// 执行调头还是下车
     /// </summary>
@@ -172,6 +184,7 @@ public class BattleUnitCarRear : BattleUnit
             yield break;
         }
 
+        SfxManager.Instance.PlaySfx("unit_carDrive");
         _sequence?.Kill();
         _sequence = DOTween.Sequence();
         _sequence.Join(transform.DOMove(GridManager.Instance.GetWorldPositionByPoint(rearTargetPoint.x, rearTargetPoint.y), 1f));
@@ -184,6 +197,7 @@ public class BattleUnitCarRear : BattleUnit
         BattleManager.Instance.UpdateUnitPoint(_player, rearTargetPoint);
 
         yield return _sequence.WaitForCompletion();
+        SfxManager.Instance.Stop("unit_carDrive");
     }
 
     /// <summary>
@@ -246,6 +260,22 @@ public class BattleUnitCarRear : BattleUnit
                 break;
         }
 
+        bool isCarRear = false;
+        //先判断下车的位置是不是另一辆车的车尾，进行跳车
+        isCarRear = BattleManager.Instance.CheckCellForOrderPoint<BattleUnitCarRear>(getOffPoint, UnitType.CarRear);
+        if (isCarRear)
+        {
+            SfxManager.Instance.PlaySfx("unit_carGetOff");
+            SfxManager.Instance.PlaySfx("unit_carGetOn");
+            yield return new WaitForSeconds(1f);
+            BattleManager.Instance.CheckCellForOrderPoint<BattleUnitCarRear>(getOffPoint, UnitType.CarRear, (carRears) =>
+            {
+                carRears[0].GetOn(_player);
+            });
+            _player = null;
+            yield break;
+        }
+
         //判断能不能下车
         if (BattleManager.Instance.CheckWalkable(getOffPoint))
         {
@@ -270,14 +300,14 @@ public class BattleUnitCarRear : BattleUnit
         {
             for (int i = 0; i < people.Count; i++)
             {
-                people[i].SetPeopleActive(false);
+                people[i].PeopleDie();
             }
         });
         BattleManager.Instance.CheckCellForUnit<BattleUnitPeople>(carFront, UnitType.People, (people) =>
         {
             for (int i = 0; i < people.Count; i++)
             {
-                people[i].SetPeopleActive(false);
+                people[i].PeopleDie();
             }
         });
     }
@@ -286,7 +316,7 @@ public class BattleUnitCarRear : BattleUnit
     /// 检测车是行驶两格还是一格还是不能行驶，返回可不可以行驶
     /// </summary>
     /// <returns></returns>
-    private bool IfCanDrive(Action<Vector2Int,Vector2Int> callback)
+    private bool IfCanDrive(Action<Vector2Int, Vector2Int> callback)
     {
         //先判断一格再判断两格,然后才DriveFail
         Vector2Int point1 = GridManager.Instance.GetPointByWorldPosition(carFront.gameObject.transform.position);
@@ -321,16 +351,16 @@ public class BattleUnitCarRear : BattleUnit
             return false;
         }
         //第一格可以走
-        
+
         //尝试走两格
         if (BattleManager.Instance.CheckWalkable(point2))
         {
-            callback?.Invoke(point1,point2);
+            callback?.Invoke(point1, point2);
             return true;
         }
 
         //只走一格
-        callback?.Invoke(GridManager.Instance.GetPointByWorldPosition(carFront.gameObject.transform.position),point1);
+        callback?.Invoke(GridManager.Instance.GetPointByWorldPosition(carFront.gameObject.transform.position), point1);
         return true;
     }
 
@@ -379,6 +409,7 @@ public class BattleUnitCarRear : BattleUnit
     /// <returns></returns>
     private IEnumerator DriveFail()
     {
+        SfxManager.Instance.PlaySfx("unit_carDriveFail");
         transform.DOShakePosition(0.5f);
         yield return new WaitForSeconds(1f);
     }

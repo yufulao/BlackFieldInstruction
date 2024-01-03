@@ -12,7 +12,7 @@ public class BattleUnitTornado : BattleUnit
     [SerializeField] private bool moveOnStart;
     [SerializeField] private int delayTime;
 
-    private float _perMoveCellTime;
+    //private float _perMoveCellTime;
     private Sequence _sequence;
     private EventManager.TypeEvent _onCommandExecuteStartAction;
     private EventManager.TypeEvent _onCommandExecuteAction;
@@ -24,8 +24,9 @@ public class BattleUnitTornado : BattleUnit
     public override void OnUnitInit()
     {
         base.OnUnitInit();
-        _perMoveCellTime = Mathf.Round(1f / speed);
+        //_perMoveCellTime = Mathf.Round(1f / speed);
         EventManager.Instance.AddListener(EventName.CommandMainStart, OnCommandMainStart);
+        EventManager.Instance.AddListener(EventName.CommandMainEnd,OnCommandMainEnd);
         ResetAll();
     }
 
@@ -38,7 +39,9 @@ public class BattleUnitTornado : BattleUnit
     public override void OnUnitDestroy()
     {
         base.OnUnitDestroy();
+        _sequence?.Kill();
         EventManager.Instance.RemoveListener(EventName.CommandMainStart, OnCommandMainStart);
+        EventManager.Instance.RemoveListener(EventName.CommandMainEnd,OnCommandMainEnd);
     }
 
     public override IEnumerator Execute()
@@ -66,7 +69,6 @@ public class BattleUnitTornado : BattleUnit
     {
         _cacheDelayTime = delayTime;
         _currentForward = originalForwardType;
-        ResetTweener();
     }
 
     /// <summary>
@@ -74,10 +76,9 @@ public class BattleUnitTornado : BattleUnit
     /// </summary>
     private void ResetTweener()
     {
-        _cacheLastPosition = transform.position;
         _sequence?.Kill();
         _sequence = DOTween.Sequence();
-        _sequence.Append(transform.DOMove(CalculateNextTargetPosition(), _perMoveCellTime));
+        _sequence.Append(transform.DOMove(CalculateNextTargetPosition(), 1f));
         _sequence.Pause();
         _sequence.SetAutoKill(false);
     }
@@ -89,8 +90,17 @@ public class BattleUnitTornado : BattleUnit
     {
         if (moveOnStart)
         {
+            SfxManager.Instance.PlaySfx("unit_tornadoMove");
             _hasStartMove = true;
         }
+    }
+
+    /// <summary>
+    /// 当所有指令都执行结束
+    /// </summary>
+    private void OnCommandMainEnd()
+    {
+        SfxManager.Instance.Stop("unit_tornadoMove");
     }
 
     /// <summary>
@@ -99,6 +109,8 @@ public class BattleUnitTornado : BattleUnit
     /// <returns></returns>
     private IEnumerator ActionEveryExecute()
     {
+        _cacheLastPosition = transform.position;
+        
         if (!_hasStartMove)
         {
             yield break;
@@ -109,7 +121,7 @@ public class BattleUnitTornado : BattleUnit
             _cacheDelayTime--;
             yield break;
         }
-
+        
         _sequence.Play();
         yield return _sequence.WaitForCompletion();
         BattleManager.Instance.UpdateUnitPoint(this);
@@ -120,6 +132,59 @@ public class BattleUnitTornado : BattleUnit
     /// </summary>
     /// <returns></returns>
     private Vector3 CalculateNextTargetPosition()
+    {
+        //如果自己的地块就不能走，就停在原地
+        if (!BattleManager.Instance.CheckWalkable(transform.position))
+        {
+            return transform.position;
+        }
+        
+        Vector3 targetPosition = GetForwardTargetPosition();
+        //如果可以走
+        if (BattleManager.Instance.CheckWalkable(targetPosition))
+        {
+            return targetPosition;
+        }
+        
+        //不能走，先调头
+        TurnRound();
+        targetPosition = GetForwardTargetPosition();
+        //调头后如果可以走
+        if (BattleManager.Instance.CheckWalkable(targetPosition))
+        {
+            return targetPosition;
+        }
+        
+        //调了头也不能走
+        return transform.position;
+
+        //Debug.Log(transform.position+"--->"+targetPosition);
+    }
+
+    /// <summary>
+    /// 调头前先设置改变当前朝向，再应用当前朝向的动画
+    /// </summary>
+    /// <returns></returns>
+    private void TurnRound()
+    {
+        switch (_currentForward)
+        {
+            case ForwardType.Up:
+                _currentForward = ForwardType.Down;
+                break;
+            case ForwardType.Down:
+                _currentForward = ForwardType.Up;
+                break;
+            case ForwardType.Left:
+                _currentForward = ForwardType.Right;
+                break;
+            case ForwardType.Right:
+                _currentForward = ForwardType.Left;
+                break;
+        }
+    }
+
+    private Vector3 GetForwardTargetPosition()
     {
         Vector3 targetPosition = transform.position;
         float cellSize = GridManager.Instance.GetPerCellSize();
@@ -138,41 +203,7 @@ public class BattleUnitTornado : BattleUnit
                 targetPosition += new Vector3(cellSize, 0, 0);
                 break;
         }
-
-        Vector2Int targetPoint = GridManager.Instance.GetPointByWorldPosition(targetPosition);
-        //禁止掉头两次还是walkable，即不能被困住
-        if (!BattleManager.Instance.CheckWalkable(targetPoint.x, targetPoint.y))
-        {
-            return TurnRound();
-        }
-
-        //Debug.Log(transform.position+"--->"+targetPosition);
         return targetPosition;
-    }
-
-    /// <summary>
-    /// 调头前先设置改变当前朝向，再应用当前朝向的动画
-    /// </summary>
-    /// <returns></returns>
-    private Vector3 TurnRound()
-    {
-        switch (_currentForward)
-        {
-            case ForwardType.Up:
-                _currentForward = ForwardType.Down;
-                break;
-            case ForwardType.Down:
-                _currentForward = ForwardType.Up;
-                break;
-            case ForwardType.Left:
-                _currentForward = ForwardType.Right;
-                break;
-            case ForwardType.Right:
-                _currentForward = ForwardType.Left;
-                break;
-        }
-
-        return CalculateNextTargetPosition();//应用当前朝向的动画
     }
 
     /// <summary>
@@ -180,9 +211,26 @@ public class BattleUnitTornado : BattleUnit
     /// </summary>
     private void CheckUnit()
     {
-        if (BattleManager.Instance.CheckCellForUnit<BattleUnitPlayer>(this, UnitType.Player))
+        if (BattleManager.Instance.CheckCellForUnit<BattleUnitCarFront>(this, UnitType.CarFront) || BattleManager.Instance.CheckCellForUnit<BattleUnitCarRear>(this, UnitType.CarRear))
         {
-            BattleManager.Instance.BattleEnd(false);
+            BackToLastPosition();
+            return;
+        }
+
+        bool needBack = false;
+        BattleManager.Instance.CheckCellForOrderPoint<BattleUnitRuin>(GridManager.Instance.GetPointByWorldPosition(_cacheLastPosition), UnitType.Ruin, (ruins) =>
+        {
+            for (int i = 0; i < ruins.Count; i++)
+            {
+                if (ruins[i].currentActive)
+                {
+                    needBack = true;
+                    BackToLastPosition();
+                }
+            }
+        });
+        if (needBack)
+        {
             return;
         }
         
@@ -193,19 +241,22 @@ public class BattleUnitTornado : BattleUnit
                 fireUnits[i].transform.GetComponent<BattleUnitFire>().SetFireActive(false);
             }
         });
-        
+
         BattleManager.Instance.CheckCellForUnit<BattleUnitPeople>(this, UnitType.People, (people) =>
         {
             for (int i = 0; i < people.Count; i++)
             {
-                people[i].SetPeopleActive(false);
+                people[i].PeopleDie();
             }
         });
+    }
 
-        if (BattleManager.Instance.CheckCellForUnit<BattleUnitCarFront>(this, UnitType.CarFront)||BattleManager.Instance.CheckCellForUnit<BattleUnitCarRear>(this, UnitType.CarRear))
-        {
-            transform.position = _cacheLastPosition;
-            BattleManager.Instance.UpdateUnitPoint(this);
-        }
+    /// <summary>
+    /// 返回上一个点
+    /// </summary>
+    private void BackToLastPosition()
+    {
+        transform.position = _cacheLastPosition;
+        BattleManager.Instance.UpdateUnitPoint(this);
     }
 }

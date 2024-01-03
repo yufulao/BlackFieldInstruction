@@ -74,7 +74,7 @@ public class BattleUnitFire : BattleUnit
         {
             for (int i = 0; i < people.Count; i++)
             {
-                people[i].SetPeopleActive(false);
+                people[i].PeopleDie();
             }
         });
     }

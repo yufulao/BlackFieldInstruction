@@ -124,17 +124,14 @@ public class StageSelectUICtrl : UICtrlBase
     /// </summary>
     public void LowSelectStateUpdate()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (Mouse.current!=null&&Mouse.current.leftButton.wasPressedThisFrame)
         {
-            _ray = CameraManager.Instance.GetObjCamera().ScreenPointToRay(Mouse.current.position.value);
-            if (Physics.Raycast(_ray, out _hit))
-            {
-                GameObject result = _hit.collider.gameObject;
-                if (result.name.Contains("StageItem"))
-                {
-                    OnStageItemClick(result.GetComponent<StageItem>());
-                }
-            }
+            CheckRayToStageItem(Mouse.current.position.value);
+        }
+        
+        if (Touchscreen.current!=null&&Touchscreen.current.press.wasPressedThisFrame)
+        {
+            CheckRayToStageItem(Touchscreen.current.position.ReadValue());
         }
     }
 
@@ -154,12 +151,26 @@ public class StageSelectUICtrl : UICtrlBase
         CloseAllFrame();
     }
 
+    private void CheckRayToStageItem(Vector3 clickPosition)
+    {
+        _ray = CameraManager.Instance.GetObjCamera().ScreenPointToRay(clickPosition);
+        if (Physics.Raycast(_ray, out _hit))
+        {
+            GameObject result = _hit.collider.gameObject;
+            if (result.name.Contains("StageItem"))
+            {
+                OnStageItemClick(result.GetComponent<StageItem>());
+            }
+        }
+    }
+
     /// <summary>
     /// 点击stageItem这个obj
     /// </summary>
     /// <param name="stageItem"></param>
     private void OnStageItemClick(StageItem stageItem)
     {
+        SfxManager.Instance.PlaySfx("stage_stageEnter");
         StageItemInfo stageInfo = _model.GetStageInfo(stageItem.stageCfgKey);
         GameManager.Instance.EnterStage(stageInfo.stageName);
         UIManager.Instance.CloseWindows("StageSelectView");
@@ -170,12 +181,14 @@ public class StageSelectUICtrl : UICtrlBase
     /// </summary>
     private void OnHighEnterMaskClick()
     {
+        SfxManager.Instance.PlaySfx("stage_cameraEnter");
         StartCoroutine(HighToMid());
     }
 
     //点击上一个地图btn
     private void OnPreHighBtnClick()
     {
+        SfxManager.Instance.PlaySfx("stage_mapSwitch");
         _model.GetPreHighId();
         StartCoroutine(UpdateHigh(0f));
     }
@@ -185,6 +198,7 @@ public class StageSelectUICtrl : UICtrlBase
     /// </summary>
     private void OnNextHighBtnClick()
     {
+        SfxManager.Instance.PlaySfx("stage_mapSwitch");
         _model.GetNextHighId();
         StartCoroutine(UpdateHigh(0f));
     }
@@ -195,11 +209,13 @@ public class StageSelectUICtrl : UICtrlBase
         {
             return;
         }
+        SfxManager.Instance.PlaySfx("stage_cameraEnter");
         StartCoroutine(MidToLow());
     }
     
     private void OnMidBackBtnClick()
     {
+        SfxManager.Instance.PlaySfx("stage_cameraBack");
         StartCoroutine(MidToHigh());
     }
 
@@ -208,6 +224,7 @@ public class StageSelectUICtrl : UICtrlBase
     /// </summary>
     private void OnPreLowBtnClick()
     {
+        SfxManager.Instance.PlaySfx("stage_mapSwitch");
         _model.GetPreLowId();
         StartCoroutine(UpdateLow(0.5f));
     }
@@ -217,6 +234,7 @@ public class StageSelectUICtrl : UICtrlBase
     /// </summary>
     private void OnNextLowBtnClick()
     {
+        SfxManager.Instance.PlaySfx("stage_mapSwitch");
         _model.GetNextLowId();
         StartCoroutine(UpdateLow(0.5f));
     }
@@ -226,6 +244,7 @@ public class StageSelectUICtrl : UICtrlBase
     /// </summary>
     private void OnLowBackBtnClick()
     {
+        SfxManager.Instance.PlaySfx("stage_cameraBack");
         StartCoroutine(LowToMid());
     }
     
@@ -269,16 +288,14 @@ public class StageSelectUICtrl : UICtrlBase
     private IEnumerator UpdateHigh(float during)
     {
         _fsm.ChangeFsmState(typeof(HighChangingState));
-        var cameraParams = _model.GetHighCameraParams();
-        yield return CameraManager.Instance.MoveObjCamera(cameraParams.Item1, cameraParams.Item2, cameraParams.Item3, during);
+        yield return CameraManager.Instance.MoveObjCamera(_model.GetHighCamera(), during);
         //Debug.Log(cameraParams.Item1 + "  " + cameraParams.Item2 + "  " + cameraParams.Item3);
         _fsm.ChangeFsmState(typeof(HighSelectState));
     }
     
     private IEnumerator UpdateMid(float during)
     {
-        var cameraParams = _model.GetMidCameraParams();
-        yield return CameraManager.Instance.MoveObjCamera(cameraParams.Item1, cameraParams.Item2, cameraParams.Item3, during);
+        yield return CameraManager.Instance.MoveObjCamera(_model.GetMidCamera(), during);
         //Debug.Log(cameraParams.Item1 + "  " + cameraParams.Item2 + "  " + cameraParams.Item3);
         _fsm.ChangeFsmState(typeof(MidState));
     }
@@ -290,8 +307,7 @@ public class StageSelectUICtrl : UICtrlBase
     private IEnumerator UpdateLow(float during)
     {
         _fsm.ChangeFsmState(typeof(LowChangingState));
-        var cameraParams = _model.GetLowCameraParams();
-        yield return CameraManager.Instance.MoveObjCamera(cameraParams.Item1, cameraParams.Item2, cameraParams.Item3, during);
+        yield return CameraManager.Instance.MoveObjCamera(_model.GetLowCamera(), during);
         //Debug.Log(cameraParams.Item1 + "  " + cameraParams.Item2 + "  " + cameraParams.Item3);
         _fsm.ChangeFsmState(typeof(LowSelectState));
     }

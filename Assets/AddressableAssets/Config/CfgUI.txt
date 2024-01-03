@@ -4,4 +4,5 @@ string#string#int#string#None#None#None
 CommandView#SceneLayer#0#Assets/AddressableAssets/UI/CommandView.prefab#None#None#None
 StageSelectView#SceneLayer#0#Assets/AddressableAssets/UI/StageSelectView.prefab#None#None#None
 PauseView#NormalLayer#100#Assets/AddressableAssets/UI/PauseView.prefab#None#None#None
-None#None#None#None#None#None#None
+IngameDebugView#NormalLayer#101#Assets/AddressableAssets/UI/IngameDebugView.prefab#None#None#None
+LoadingView#NormalLayer#102#Assets/AddressableAssets/UI/LoadingView.prefab#None#None#None

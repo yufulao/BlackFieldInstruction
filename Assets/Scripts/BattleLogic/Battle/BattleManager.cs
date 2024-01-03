@@ -15,7 +15,6 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
     private readonly Dictionary<BattleUnit, BattleUnitInfo> _unitInfoDic = new Dictionary<BattleUnit, BattleUnitInfo>();
     private bool _hadInit;
     private bool _win;
-    private string _cacheStageName;
 
     public void OnInit()
     {
@@ -50,11 +49,10 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
     /// <summary>
     /// 进入battle场景
     /// </summary>
-    /// <param name="stageName"></param>
-    public void EnterStageScene(string stageName)
+    /// <param name="rowCfgStage"></param>
+    public void EnterStageScene(RowCfgStage rowCfgStage)
     {
-        _cacheStageName = stageName;
-        LoadStageCfg();
+        _rowCfgStage = rowCfgStage;
         _battleFsm.ChangeFsmState(typeof(BattleInitState));
     }
 
@@ -111,10 +109,11 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
     /// <returns></returns>
     public void BattleEnd(bool win)
     {
-        if (_win)
+        if (_win)//避免重复结束战斗
         {
             return;
         }
+
         _win = win;
         _battleFsm.ChangeFsmState(typeof(BattleEndState));
     }
@@ -124,15 +123,41 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
     /// </summary>
     public void BattleEndStateEnter()
     {
-        Debug.Log("游戏结束" + _win);
+        //Debug.Log("游戏结束" + _win);
+        CommandManager.Instance.ForceChangeToMainEnd();
+        
         if (_win)
         {
+            SfxManager.Instance.PlaySfx("level_success");
+            DestroyAllUnit();
             SaveManager.SetInt(_rowCfgStage.nextStageName, 1);
             GameManager.Instance.EnterStage(_rowCfgStage.nextStageName);
             return;
         }
-
+        
+        //游戏失败
+        SfxManager.Instance.PlaySfx("lever_fail");
         ResetBattleMap();
+    }
+
+    /// <summary>
+    /// 安全，强制脱离战场
+    /// </summary>
+    public void ForceQuitBattle()
+    {
+        CommandManager.Instance.ForceChangeToMainEnd();
+        DestroyAllUnit();
+    }
+
+    /// <summary>
+    /// 积分达标时设置Target
+    /// </summary>
+    public void SetTargetState(int currentPeople)
+    {
+        for (int i = 0; i < _targetUnits.Count; i++)
+        {
+            _targetUnits[i].SetTargetState(currentPeople);
+        }
     }
 
     /// <summary>
@@ -169,14 +194,15 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
         return true;
     }
 
-    /// <summary>
-    /// 检测当前坐标点是否可以通过
-    /// </summary>
-    /// <param name="point"></param>
-    /// <returns></returns>
     public bool CheckWalkable(Vector2Int point)
     {
         return CheckWalkable(point.x, point.y);
+    }
+
+    public bool CheckWalkable(Vector3 targetPosition)
+    {
+        Vector2Int targetPoint = GridManager.Instance.GetPointByWorldPosition(targetPosition);
+        return CheckWalkable(targetPoint);
     }
 
     /// <summary>
@@ -367,25 +393,11 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
         {
             _allUnits[i].StopAllCoroutines();
             BattleUnitInfo unitInfo = _unitInfoDic[_allUnits[i]];
-            _allUnits[i].gameObject.transform.position = GridManager.Instance.GetWorldPositionByPoint(unitInfo.originalPoint.x, unitInfo.originalPoint.y,_allUnits[i].gameObject.transform.position.y);
+            _allUnits[i].gameObject.transform.position = GridManager.Instance.GetWorldPositionByPoint(unitInfo.originalPoint.x, unitInfo.originalPoint.y, _allUnits[i].gameObject.transform.position.y);
             //Debug.Log(_allUnits[i].gameObject.name + "--->" + _allUnits[i].gameObject.transform.position);
             _model.ResetUnitInfo(unitInfo);
             _allUnits[i].OnUnitReset();
         }
-    }
-
-    /// <summary>
-    /// 加载场景配置
-    /// </summary>
-    private void LoadStageCfg()
-    {
-        if (string.IsNullOrEmpty(_cacheStageName))
-        {
-            Debug.LogError("battleManager的关卡名为空");
-            return;
-        }
-
-        _rowCfgStage = ConfigManager.Instance.cfgStage[_cacheStageName];
     }
 
     /// <summary>
@@ -484,5 +496,16 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
         _allUnits.Remove(unit);
         unit.OnUnitDestroy();
         GameObject.Destroy(unit.gameObject);
+    }
+
+    /// <summary>
+    /// 销毁所有unit
+    /// </summary>
+    private void DestroyAllUnit()
+    {
+        for (int i = 0; i < _allUnits.Count; i++)
+        {
+            _allUnits[i].OnUnitDestroy();
+        }
     }
 }

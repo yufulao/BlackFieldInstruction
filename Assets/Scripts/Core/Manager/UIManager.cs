@@ -49,6 +49,15 @@ public class UIManager : BaseSingleTon<UIManager>, IMonoManager
     }
 
     /// <summary>
+    /// 获取uiRoot
+    /// </summary>
+    /// <returns></returns>
+    public Transform GetUIRoot()
+    {
+        return _uiRoot;
+    }
+
+    /// <summary>
     /// 打开页面
     /// </summary>
     /// <param name="windowName"></param>
@@ -82,7 +91,7 @@ public class UIManager : BaseSingleTon<UIManager>, IMonoManager
 
         ctrl.CloseRoot();
     }
-    
+
     /// <summary>
     /// 关闭所有页面
     /// </summary>
@@ -90,14 +99,15 @@ public class UIManager : BaseSingleTon<UIManager>, IMonoManager
     {
         foreach (var layerStack in _layerStacks)
         {
-            if (layerStack.Value.Count==0)
+            if (layerStack.Value.Count == 0)
             {
                 continue;
             }
+
             while (layerStack.Value.Count > 0)
             {
-                UICtrlBase ctrlBefore = layerStack.Value.Pop();
-                ctrlBefore.CloseRoot();
+                UICtrlBase ctrl = layerStack.Value.Pop();
+                ctrl.CloseRoot();
             }
         }
     }
@@ -113,10 +123,31 @@ public class UIManager : BaseSingleTon<UIManager>, IMonoManager
     {
         if (_allViews.ContainsKey(windowName))
         {
-            return (T)_allViews[windowName];
+            return (T) _allViews[windowName];
         }
 
-        return (T)CreatNewView<T>(windowName, param);
+        return (T) CreatNewView<T>(windowName, param);
+    }
+
+    /// <summary>
+    /// 判断是不是对应的ctrl
+    /// </summary>
+    /// <param name="viewName"></param>
+    /// <param name="ctrl"></param>
+    /// <returns></returns>
+    private bool IsViewName2Ctrl(string viewName, UICtrlBase ctrl)
+    {
+        if (!_allViews.ContainsKey(viewName))
+        {
+            return false;
+        }
+
+        if (_allViews[viewName] != ctrl)
+        {
+            return false;
+        }
+
+        return true;
     }
 
     /// <summary>

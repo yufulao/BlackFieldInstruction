@@ -11,7 +11,9 @@ namespace Rabi
 {
     public sealed class ConfigManager : BaseSingleTon<ConfigManager>
     {
+        public readonly CfgBattleUnitPeopleText cfgBattleUnitPeopleText = new CfgBattleUnitPeopleText();
         public readonly CfgBgm cfgBgm = new CfgBgm();
+        public readonly CfgCamera cfgCamera = new CfgCamera();
         public readonly CfgCommand cfgCommand = new CfgCommand();
         public readonly CfgMap cfgMap = new CfgMap();
         public readonly CfgPrefab cfgPrefab = new CfgPrefab();
@@ -32,7 +34,9 @@ namespace Rabi
         /// </summary>
         private void Init()
         {
+            cfgBattleUnitPeopleText.Load();
             cfgBgm.Load();
+            cfgCamera.Load();
             cfgCommand.Load();
             cfgMap.Load();
             cfgPrefab.Load();

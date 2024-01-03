@@ -12,14 +12,14 @@ public class AssetManager : BaseSingleTon<AssetManager>,IMonoManager
 {
     //value是handle，获取资源的异步操作句柄，状态可以是isDone也可以是正在加载
     private readonly Dictionary<string, AsyncOperationHandle> _handleDict = new Dictionary<string, AsyncOperationHandle>();
-    private bool hadInit=false;
+    private bool _hadInit=false;
     
     public void OnInit()
     {
-        if (!hadInit)
+        if (!_hadInit)
         {
             Addressables.InitializeAsync();
-            hadInit = true;
+            _hadInit = true;
         }
     }
 
