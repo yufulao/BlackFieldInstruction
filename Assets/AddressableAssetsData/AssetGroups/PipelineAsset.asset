@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: PipelineAsset
+  m_EditorClassIdentifier: 
+  m_GroupName: PipelineAsset
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 806c250c49c19ba49879aeb1c4affa23
+  m_SerializeEntries:
+  - m_GUID: ac515ab31d879f946a99beaf1d537d7e
+    m_Address: Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d2a3bd3851b5e6f43849b76ebdd897ff
+    m_Address: Assets/AddressableAssets/PipelineAsset/Wanderer-URP Asset.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: a19174961d3b32943af996d43a3fd044, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: c85162fb7bf62b146a4b672e48b27949, type: 2}
+    - {fileID: 11400000, guid: 6fb1b75762ed407498056974b396d52f, type: 2}

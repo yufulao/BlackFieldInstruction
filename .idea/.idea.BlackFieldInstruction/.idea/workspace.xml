@@ -5,20 +5,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlackFieldInstruction/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.plastic/plastic.wktree" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.wktree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Bgm/TestBgm.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Bgm/TestBgm.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgBgm.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgBgm.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgMap.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgMap.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgSfx.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgSfx.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgBattleUnitPeopleText.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgBattleUnitPeopleText.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgCamera.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgCamera.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgStage.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgStage.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgUI.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgUI.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Prefab/CommandItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Prefab/CommandItem.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Rank2-Map.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Rank2-Map.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage0-0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage0-0.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-10.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-10.unity" afterDir="false" />
@@ -46,78 +37,29 @@
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage2-9.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage2-9.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/StageTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/StageTest.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/StartUp.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/StartUp.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Sfx/TestSfx.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Sfx/TestSfx.wav.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/UI/CommandView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/UI/CommandView.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/UI/StageSelectView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/UI/StageSelectView.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Bgm.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Bgm.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Scene.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Scene.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Sfx.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Sfx.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/UI.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/UI.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3Defaults.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3Defaults.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitBrokenBuilding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitBrokenBuilding.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitCarRear.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitCarRear.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitFire.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitFire.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitMeteorite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitMeteorite.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitPeople.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitPeople.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitRuin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitRuin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitTarget.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitTornado.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitTornado.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Command/CommandManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Command/CommandManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Grid/GridModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Grid/GridModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Config/CfgMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Config/CfgMap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Config/CfgSfx.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Config/CfgSfx.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Config/CfgStage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Config/CfgStage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/AssetManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/AssetManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/CameraManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/CameraManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/ConfigManager/ConfigManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/ConfigManager/ConfigManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Config/CfgCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Config/CfgCamera.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/InputManager/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/InputManager/InputManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/SceneManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/SfxManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/SfxManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Def/CommandType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Def/CommandType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Def/EventName.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Def/EventName.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Util/Utils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Util/Utils.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/CommandUI/CommandUICtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/CommandUI/CommandUICtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/PauseUI/PauseUICtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/PauseUI/PauseUICtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelectUI/Component/StageItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelectUI/Component/StageItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelectUI/StageSelectUICtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelectUI/StageSelectUICtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelectUI/StageSelectUIModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelectUI/StageSelectUIModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlackFieldInstruction.sln" beforeDir="false" afterPath="$PROJECT_DIR$/BlackFieldInstruction.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Boxophobic.SkyboxCubemapExtended.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Boxophobic.SkyboxCubemapExtended.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Boxophobic.Utils.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Boxophobic.Utils.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Boxophobic.Utils.Scripts.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Boxophobic.Utils.Scripts.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CFXRDemo.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CFXRDemo.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CFXREditor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CFXREditor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CFXRRuntime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CFXRRuntime.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExternAttributes.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ExternAttributes.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlatKit.Utils.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FlatKit.Utils.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KinoBloom.Runtime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/KinoBloom.Runtime.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RabiConfig/xlsx/Bgm.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/RabiConfig/xlsx/Bgm.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RabiConfig/xlsx/Map.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/RabiConfig/xlsx/Map.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RabiConfig/xlsx/Sfx.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/RabiConfig/xlsx/Sfx.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RabiConfig/xlsx/BattleUnitPeopleText.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/RabiConfig/xlsx/BattleUnitPeopleText.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RabiConfig/xlsx/Camera.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/RabiConfig/xlsx/Camera.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RabiConfig/xlsx/Stage.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/RabiConfig/xlsx/Stage.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RabiConfig/xlsx/UI.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/RabiConfig/xlsx/UI.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RabiConfig/xlsx/manifest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RabiConfig/xlsx/manifest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToonyColorsPro.Demo.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ToonyColorsPro.Demo.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Unity.RenderPipelines.Universal.Runtime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Unity.RenderPipelines.Universal.Runtime.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Search.settings" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Search.settings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Whinarn.UnityMeshSimplifier.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Whinarn.UnityMeshSimplifier.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Whinarn.UnityMeshSimplifier.Runtime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Whinarn.UnityMeshSimplifier.Runtime.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor-firstpass.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor-firstpass.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-firstpass.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-firstpass.csproj.AssemblyReference.cache" afterDir="false" />
@@ -145,6 +87,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UILogic/PauseUI/PauseUICtrl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/Util/SkipUnityLogo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Config/CfgBattleUnitPeopleText.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UILogic/LoadingUI/LoadingUICtrl.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -169,22 +112,24 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Grid/GridModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelectUI/StageSelectUIModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelectUI/StageSelectUICtrl.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitBrokenBuilding.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitFire.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitRuin.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitMeteorite.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/SfxManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/CameraManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/CommandUI/CommandUICtrl.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/PauseUI/PauseUICtrl.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Misc/Def/EventName.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Command/CommandManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitPlayer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitCarRear.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitPeople.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitBrokenBuilding.cs" />
+      <option value="$PROJECT_DIR$/Assets/Res/ResourcePackages/FlatKit/Demos/Common/Scripts/AutoLoadPipelineAsset.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Misc/Util/SkipUnityLogo.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitRuin.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitPlayer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitTornado.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/CommandUI/CommandUICtrl.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitPeople.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2a5koNHFMbv6wOMksIgWZzfVSpu" />
@@ -233,7 +178,8 @@
       <workItem from="1703616412161" duration="6237000" />
       <workItem from="1703781396855" duration="3066000" />
       <workItem from="1703851392052" duration="64316000" />
-      <workItem from="1704296383265" duration="888000" />
+      <workItem from="1704296383265" duration="8971000" />
+      <workItem from="1704380372458" duration="6075000" />
     </task>
     <servers />
   </component>

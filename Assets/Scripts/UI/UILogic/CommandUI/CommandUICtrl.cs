@@ -17,6 +17,7 @@ public class CommandUICtrl : UICtrlBase
     [SerializeField] private Button pauseBtn;
     [SerializeField] private Button resetBtn;
     [SerializeField] private Button cancelExecuteBtn;
+    [SerializeField] private Button skipStageBtn;
     [SerializeField] private Text currentTimeText;
     [SerializeField] private Text stageTimeText;
     [SerializeField] private Slider timeScaleSlider;
@@ -25,6 +26,7 @@ public class CommandUICtrl : UICtrlBase
     [SerializeField] private Transform usedItemContainer;
     [SerializeField] private Transform waitingItemContainer;
     [SerializeField] private List<Transform> waitingItemTransformList = new List<Transform>();
+    [SerializeField] private Text stageNameText;
 
 
     private readonly Dictionary<UsedItemInfo, CommandItem> _usedItemInfoDic = new Dictionary<UsedItemInfo, CommandItem>();
@@ -33,14 +35,21 @@ public class CommandUICtrl : UICtrlBase
 
     public override void OnInit(params object[] param)
     {
+        if (param == null)
+        {
+            Debug.LogError("没传参数CfgStage");
+            return;
+        }
+        RowCfgStage rowCfgStage = param[0] as RowCfgStage;
         _model = new CommandUIModel();
-        ReloadModel(param);
+        ReloadModel(rowCfgStage);
         BindEvent();
     }
 
     public override void OpenRoot()
     {
         gameObject.SetActive(true);
+        skipStageBtn.gameObject.SetActive(GameManager.Instance.crack);
     }
 
     public override void CloseRoot()
@@ -132,6 +141,11 @@ public class CommandUICtrl : UICtrlBase
         {
             SfxManager.Instance.PlaySfx("command_select");
             BattleManager.Instance.ForceStopExecuteCommand();
+        });
+        skipStageBtn.onClick.AddListener(() =>
+        {
+            SfxManager.Instance.PlaySfx("command_select");
+            BattleManager.Instance.BattleEnd(true);
         });
         timeScaleSlider.onValueChanged.AddListener(GameManager.Instance.SetTimeScale);
     }
@@ -227,19 +241,14 @@ public class CommandUICtrl : UICtrlBase
     /// <summary>
     /// 重新获取场景中的commandModel和commandView
     /// </summary>
-    /// <param name="param">param[0]传关卡数据rowCfgStage</param>
-    private void ReloadModel(params object[] param)
+    /// <param name="rowCfgStage">param[0]传关卡数据rowCfgStage</param>
+    private void ReloadModel(RowCfgStage rowCfgStage)
     {
-        if (param == null)
-        {
-            Debug.LogError("没传参数CfgStage");
-            return;
-        }
-
         _waitingItemInfoDic.Clear();
-
-        _rowCfgStage = param[0] as RowCfgStage;
+        _rowCfgStage = rowCfgStage;
         _model.OnInit(ReLoadOriginalItemList());
+        stageNameText.text = rowCfgStage.key;
+        timeScaleSlider.value = Time.timeScale;
         RefreshCurrentTimeText(0, _rowCfgStage.stageTime);
     }
 

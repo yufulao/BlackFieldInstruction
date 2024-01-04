@@ -193,16 +193,27 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
 
         return true;
     }
-
     public bool CheckWalkable(Vector2Int point)
     {
         return CheckWalkable(point.x, point.y);
     }
-
     public bool CheckWalkable(Vector3 targetPosition)
     {
         Vector2Int targetPoint = GridManager.Instance.GetPointByWorldPosition(targetPosition);
         return CheckWalkable(targetPoint);
+    }
+
+    /// <summary>
+    /// 判断是不是网格边界外
+    /// </summary>
+    /// <returns></returns>
+    public bool CheckCellValid(Vector2Int point)
+    {
+        return GridManager.Instance.CheckPointValid(point.x, point.y);
+    }
+    public bool CheckCellValid(Vector3 targetPosition)
+    {
+        return CheckCellValid(GridManager.Instance.GetPointByWorldPosition(targetPosition));
     }
 
     /// <summary>
@@ -394,7 +405,7 @@ public class BattleManager : BaseSingleTon<BattleManager>, IMonoManager
             _allUnits[i].StopAllCoroutines();
             BattleUnitInfo unitInfo = _unitInfoDic[_allUnits[i]];
             _allUnits[i].gameObject.transform.position = GridManager.Instance.GetWorldPositionByPoint(unitInfo.originalPoint.x, unitInfo.originalPoint.y, _allUnits[i].gameObject.transform.position.y);
-            //Debug.Log(_allUnits[i].gameObject.name + "--->" + _allUnits[i].gameObject.transform.position);
+            //Debug.Log(_allUnits[i].gameObject.name + "--->" + _allUnits[i].gameObject.transform.position+"--->"+GridManager.Instance.GetWorldPositionByPoint(unitInfo.originalPoint.x,unitInfo.originalPoint.y));
             _model.ResetUnitInfo(unitInfo);
             _allUnits[i].OnUnitReset();
         }

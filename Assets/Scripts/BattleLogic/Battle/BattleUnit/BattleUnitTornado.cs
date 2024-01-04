@@ -11,20 +11,18 @@ public class BattleUnitTornado : BattleUnit
     [SerializeField] private ForwardType originalForwardType;
     [SerializeField] private bool moveOnStart;
     [SerializeField] private int delayTime;
-
-    //private float _perMoveCellTime;
+    
     private Sequence _sequence;
     private EventManager.TypeEvent _onCommandExecuteStartAction;
     private EventManager.TypeEvent _onCommandExecuteAction;
     private int _cacheDelayTime;
-    private ForwardType _currentForward;
+    [HideInInspector]public ForwardType currentForward;
     private bool _hasStartMove; //包括delay
-    private Vector3 _cacheLastPosition;
+    [HideInInspector]public Vector3 cacheLastPosition;
 
     public override void OnUnitInit()
     {
         base.OnUnitInit();
-        //_perMoveCellTime = Mathf.Round(1f / speed);
         EventManager.Instance.AddListener(EventName.CommandMainStart, OnCommandMainStart);
         EventManager.Instance.AddListener(EventName.CommandMainEnd,OnCommandMainEnd);
         ResetAll();
@@ -59,7 +57,8 @@ public class BattleUnitTornado : BattleUnit
     public override IEnumerator Calculate(CommandType commandType)
     {
         yield return base.Calculate(commandType);
-        ResetTweener();
+        Vector3 targetPosition = CalculateNextTargetPosition();
+        ResetTweener(targetPosition);
     }
 
     /// <summary>
@@ -67,18 +66,19 @@ public class BattleUnitTornado : BattleUnit
     /// </summary>
     private void ResetAll()
     {
+        _sequence?.Kill();
         _cacheDelayTime = delayTime;
-        _currentForward = originalForwardType;
+        currentForward = originalForwardType;
     }
 
     /// <summary>
     /// 重置tweener
     /// </summary>
-    private void ResetTweener()
+    private void ResetTweener(Vector3 targetPosition)
     {
         _sequence?.Kill();
         _sequence = DOTween.Sequence();
-        _sequence.Append(transform.DOMove(CalculateNextTargetPosition(), 1f));
+        _sequence.Append(transform.DOMove(targetPosition, 1f));
         _sequence.Pause();
         _sequence.SetAutoKill(false);
     }
@@ -109,7 +109,7 @@ public class BattleUnitTornado : BattleUnit
     /// <returns></returns>
     private IEnumerator ActionEveryExecute()
     {
-        _cacheLastPosition = transform.position;
+        cacheLastPosition = transform.position;
         
         if (!_hasStartMove)
         {
@@ -167,19 +167,19 @@ public class BattleUnitTornado : BattleUnit
     /// <returns></returns>
     private void TurnRound()
     {
-        switch (_currentForward)
+        switch (currentForward)
         {
             case ForwardType.Up:
-                _currentForward = ForwardType.Down;
+                currentForward = ForwardType.Down;
                 break;
             case ForwardType.Down:
-                _currentForward = ForwardType.Up;
+                currentForward = ForwardType.Up;
                 break;
             case ForwardType.Left:
-                _currentForward = ForwardType.Right;
+                currentForward = ForwardType.Right;
                 break;
             case ForwardType.Right:
-                _currentForward = ForwardType.Left;
+                currentForward = ForwardType.Left;
                 break;
         }
     }
@@ -188,7 +188,7 @@ public class BattleUnitTornado : BattleUnit
     {
         Vector3 targetPosition = transform.position;
         float cellSize = GridManager.Instance.GetPerCellSize();
-        switch (_currentForward)
+        switch (currentForward)
         {
             case ForwardType.Up:
                 targetPosition += new Vector3(0, 0, cellSize);
@@ -218,7 +218,7 @@ public class BattleUnitTornado : BattleUnit
         }
 
         bool needBack = false;
-        BattleManager.Instance.CheckCellForOrderPoint<BattleUnitRuin>(GridManager.Instance.GetPointByWorldPosition(_cacheLastPosition), UnitType.Ruin, (ruins) =>
+        BattleManager.Instance.CheckCellForOrderPoint<BattleUnitRuin>(GridManager.Instance.GetPointByWorldPosition(cacheLastPosition), UnitType.Ruin, (ruins) =>
         {
             for (int i = 0; i < ruins.Count; i++)
             {
@@ -256,7 +256,9 @@ public class BattleUnitTornado : BattleUnit
     /// </summary>
     private void BackToLastPosition()
     {
-        transform.position = _cacheLastPosition;
+        transform.position = cacheLastPosition;
         BattleManager.Instance.UpdateUnitPoint(this);
     }
+
+    
 }

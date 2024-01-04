@@ -129,6 +129,7 @@
      <Compile Include="Assets\Scripts\UI\UILogic\StageSelectUI\StageSelectUIFsm\FsmState\LowToMidState.cs" />
      <Compile Include="Assets\Scripts\Core\Manager\SfxManager.cs" />
      <Compile Include="Assets\Scripts\UI\UILogic\StageSelectUI\StageSelectUIFsm\FsmState\HighSelectState.cs" />
+     <Compile Include="Assets\Scripts\Misc\Util\SkipUnityLogo.cs" />
      <Compile Include="Assets\Scripts\UI\UILogic\StageSelectUI\Component\StageItemInfo.cs" />
      <Compile Include="Assets\Scripts\Core\Manager\GameManager.cs" />
      <Compile Include="Assets\Res\Modle\Stage\Unit\Tent\SCRIPTS\rorateslow.cs" />
@@ -359,6 +360,7 @@
      <None Include="Assets\Res\ResourcePackages\LaFinca\Viking Gods\Thor\package.json" />
      <Folder Include="Assets\Res\ResourcePackages\LowPoly Nature Pack\Prefabs\Others" />
      <Folder Include="Assets\Res\ResourcePackages\mmmm\3D Road Tiles\Materials" />
+     <Folder Include="Assets\Res\ResourcePackages\car\STL format" />
      <Folder Include="Assets\Scripts\BattleLogic\Battle\BattleUnit\BattleUnitBrokenBuildingFsm" />
      <Folder Include="Assets\Res\ResourcePackages\Animated Loading Icons\Prefabs\Pickaxe" />
      <Folder Include="Assets\Settings" />
@@ -540,6 +542,7 @@
      <Folder Include="Assets\Res\ResourcePackages\mmmm\Medieval Town (base)" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Assets\Meshes" />
      <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\3_Prefabs\Particles" />
+     <Folder Include="Assets\AddressableAssets\PipelineAsset" />
      <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\5_Materials" />
      <Folder Include="Assets\Res\ResourcePackages\LaFinca\Viking Gods\Thor" />
      <Folder Include="Assets\Res\ResourcePackages\Robot\Robo1\Materials" />
@@ -560,6 +563,7 @@
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Wanderer" />
      <Folder Include="Assets\Res\ResourcePackages\Desert City\Models\Terrain\Materials" />
      <None Include="Assets\AddressableAssets\Config\CfgUI.txt" />
+     <Folder Include="Assets\Res\ResourcePackages\car" />
      <Folder Include="Assets\AddressableAssets\UI" />
      <Folder Include="Assets\Res\ResourcePackages\Tale Monster Cube Env\Materials" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Spawn System" />
@@ -868,6 +872,7 @@
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] Mugs\Mugs-Materials" />
      <Folder Include="Assets\Scripts\UI" />
      <Folder Include="Assets\Res\ResourcePackages\Animated Loading Icons\Animations\Spinner anim\Spinner 7" />
+     <Folder Include="Assets\Res\ResourcePackages\car\GLTF format" />
      <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\1_FBX\Terrain" />
      <Folder Include="Assets\Res\ResourcePackages\LowPoly Nature Pack\Materials\Others" />
      <Folder Include="Assets\Res\ResourcePackages\EmaceArt\FREE EpicMobile 3d Voxel Forest And Atols - Winter\Meshes" />
@@ -917,6 +922,7 @@
      <Folder Include="Assets\Res\ResourcePackages\Animated Loading Icons\Animations\Circle half rotating fading anim\Circle half rotating fading 4" />
      <Folder Include="Assets\Res\ResourcePackages\LowPoly Nature Pack\Scenes" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Misc\Tornado Variants" />
+     <Folder Include="Assets\Res\ResourcePackages\car\FBX format" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\[Demo] IslandWithTrees\IslandWithTrees-Models" />
      <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\1_FBX\Collision" />
      <Folder Include="Assets\Res\ResourcePackages\LowPoly Nature Pack\Meshes" />
@@ -1028,11 +1034,14 @@
      <Folder Include="Assets\Res\ResourcePackages\_Heathen Engineering\Documentation\UX" />
      <Folder Include="Assets\Res\ResourcePackages\Weather Effect\Environment VFX pack\Demo\Scenes" />
      <Folder Include="Assets\Res\ResourcePackages\Realistic Hail Set" />
+     <Folder Include="Assets\Res\ResourcePackages\car\DAE format" />
      <Folder Include="Assets\Res\ResourcePackages\FlatKit\Demos\Common\Scripts" />
      <None Include="Assets\Res\ResourcePackages\mmmm\kenney_3d-road-tiles\License.txt" />
+     <Folder Include="Assets\AddressableAssets\Scene\MainScene" />
      <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\1_FBX\House\MergedMeshes" />
      <None Include="Assets\Res\ResourcePackages\FlatKit\[Render Pipeline] URP\Water\Shaders\Water.shader" />
      <Folder Include="Assets\Res\ResourcePackages\Animated Loading Icons\Prefabs\Circle half rotating fading\Fast" />
+     <Folder Include="Assets\Res\ResourcePackages\car\OBJ format" />
      <Reference Include="UnityEngine">
      <HintPath>D:\app\Unity\Hub\Editor\2022.3.14f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

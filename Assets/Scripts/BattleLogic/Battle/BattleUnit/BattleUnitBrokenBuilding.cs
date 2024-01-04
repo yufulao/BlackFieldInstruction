@@ -153,6 +153,11 @@ public class BattleUnitBrokenBuilding : BattleUnit
                 break;
         }
 
+        if (!BattleManager.Instance.CheckCellValid(targetRuinPosition))//如果废墟的目标位置在网格外，则改为原地生成废墟
+        {
+            targetRuinPosition = transform.position;
+        }
+        
         ruinUnit.gameObject.transform.position = targetRuinPosition;
         Vector2Int targetRuinPoint = GridManager.Instance.GetPointByWorldPosition(targetRuinPosition);
         BattleManager.Instance.UpdateUnitPoint(ruinUnit,targetRuinPoint);

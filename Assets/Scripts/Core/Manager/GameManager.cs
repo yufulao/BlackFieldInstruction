@@ -1,21 +1,24 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using FlatKit;
 using Rabi;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class GameManager : MonoSingleton<GameManager>
 {
     private readonly List<IMonoManager> _managerList = new List<IMonoManager>();
-    public bool test;
-    
+    public bool test;//测试模式
+    public bool crack;//破解版
+
     protected override void Awake()
     {
         base.Awake();
         DontDestroyOnLoad(this.gameObject);
         Application.targetFrameRate = 120;
-        
+
         _managerList.Add(EventManager.Instance);
         _managerList.Add(AssetManager.Instance);
         _managerList.Add(InputManager.Instance);
@@ -39,6 +42,7 @@ public class GameManager : MonoSingleton<GameManager>
         {
             IsTest();
         }
+
         //测试
         //StartCoroutine(BgmManager.Instance.PlayBgmFadeDelay("TestBgm",0f, 0f, 0f));
         //StartCoroutine(SfxManager.Instance.PlaySfx("TestSfx",1f));
@@ -66,7 +70,7 @@ public class GameManager : MonoSingleton<GameManager>
     private void IsTest()
     {
         Instantiate(AssetManager.Instance.LoadAsset<GameObject>(ConfigManager.Instance.cfgUI["IngameDebugView"].uiPath)
-            ,UIManager.Instance.GetUIRoot().Find("NormalLayer"));
+            , UIManager.Instance.GetUIRoot().Find("NormalLayer"));
     }
 
     /// <summary>
@@ -79,11 +83,14 @@ public class GameManager : MonoSingleton<GameManager>
         UIManager.Instance.OpenWindow("LoadingView");
         yield return BgmManager.Instance.StopBgmFadeDelay(0f, 0.4f);
         yield return new WaitForSeconds(0.5f);
+        SetTimeScale(1f);
         yield return SceneManager.Instance.ChangeSceneAsync("MainScene");
         CameraManager.Instance.ResetObjCamera();
         UIManager.Instance.OpenWindow("StageSelectView");
         GC.Collect();
         UIManager.Instance.CloseWindows("LoadingView");
+        CameraManager.Instance.GetObjCamera().transform.GetComponent<AutoLoadPipelineAsset>().SetPipeline(
+            AssetManager.Instance.LoadAsset<RenderPipelineAsset>(ConfigManager.Instance.cfgCamera["DessertHigh"].pipelinePath));
         yield return BgmManager.Instance.PlayBgmFadeDelay("MainScene", 0f, 0f, 0.5f, 0.5f);
     }
 
@@ -120,16 +127,18 @@ public class GameManager : MonoSingleton<GameManager>
     /// <returns></returns>
     private IEnumerator IEnterStage(RowCfgStage rowCfgStage)
     {
-        UIManager.Instance.OpenWindow("LoadingView");//加载界面
-        yield return BgmManager.Instance.StopBgmFadeDelay(0f, 0.4f);//关闭bgm
+        UIManager.Instance.OpenWindow("LoadingView"); //加载界面
+        yield return BgmManager.Instance.StopBgmFadeDelay(0f, 0.4f); //关闭bgm
         yield return new WaitForSeconds(0.5f);
-        yield return SceneManager.Instance.ChangeSceneAsync(rowCfgStage.scenePath);//切换场景
-        BattleManager.Instance.EnterStageScene(rowCfgStage);//battleManager切换状态机
-        StartCoroutine(CameraManager.Instance.MoveObjCamera(rowCfgStage.stageCamera));//切换摄像机
-        SfxManager.Instance.PlaySfx("level_generate");//播放进入关卡音效
-        GC.Collect();//清gc
-        UIManager.Instance.CloseWindows("LoadingView");//关闭加载界面
-        yield return BgmManager.Instance.PlayBgmFadeDelay(rowCfgStage.stageBgm, 0f, 0f, 0.5f, 1f);//播放关卡bgm
+        yield return SceneManager.Instance.ChangeSceneAsync(rowCfgStage.scenePath); //切换场景
+        BattleManager.Instance.EnterStageScene(rowCfgStage); //battleManager切换状态机
+        StartCoroutine(CameraManager.Instance.MoveObjCamera(rowCfgStage.stageCamera)); //切换摄像机
+        CameraManager.Instance.GetObjCamera().transform.GetComponent<AutoLoadPipelineAsset>().SetPipeline(
+            AssetManager.Instance.LoadAsset<RenderPipelineAsset>(ConfigManager.Instance.cfgCamera[rowCfgStage.stageCamera].pipelinePath));
+        SfxManager.Instance.PlaySfx("level_generate"); //播放进入关卡音效
+        GC.Collect(); //清gc
+        UIManager.Instance.CloseWindows("LoadingView"); //关闭加载界面
+        yield return BgmManager.Instance.PlayBgmFadeDelay(rowCfgStage.stageBgm, 0f, 0f, 0.5f, 1f); //播放关卡bgm
     }
 
     private void Update()
@@ -155,7 +164,7 @@ public class GameManager : MonoSingleton<GameManager>
             manager.LateUpdate();
         }
     }
-    
+
     private void OnDestroy()
     {
         for (var i = _managerList.Count - 1; i >= 0; i--)
@@ -163,5 +172,4 @@ public class GameManager : MonoSingleton<GameManager>
             _managerList[i].OnClear();
         }
     }
-    
 }

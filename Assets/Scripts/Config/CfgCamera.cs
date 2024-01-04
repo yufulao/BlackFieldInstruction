@@ -20,6 +20,7 @@ namespace Rabi
         public List<float> position; //坐标
         public List<float> rotation; //rotation
         public float fieldOfView; //视野
+        public string pipelinePath; //渲染管线的资源路径
     }
 
     public class CfgCamera
@@ -72,7 +73,7 @@ namespace Rabi
         private RowCfgCamera ParseRow(string[] col)
         {
             //列越界
-            if (col.Length < 4)
+            if (col.Length < 5)
             {
                 Debug.LogError($"配置表字段行数越界:{GetType()}");
                 return null;
@@ -84,6 +85,7 @@ namespace Rabi
             data.position = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //坐标
             data.rotation = CsvUtility.ToList<float>(rowHelper.ReadNextCol()); //rotation
             data.fieldOfView = CsvUtility.ToFloat(rowHelper.ReadNextCol()); //视野
+            data.pipelinePath = CsvUtility.ToString(rowHelper.ReadNextCol()); //渲染管线的资源路径
             return data;
         }
     }

@@ -24,8 +24,11 @@
             <e p="CfgStage.txt" t="Include" />
             <e p="CfgUI.txt" t="Include" />
           </e>
+          <e p="PipelineAsset" t="Include" />
           <e p="Prefab" t="Include" />
-          <e p="scene" t="Include" />
+          <e p="scene" t="Include">
+            <e p="MainScene" t="Include" />
+          </e>
           <e p="Sfx" t="Include" />
           <e p="Sprite" t="Include" />
           <e p="UI" t="Include" />
@@ -816,6 +819,13 @@
                   </e>
                 </e>
               </e>
+            </e>
+            <e p="car" t="Include">
+              <e p="DAE format" t="Include" />
+              <e p="FBX format" t="Include" />
+              <e p="GLTF format" t="Include" />
+              <e p="OBJ format" t="Include" />
+              <e p="STL format" t="Include" />
             </e>
             <e p="Desert City" t="Include">
               <e p="Demo" t="Include" />
@@ -1928,6 +1938,7 @@
               <e p="UnitType.cs" t="Include" />
             </e>
             <e p="Util" t="Include">
+              <e p="SkipUnityLogo.cs" t="Include" />
               <e p="Utils.cs" t="Include" />
             </e>
           </e>

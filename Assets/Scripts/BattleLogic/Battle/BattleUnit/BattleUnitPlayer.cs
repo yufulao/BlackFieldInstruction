@@ -164,6 +164,7 @@ public class BattleUnitPlayer : BattleUnit
                 car.GetOn(this);
                 _cacheIsGetOnCommand = false;
             }
+
             yield break;
         }
 
@@ -228,62 +229,89 @@ public class BattleUnitPlayer : BattleUnit
     /// </summary>
     private void CheckAfterPlayerMove()
     {
+        if (car)
+        {
+            return;
+        }
+
         BattleManager.Instance.CheckCellForUnit<BattleUnitTarget>(this, UnitType.Target, (targets) =>
         {
-            if (car == null)
+            for (int i = 0; i < targets.Count; i++)
             {
-                for (int i = 0; i < targets.Count; i++)
+                if (_currentPeopleCount >= targets[i].needPeopleCount)
                 {
-                    if (_currentPeopleCount >= targets[i].needPeopleCount)
+                    if (CommandManager.Instance.CheckMoreThanTime()) //更新左上角时间，如果超时
                     {
-                        if (CommandManager.Instance.CheckMoreThanTime()) //更新左上角时间，如果超时
-                        {
-                            BattleManager.Instance.BattleEnd(false);
-                            return;
-                        }
-                        
-                        BattleManager.Instance.BattleEnd(true);
+                        BattleManager.Instance.BattleEnd(false);
                         return;
                     }
+
+                    BattleManager.Instance.BattleEnd(true);
+                    return;
                 }
             }
         });
 
         BattleManager.Instance.CheckCellForUnit<BattleUnitFire>(this, UnitType.Fire, (fires) =>
         {
-            if (car == null)
+            for (int i = 0; i < fires.Count; i++)
             {
-                for (int i = 0; i < fires.Count; i++)
+                if (fires[i].currentActive)
                 {
-                    if (fires[i].currentActive)
-                    {
-                        BattleManager.Instance.BattleEnd(false);
-                        return;
-                    }
+                    BattleManager.Instance.BattleEnd(false);
+                    return;
                 }
             }
         });
 
         BattleManager.Instance.CheckCellForUnit<BattleUnitTornado>(this, UnitType.Tornado, (tornadoes) =>
         {
-            if (car == null && tornadoes.Count > 0)
+            if (tornadoes.Count > 0)
             {
                 BattleManager.Instance.BattleEnd(false);
             }
         });
 
-        BattleManager.Instance.CheckCellForUnit<BattleUnitPeople>(this, UnitType.People, (people) =>
+        BattleManager.Instance.CheckCellForUnit<BattleUnitRuin>(this, UnitType.Ruin, (ruins) =>
         {
-            if (car == null)
+            for (int i = 0; i < ruins.Count; i++)
             {
-                for (int i = 0; i < people.Count; i++)
+                if (ruins[i].currentActive)
                 {
-                    people[i].PeopleHelp();
-                    _currentPeopleCount++;
-                    BattleManager.Instance.SetTargetState(_currentPeopleCount);
+                    BattleManager.Instance.BattleEnd(false);
+                    return;
                 }
             }
         });
+
+        BattleManager.Instance.CheckCellForUnit<BattleUnitPeople>(this, UnitType.People, (people) =>
+        {
+            for (int i = 0; i < people.Count; i++)
+            {
+                people[i].PeopleHelp();
+                _currentPeopleCount++;
+                BattleManager.Instance.SetTargetState(_currentPeopleCount);
+            }
+        });
+        
+        List<BattleUnit> allUnit = BattleManager.Instance.GetAllUnit();
+        for (int i = 0; i < allUnit.Count; i++)
+        {
+            if (allUnit[i].unitType == UnitType.Tornado)
+            {
+                BattleUnitTornado tornado = allUnit[i].transform.GetComponent<BattleUnitTornado>();
+                if (GridManager.Instance.GetPointByWorldPosition(transform.position)==GridManager.Instance.GetPointByWorldPosition(tornado.cacheLastPosition))//如果当前站在tornado的上一个坐标点
+                {
+                    if (CheckTornadoForwardMove(tornado.currentForward))//如果正面相撞
+                    {
+                        BattleManager.Instance.BattleEnd(false);
+                        break;
+                    }
+                }
+            }
+        }
+        
+        
     }
 
     /// <summary>
@@ -314,5 +342,47 @@ public class BattleUnitPlayer : BattleUnit
 
         yield return _sequence.WaitForCompletion();
         _currentForwardType = targetForward;
+    }
+
+    /// <summary>
+    /// 检测player和tornado面对面直撞
+    /// </summary>
+    /// <returns></returns>
+    private bool CheckTornadoForwardMove(ForwardType tornadoForward)
+    {
+        bool isHit = false;
+        switch (_currentForwardType)
+        {
+            case ForwardType.Up:
+                if (tornadoForward == ForwardType.Down)
+                {
+                    isHit = true;
+                }
+
+                break;
+            case ForwardType.Down:
+                if (tornadoForward == ForwardType.Up)
+                {
+                    isHit = true;
+                }
+
+                break;
+            case ForwardType.Left:
+                if (tornadoForward == ForwardType.Right)
+                {
+                    isHit = true;
+                }
+
+                break;
+            case ForwardType.Right:
+                if (tornadoForward == ForwardType.Left)
+                {
+                    isHit = true;
+                }
+
+                break;
+        }
+
+        return isHit;
     }
 }

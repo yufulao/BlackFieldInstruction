@@ -17,7 +17,9 @@ public class BattleUnitPeople : BattleUnit
     [HideInInspector] public bool currentActive;
     private float _cacheTextTimer;
     private List<string> _textListBeforeExecute;
+    private List<string> _textListDuringExecute;
     private List<string> _textListOnDie;
+    private List<string> _textListOnHelp;
     private Sequence _textSequence;
 
     private void Update()
@@ -38,7 +40,9 @@ public class BattleUnitPeople : BattleUnit
     {
         base.OnUnitInit();
         _textListBeforeExecute = ConfigManager.Instance.cfgBattleUnitPeopleText["BeforeExecute"].textList;
+        _textListDuringExecute=ConfigManager.Instance.cfgBattleUnitPeopleText["DuringExecute"].textList;
         _textListOnDie = ConfigManager.Instance.cfgBattleUnitPeopleText["OnDie"].textList;
+        _textListOnHelp = ConfigManager.Instance.cfgBattleUnitPeopleText["OnHelp"].textList;
         ResetAll();
     }
 
@@ -51,7 +55,6 @@ public class BattleUnitPeople : BattleUnit
     public override void OnUnitDestroy()
     {
         base.OnUnitDestroy();
-        _textSequence?.Pause();
         _textSequence?.Kill();
     }
 
@@ -60,6 +63,7 @@ public class BattleUnitPeople : BattleUnit
         if (currentActive)
         {
             SfxManager.Instance.PlaySfx("unit_peopleHelp");
+            TextPopOnHelp();
             SetPeopleActive(false);
         }
     }
@@ -72,6 +76,14 @@ public class BattleUnitPeople : BattleUnit
             TextPopOnDie();
             SetPeopleActive(false);
         }
+    }
+
+    /// <summary>
+    /// 人群获救时飘字
+    /// </summary>
+    private void TextPopOnHelp()
+    {
+        TextPop(_textListOnHelp[Random.Range(0, _textListOnHelp.Count)]);
     }
 
     /// <summary>
@@ -103,9 +115,13 @@ public class BattleUnitPeople : BattleUnit
 
     private void TextPop(string text)
     {
+        _textSequence?.Kill();
         flyText.text = text;
         Vector3 offset = new Vector3(-190, 0, 0);
-        _textSequence?.Kill();
         _textSequence = Utils.TextFly(flyText, CameraManager.Instance.GetObjCamera().WorldToScreenPoint(transform.position) + offset);
+        _textSequence.onComplete += () =>
+        {
+            _textSequence?.Kill();
+        };
     }
 }
