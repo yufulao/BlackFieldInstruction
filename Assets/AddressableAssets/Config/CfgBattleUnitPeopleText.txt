@@ -4,4 +4,4 @@ string#List<string>#None#None#None#None#None
 BeforeExecute#Who can save me,dont leave me alone,we are here#None#None#None#None#None
 DuringExecute#None#None#None#None#None#None
 OnDie#Oh no....,I feel so painful,I....#None#None#None#None#None
-OnHelp#Thank you!Finally rescued!You are my hero#None#None#None#None#None
+OnHelp#Thank you!,Finally rescued!,You are my hero#None#None#None#None#None

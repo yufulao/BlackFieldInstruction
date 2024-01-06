@@ -26,7 +26,7 @@ public class StageItem : MonoBehaviour
             return;
         }
 
-        GetComponent<Collider>().enabled = false;
+        GetComponent<Collider>().enabled = true;
         for (int i = 0; i < transform.childCount; i++)
         {
             transform.GetChild(i).GetComponent<SpriteRenderer>().color = Color.gray;

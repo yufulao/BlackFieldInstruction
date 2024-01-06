@@ -48,6 +48,6 @@ public class BattleUnitTarget : BattleUnit
 
     private void ResetAll()
     {
-        SetLessThanPeopleCountNeed();
+        SetTargetState(0);
     }
 }

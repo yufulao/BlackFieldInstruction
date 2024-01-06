@@ -69,6 +69,7 @@ public class BattleUnitTornado : BattleUnit
         _sequence?.Kill();
         _cacheDelayTime = delayTime;
         currentForward = originalForwardType;
+        SfxManager.Instance.Stop("unit_tornadoMove");
     }
 
     /// <summary>

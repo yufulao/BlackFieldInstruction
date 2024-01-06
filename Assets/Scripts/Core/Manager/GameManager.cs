@@ -29,6 +29,7 @@ public class GameManager : MonoSingleton<GameManager>
         _managerList.Add(UIManager.Instance);
         _managerList.Add(CameraManager.Instance);
         _managerList.Add(BattleManager.Instance);
+        _managerList.Add(PipelineManager.Instance);
 
         foreach (var manager in _managerList)
         {
@@ -89,8 +90,7 @@ public class GameManager : MonoSingleton<GameManager>
         UIManager.Instance.OpenWindow("StageSelectView");
         GC.Collect();
         UIManager.Instance.CloseWindows("LoadingView");
-        CameraManager.Instance.GetObjCamera().transform.GetComponent<AutoLoadPipelineAsset>().SetPipeline(
-            AssetManager.Instance.LoadAsset<RenderPipelineAsset>(ConfigManager.Instance.cfgCamera["DessertHigh"].pipelinePath));
+        CameraManager.Instance.GetObjCamera().transform.GetComponent<AutoLoadPipelineAsset>().SetPipeline(PipelineManager.Instance.mainScenePipelineAsset);
         yield return BgmManager.Instance.PlayBgmFadeDelay("MainScene", 0f, 0f, 0.5f, 0.5f);
     }
 
@@ -133,8 +133,8 @@ public class GameManager : MonoSingleton<GameManager>
         yield return SceneManager.Instance.ChangeSceneAsync(rowCfgStage.scenePath); //切换场景
         BattleManager.Instance.EnterStageScene(rowCfgStage); //battleManager切换状态机
         StartCoroutine(CameraManager.Instance.MoveObjCamera(rowCfgStage.stageCamera)); //切换摄像机
-        CameraManager.Instance.GetObjCamera().transform.GetComponent<AutoLoadPipelineAsset>().SetPipeline(
-            AssetManager.Instance.LoadAsset<RenderPipelineAsset>(ConfigManager.Instance.cfgCamera[rowCfgStage.stageCamera].pipelinePath));
+        CameraManager.Instance.GetObjCamera().transform.GetComponent<AutoLoadPipelineAsset>().SetPipeline(PipelineManager.Instance.stagePipelineAsset);
+        //Debug.Log(PipelineManager.Instance.stagePipelineAsset.defaultShader.name);
         SfxManager.Instance.PlaySfx("level_generate"); //播放进入关卡音效
         GC.Collect(); //清gc
         UIManager.Instance.CloseWindows("LoadingView"); //关闭加载界面

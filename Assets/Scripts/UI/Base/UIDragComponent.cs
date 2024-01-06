@@ -25,19 +25,23 @@ public class UIDragComponent : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     private Vector2 _originalPos; //开始拖拽的position
     private bool _isValidDragging; //当前dragging是否是有效拖拽
     private bool _hadSetValidDrag; //是否已经设置了有效拖拽
+    
+    private bool _checkValidDrag;//是否检测无效拖拽
 
 
     /// <summary>
     /// 初始化拖拽组件，需要手动初始化
     /// </summary>
     /// <param name="onDragParent"></param>
-    public void InitDragComponent(Transform onDragParent)
+    /// <param name="checkValidDrag"></param>
+    public void InitDragComponent(Transform onDragParent,bool checkValidDrag)
     {
         _canvasGroup = gameObject.GetComponent<CanvasGroup>();
         _graphic = GetComponent<Graphic>();
         _cacheObjOnDrag = Instantiate(this.gameObject, onDragParent);
         _cacheObjOnDrag.SetActive(false);
         _dragRectTransform = _cacheObjOnDrag.GetComponent<RectTransform>();
+        _checkValidDrag = checkValidDrag;
     }
 
     /// <summary>
@@ -96,6 +100,7 @@ public class UIDragComponent : MonoBehaviour, IBeginDragHandler, IEndDragHandler
         {
             if (Vector2.Distance(eventData.position, _originalPos) > validDragDistance)
             {
+                
                 SetValidDragging(eventData);//设置本次拖拽事件，是否是无效拖拽
                 _hadSetValidDrag = true;
             }
@@ -154,6 +159,10 @@ public class UIDragComponent : MonoBehaviour, IBeginDragHandler, IEndDragHandler
     /// <param name="eventData"></param>
     private void SetValidDragging(PointerEventData eventData)
     {
+        if (!_checkValidDrag)
+        {
+            return;
+        }
         //偏移向量
         Vector2 direction = eventData.position - _originalPos;
         //与X轴夹角

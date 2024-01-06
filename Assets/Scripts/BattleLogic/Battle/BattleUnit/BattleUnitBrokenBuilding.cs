@@ -261,7 +261,8 @@ public class BattleUnitBrokenBuilding : BattleUnit
                 _fsm.ChangeFsmState(typeof(BuildingUnbrokenState));
                 break;
             case BrokenBuildingStateType.Broken:
-                _fsm.ChangeFsmState(typeof(BuildingBrokenState));
+                ToBroken(forwardForBrokenAtStart);
+                //_fsm.ChangeFsmState(typeof(BuildingBrokenState));
                 break;
             case  BrokenBuildingStateType.Ruin:
                 _fsm.ChangeFsmState(typeof(BuildingRuinState));

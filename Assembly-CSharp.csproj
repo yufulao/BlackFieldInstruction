@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\Core\Base\Manager\IMonoManager.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\Battle\BattleView.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\Battle\BattleFsm\FsmState\BattleEndState.cs" />
+     <Compile Include="Assets\Scripts\Core\Manager\PipelineManager.cs" />
      <Compile Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_InspectorHelp.cs" />
      <Compile Include="Assets\Scripts\BattleLogic\Command\CommandFsm\FsmState\CommandMainStartState.cs" />
      <Compile Include="Assets\Scripts\Config\CfgSfx.cs" />
@@ -363,7 +364,6 @@
      <Folder Include="Assets\Res\ResourcePackages\car\STL format" />
      <Folder Include="Assets\Scripts\BattleLogic\Battle\BattleUnit\BattleUnitBrokenBuildingFsm" />
      <Folder Include="Assets\Res\ResourcePackages\Animated Loading Icons\Prefabs\Pickaxe" />
-     <Folder Include="Assets\Settings" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Texts (drag-drop to prefabs)" />
      <Folder Include="Assets\Res\ResourcePackages\kenney_space-kit\Models" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Screen Distortion" />
@@ -542,7 +542,7 @@
      <Folder Include="Assets\Res\ResourcePackages\mmmm\Medieval Town (base)" />
      <Folder Include="Assets\Res\ResourcePackages\JMO Assets\Cartoon FX Remaster\CFXR Assets\Meshes" />
      <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\3_Prefabs\Particles" />
-     <Folder Include="Assets\AddressableAssets\PipelineAsset" />
+     <Folder Include="Assets\Resources\PipelineAsset" />
      <Folder Include="Assets\Res\ResourcePackages\Rank-Island\Cliffy Coast\5_Materials" />
      <Folder Include="Assets\Res\ResourcePackages\LaFinca\Viking Gods\Thor" />
      <Folder Include="Assets\Res\ResourcePackages\Robot\Robo1\Materials" />

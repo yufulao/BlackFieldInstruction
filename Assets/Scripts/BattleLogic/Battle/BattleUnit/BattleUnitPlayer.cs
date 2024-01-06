@@ -146,6 +146,7 @@ public class BattleUnitPlayer : BattleUnit
         StartCoroutine(WaitForRotate(originalForwardType, 0f));
         _cacheIsGetOnCommand = false;
         animator.SetBool("run", false);
+        SfxManager.Instance.Stop("unit_playerMove");
     }
 
     /// <summary>

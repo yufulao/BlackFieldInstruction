@@ -9,20 +9,20 @@
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgBattleUnitPeopleText.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgBattleUnitPeopleText.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgCamera.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgCamera.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgStage.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Config/CfgStage.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/PipelineAsset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/PipelineAsset/Wanderer-URP Asset.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/PipelineAsset/Wanderer-URP Asset.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage0-0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage0-0.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/MainScene/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/MainScene/LightingData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/MainScene/OcclusionCullingData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/MainScene/OcclusionCullingData.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-10.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-10.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-11.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-11.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-12.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-12.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-4.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-5.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-6.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-7.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-7.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-8.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-8.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-9.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage1-9.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage2-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage2-1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage2-10.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage2-10.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage2-11.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage2-11.unity" afterDir="false" />
@@ -35,24 +35,55 @@
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage2-7.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage2-7.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage2-8.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage2-8.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage2-9.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/Stage2-9.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/StageTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/StageTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/StartUp.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/Scene/StartUp.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/UI/CommandView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/UI/CommandView.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssets/UI/StageSelectView.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssets/UI/StageSelectView.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AddressableAssetSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Default Local Group.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Scene.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Scene.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/PipelineAsset.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/PipelineAsset.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/PipelineAsset_BundledAssetGroupSchema.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/PipelineAsset_BundledAssetGroupSchema.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/PipelineAsset_ContentUpdateGroupSchema.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Schemas/PipelineAsset_ContentUpdateGroupSchema.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitBrokenBuilding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitBrokenBuilding.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitCarRear.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitCarRear.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitMeteorite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitMeteorite.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitPeople.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitPeople.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitTarget.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitTornado.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitTornado.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Config/CfgCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Config/CfgCamera.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/SceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Manager/SceneManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Util/Utils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Util/Utils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Base/UIDragComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Base/UIDragComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/CommandUI/CommandUICtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/CommandUI/CommandUICtrl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/CommandUI/Component/CommandItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/CommandUI/Component/CommandItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelectUI/Component/StageItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelectUI/Component/StageItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelectUI/StageSelectUICtrl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelectUI/StageSelectUICtrl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/High_PipelineAsset.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/High_PipelineAsset.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/High_PipelineAsset_ForwardRenderer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/High_PipelineAsset_ForwardRenderer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Low_PipelineAsset.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Low_PipelineAsset.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Low_PipelineAsset_ForwardRenderer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Low_PipelineAsset_ForwardRenderer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Medium_PipelineAsset.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Medium_PipelineAsset.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Medium_PipelineAsset_ForwardRenderer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Medium_PipelineAsset_ForwardRenderer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Very High_PipelineAsset.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Very High_PipelineAsset.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Very High_PipelineAsset_ForwardRenderer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Very High_PipelineAsset_ForwardRenderer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Very Low_PipelineAsset.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Very Low_PipelineAsset.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Very Low_PipelineAsset_ForwardRenderer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/Very Low_PipelineAsset_ForwardRenderer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RabiConfig/xlsx/BattleUnitPeopleText.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/RabiConfig/xlsx/BattleUnitPeopleText.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RabiConfig/xlsx/Camera.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/RabiConfig/xlsx/Camera.xlsx" afterDir="false" />
@@ -88,6 +119,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UILogic/PauseUI/PauseUICtrl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/Util/SkipUnityLogo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Manager/PipelineManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Config/CfgBattleUnitPeopleText.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UILogic/LoadingUI/LoadingUICtrl.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -96,40 +128,42 @@
       <option value="$PROJECT_DIR$/.gitignore" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/PauseUI/PauseUIModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/CommandUI/CommandUIModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/CommandUI/Component/CommandItem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/InputManager/InputManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Reporter.cs" />
       <option value="$PROJECT_DIR$/Assets/Unity-Logs-Viewer/Reporter/Test/TestReporter.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelectUI/Component/StageItem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/SceneManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/AssetManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/UIManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/LoadingUI/LoadingUICtrl.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitTarget.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Misc/Def/CommandType.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Misc/Util/Utils.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Grid/GridModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelectUI/StageSelectUIModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelectUI/StageSelectUICtrl.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitFire.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitMeteorite.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/SfxManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/CameraManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/PauseUI/PauseUICtrl.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Misc/Def/EventName.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Command/CommandManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitCarRear.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitBrokenBuilding.cs" />
       <option value="$PROJECT_DIR$/Assets/Res/ResourcePackages/FlatKit/Demos/Common/Scripts/AutoLoadPipelineAsset.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Misc/Util/SkipUnityLogo.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitRuin.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitPlayer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitTornado.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/CommandUI/CommandUICtrl.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/Base/UIDragComponent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/CommandUI/CommandUICtrl.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/CommandUI/Component/CommandItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/PipelineManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitMeteorite.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelectUI/Component/StageItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Core/Manager/SceneManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Misc/Util/Utils.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitPeople.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitPlayer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitTornado.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitCarRear.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/UI/UILogic/StageSelectUI/StageSelectUICtrl.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitBrokenBuilding.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BattleLogic/Battle/BattleUnit/BattleUnitTarget.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2a5koNHFMbv6wOMksIgWZzfVSpu" />
@@ -179,7 +213,8 @@
       <workItem from="1703781396855" duration="3066000" />
       <workItem from="1703851392052" duration="64316000" />
       <workItem from="1704296383265" duration="8971000" />
-      <workItem from="1704380372458" duration="6075000" />
+      <workItem from="1704380372458" duration="11365000" />
+      <workItem from="1704519972351" duration="8570000" />
     </task>
     <servers />
   </component>

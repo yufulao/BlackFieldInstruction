@@ -81,7 +81,7 @@ public class BattleUnitMeteorite : BattleUnit
         _sequence?.Kill();
         _sequence = DOTween.Sequence();
         meteorite.transform.position = _meteoriteOriginalPosition;
-        _sequence.Append(meteorite.transform.DOMove(targetFallPosition.position, fallTime));
+        _sequence.Append(meteorite.transform.DOMove(targetFallPosition.position, fallTime).SetEase(Ease.InSine));
         _sequence.Pause();
         _sequence.SetAutoKill(false);
     }

@@ -22,7 +22,7 @@ public class CommandUICtrl : UICtrlBase
     [SerializeField] private Text stageTimeText;
     [SerializeField] private Slider timeScaleSlider;
     [SerializeField] private ScrollRect usedScroll;
-    [SerializeField] private ScrollRect waitingScroll;
+    // [SerializeField] private ScrollRect waitingScroll;
     [SerializeField] private Transform usedItemContainer;
     [SerializeField] private Transform waitingItemContainer;
     [SerializeField] private List<Transform> waitingItemTransformList = new List<Transform>();
@@ -79,7 +79,7 @@ public class CommandUICtrl : UICtrlBase
     {
         startBtn.gameObject.SetActive(false);
         usedScroll.gameObject.SetActive(false);
-        waitingScroll.gameObject.SetActive(false);
+        //waitingScroll.gameObject.SetActive(false);
         resetBtn.gameObject.SetActive(false);
         cancelExecuteBtn.gameObject.SetActive(true);
         timeScaleSlider.gameObject.SetActive(false);
@@ -94,7 +94,7 @@ public class CommandUICtrl : UICtrlBase
     {
         startBtn.gameObject.SetActive(true);
         usedScroll.gameObject.SetActive(true);
-        waitingScroll.gameObject.SetActive(true);
+        //waitingScroll.gameObject.SetActive(true);
         resetBtn.gameObject.SetActive(true);
         cancelExecuteBtn.gameObject.SetActive(false);
         timeScaleSlider.gameObject.SetActive(true);
@@ -210,7 +210,7 @@ public class CommandUICtrl : UICtrlBase
         CommandItem usedItem = Instantiate(AssetManager.Instance.LoadAsset<GameObject>(ConfigManager.Instance.cfgPrefab["CommandItem"].prefabPath)
             , usedItemContainer).GetComponent<CommandItem>();
         UsedItemInfo usedItemInfo = _model.CreatUsedItemInfo(waitingItemInfo);
-        usedItem.Init(usedItemInfo.cacheCommandEnum, transform);
+        usedItem.Init(usedItemInfo.cacheCommandEnum, transform,true);
         usedItem.SetBtnOnClick(UsedItemOnClick);
         usedItem.SetDragAction(UsedItemDragFilter, UsedBtnOnBeginDrag, UsedItemOnEndDrag);
         usedItem.SetInvalidDragAction(usedScroll.OnBeginDrag, usedScroll.OnDrag, usedScroll.OnEndDrag);
@@ -231,10 +231,11 @@ public class CommandUICtrl : UICtrlBase
             , waitingItemContainer).GetComponent<CommandItem>();
         item.transform.position = waitingItemTransformList[CommandIndex.GetCommandIndexByType(commandEnum)].position;
         WaitingItemInfo info = _model.CreatWaitingItemInfo(commandEnum, needTime, count);
-        item.Init(commandEnum, transform);
+        item.Init(commandEnum, transform,false);
         item.SetBtnOnClick(WaitingItemOnClick);
         item.SetDragAction(WaitingItemDragFilter, null, WaitingItemOnEndDrag);
-        item.SetInvalidDragAction(waitingScroll.OnBeginDrag, waitingScroll.OnDrag, waitingScroll.OnEndDrag);
+        //item.SetInvalidDragAction(waitingScroll.OnBeginDrag, waitingScroll.OnDrag, waitingScroll.OnEndDrag);
+        //item.SetInvalidDragAction(null, waitingScroll.OnDrag, WaitingItemOnEndDrag);
         return (item, info);
     }
 

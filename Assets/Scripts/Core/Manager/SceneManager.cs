@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -47,6 +48,7 @@ public class SceneManager : BaseSingleTon<SceneManager>,IMonoManager
         //single模式切换场景
         yield return AssetManager.Instance.LoadSceneSync(scenePath, (sceneInstance) =>
         {
+            DOTween.KillAll();
             if (!_loadedSceneDic.ContainsKey(scenePath))
             {
                 _loadedSceneDic.Add(scenePath, sceneInstance);

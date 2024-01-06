@@ -464,5 +464,6 @@ public class BattleUnitCarRear : BattleUnit
         _currentForward = originalForwardType;
         RefreshCarObj();
         carObj.transform.position = _cacheCraObjOriginalPosition;
+        SfxManager.Instance.Stop("unit_carDrive");
     }
 }

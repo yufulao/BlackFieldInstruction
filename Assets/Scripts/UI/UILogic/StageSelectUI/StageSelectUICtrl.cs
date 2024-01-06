@@ -1,12 +1,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using Rabi;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using MouseButton = UnityEngine.InputSystem.LowLevel.MouseButton;
+using Sequence = DG.Tweening.Sequence;
+using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
+using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 
 public class StageSelectUICtrl : UICtrlBase
 {
@@ -23,6 +27,7 @@ public class StageSelectUICtrl : UICtrlBase
     [SerializeField] private Button preLowBtn;
     [SerializeField] private Button nextLowBtn;
     [SerializeField] private Button lowBackBtn;
+    [SerializeField] private Text lockStageItemClickText;
 
     private StageSelectUIModel _model;
     private FsmComponent<StageSelectUICtrl> _fsm;
@@ -128,8 +133,8 @@ public class StageSelectUICtrl : UICtrlBase
         {
             CheckRayToStageItem(Mouse.current.position.value);
         }
-        
-        if (Touchscreen.current!=null&&Touchscreen.current.press.wasPressedThisFrame)
+
+        if (Touchscreen.current != null && Touchscreen.current.press.wasPressedThisFrame)
         {
             CheckRayToStageItem(Touchscreen.current.position.ReadValue());
         }
@@ -172,8 +177,13 @@ public class StageSelectUICtrl : UICtrlBase
     {
         SfxManager.Instance.PlaySfx("stage_stageEnter");
         StageItemInfo stageInfo = _model.GetStageInfo(stageItem.stageCfgKey);
-        GameManager.Instance.EnterStage(stageInfo.stageName);
-        UIManager.Instance.CloseWindows("StageSelectView");
+        if (SaveManager.GetInt(stageItem.stageCfgKey, 0) == 1)//已解锁
+        {
+            GameManager.Instance.EnterStage(stageInfo.stageName);
+            UIManager.Instance.CloseWindows("StageSelectView");
+            return;
+        }
+        Utils.TextFly(lockStageItemClickText, CameraManager.Instance.GetObjCamera().WorldToScreenPoint(stageItem.transform.position));
     }
 
     /// <summary>
@@ -278,6 +288,9 @@ public class StageSelectUICtrl : UICtrlBase
     private void ResetView()
     {
         StartCoroutine(UpdateHigh(1f));
+        Color originalColor = lockStageItemClickText.color;
+        originalColor.a = 0;
+        lockStageItemClickText.color = originalColor;
     }
 
     /// <summary>
@@ -338,7 +351,7 @@ public class StageSelectUICtrl : UICtrlBase
         midUIFrame.SetActive(false);
         lowUIFrame.SetActive(false);
     }
-
+    
     private void Update()
     {
         _fsm?.OnUpdate();

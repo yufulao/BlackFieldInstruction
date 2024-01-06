@@ -1,38 +1,38 @@
-key#position#rotation#fieldOfView#pipelinePath
-key#坐标#rotation#视野#渲染管线的资源路径
-string#List<float>#List<float>#float#string
-DessertHigh#3,33,5#80,-527,-120#60#Assets/AddressableAssets/PipelineAsset/Wanderer-URP Asset.asset
-DessertMid#1.8,20,-2#80,0,50#60#Assets/AddressableAssets/PipelineAsset/Wanderer-URP Asset.asset
-DessertLowA#0.38,15.24,-3.76#80,0,34.4#33#Assets/AddressableAssets/PipelineAsset/Wanderer-URP Asset.asset
-DessertLowB#2,18,-3#80,0,30#20#Assets/AddressableAssets/PipelineAsset/Wanderer-URP Asset.asset
-DessertLowC#4.2,20,-2#80,0,-2#20#Assets/AddressableAssets/PipelineAsset/Wanderer-URP Asset.asset
-IslandHigh#7,-10.5,-38#196.5,-190,-3.2#60#Assets/AddressableAssets/PipelineAsset/Wanderer-URP Asset.asset
-IslandMid#4.6,-6.3,-20.8#196.5,-190,-3.2#60#Assets/AddressableAssets/PipelineAsset/Wanderer-URP Asset.asset
-IslandLowA#9.5,-7.4,-20.8#196.5,-193.5,57.1#27.3#Assets/AddressableAssets/PipelineAsset/Wanderer-URP Asset.asset
-IslandLowB#4.1,-7.4,-20.8#196.5,-193.5,57.1#20#Assets/AddressableAssets/PipelineAsset/Wanderer-URP Asset.asset
-IslandLowC#-1.52,-5.57,-21.07#-10.76,-3.68,-60.62#20#Assets/AddressableAssets/PipelineAsset/Wanderer-URP Asset.asset
-NullHigh#-34.5,-16.6,-3.1#-24.2,-273.1,-7.9#60#Assets/AddressableAssets/PipelineAsset/Wanderer-URP Asset.asset
-NullMid#-18.2,-10.3,0#-24.2,-273.1,-7.9#60#Assets/AddressableAssets/PipelineAsset/Wanderer-URP Asset.asset
-StageTest#-2,17.17,-6.1#67.37,-1057.817,21.401#18#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
-Stage1-1#-2,17.17,-6.1#67.37,-1057.817,21.401#18#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
-Stage1-2#-0.5,19.18,-3.02#78.877,-1057.817,21.401#18#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
-Stage1-3#-0.72,17.17,-2.31#78.877,-1057.817,21.401#18#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
-Stage1-4#-0.14,14.13,-0.3#83.6,-1059.5,21.401#26#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
-Stage1-5#1.02,15.14,-8.08#58.9,0,0#26#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
-Stage1-6#1.5,18.96,-2.81#75.68,0,0#26#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
-Stage1-7#1.5,34.48,-7.1#75.68,0,0#14#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
-Stage1-8#1.5,37.99,-7.1#75.68,0,0#14#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
-Stage1-9#1.36,43.65,-4.7#81.2,0,0#14#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
-Stage1-10#2.1,10.4,-0.64#78.47,0,0#59#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
-Stage2-1#1.17,19.54,1.87#87.3,-889.9,-169.95#18#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
-Stage2-2#1.6,15.95,1.87#87.3,-889.9,-169.95#34#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
-Stage2-3#1.6,15.95,1.87#87.3,-889.9,-169.95#34#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
-Stage2-4#2.2,20.41,1.87#87.3,-889.9,-169.95#34#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
-Stage2-5#0.5,16.8,-6.6#113,-888,-170#34#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
-Stage2-6#2.1,16.97,-2#81,-3,-3#37.7#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
-Stage2-7#1.87,15,3.4#98.2,9.75,10.05#34#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
-Stage2-8#1.78,15.24,2.5#95.96,10.1,10.05#34#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
-Stage2-9#2,20,3.4#81.8,-889.08,-169.95#34#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
-Stage2-10#2.5,20,3.4#98.2,10.92,10.05#34#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
-Stage2-11#2.5,18.4,3.4#81.8,191.19,-168.57#34#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
-Stage2-12#2.5,19.05,3.4#98.2,10.06,10.05#34#Assets/AddressableAssets/PipelineAsset/FruitVaseScene-Var-URP Asset.asset
+key#position#rotation#fieldOfView
+key#坐标#rotation#视野
+string#List<float>#List<float>#float
+DessertHigh#3,33,5#80,-527,-120#60
+DessertMid#1.8,20,-2#80,0,50#60
+DessertLowA#0.38,15.24,-3.76#80,0,34.4#33
+DessertLowB#2,18,-3#80,0,30#20
+DessertLowC#4.2,20,-2#80,0,-2#20
+IslandHigh#7,-10.5,-38#196.5,-190,-3.2#60
+IslandMid#4.6,-6.3,-20.8#196.5,-190,-3.2#60
+IslandLowA#9.5,-7.4,-20.8#196.5,-193.5,57.1#27.3
+IslandLowB#4.1,-7.4,-20.8#196.5,-193.5,57.1#20
+IslandLowC#-1.52,-5.57,-21.07#-10.76,-3.68,-60.62#20
+NullHigh#-34.5,-16.6,-3.1#-24.2,-273.1,-7.9#60
+NullMid#-18.2,-10.3,0#-24.2,-273.1,-7.9#60
+StageTest#-2,17.17,-6.1#67.37,-1057.817,21.401#18
+Stage1-1#-2,17.17,-6.1#67.37,-1057.817,21.401#18
+Stage1-2#-0.5,19.18,-3.02#78.877,-1057.817,21.401#18
+Stage1-3#-0.72,17.17,-2.31#78.877,-1057.817,21.401#18
+Stage1-4#-0.14,14.13,-0.3#83.6,-1059.5,21.401#26
+Stage1-5#1.02,15.14,-8.08#58.9,0,0#26
+Stage1-6#1.5,18.96,-2.81#75.68,0,0#26
+Stage1-7#1.5,34.48,-7.1#75.68,0,0#14
+Stage1-8#1.5,37.99,-7.1#75.68,0,0#14
+Stage1-9#1.36,43.65,-4.7#81.2,0,0#14
+Stage1-10#2.1,10.4,-0.64#78.47,0,0#59
+Stage2-1#1.17,19.54,1.87#87.3,-889.9,-169.95#18
+Stage2-2#1.6,15.95,1.87#87.3,-889.9,-169.95#34
+Stage2-3#1.6,15.95,1.87#87.3,-889.9,-169.95#34
+Stage2-4#2.2,20.41,1.87#87.3,-889.9,-169.95#34
+Stage2-5#0.5,16.8,-6.6#113,-888,-170#34
+Stage2-6#2.1,16.97,-2#81,-3,-3#37.7
+Stage2-7#1.87,15,3.4#98.2,9.75,10.05#34
+Stage2-8#1.78,15.24,2.5#95.96,10.1,10.05#34
+Stage2-9#2,20,3.4#81.8,-889.08,-169.95#34
+Stage2-10#2.5,20,3.4#98.2,10.92,10.05#34
+Stage2-11#2.5,18.4,3.4#81.8,191.19,-168.57#34
+Stage2-12#2.5,19.05,3.4#98.2,10.06,10.05#34

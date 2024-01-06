@@ -83,22 +83,22 @@ public static class Utils
     /// 飘字效果
     /// </summary>
     /// <param name="graphic"></param>
-    /// <param name="originalRect"></param>
-    public static Sequence TextFly(Graphic graphic, Vector3 originalRect)
+    /// <param name="originalPosition"></param>
+    public static Sequence TextFly(Graphic graphic, Vector3 originalPosition)
     {
-        RectTransform rectTransform = graphic.rectTransform;
+        Transform transform = graphic.transform;
         Color originalColor = graphic.color;
 
-        rectTransform.anchoredPosition = originalRect;
+        transform.position = originalPosition;
         //Debug.Log(rectTransform.localPosition);
         originalColor.a = 0;
         graphic.color = originalColor;
 
-        Sequence textSequence = DOTween.Sequence();
-        textSequence.Append(rectTransform.DOMoveY(rectTransform.position.y + 50, 0.5f));
+        Sequence textSequence = DOTween.Sequence().SetAutoKill(true);
+        textSequence.Append(transform.DOMoveY(transform.position.y + 50, 0.5f));
         textSequence.Join(graphic.DOColor(new Color(originalColor.r, originalColor.g, originalColor.b, 1), 0.5f));
         textSequence.AppendInterval(0.5f);
-        textSequence.Append(rectTransform.DOMoveY(rectTransform.position.y + 50, 0.5f));
+        textSequence.Append(transform.DOMoveY(transform.position.y + 50, 0.5f));
         textSequence.Join(graphic.DOColor(new Color(originalColor.r, originalColor.g, originalColor.b, 0), 0.5f));
         return textSequence;
     }

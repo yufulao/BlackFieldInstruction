@@ -18,12 +18,12 @@ public class CommandItem : MonoBehaviour
     // [HideInInspector]public CommandItemInfo itemInfo;
 
 
-    public virtual void Init(CommandType commandEnum, Transform onDragParent /*,CommandItemInfo itemInfoT*/)
+    public virtual void Init(CommandType commandEnum, Transform onDragParent,bool checkValidDrag /*,CommandItemInfo itemInfoT*/)
     {
         Sprite commandTypeSprite = AssetManager.Instance.LoadAsset<Sprite>(ConfigManager.Instance.cfgSprite[commandEnum.ToString()].spritePath);
         transform.Find("Decorate").Find("ClickBtnBg").Find("CommandTypeSprite").GetComponent<Image>().sprite = commandTypeSprite;
         clickBtn.transform.Find("CommandTypeSprite").GetComponent<Image>().sprite = commandTypeSprite;
-        btnDragCmp.InitDragComponent(onDragParent);
+        btnDragCmp.InitDragComponent(onDragParent,checkValidDrag);
         // itemInfo = itemInfoT;
     }
 

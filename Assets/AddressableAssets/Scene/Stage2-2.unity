@@ -746,6 +746,26 @@ PrefabInstance:
       propertyPath: needPeopleCount
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8478762520450804120, guid: 13f8d446e35dc9949b5f1f726ebb314f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.992631
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478762520450804120, guid: 13f8d446e35dc9949b5f1f726ebb314f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.121176384
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478762520450804120, guid: 13f8d446e35dc9949b5f1f726ebb314f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478762520450804120, guid: 13f8d446e35dc9949b5f1f726ebb314f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478762520450804120, guid: 13f8d446e35dc9949b5f1f726ebb314f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 13.92
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

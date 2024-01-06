@@ -24,7 +24,6 @@
             <e p="CfgStage.txt" t="Include" />
             <e p="CfgUI.txt" t="Include" />
           </e>
-          <e p="PipelineAsset" t="Include" />
           <e p="Prefab" t="Include" />
           <e p="scene" t="Include">
             <e p="MainScene" t="Include" />
@@ -40,6 +39,7 @@
           </e>
           <e p="AssetGroupTemplates" t="Include" />
           <e p="DataBuilders" t="Include" />
+          <e p="link.xml" t="Include" />
           <e p="Windows" t="Include" />
         </e>
         <e p="Editor" t="Include" />
@@ -1810,7 +1810,9 @@
             </e>
           </e>
         </e>
-        <e p="Resources" t="Include" />
+        <e p="Resources" t="Include">
+          <e p="PipelineAsset" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
           <e p="BattleLogic" t="Include">
             <e p="Battle" t="Include">
@@ -1922,6 +1924,7 @@
                 <e p="InputActions.cs" t="Include" />
                 <e p="InputManager.cs" t="Include" />
               </e>
+              <e p="PipelineManager.cs" t="Include" />
               <e p="SaveManager.cs" t="Include" />
               <e p="SceneManager.cs" t="Include" />
               <e p="SfxManager.cs" t="Include" />
@@ -1988,7 +1991,6 @@
             </e>
           </e>
         </e>
-        <e p="Settings" t="Include" />
       </e>
       <e p="BlackFieldInstruction.sln" t="IncludeFlat" />
       <e p="Boxophobic.SkyboxCubemapExtended.Editor.csproj" t="IncludeRecursive" />
